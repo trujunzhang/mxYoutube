@@ -1,0 +1,134 @@
+/*
+ * Copyright (c) 2010 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+package com.google.api.client.http.javanet;
+
+import com.google.api.client.http.LowLevelHttpResponse;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+final class NetHttpResponse extends LowLevelHttpResponse {
+
+  private final HttpURLConnection connection;
+  private final int responseCode;
+  private final String responseMessage;
+  private final ArrayList<String> headerNames = new ArrayList<String>();
+  private final ArrayList<String> headerValues = new ArrayList<String>();
+
+  NetHttpResponse(HttpURLConnection connection) throws IOException {
+    this.connection = connection;
+    int responseCode = connection.getResponseCode();
+    this.responseCode = responseCode == -1 ? 0 : responseCode;
+    responseMessage = connection.getResponseMessage();
+    List<String> headerNames = this.headerNames;
+    List<String> headerValues = this.headerValues;
+    for (Map.Entry<String, List<String>> entry : connection.getHeaderFields().entrySet()) {
+      String key = entry.getKey();
+      if (key != null) {
+        for (String value : entry.getValue()) {
+          if (value != null) {
+            headerNames.add(key);
+            headerValues.add(value);
+          }
+        }
+      }
+    }
+  }
+
+  @Override
+  public int getStatusCode() {
+    return responseCode;
+  }
+
+  /**
+   * {@inheritDoc}
+   *
+   * <p>
+   * Returns {@link HttpURLConnection#getInputStream} when it doesn't throw {@link IOException},
+   * otherwise it returns {@link HttpURLConnection#getErrorStream}.
+   * </p>
+   *
+   * <p>
+   * Upgrade warning: in prior version 1.16 {@link #getContent()} returned
+   * {@link HttpURLConnection#getInputStream} only when the status code was successful. Starting
+   * with version 1.17 it returns {@link HttpURLConnection#getInputStream} when it doesn't throw
+   * {@link IOException}, otherwise it returns {@link HttpURLConnection#getErrorStream}
+   * </p>
+   */
+  @Override
+  public InputStream getContent() throws IOException {
+    try {
+      return connection.getInputStream();
+    } catch (IOException ioe) {
+      return connection.getErrorStream();
+    }
+  }
+
+  @Override
+  public String getContentEncoding() {
+    return connection.getContentEncoding();
+  }
+
+  @Override
+  public long getContentLength() {
+    String string = connection.getHeaderField("Content-Length");
+    return string == null ? -1 : Long.parseLong(string);
+  }
+
+  @Override
+  public String getContentType() {
+    return connection.getHeaderField("Content-Type");
+  }
+
+  @Override
+  public String getReasonPhrase() {
+    return responseMessage;
+  }
+
+  @Override
+  public String getStatusLine() {
+    String result = connection.getHeaderField(0);
+    return result != null && result.startsWith("HTTP/1.") ? result : null;
+  }
+
+  @Override
+  public int getHeaderCount() {
+    return headerNames.size();
+  }
+
+  @Override
+  public String getHeaderName(int index) {
+    return headerNames.get(index);
+  }
+
+  @Override
+  public String getHeaderValue(int index) {
+    return headerValues.get(index);
+  }
+
+  /**
+   * Closes the connection to the HTTP server.
+   *
+   * @since 1.4
+   */
+  @Override
+  public void disconnect() {
+    connection.disconnect();
+  }
+}
