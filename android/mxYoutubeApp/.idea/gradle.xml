@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/libraries/google/google-http-client" />
             <option value="$PROJECT_DIR$/libraries/google/google-oauth-client" />
             <option value="$PROJECT_DIR$/libraries/layers" />
+            <option value="$PROJECT_DIR$/libraries/layers/Business-Logic-Layer" />
             <option value="$PROJECT_DIR$/libraries/layers/google-api-services-youtube" />
           </set>
         </option>

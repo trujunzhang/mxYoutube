@@ -23,7 +23,7 @@ dependencies {
 apt {
     arguments {
         androidManifestFile variant.processResources.manifestFile
-        resourcePackageName 'eoe.wanghao.template'
+        resourcePackageName 'com.mxtube.app'
 
         // If you're using Android NBS flavors you should use the following line instead of hard-coded packageName
         // resourcePackageName android.defaultConfig.packageName

@@ -1,4 +1,4 @@
-package eoe.wanghao.template;
+package com.mxtube.app;
 
 import android.annotation.TargetApi;
 import android.app.Activity;

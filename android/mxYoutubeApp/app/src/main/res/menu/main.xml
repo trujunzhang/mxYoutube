@@ -1,5 +1,5 @@
 <menu
         xmlns:tools="http://schemas.android.com/tools"
-        tools:context="eoe.wanghao.template.MainActivity">
+        tools:context="com.mxtube.app.MainActivity">
 
 </menu>
