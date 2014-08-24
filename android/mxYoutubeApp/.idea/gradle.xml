@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../../macshare/SHARE/HomeBrew/Library/Gradle/Home" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/libraries" />
+            <option value="$PROJECT_DIR$/libraries/layers" />
+            <option value="$PROJECT_DIR$/libraries/layers/google-api-services-youtube" />
+            <option value="$PROJECT_DIR$/libraries/openprojects" />
+            <option value="$PROJECT_DIR$/libraries/openprojects/google-api-client" />
+            <option value="$PROJECT_DIR$/libraries/openprojects/google-http-client" />
+            <option value="$PROJECT_DIR$/libraries/openprojects/google-oauth-client" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
+
