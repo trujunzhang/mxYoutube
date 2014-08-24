@@ -5,6 +5,7 @@ include ':app'
 // ---------------------------
 include ':libraries:open:actionbarsherlock'
 include ':libraries:open:SlidingMenu'
+include ':libraries:open:GreenDroid'
 
 // ---------------------------
 //       google projects
