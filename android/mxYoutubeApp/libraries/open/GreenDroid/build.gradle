@@ -8,6 +8,10 @@ android {
         release {
         }
     }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
