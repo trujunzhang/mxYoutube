@@ -4,6 +4,7 @@ include ':app'
 //       open projects
 // ---------------------------
 include ':libraries:open:actionbarsherlock'
+include ':libraries:open:SlidingMenu'
 
 // ---------------------------
 //       google projects
