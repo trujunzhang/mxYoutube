@@ -17,13 +17,13 @@ public class MainActivity extends Activity {
 
 	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	@AfterInject
-	void calledAfterInjection() {
+    public void calledAfterInjection() {
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 	}
 
 	@AfterViews
-	protected void calledAfterViewInjection() {
+    public void calledAfterViewInjection() {
 		search();
 	}
 
