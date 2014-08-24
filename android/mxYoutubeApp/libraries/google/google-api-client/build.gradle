@@ -17,10 +17,9 @@ android {
 dependencies {
 
 //-------- v1.0
-    compile project(':libraries:openprojects:google-http-client')
+    compile project(':libraries:google:google-oauth-client')
 
 //-------- v2.0
 //    compile "com.google.http-client:google-http-client:1.18.0-rc"
-
 
 }

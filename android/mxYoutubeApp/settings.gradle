@@ -2,13 +2,13 @@ include ':app'
 
 // ....open projects ....
 // 0101. based library(all projects required it)
-include ':libraries:openprojects:google-http-client'
+include ':libraries:google:google-http-client'
 
 // 0102. dependencies:[n0101]
-include ':libraries:openprojects:google-oauth-client'
+include ':libraries:google:google-oauth-client'
 
 // 0103. dependencies:[n0102]
-include ':libraries:openprojects:google-api-client'
+include ':libraries:google:google-api-client'
 
 // .... layers projects ....
 // 0301. dependencies:[n0102]

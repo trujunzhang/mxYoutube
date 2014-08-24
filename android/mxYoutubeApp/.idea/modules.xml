@@ -3,14 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/openprojects/google-api-client/google-api-client.iml" filepath="$PROJECT_DIR$/libraries/openprojects/google-api-client/google-api-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/google/google.iml" filepath="$PROJECT_DIR$/libraries/google/google.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/google/google-api-client/google-api-client.iml" filepath="$PROJECT_DIR$/libraries/google/google-api-client/google-api-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/layers/google-api-services-youtube/google-api-services-youtube.iml" filepath="$PROJECT_DIR$/libraries/layers/google-api-services-youtube/google-api-services-youtube.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/openprojects/google-http-client/google-http-client.iml" filepath="$PROJECT_DIR$/libraries/openprojects/google-http-client/google-http-client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/openprojects/google-oauth-client/google-oauth-client.iml" filepath="$PROJECT_DIR$/libraries/openprojects/google-oauth-client/google-oauth-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/google/google-http-client/google-http-client.iml" filepath="$PROJECT_DIR$/libraries/google/google-http-client/google-http-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/google/google-oauth-client/google-oauth-client.iml" filepath="$PROJECT_DIR$/libraries/google/google-oauth-client/google-oauth-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/layers/layers.iml" filepath="$PROJECT_DIR$/libraries/layers/layers.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
       <module fileurl="file://$PROJECT_DIR$/mxYoutubeApp.iml" filepath="$PROJECT_DIR$/mxYoutubeApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/openprojects/openprojects.iml" filepath="$PROJECT_DIR$/libraries/openprojects/openprojects.iml" />
     </modules>
   </component>
 </project>
