@@ -16,7 +16,14 @@ dependencies {
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
 
-//    compile 'com.android.support:appcompat-v7:19.+'
+//-------- v1.0
+    compile project(':libraries:open:actionbarsherlock');
+
+
+    compile project(':libraries:open:SlidingMenu');
+
+
+    compile project(':libraries:open:GreenDroid');
 
 }
 
@@ -49,5 +56,9 @@ android {
     buildTypes {
         release {
         }
+    }
+
+    lintOptions {
+        abortOnError false
     }
 }

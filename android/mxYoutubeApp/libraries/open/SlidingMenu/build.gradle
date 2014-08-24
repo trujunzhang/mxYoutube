@@ -17,10 +17,9 @@ android {
 dependencies {
 
 //-------- v1.0
-    compile project(':libraries:google:google-http-client')
+    compile 'com.android.support:support-v4:+'
 
 //-------- v2.0
-//    compile "com.google.http-client:google-http-client:1.18.0-rc"
 
 
 }
