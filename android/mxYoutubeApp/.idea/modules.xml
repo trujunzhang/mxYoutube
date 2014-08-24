@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/libraries/layers/Business-Logic-Layer/Business-Logic-Layer.iml" filepath="$PROJECT_DIR$/libraries/layers/Business-Logic-Layer/Business-Logic-Layer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/open/actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/libraries/open/actionbarsherlock/actionbarsherlock.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/google/google.iml" filepath="$PROJECT_DIR$/libraries/google/google.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/google/google-api-client/google-api-client.iml" filepath="$PROJECT_DIR$/libraries/google/google-api-client/google-api-client.iml" />
@@ -12,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/libraries/layers/layers.iml" filepath="$PROJECT_DIR$/libraries/layers/layers.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
       <module fileurl="file://$PROJECT_DIR$/mxYoutubeApp.iml" filepath="$PROJECT_DIR$/mxYoutubeApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/open/open.iml" filepath="$PROJECT_DIR$/libraries/open/open.iml" />
     </modules>
   </component>
 </project>

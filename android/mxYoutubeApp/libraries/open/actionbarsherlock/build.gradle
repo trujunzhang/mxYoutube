@@ -1,0 +1,30 @@
+apply plugin: 'android-library'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 19
+    }
+    buildTypes {
+        release {
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+
+//-------- v1.0
+    compile 'com.android.support:support-v4:+'
+
+//-------- v2.0
+//    compile "com.google.http-client:google-http-client:1.18.0-rc"
+
+
+}

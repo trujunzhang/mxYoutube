@@ -1,6 +1,13 @@
 include ':app'
 
-// ....open projects ....
+// ---------------------------
+//       open projects
+// ---------------------------
+include ':libraries:open:actionbarsherlock'
+
+// ---------------------------
+//       google projects
+// ---------------------------
 // 0101. based library(all projects required it)
 include ':libraries:google:google-http-client'
 

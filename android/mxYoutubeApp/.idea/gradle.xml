@@ -18,6 +18,8 @@
             <option value="$PROJECT_DIR$/libraries/layers" />
             <option value="$PROJECT_DIR$/libraries/layers/Business-Logic-Layer" />
             <option value="$PROJECT_DIR$/libraries/layers/google-api-services-youtube" />
+            <option value="$PROJECT_DIR$/libraries/open" />
+            <option value="$PROJECT_DIR$/libraries/open/actionbarsherlock" />
           </set>
         </option>
       </GradleProjectSettings>
