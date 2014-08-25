@@ -23,6 +23,12 @@
             <option value="$PROJECT_DIR$/libraries/open/SlidingMenu" />
             <option value="$PROJECT_DIR$/libraries/open/actionbarsherlock" />
             <option value="$PROJECT_DIR$/libraries/openexamples" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/actionbarsherlockexample" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/actionbarsherlockexample/demos" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/actionbarsherlockexample/fragments" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/actionbarsherlockexample/known-bugs" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/actionbarsherlockexample/roboguice" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/actionbarsherlockexample/styled" />
             <option value="$PROJECT_DIR$/libraries/openexamples/slidingmenuexample" />
           </set>
         </option>

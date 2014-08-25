@@ -10,7 +10,11 @@ include ':libraries:open:GreenDroid'
 // ---------------------------
 //       open project examples
 // ---------------------------
-//include ':libraries:openexamples:actionbarsherlock'
+include ':libraries:openexamples:actionbarsherlockexample:demos'
+include ':libraries:openexamples:actionbarsherlockexample:fragments'
+include ':libraries:openexamples:actionbarsherlockexample:known-bugs'
+include ':libraries:openexamples:actionbarsherlockexample:roboguice'
+include ':libraries:openexamples:actionbarsherlockexample:styled'
 include ':libraries:openexamples:slidingmenuexample'
 //include ':libraries:openexamples:GreenDroid'
 
