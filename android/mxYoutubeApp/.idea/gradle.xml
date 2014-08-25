@@ -22,6 +22,8 @@
             <option value="$PROJECT_DIR$/libraries/open/GreenDroid" />
             <option value="$PROJECT_DIR$/libraries/open/SlidingMenu" />
             <option value="$PROJECT_DIR$/libraries/open/actionbarsherlock" />
+            <option value="$PROJECT_DIR$/libraries/openexamples" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/slidingmenuexample" />
           </set>
         </option>
       </GradleProjectSettings>

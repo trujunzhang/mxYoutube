@@ -16,6 +16,10 @@
       <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
       <module fileurl="file://$PROJECT_DIR$/mxYoutubeApp.iml" filepath="$PROJECT_DIR$/mxYoutubeApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/open.iml" filepath="$PROJECT_DIR$/libraries/open/open.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/openexamples.iml" filepath="$PROJECT_DIR$/libraries/openexamples/openexamples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openexamples/openexamples.iml" filepath="$PROJECT_DIR$/openexamples/openexamples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/slidingmenuexample/slidingmenuexample.iml" filepath="$PROJECT_DIR$/libraries/openexamples/slidingmenuexample/slidingmenuexample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openexamples/slidingmenuexample/slidingmenuexample.iml" filepath="$PROJECT_DIR$/openexamples/slidingmenuexample/slidingmenuexample.iml" />
     </modules>
   </component>
 </project>

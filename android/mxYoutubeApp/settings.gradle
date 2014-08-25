@@ -8,6 +8,13 @@ include ':libraries:open:SlidingMenu'
 include ':libraries:open:GreenDroid'
 
 // ---------------------------
+//       open project examples
+// ---------------------------
+//include ':libraries:openexamples:actionbarsherlock'
+include ':libraries:openexamples:slidingmenuexample'
+//include ':libraries:openexamples:GreenDroid'
+
+// ---------------------------
 //       google projects
 // ---------------------------
 // 0101. based library(all projects required it)
@@ -22,7 +29,6 @@ include ':libraries:google:google-api-client'
 // .... layers projects ....
 // 0301. dependencies:[n0102]
 include ':libraries:layers:google-api-services-youtube'
-
 
 include ':libraries:layers:Business-Logic-Layer'
 
