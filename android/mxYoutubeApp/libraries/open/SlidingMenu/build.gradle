@@ -12,14 +12,19 @@ android {
         release {
         }
     }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
 
 //-------- v1.0
+    compile project(':libraries:open:actionbarsherlock');
     compile 'com.android.support:support-v4:+'
 
 //-------- v2.0
-
+//    compile 'com.android.support:appcompat-v7:19.+'
 
 }
