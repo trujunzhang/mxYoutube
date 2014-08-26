@@ -6,6 +6,7 @@ include ':app'
 include ':libraries:open:actionbarsherlock'
 include ':libraries:open:SlidingMenu'
 include ':libraries:open:GreenDroid'
+include ':libraries:open:Android-ViewPagerIndicator'
 
 // ---------------------------
 //       open project examples
@@ -15,6 +16,8 @@ include ':libraries:openexamples:actionbarsherlockexample:fragments'
 include ':libraries:openexamples:actionbarsherlockexample:known-bugs'
 include ':libraries:openexamples:actionbarsherlockexample:roboguice'
 include ':libraries:openexamples:actionbarsherlockexample:styled'
+include ':libraries:openexamples:androidviewpagerindicatorexample:Android-ViewPagerIndicator-Examples'
+include ':libraries:openexamples:androidviewpagerindicatorexample:vpi-abs-demo'
 include ':libraries:openexamples:slidingmenuexample'
 //include ':libraries:openexamples:GreenDroid'
 

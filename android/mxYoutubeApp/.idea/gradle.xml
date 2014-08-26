@@ -19,6 +19,7 @@
             <option value="$PROJECT_DIR$/libraries/layers/Business-Logic-Layer" />
             <option value="$PROJECT_DIR$/libraries/layers/google-api-services-youtube" />
             <option value="$PROJECT_DIR$/libraries/open" />
+            <option value="$PROJECT_DIR$/libraries/open/Android-ViewPagerIndicator" />
             <option value="$PROJECT_DIR$/libraries/open/GreenDroid" />
             <option value="$PROJECT_DIR$/libraries/open/SlidingMenu" />
             <option value="$PROJECT_DIR$/libraries/open/actionbarsherlock" />
@@ -29,6 +30,9 @@
             <option value="$PROJECT_DIR$/libraries/openexamples/actionbarsherlockexample/known-bugs" />
             <option value="$PROJECT_DIR$/libraries/openexamples/actionbarsherlockexample/roboguice" />
             <option value="$PROJECT_DIR$/libraries/openexamples/actionbarsherlockexample/styled" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/androidviewpagerindicatorexample" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/androidviewpagerindicatorexample/Android-ViewPagerIndicator-Examples" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/androidviewpagerindicatorexample/vpi-abs-demo" />
             <option value="$PROJECT_DIR$/libraries/openexamples/slidingmenuexample" />
           </set>
         </option>
