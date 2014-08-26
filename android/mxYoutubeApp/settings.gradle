@@ -19,7 +19,7 @@ include ':libraries:openexamples:actionbarsherlockexample:styled'
 include ':libraries:openexamples:androidviewpagerindicatorexample:Android-ViewPagerIndicator-Examples'
 include ':libraries:openexamples:androidviewpagerindicatorexample:vpi-abs-demo'
 include ':libraries:openexamples:slidingmenuexample'
-//include ':libraries:openexamples:GreenDroid'
+include ':libraries:openexamples:greendroidexample'
 
 // ---------------------------
 //       google projects

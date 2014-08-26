@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/libraries/layers/google-api-services-youtube/google-api-services-youtube.iml" filepath="$PROJECT_DIR$/libraries/layers/google-api-services-youtube/google-api-services-youtube.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/google/google-http-client/google-http-client.iml" filepath="$PROJECT_DIR$/libraries/google/google-http-client/google-http-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/google/google-oauth-client/google-oauth-client.iml" filepath="$PROJECT_DIR$/libraries/google/google-oauth-client/google-oauth-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/greendroidexample/greendroidexample.iml" filepath="$PROJECT_DIR$/libraries/openexamples/greendroidexample/greendroidexample.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/actionbarsherlockexample/known-bugs/known-bugs.iml" filepath="$PROJECT_DIR$/libraries/openexamples/actionbarsherlockexample/known-bugs/known-bugs.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/layers/layers.iml" filepath="$PROJECT_DIR$/libraries/layers/layers.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
