@@ -18,12 +18,9 @@ dependencies {
 
 //-------- v1.0
     compile project(':libraries:open:actionbarsherlock');
-
-
     compile project(':libraries:open:SlidingMenu');
-
-
     compile project(':libraries:open:GreenDroid');
+    compile project(':libraries:collect:AndroidCommon');
 
 }
 

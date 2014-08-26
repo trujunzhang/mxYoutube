@@ -1,6 +1,16 @@
 include ':app'
 
 // ---------------------------
+//       Enterprise app layer libraries
+// ---------------------------
+include ':libraries:layers:Business-Logic-Layer'
+
+// ---------------------------
+//       my collection libraries
+// ---------------------------
+include ':libraries:collect:AndroidCommon'
+
+// ---------------------------
 //       open projects
 // ---------------------------
 include ':libraries:open:actionbarsherlock'
@@ -11,33 +21,31 @@ include ':libraries:open:Android-ViewPagerIndicator'
 // ---------------------------
 //       open project examples
 // ---------------------------
-include ':libraries:openexamples:actionbarsherlockexample:demos'
-include ':libraries:openexamples:actionbarsherlockexample:fragments'
-include ':libraries:openexamples:actionbarsherlockexample:known-bugs'
-include ':libraries:openexamples:actionbarsherlockexample:roboguice'
-include ':libraries:openexamples:actionbarsherlockexample:styled'
-include ':libraries:openexamples:androidviewpagerindicatorexample:Android-ViewPagerIndicator-Examples'
-include ':libraries:openexamples:androidviewpagerindicatorexample:vpi-abs-demo'
-include ':libraries:openexamples:slidingmenuexample'
-include ':libraries:openexamples:greendroidexample'
+//include ':libraries:openexamples:actionbarsherlockexample:demos'
+//include ':libraries:openexamples:actionbarsherlockexample:fragments'
+//include ':libraries:openexamples:actionbarsherlockexample:known-bugs'
+//include ':libraries:openexamples:actionbarsherlockexample:roboguice'
+//include ':libraries:openexamples:actionbarsherlockexample:styled'
+//include ':libraries:openexamples:androidviewpagerindicatorexample:Android-ViewPagerIndicator-Examples'
+//include ':libraries:openexamples:androidviewpagerindicatorexample:vpi-abs-demo'
+//include ':libraries:openexamples:slidingmenuexample'
+//include ':libraries:openexamples:greendroidexample'
 
 // ---------------------------
 //       google projects
 // ---------------------------
 // 0101. based library(all projects required it)
-include ':libraries:google:google-http-client'
+//include ':libraries:google:google-http-client'
 
 // 0102. dependencies:[n0101]
-include ':libraries:google:google-oauth-client'
+//include ':libraries:google:google-oauth-client'
 
 // 0103. dependencies:[n0102]
-include ':libraries:google:google-api-client'
+//include ':libraries:google:google-api-client'
 
 // .... layers projects ....
-// 0301. dependencies:[n0102]
+//0301. dependencies:[n0102]
 include ':libraries:layers:google-api-services-youtube'
-
-include ':libraries:layers:Business-Logic-Layer'
 
 
 
