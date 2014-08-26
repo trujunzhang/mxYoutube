@@ -20,6 +20,7 @@
 
     <application
             android:allowBackup="true"
+            android:name=".AppContext_"
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name">
         <activity
