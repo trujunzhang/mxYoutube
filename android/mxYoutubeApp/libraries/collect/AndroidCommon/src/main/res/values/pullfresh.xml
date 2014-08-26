@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="qzone_pull_to_refresh_pull_label">下拉可以刷新</string>
+    <string name="qzone_pull_to_refresh_release_label">松开即可刷新</string>
+    <string name="qzone_pull_to_refresh_refreshing_label">正在刷新</string>
+    <string name="qzone_pull_refresh_succeed">刷新成功</string>
+    <string name="qzone_pull_refresh_failed">刷新失败</string>
+    <string name="qzone_pull_refresh_myfeed_empty_tip">没有动态</string>
+
+    <string name="pull_to_refresh_pull_label">Pull to refresh...</string>
+    <string name="pull_to_refresh_release_label">Release to refresh...</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
+
+    <string name="pull_to_refresh_from_bottom_pull_label">上拉刷新</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/qzone_pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/qzone_pull_to_refresh_refreshing_label</string>
+
+</resources>
