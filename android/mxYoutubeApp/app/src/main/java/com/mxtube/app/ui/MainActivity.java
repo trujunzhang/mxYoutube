@@ -1,29 +1,33 @@
-package com.mxtube.app;
+package com.mxtube.app.ui;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.os.Build;
 import android.os.StrictMode;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.example.api.Search;
-import org.androidannotations.annotations.AfterInject;
-import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.UiThread;
+import com.mxtube.app.R;
+import org.androidannotations.annotations.*;
 
 import java.io.InputStream;
 
 @EActivity(R.layout.activity_main)
-public class MainActivity extends Activity {
+public class MainActivity extends SherlockFragmentActivity {
+
+	// @App
+	// public AppContext appContext;
+
+	@FragmentById(R.id.fragment_footer_tab)
+	MainFooterFragment fragmentFooterTab;
 
 	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	@AfterInject
-    public void calledAfterInjection() {
+	public void calledAfterInjection() {
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 	}
 
 	@AfterViews
-    public void calledAfterViewInjection() {
+	public void calledAfterViewInjection() {
 		search();
 	}
 
