@@ -5,32 +5,42 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
         >
-
+    <!--line-01:[thumbnails,duration]-->
     <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="400dp"
-            android:background="@color/solid_red"
-            >
-        <ImageView android:layout_width="fill_parent"
-                   android:layout_height="fill_parent"
-                   android:src="@drawable/background"
-                   android:scaleType="fitXY"/>
+            android:layout_height="200dp"
+            android:background="@color/solid_blue">
 
-        <ImageView android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_alignParentBottom="true"
-                   android:layout_alignParentRight="true"/>
+        <ImageView
+                android:id="@+id/thumbnails"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"/>
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentBottom="true"
+                      android:layout_alignParentRight="true"
+                      android:background="@color/duration_background">
+            <TextView
+                    android:id="@+id/duration"
+                    android:text="12:00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
     </RelativeLayout>
-
-    <!--line-01:[cover,time]-->
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content">
-
-    </LinearLayout>
 
     <!--line-02:[title]-->
     <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content">
+                  android:layout_height="wrap_content"
+                  android:background="@color/solid_red">
+        <TextView
+                android:id="@+id/title"
+                android:text="Sony Vegas Pro 13 - Tutorial for Beginners [COMPLETE]"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="4dp"
+                android:textSize="22dp" android:maxLines="2"/>
     </LinearLayout>
 
     <!--line-03:[rating and statistics]-->
@@ -43,4 +53,22 @@
                   android:layout_height="wrap_content">
     </LinearLayout>
 
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:visibility="gone"
+            >
+        <ImageView
+                android:id="@+id/thumbnails123"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/background"
+                android:scaleType="fitXY"/>
+
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/subscribe"
+                   android:layout_alignParentBottom="true"
+                   android:layout_alignParentRight="true"/>
+    </RelativeLayout>
 </LinearLayout>
