@@ -5,4 +5,25 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <!--line-01:[cover,time]-->
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+        
+    </LinearLayout>
+
+    <!--line-02:[title]-->
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+    </LinearLayout>
+
+    <!--line-03:[rating and statistics]-->
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+    </LinearLayout>
+
+    <!--line-04:[user]-->
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+    </LinearLayout>
+
 </LinearLayout>
