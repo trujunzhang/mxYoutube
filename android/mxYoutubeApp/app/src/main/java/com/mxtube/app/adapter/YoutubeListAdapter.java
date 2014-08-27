@@ -11,12 +11,18 @@ import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.EBean;
 import org.androidannotations.annotations.RootContext;
 
+import java.util.Collections;
 import java.util.List;
 
 @EBean
 public class YoutubeListAdapter extends BaseAdapter {
 
-	private List<SearchResult> persons;
+	private List<SearchResult> youtubeList = Collections.emptyList();
+
+	public void updateSearchResult(List<SearchResult> bananaPhones) {
+		this.youtubeList = bananaPhones;
+		notifyDataSetChanged();
+	}
 
 	@RootContext
 	Context context;
@@ -36,19 +42,19 @@ public class YoutubeListAdapter extends BaseAdapter {
 			youtubeItemView = (YoutubeItemView) convertView;
 		}
 
-		// youtubeItemView.bind(getItem(position));
+		youtubeItemView.bind(getItem(position));
 
 		return youtubeItemView;
 	}
 
 	@Override
 	public int getCount() {
-		return persons.size();
+		return youtubeList.size();
 	}
 
 	@Override
 	public SearchResult getItem(int position) {
-		return persons.get(position);
+		return youtubeList.get(position);
 	}
 
 	@Override

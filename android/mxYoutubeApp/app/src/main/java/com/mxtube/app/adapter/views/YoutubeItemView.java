@@ -3,6 +3,7 @@ package com.mxtube.app.adapter.views;
 
 import android.content.Context;
 import android.widget.LinearLayout;
+import com.google.api.services.youtube.model.SearchResult;
 import com.mxtube.app.R;
 import org.androidannotations.annotations.EViewGroup;
 
@@ -19,8 +20,8 @@ public class YoutubeItemView extends LinearLayout {
         super(context);
     }
 
-	// public void bind(Person person) {
+	public void bind(SearchResult person) {
 	// firstNameView.setText(person.firstName);
 	// lastNameView.setText(person.lastName);
-	// }
+	}
 }
