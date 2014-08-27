@@ -4,6 +4,7 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/solid_white"
         >
     <!--line-01:[thumbnails,duration]-->
     <RelativeLayout
@@ -39,18 +40,57 @@
                 android:id="@+id/title"
                 android:text="Sony Vegas Pro 13 - Tutorial for Beginners [COMPLETE]"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
                 android:textSize="22dp" android:maxLines="2"/>
     </LinearLayout>
 
     <!--line-03:[rating and statistics]-->
     <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content">
+                  android:layout_height="wrap_content"
+                  android:background="@color/solid_blue"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginBottom="8dp">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mt_video_rating_count"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"/>
+        <TextView
+                android:id="@+id/rating"
+                android:text="100%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="22dp"
+                android:maxLines="2"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mt_video_view_count"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="10dp"/>
+        <TextView
+                android:id="@+id/viewCount"
+                android:text="117"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="22dp"
+                android:maxLines="2"/>
     </LinearLayout>
 
     <!--line-04:[user]-->
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content">
+        
     </LinearLayout>
 
     <RelativeLayout
