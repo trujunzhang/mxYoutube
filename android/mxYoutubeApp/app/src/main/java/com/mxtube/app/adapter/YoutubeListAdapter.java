@@ -1,58 +1,58 @@
 package com.mxtube.app.adapter;
 
-
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import com.google.api.services.youtube.model.SearchResult;
+import com.mxtube.app.adapter.views.YoutubeItemView;
+import com.mxtube.app.adapter.views.YoutubeItemView_;
 import org.androidannotations.annotations.AfterInject;
-import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EBean;
 import org.androidannotations.annotations.RootContext;
+
+import java.util.List;
 
 @EBean
 public class YoutubeListAdapter extends BaseAdapter {
 
-    List<Person> persons;
+	private List<SearchResult> persons;
 
-    @Bean(InMemoryPersonFinder.class)
-    PersonFinder personFinder;
+	@RootContext
+	Context context;
 
-    @RootContext
-    Context context;
+	@AfterInject
+	void initAdapter() {
 
-    @AfterInject
-    void initAdapter() {
-        persons = personFinder.findAll();
-    }
+	}
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
 
-        YoutubeItemView personItemView;
-        if (convertView == null) {
-            personItemView = YoutubeItemView_.build(context);
-        } else {
-            personItemView = (personItemView) convertView;
-        }
+		YoutubeItemView youtubeItemView;
+		if (convertView == null) {
+			youtubeItemView = YoutubeItemView_.build(context);
+		} else {
+			youtubeItemView = (YoutubeItemView) convertView;
+		}
 
-//        personItemView.bind(getItem(position));
+		// youtubeItemView.bind(getItem(position));
 
-        return personItemView;
-    }
+		return youtubeItemView;
+	}
 
-    @Override
-    public int getCount() {
-        return persons.size();
-    }
+	@Override
+	public int getCount() {
+		return persons.size();
+	}
 
-    @Override
-    public Person getItem(int position) {
-        return persons.get(position);
-    }
+	@Override
+	public SearchResult getItem(int position) {
+		return persons.get(position);
+	}
 
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
 }
