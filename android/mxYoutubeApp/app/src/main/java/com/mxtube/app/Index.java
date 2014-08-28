@@ -1,9 +1,10 @@
-package com.mxtube.app.ui;
+package com.mxtube.app;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.example.api.Search;
 import com.mxtube.app.AppContext;
 import com.mxtube.app.R;
+import com.mxtube.app.ui.Footer;
 import org.androidannotations.annotations.*;
 
 import java.io.InputStream;
@@ -15,7 +16,7 @@ public class Index extends SherlockFragmentActivity {
 	public AppContext appContext;
 
 	@FragmentById(R.id.fragment_footer_tab)
-	Footer fragmentFooterTab;
+    Footer fragmentFooterTab;
 
 	@AfterInject
 	public void calledAfterInjection() {
