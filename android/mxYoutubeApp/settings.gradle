@@ -40,7 +40,7 @@ include ':libraries:open:cwac-endless'
 //include ':libraries:openexamples:smoothieexample:bitmap-cache'
 //include ':libraries:openexamples:smoothieexample:gallery'
 // ..........cwac-endless
-include ':libraries:openexamples:cwac-endless-example'
+include ':libraries:openexamples:cwac-endless'
 
 // ---------------------------
 //       google projects
