@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EndlessAdapter Demo</string>
+    <string name="app_name2">Endless Exception Demo</string>
+    <string name="app_name3">EndlessAdapter Fragment Demo</string>
+    <string name="simple">Simple</string>
+    <string name="custom">Custom Task</string>
+</resources>

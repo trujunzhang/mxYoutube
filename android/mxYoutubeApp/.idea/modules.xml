@@ -2,24 +2,21 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/libraries/open/Android-ViewPagerIndicator/Android-ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/libraries/open/Android-ViewPagerIndicator/Android-ViewPagerIndicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/collect/AndroidCommon/AndroidCommon.iml" filepath="$PROJECT_DIR$/libraries/collect/AndroidCommon/AndroidCommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/layers/Business-Logic-Layer/Business-Logic-Layer.iml" filepath="$PROJECT_DIR$/libraries/layers/Business-Logic-Layer/Business-Logic-Layer.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/GreenDroid/GreenDroid.iml" filepath="$PROJECT_DIR$/libraries/open/GreenDroid/GreenDroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/SlidingMenu/SlidingMenu.iml" filepath="$PROJECT_DIR$/libraries/open/SlidingMenu/SlidingMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/libraries/open/actionbarsherlock/actionbarsherlock.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/smoothieexample/bitmap-cache/bitmap-cache.iml" filepath="$PROJECT_DIR$/libraries/openexamples/smoothieexample/bitmap-cache/bitmap-cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/collect/collect.iml" filepath="$PROJECT_DIR$/libraries/collect/collect.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/smoothieexample/gallery/gallery.iml" filepath="$PROJECT_DIR$/libraries/openexamples/smoothieexample/gallery/gallery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/open/cwac-endless/cwac-endless.iml" filepath="$PROJECT_DIR$/libraries/open/cwac-endless/cwac-endless.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/cwac-endless-example/cwac-endless-example.iml" filepath="$PROJECT_DIR$/libraries/openexamples/cwac-endless-example/cwac-endless-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/layers/google-api-services-youtube/google-api-services-youtube.iml" filepath="$PROJECT_DIR$/libraries/layers/google-api-services-youtube/google-api-services-youtube.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/layers/layers.iml" filepath="$PROJECT_DIR$/libraries/layers/layers.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
       <module fileurl="file://$PROJECT_DIR$/mxYoutubeApp.iml" filepath="$PROJECT_DIR$/mxYoutubeApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/open.iml" filepath="$PROJECT_DIR$/libraries/open/open.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/openexamples.iml" filepath="$PROJECT_DIR$/libraries/openexamples/openexamples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/open/smoothie/smoothie.iml" filepath="$PROJECT_DIR$/libraries/open/smoothie/smoothie.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/smoothieexample/smoothieexample.iml" filepath="$PROJECT_DIR$/libraries/openexamples/smoothieexample/smoothieexample.iml" />
     </modules>
   </component>
 </project>

@@ -17,15 +17,12 @@
             <option value="$PROJECT_DIR$/libraries/layers/Business-Logic-Layer" />
             <option value="$PROJECT_DIR$/libraries/layers/google-api-services-youtube" />
             <option value="$PROJECT_DIR$/libraries/open" />
-            <option value="$PROJECT_DIR$/libraries/open/Android-ViewPagerIndicator" />
             <option value="$PROJECT_DIR$/libraries/open/GreenDroid" />
             <option value="$PROJECT_DIR$/libraries/open/SlidingMenu" />
             <option value="$PROJECT_DIR$/libraries/open/actionbarsherlock" />
-            <option value="$PROJECT_DIR$/libraries/open/smoothie" />
+            <option value="$PROJECT_DIR$/libraries/open/cwac-endless" />
             <option value="$PROJECT_DIR$/libraries/openexamples" />
-            <option value="$PROJECT_DIR$/libraries/openexamples/smoothieexample" />
-            <option value="$PROJECT_DIR$/libraries/openexamples/smoothieexample/bitmap-cache" />
-            <option value="$PROJECT_DIR$/libraries/openexamples/smoothieexample/gallery" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/cwac-endless-example" />
           </set>
         </option>
       </GradleProjectSettings>
