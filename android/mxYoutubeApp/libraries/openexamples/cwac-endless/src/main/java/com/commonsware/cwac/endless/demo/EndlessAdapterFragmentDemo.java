@@ -20,64 +20,62 @@ import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 
-public class EndlessAdapterFragmentDemo extends Activity implements
-    ActionBar.TabListener {
-  private EndlessAdapterFragment simple=null;
-  private EndlessAdapterCustomTaskFragment customTask=null;
+public class EndlessAdapterFragmentDemo extends Activity implements ActionBar.TabListener {
+	private EndlessAdapterFragment simple = null;
+	private EndlessAdapterCustomTaskFragment customTask = null;
 
-  @Override
-  public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 
-    ActionBar bar=getActionBar();
+		ActionBar bar = getActionBar();
 
-    bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-    bar.addTab(bar.newTab().setText(R.string.simple)
-                  .setTabListener(this).setTag(Tabs.TAB_SIMPLE));
-    bar.addTab(bar.newTab().setText(R.string.custom)
-                  .setTabListener(this).setTag(Tabs.TAB_CUSTOM_TASK));
-  }
+		bar.addTab(bar.newTab().setText(R.string.simple).setTabListener(this).setTag(Tabs.TAB_SIMPLE));
+		bar.addTab(bar.newTab().setText(R.string.custom).setTabListener(this).setTag(Tabs.TAB_CUSTOM_TASK));
+	}
 
-  @Override
-  public void onTabReselected(Tab tab, FragmentTransaction ft) {
-    onTabSelected(tab, ft);
-  }
+	@Override
+	public void onTabReselected(Tab tab, FragmentTransaction ft) {
+		onTabSelected(tab, ft);
+	}
 
-  @Override
-  public void onTabSelected(Tab tab, FragmentTransaction ft) {
-    switch ((Tabs)tab.getTag()) {
-      case TAB_SIMPLE:
-        showSimple(ft);
-        break;
-      case TAB_CUSTOM_TASK:
-        showCustom(ft);
-        break;
-    }
-  }
+	@Override
+	public void onTabSelected(Tab tab, FragmentTransaction ft) {
+		switch ((Tabs) tab.getTag()) {
+		case TAB_SIMPLE:
+			showSimple(ft);
+			break;
+		case TAB_CUSTOM_TASK:
+			showCustom(ft);
+			break;
+		}
+	}
 
-  @Override
-  public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-    // no-op
-  }
+	@Override
+	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+		// no-op
+	}
 
-  private void showSimple(FragmentTransaction ft) {
-    if (simple == null) {
-      simple=new EndlessAdapterFragment();
-    }
+	private void showSimple(FragmentTransaction ft) {
+		if (simple == null) {
+			simple = new EndlessAdapterFragment();
+		}
 
-    ft.replace(android.R.id.content, simple);
-  }
+		ft.replace(android.R.id.content, simple);
+	}
 
-  private void showCustom(FragmentTransaction ft) {
-    if (customTask == null) {
-      customTask=new EndlessAdapterCustomTaskFragment();
-    }
+	private void showCustom(FragmentTransaction ft) {
+		if (customTask == null) {
+			customTask = new EndlessAdapterCustomTaskFragment();
+		}
 
-    ft.replace(android.R.id.content, customTask);
-  }
+		ft.replace(android.R.id.content, customTask);
+	}
 
-  private static enum Tabs {
-    TAB_SIMPLE, TAB_CUSTOM_TASK;
-  }
+	private static enum Tabs {
+		TAB_SIMPLE,
+		TAB_CUSTOM_TASK;
+	}
 }
