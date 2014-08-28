@@ -3,6 +3,7 @@ package com.mxtube.app.ui.single;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.example.api.Search;
 import com.google.api.services.youtube.model.SearchResult;
+import com.mxtube.app.AppContext;
 import com.mxtube.app.R;
 
 import java.io.InputStream;
@@ -18,4 +19,7 @@ public abstract class Single extends SherlockFragment {
 
 	public abstract void initSingle();
 
+	public void setTitle(String title) {
+		AppContext.instance.index.setTitle(title);
+	}
 }

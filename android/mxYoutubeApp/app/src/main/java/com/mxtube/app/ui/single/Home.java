@@ -18,6 +18,7 @@ public class Home extends Single {
 
 	@AfterInject
 	void calledAfterInjection() {
+		this.setTitle("Subscriptions");
 		this.getYoutubeInBackground();
 	}
 
@@ -43,8 +44,8 @@ public class Home extends Single {
 		gridView.setAdapter(adapter);
 	}
 
-    @Override
-    public void initSingle() {
+	@Override
+	public void initSingle() {
 
-    }
+	}
 }

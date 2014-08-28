@@ -1,6 +1,5 @@
 package com.mxtube.app;
 
-import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.mxtube.app.ui.Footer;
 import org.androidannotations.annotations.*;
@@ -16,11 +15,11 @@ public class Index extends SherlockFragmentActivity {
 
 	@AfterInject
 	public void calledAfterInjection() {
+		appContext.index = this;
 	}
 
 	@AfterViews
 	public void calledAfterViewInjection() {
-		setTitle("Subscriptions");
 	}
 
 }
