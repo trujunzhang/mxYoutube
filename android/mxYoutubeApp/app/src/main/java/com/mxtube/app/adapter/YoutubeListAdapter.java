@@ -44,7 +44,7 @@ public class YoutubeListAdapter extends BaseAdapter {
 			youtubeItemView = (YoutubeItemView) convertView;
 		}
 
-		youtubeItemView.bind(getItem(position));
+		youtubeItemView.bind(context, getItem(position));
 
 		return youtubeItemView;
 	}

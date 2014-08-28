@@ -6,6 +6,7 @@ import com.google.api.services.youtube.model.ResourceId;
 import com.google.api.services.youtube.model.SearchResult;
 import com.google.api.services.youtube.model.Thumbnail;
 import com.mxtube.app.R;
+import com.squareup.picasso.Picasso;
 import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
@@ -26,7 +27,7 @@ public class YoutubeItemView extends LinearLayout {
 		super(context);
 	}
 
-	public void bind(SearchResult singleVideo) {
+	public void bind(Context context, SearchResult singleVideo) {
 		ResourceId rId = singleVideo.getId();
 
 		// Confirm that the result represents a video. Otherwise, the
@@ -39,8 +40,10 @@ public class YoutubeItemView extends LinearLayout {
 			System.out.println(" Title: " + singleVideo.getSnippet().getTitle());
 			System.out.println(" Thumbnail: " + thumbnail.getUrl());
 			System.out.println("\n-------------------------------------------------------------\n");
+
+			title.setText(singleVideo.getSnippet().getTitle());
+			Picasso.with(context).load(thumbnail.getUrl()).into(thumbnails);
 		}
-		title.setText(singleVideo.getSnippet().getTitle());
 
 		// firstNameView.setText(result.firstName);
 		// lastNameView.setText(result.lastName);
