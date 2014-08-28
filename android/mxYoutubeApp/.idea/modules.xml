@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
       <module fileurl="file://$PROJECT_DIR$/mxYoutubeApp.iml" filepath="$PROJECT_DIR$/mxYoutubeApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/open.iml" filepath="$PROJECT_DIR$/libraries/open/open.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/open/smoothie/smoothie.iml" filepath="$PROJECT_DIR$/libraries/open/smoothie/smoothie.iml" />
     </modules>
   </component>
 </project>

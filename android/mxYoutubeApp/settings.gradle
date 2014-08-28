@@ -17,6 +17,7 @@ include ':libraries:open:actionbarsherlock'
 include ':libraries:open:SlidingMenu'
 include ':libraries:open:GreenDroid'
 include ':libraries:open:Android-ViewPagerIndicator'
+include ':libraries:open:smoothie'
 
 // ---------------------------
 //       open project examples
