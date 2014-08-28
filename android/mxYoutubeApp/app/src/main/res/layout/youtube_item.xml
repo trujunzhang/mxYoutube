@@ -5,7 +5,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@color/solid_white"
-        >
+              android:paddingLeft="8dp" android:paddingRight="8dp" android:paddingTop="7dp" android:paddingBottom="7dp">
     <!--line-01:[thumbnails,duration]-->
     <RelativeLayout
             android:layout_width="fill_parent"
@@ -93,22 +93,22 @@
         
     </LinearLayout>
 
-    <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="10dp"
-            android:visibility="gone"
-            >
-        <ImageView
-                android:id="@+id/thumbnails123"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:src="@drawable/background"
-                android:scaleType="fitXY"/>
+    <!--<RelativeLayout-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="10dp"-->
+            <!--android:visibility="gone"-->
+            <!-->-->
+        <!--<ImageView-->
+                <!--android:id="@+id/thumbnails123"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:src="@drawable/background"-->
+                <!--android:scaleType="fitXY"/>-->
 
-        <ImageView android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:src="@drawable/subscribe"
-                   android:layout_alignParentBottom="true"
-                   android:layout_alignParentRight="true"/>
-    </RelativeLayout>
+        <!--<ImageView android:layout_width="wrap_content"-->
+                   <!--android:layout_height="wrap_content"-->
+                   <!--android:src="@drawable/subscribe"-->
+                   <!--android:layout_alignParentBottom="true"-->
+                   <!--android:layout_alignParentRight="true"/>-->
+    <!--</RelativeLayout>-->
 </LinearLayout>

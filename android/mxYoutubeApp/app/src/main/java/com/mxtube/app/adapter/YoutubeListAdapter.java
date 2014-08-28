@@ -20,6 +20,8 @@ public class YoutubeListAdapter extends BaseAdapter {
 	private List<SearchResult> youtubeList = Collections.emptyList();
 
 	public void updateSearchResult(List<SearchResult> bananaPhones) {
+		if (bananaPhones == null)
+			return;
 		this.youtubeList = bananaPhones;
 		notifyDataSetChanged();
 	}
