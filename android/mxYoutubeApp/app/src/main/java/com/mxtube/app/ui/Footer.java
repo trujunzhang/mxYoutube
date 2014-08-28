@@ -86,8 +86,8 @@ public class Footer extends SherlockFragment {
 			lastRadioButton.setChecked(false);
 		}
 		// newButton.setChecked(true);
-		Index activity = (Index) getActivity();
-		activity.setTitle(index);
+		Index activity = (Index) getSherlockActivity();
+//		activity.setTitle(index);
 		mCurSel = index;
 
 		// lastRadioButton = newButton;
