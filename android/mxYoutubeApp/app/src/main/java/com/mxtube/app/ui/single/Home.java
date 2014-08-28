@@ -42,4 +42,9 @@ public class Home extends Single {
 		adapter.updateSearchResult(resultList);
 		gridView.setAdapter(adapter);
 	}
+
+    @Override
+    public void initSingle() {
+
+    }
 }
