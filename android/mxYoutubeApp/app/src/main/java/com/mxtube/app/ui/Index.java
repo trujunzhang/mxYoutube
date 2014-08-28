@@ -12,13 +12,13 @@ import org.androidannotations.annotations.*;
 import java.io.InputStream;
 
 @EActivity(R.layout.activity_main)
-public class MainActivity extends SherlockFragmentActivity {
+public class Index extends SherlockFragmentActivity {
 
 	@App
 	public AppContext appContext;
 
 	@FragmentById(R.id.fragment_footer_tab)
-	MainFooterFragment fragmentFooterTab;
+    Footer fragmentFooterTab;
 
 	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	@AfterInject
