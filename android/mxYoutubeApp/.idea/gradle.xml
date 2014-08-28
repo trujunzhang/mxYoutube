@@ -22,6 +22,10 @@
             <option value="$PROJECT_DIR$/libraries/open/SlidingMenu" />
             <option value="$PROJECT_DIR$/libraries/open/actionbarsherlock" />
             <option value="$PROJECT_DIR$/libraries/open/smoothie" />
+            <option value="$PROJECT_DIR$/libraries/openexamples" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/smoothieexample" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/smoothieexample/bitmap-cache" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/smoothieexample/gallery" />
           </set>
         </option>
       </GradleProjectSettings>

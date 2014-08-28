@@ -31,6 +31,8 @@ include ':libraries:open:smoothie'
 //include ':libraries:openexamples:androidviewpagerindicatorexample:vpi-abs-demo'
 //include ':libraries:openexamples:slidingmenuexample'
 //include ':libraries:openexamples:greendroidexample'
+include ':libraries:openexamples:smoothieexample:bitmap-cache'
+include ':libraries:openexamples:smoothieexample:gallery'
 
 // ---------------------------
 //       google projects
