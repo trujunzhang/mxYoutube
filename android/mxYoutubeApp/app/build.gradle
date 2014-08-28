@@ -17,12 +17,26 @@ dependencies {
     compile "org.androidannotations:androidannotations-api:$AAVersion"
 
 //-------- v1.0
+// ---------------------------
+//       open projects
+// ---------------------------
     compile project(':libraries:open:actionbarsherlock');
     compile project(':libraries:open:SlidingMenu');
     compile project(':libraries:open:GreenDroid');
-    compile project(':libraries:collect:AndroidCommon');
+    compile project(':libraries:open:cwac-endless');
 
     compile 'com.squareup.picasso:picasso:2.3.4'
+
+// ------------------------------------------------------
+//       Enterprise app layer libraries
+// ------------------------------------------------------
+
+// ------------------------------------------------------
+//       my collection libraries
+// ------------------------------------------------------
+    compile project(':libraries:collect:AndroidCommon');
+
+
 }
 
 apt {
