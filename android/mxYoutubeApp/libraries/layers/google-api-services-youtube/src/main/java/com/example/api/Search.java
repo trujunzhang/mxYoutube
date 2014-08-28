@@ -64,7 +64,7 @@ public class Search {
 		// searchByQuery(in);
 	}
 
-	public static void searchByQuery(InputStream in) {
+	public static List<SearchResult> searchByQuery(InputStream in) {
 		// Read the developer key from the properties file.
 		Properties properties = new Properties();
 		try {
@@ -112,18 +112,22 @@ public class Search {
 			SearchListResponse searchResponse = search.execute();
 			List<SearchResult> searchResultList = searchResponse.getItems();
 			if (searchResultList != null) {
-				prettyPrint(searchResultList.iterator(), queryTerm);
+				return searchResultList;
+				// prettyPrint(searchResultList.iterator(), queryTerm);
 			}
 		} catch (GoogleJsonResponseException e) {
 			System.err.println("There was a service error: " + e.getDetails().getCode() + " : "
 					+ e.getDetails().getMessage());
 		} catch (IOException e) {
 			System.err.println("There was an IO error: " + e.getCause() + " : " + e.getMessage());
-            //java.net.UnknownHostException: Unable to resolve host "www.googleapis.com": No address associated with hostname
+			// java.net.UnknownHostException: Unable to resolve host "www.googleapis.com": No address associated with
+			// hostname
 		} catch (Throwable t) {
 			t.printStackTrace();
-            //android.os.NetworkOnMainThreadException
+			// android.os.NetworkOnMainThreadException
 		}
+
+		return null;
 	}
 
 	/*

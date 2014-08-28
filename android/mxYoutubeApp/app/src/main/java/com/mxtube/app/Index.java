@@ -25,13 +25,7 @@ public class Index extends SherlockFragmentActivity {
 	@AfterViews
 	public void calledAfterViewInjection() {
         setTitle("Subscriptions");
-//		search();
 	}
 
-	@UiThread
-	public void search() {
-		InputStream in = this.getResources().openRawResource(R.raw.youtube);
-		Search.searchByQuery(in);
-	}
 
 }
