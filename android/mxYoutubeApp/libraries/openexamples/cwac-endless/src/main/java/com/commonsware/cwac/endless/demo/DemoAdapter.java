@@ -39,7 +39,7 @@ class DemoAdapter extends EndlessAdapter {
 
 	@Override
 	protected boolean cacheInBackground() {
-		SystemClock.sleep(10000); // pretend to do work
+		SystemClock.sleep(1000); // pretend to do work
 
 		return (getWrappedAdapter().getCount() < 75);
 	}
@@ -50,7 +50,7 @@ class DemoAdapter extends EndlessAdapter {
 			@SuppressWarnings("unchecked")
 			ArrayAdapter<Integer> a = (ArrayAdapter<Integer>) getWrappedAdapter();
 
-			for (int i = 0; i < 25; i++) {
+			for (int i = 0; i < 3; i++) {
 				a.add(a.getCount());
 			}
 		}

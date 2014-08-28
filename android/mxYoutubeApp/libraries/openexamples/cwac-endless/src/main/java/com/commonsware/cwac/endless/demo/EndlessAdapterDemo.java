@@ -39,7 +39,7 @@ public class EndlessAdapterDemo extends ListActivity {
 			adapter.startProgressAnimation();
 		}
 
-		adapter.startProgressAnimation();
+//		adapter.startProgressAnimation();
 
 		setListAdapter(adapter);
 	}
