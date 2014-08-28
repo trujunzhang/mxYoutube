@@ -1,8 +1,5 @@
 package com.mxtube.app.ui;
 
-import android.annotation.TargetApi;
-import android.os.Build;
-import android.os.StrictMode;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.example.api.Search;
 import com.mxtube.app.AppContext;
@@ -18,13 +15,10 @@ public class Index extends SherlockFragmentActivity {
 	public AppContext appContext;
 
 	@FragmentById(R.id.fragment_footer_tab)
-    Footer fragmentFooterTab;
+	Footer fragmentFooterTab;
 
-	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	@AfterInject
 	public void calledAfterInjection() {
-		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-		StrictMode.setThreadPolicy(policy);
 	}
 
 	@AfterViews
