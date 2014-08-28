@@ -26,7 +26,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".PropertiesActivity" />
-        <activity android:name=".LeftAndRightActivity" />
+        <activity android:name=".LeftAndRightActivity" >
+
+
+        </activity>
         <activity android:name=".AttachExample" />
         <activity android:name=".anim.CustomScaleAnimation" />
         <activity android:name=".anim.CustomZoomAnimation" />

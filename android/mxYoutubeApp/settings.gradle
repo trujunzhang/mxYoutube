@@ -24,23 +24,23 @@ include ':libraries:open:cwac-endless'
 //       open project examples
 // ---------------------------
 // ..........actionbarsherlock
-//include ':libraries:openexamples:actionbarsherlockexample:demos'
-//include ':libraries:openexamples:actionbarsherlockexample:fragments'
-//include ':libraries:openexamples:actionbarsherlockexample:known-bugs'
-//include ':libraries:openexamples:actionbarsherlockexample:roboguice'
-//include ':libraries:openexamples:actionbarsherlockexample:styled'
-// ..........androidviewpagerindicator
-//include ':libraries:openexamples:androidviewpagerindicatorexample:Android-ViewPagerIndicator-Examples'
-//include ':libraries:openexamples:androidviewpagerindicatorexample:vpi-abs-demo'
+//include ':libraries:openexamples:actionbarsherlock:demos'
+//include ':libraries:openexamples:actionbarsherlock:fragments'
+//include ':libraries:openexamples:actionbarsherlock:known-bugs'
+//include ':libraries:openexamples:actionbarsherlock:roboguice'
+//include ':libraries:openexamples:actionbarsherlock:styled'
+// ..........Android-ViewPagerIndicator
+//include ':libraries:openexamples:Android-ViewPagerIndicator:Android-ViewPagerIndicator'
+//include ':libraries:openexamples:Android-ViewPagerIndicator:vpi-abs-demo'
 // ..........slidingmenu
-//include ':libraries:openexamples:slidingmenuexample'
+//include ':libraries:openexamples:slidingmenu'
 // ..........greendroid
-//include ':libraries:openexamples:greendroidexample'
+//include ':libraries:openexamples:greendroid'
 // ..........smoothie
 //include ':libraries:openexamples:smoothieexample:bitmap-cache'
 //include ':libraries:openexamples:smoothieexample:gallery'
 // ..........cwac-endless
-include ':libraries:openexamples:cwac-endless'
+//include ':libraries:openexamples:cwac-endless'
 
 // ---------------------------
 //       google projects
