@@ -24,7 +24,8 @@ public class Index extends SherlockFragmentActivity {
 
 	@AfterViews
 	public void calledAfterViewInjection() {
-		search();
+        setTitle("Subscriptions");
+//		search();
 	}
 
 	@UiThread
