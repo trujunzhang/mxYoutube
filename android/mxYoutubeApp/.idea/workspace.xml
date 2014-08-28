@@ -92,158 +92,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40b4ff95-6454-4327-83b2-70fa6b42ff96" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-hdpi/button_disabled.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-mdpi/button_disabled.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-xhdpi/button_disabled.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-hdpi/button_disabled_focused.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-mdpi/button_disabled_focused.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-xhdpi/button_disabled_focused.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-hdpi/button_focused.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-mdpi/button_focused.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-xhdpi/button_focused.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-hdpi/button_normal.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-mdpi/button_normal.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-xhdpi/button_normal.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-hdpi/button_pressed.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-mdpi/button_pressed.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-xhdpi/button_pressed.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-hdpi/contact_picture_placeholder.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-mdpi/contact_picture_placeholder.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-xhdpi/contact_picture_placeholder.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/static/debug.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable/error.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/static/icon-github.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/static/icon-square.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-hdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-mdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-xhdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-xxhdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-xxxhdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-hdpi/list_focused.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-mdpi/list_focused.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-xhdpi/list_focused.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-hdpi/list_pressed.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-mdpi/list_pressed.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-xhdpi/list_pressed.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-hdpi/list_selector_disabled.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-mdpi/list_selector_disabled.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-xhdpi/list_selector_disabled.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/static/logo-square.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable-nodpi/noise.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable/placeholder.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/static/sample.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/Action.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/AssetBitmapHunter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/AssetBitmapHunterTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/BitmapHunter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/BitmapHunterTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/Cache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/Callback.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/ContactsPhotoBitmapHunter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/ContentStreamBitmapHunter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/java/com/example/picasso/Data.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/DeferredRequestCreator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/DeferredRequestCreatorTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/Dispatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/DispatcherTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/Downloader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/FetchAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/FileBitmapHunter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/GetAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/java/com/example/picasso/GrayscaleTransformation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/ImageViewAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/ImageViewActionTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/LruCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/LruCacheTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/MarkableInputStream.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/MarkableInputStreamTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/MediaStoreBitmapHunter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/MediaStoreBitmapHunterTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/NetworkBitmapHunter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/NetworkBitmapHunterTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/OkHttpDownloader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/OkHttpDownloaderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/Picasso.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/PicassoDrawable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/PicassoDrawableTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/PicassoExecutorService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/java/com/example/picasso/PicassoSampleActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/java/com/example/picasso/PicassoSampleAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/PicassoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/RemoteViewsAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/RemoteViewsActionTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/Request.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/RequestCreator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/RequestCreatorTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/ResourceBitmapHunter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/java/com/example/picasso/SampleContactsActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/java/com/example/picasso/SampleContactsAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/java/com/example/picasso/SampleGalleryActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/java/com/example/picasso/SampleGridViewActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/java/com/example/picasso/SampleGridViewAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/java/com/example/picasso/SampleListDetailActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/java/com/example/picasso/SampleListDetailAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/java/com/example/picasso/SampleWidgetProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/Shadows.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/java/com/example/picasso/SquaredImageView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/Stats.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/StatsSnapshot.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/Target.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/TargetAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/TargetActionTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/TestTransformation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/TestUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/Transformation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/UrlConnectionDownloader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/UrlConnectionDownloaderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/Utils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/src/test/java/com/squareup/picasso/UtilsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/static/app-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/static/app.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/static/bootstrap-combined.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/static/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable/button_selector.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/values/colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/values/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/values-land/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/values-w600dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/static/html5shiv.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/values/integers.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/values-w500dp/integers.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/values-w600dp/integers.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/values-w700dp/integers.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/static/jquery-maven-artifact.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/static/jquery.smooth-scroll.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable/list_selector.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/layout/notification_view.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/drawable/overlay_selector.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/layout/picasso_sample_activity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/layout/picasso_sample_activity_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/picasso/website/static/prettify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/layout/sample_contacts_activity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/layout/sample_contacts_activity_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/layout/sample_gallery_activity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/layout/sample_gridview_activity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/layout/sample_list_detail_detail.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/layout/sample_list_detail_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/layout/sample_list_detail_list.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/layout/sample_widget.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/xml/sample_widget_info.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/values/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/values/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/src/main/res/values/themes.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/SlidingMenu/build.gradle" afterPath="$PROJECT_DIR$/libraries/open/SlidingMenu/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/smoothie/build.gradle" afterPath="$PROJECT_DIR$/libraries/open/smoothie/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -308,7 +157,38 @@
     <favorites_list name="mxYoutubeApp" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="settings.gradle" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.04" vertical-offset="90" max-vertical-offset="1242">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.04" vertical-offset="0" max-vertical-offset="540">
+              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4016227" vertical-offset="270" max-vertical-offset="1332">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -383,32 +263,20 @@
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
-                <option name="name" value=":libraries:open:picasso" />
-                <option name="path" value="$PROJECT_DIR$/libraries/open/picasso" />
+                <option name="name" value=":libraries:layers" />
+                <option name="path" value="$PROJECT_DIR$/libraries/layers" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
                 <option name="name" value=":libraries:open:actionbarsherlock" />
                 <option name="path" value="$PROJECT_DIR$/libraries/open/actionbarsherlock" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
-                <option name="name" value=":libraries:layers" />
-                <option name="path" value="$PROJECT_DIR$/libraries/layers" />
-              </ExternalProjectPojo>
-              <ExternalProjectPojo>
                 <option name="name" value=":libraries:open:cwac-endless" />
                 <option name="path" value="$PROJECT_DIR$/libraries/open/cwac-endless" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
-                <option name="name" value=":libraries:openexamples" />
-                <option name="path" value="$PROJECT_DIR$/libraries/openexamples" />
-              </ExternalProjectPojo>
-              <ExternalProjectPojo>
                 <option name="name" value=":libraries:open" />
                 <option name="path" value="$PROJECT_DIR$/libraries/open" />
-              </ExternalProjectPojo>
-              <ExternalProjectPojo>
-                <option name="name" value=":libraries:openexamples:picasso" />
-                <option name="path" value="$PROJECT_DIR$/libraries/openexamples/picasso" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
                 <option name="name" value=":libraries:layers:Business-Logic-Layer" />
@@ -460,11 +328,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="preReleaseBuild" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare mxYoutubeApp.libraries.open:picasso:unspecified" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareMxYoutubeAppLibrariesOpenPicassoUnspecifiedLibrary" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -1207,6 +1070,11 @@
                 <option name="description" value="Prepare mxYoutubeApp.libraries.open:actionbarsherlock:unspecified" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareMxYoutubeAppLibrariesOpenActionbarsherlockUnspecifiedLibrary" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare mxYoutubeApp.libraries.open:cwac-endless:unspecified" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareMxYoutubeAppLibrariesOpenCwacEndlessUnspecifiedLibrary" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare mxYoutubeApp.libraries.open:GreenDroid:unspecified" />
@@ -4334,7 +4202,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="15501332322000" />
+        <entry key="$PROJECT_DIR$" value="12682905513000" />
         <entry key="$PROJECT_DIR$/../../../../project live templates/AndroidGradleTemplate v3.0" value="5635394167000" />
         <entry key="$PROJECT_DIR$/../../../../svn/AndroidGradleTemplate" value="4203216683000" />
         <entry key="$PROJECT_DIR$/../../../../svn/EnterpriseTemplate/mobile/android/MultiEnterAndroidProject/trunk/MultiEnterAndroidProject" value="12641375166000" />
@@ -8249,11 +8117,11 @@
         <option value="$PROJECT_DIR$/libraries/openexamples/slidingmenu/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/Action.java" />
         <option value="$PROJECT_DIR$/libraries/open/picasso/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/libraries/open/smoothie/build.gradle" />
         <option value="$PROJECT_DIR$/libraries/open/picasso/build.gradle" />
         <option value="$PROJECT_DIR$/libraries/open/SlidingMenu/build.gradle" />
         <option value="$PROJECT_DIR$/libraries/openexamples/picasso/build.gradle" />
+        <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
     </option>
@@ -8757,6 +8625,7 @@
     <property name="recentsLimit" value="5" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
+    <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -8774,7 +8643,7 @@
       <recent name="com.common" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Application.openexamples-picasso">
+  <component name="RunManager" selected="Android Application.app">
     <configuration default="false" name="mxYoutubeApp [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -9070,33 +8939,10 @@
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="openexamples-picasso" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="openexamples-picasso" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <RunnerSettings RunnerId="AndroidDebugRunner" />
-      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
-      <method />
-    </configuration>
-    <list size="4">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Android Application.app" />
       <item index="1" class="java.lang.String" itemvalue="Gradle.mxYoutubeApp [clean]" />
       <item index="2" class="java.lang.String" itemvalue="Gradle.mxYoutubeApp [build]" />
-      <item index="3" class="java.lang.String" itemvalue="Android Application.openexamples-picasso" />
     </list>
     <recent_temporary>
       <list size="2">
@@ -9157,7 +9003,7 @@
       <workItem from="1409200638761" duration="5299000" />
       <workItem from="1409207759040" duration="1940000" />
       <workItem from="1409210503951" duration="1348000" />
-      <workItem from="1409212830807" duration="1307000" />
+      <workItem from="1409212830807" duration="1595000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1408861027733</created>
@@ -9343,18 +9189,22 @@
       <created>1409212890193</created>
       <updated>1409212890193</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="add picasso library.">
+      <created>1409214262951</created>
+      <updated>1409214262951</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33551000" />
+    <option name="totallyTimeSpent" value="33839000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1366" height="689" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32920355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952815" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -9364,7 +9214,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.05022831" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.261035" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.261035" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32389382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -9463,7 +9313,8 @@
     <MESSAGE value="add smoothie examples." />
     <MESSAGE value="add cwac-endless and examples." />
     <MESSAGE value="remove all fold contains &quot;example&quot;." />
-    <option name="LAST_COMMIT_MESSAGE" value="remove all fold contains &quot;example&quot;." />
+    <MESSAGE value="add picasso library." />
+    <option name="LAST_COMMIT_MESSAGE" value="add picasso library." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -9633,14 +9484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2555781" vertical-offset="0" max-vertical-offset="540">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/openexamples/cwac-endless/src/main/java/com/commonsware/cwac/endless/demo/DemoAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24324325" vertical-offset="162" max-vertical-offset="1278">
@@ -9758,14 +9601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.52" vertical-offset="90" max-vertical-offset="1278">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/open/picasso/src/main/java/com/squareup/picasso/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5421687" vertical-offset="180" max-vertical-offset="6912">
@@ -9868,10 +9703,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.04" vertical-offset="0" max-vertical-offset="540">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.04" vertical-offset="90" max-vertical-offset="1242">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3127413" vertical-offset="0" max-vertical-offset="1224">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.4016227" vertical-offset="270" max-vertical-offset="1332">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>

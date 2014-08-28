@@ -19,7 +19,7 @@ include ':libraries:open:GreenDroid'
 //include ':libraries:open:Android-ViewPagerIndicator'
 //include ':libraries:open:smoothie'
 include ':libraries:open:cwac-endless'
-include ':libraries:open:picasso'
+//include ':libraries:open:picasso'
 
 // ---------------------------
 //       open project examples
@@ -43,7 +43,7 @@ include ':libraries:open:picasso'
 // ..........cwac-endless
 //include ':libraries:openexamples:cwac-endless'
 // ..........picasso
-include ':libraries:openexamples:picasso'
+//include ':libraries:openexamples:picasso'
 
 // ---------------------------
 //       google projects

@@ -15,9 +15,6 @@
       <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
       <module fileurl="file://$PROJECT_DIR$/mxYoutubeApp.iml" filepath="$PROJECT_DIR$/mxYoutubeApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/open.iml" filepath="$PROJECT_DIR$/libraries/open/open.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/openexamples.iml" filepath="$PROJECT_DIR$/libraries/openexamples/openexamples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/picasso/openexamples-picasso.iml" filepath="$PROJECT_DIR$/libraries/openexamples/picasso/openexamples-picasso.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/open/picasso/picasso.iml" filepath="$PROJECT_DIR$/libraries/open/picasso/picasso.iml" />
     </modules>
   </component>
 </project>
