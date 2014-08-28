@@ -22,6 +22,7 @@ dependencies {
     compile project(':libraries:open:GreenDroid');
     compile project(':libraries:collect:AndroidCommon');
 
+    compile 'com.squareup.picasso:picasso:2.3.4'
 }
 
 apt {
