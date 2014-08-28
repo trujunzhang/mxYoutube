@@ -26,7 +26,7 @@ public class Home extends Single {
 
 	}
 
-	@ItemClick
+	@ItemClick(R.id.gridView)
 	void youtubeListItemClicked(SearchResult person) {
 
 	}
