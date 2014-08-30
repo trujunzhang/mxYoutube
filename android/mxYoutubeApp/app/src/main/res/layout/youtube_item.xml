@@ -100,7 +100,7 @@
     </LinearLayout>
     <!--line-04:[user]-->
     <FrameLayout android:layout_width="match_parent"
-                 android:layout_height="27dp"
+                 android:layout_height="29dp"
                  android:background="@drawable/table_cell_bg_dark"
                  android:orientation="horizontal">
         <ImageView
@@ -112,8 +112,8 @@
                 android:src="@drawable/photo"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"/>
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
         <TextView
                 android:id="@+id/user_name"
                 android:layout_width="wrap_content"
