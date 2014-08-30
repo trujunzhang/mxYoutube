@@ -52,7 +52,7 @@ public class YoutubeItemView extends LinearLayout {
 		Picasso.with(context).load(thumbnail.getUrl()).into(this.thumbnails);
 
 		this.title.setText(title);
-		this.duration.setText(duration.replace("PT", "").replace("M", ":").replace("S", ":"));
+		this.duration.setText(duration.replace("PT", "").replace("M", ":").replace("S", ""));
 		this.rating.setText(String.valueOf(favoriteCount));
 		this.viewCount.setText(String.valueOf(viewCount));
 	}
