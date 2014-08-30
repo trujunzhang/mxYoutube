@@ -9,15 +9,16 @@
     <!--line-01:[thumbnails,duration]-->
     <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             >
 
-        <ImageView
+        <com.views.SquareImageView
                 android:id="@+id/thumbnails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/hqdefault"
-                android:scaleType="fitXY" android:layout_gravity="center"/>
+                android:scaleType="fitXY"
+                android:layout_gravity="center"/>
 
         <TextView
                 android:id="@+id/duration"

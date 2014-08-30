@@ -57,13 +57,13 @@ public class YoutubeItemView extends LinearLayout {
 		BigDecimal bigDecX = new BigDecimal(likeCount);
 		BigDecimal bigDecY = new BigDecimal(count);
 		// to divide:
-//		BigDecimal _rating = bigDecX.divide(bigDecY);
+		// BigDecimal _rating = bigDecX.divide(bigDecY);
 
 		Picasso.with(context).load(thumbnail.getUrl()).into(this.thumbnails);
 
 		this.title.setText(_title);
 		this.duration.setText(_duration.replace("PT", "").replace("M", ":").replace("S", ""));
-//		this.rating.setText(String.valueOf(_rating));
+		// this.rating.setText(String.valueOf(_rating));
 		this.viewCount.setText(String.valueOf(_viewCount));
 	}
 }
