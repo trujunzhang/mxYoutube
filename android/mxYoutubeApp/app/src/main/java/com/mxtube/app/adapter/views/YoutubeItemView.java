@@ -44,15 +44,16 @@ public class YoutubeItemView extends LinearLayout {
 		System.out.println(" Thumbnail: " + thumbnail.getUrl());
 		System.out.println("\n-------------------------------------------------------------\n");
 
-        BigInteger favoriteCount = singleVideo.getStatistics().getFavoriteCount();
-        String duration1 = singleVideo.getContentDetails().getDuration();
-		title.setText(singleVideo.getSnippet().getTitle());
-		Picasso.with(context).load(thumbnail.getUrl()).into(thumbnails);
+		BigInteger favoriteCount = singleVideo.getStatistics().getFavoriteCount();
+		String duration = singleVideo.getContentDetails().getDuration();
+		BigInteger viewCount = singleVideo.getStatistics().getViewCount();
+		String title = singleVideo.getSnippet().getTitle();
 
-        duration.setText(duration1.replace("PT", "").replace("M", ":").replace("S",
-                ":"));
+		Picasso.with(context).load(thumbnail.getUrl()).into(this.thumbnails);
 
-
-//        rating.setText(favoriteCount);
+		this.title.setText(title);
+		this.duration.setText(duration.replace("PT", "").replace("M", ":").replace("S", ":"));
+		this.rating.setText(String.valueOf(favoriteCount));
+		this.viewCount.setText(String.valueOf(viewCount));
 	}
 }
