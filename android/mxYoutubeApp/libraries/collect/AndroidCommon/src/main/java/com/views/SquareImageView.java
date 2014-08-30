@@ -36,8 +36,8 @@ public class SquareImageView extends ImageView {
 		TypedArray a = null;
 		try {
 			a = getContext().obtainStyledAttributes(attributeSet, R.styleable.SquareImageView);
-			defaultWidth = a.getInt(R.styleable.SquareImageView_defaultWidth, DEF_WIDTH);
-			defaultHeight = a.getInt(R.styleable.SquareImageView_defaultHeight, DEF_HEIGHT);
+			defaultWidth = a.getInt(R.styleable.SquareImageView_default_width, DEF_WIDTH);
+			defaultHeight = a.getInt(R.styleable.SquareImageView_default_height, DEF_HEIGHT);
 		} finally {
 			if (a != null) {
 				a.recycle(); // ensure this is always called
