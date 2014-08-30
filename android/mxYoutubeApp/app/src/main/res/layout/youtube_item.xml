@@ -53,7 +53,7 @@
                     android:layout_marginBottom="4dp"
                     android:paddingLeft="4dp"
                     android:textSize="14sp"
-                    android:textColor="@color/solid_black"
+                    android:textColor="@color/youtube_cell_title"
                     android:maxLines="2"
                     android:minLines="2"/>
         </LinearLayout>
