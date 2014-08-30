@@ -75,6 +75,16 @@
         <attr name="ptrAdapterViewBackground" format="reference|color"/>
         <attr name="ptrDrawableTop" format="reference"/>
         <attr name="ptrDrawableBottom" format="reference"/>
+
+
     </declare-styleable>
+
+    <declare-styleable name="CustomImageView">
+        <!-- Style of ImageView should be used when measured dimension. -->
+        <attr name="defaultWidth" format="integer"/>
+        <attr name="defaultHeight" format="integer"/>
+
+    </declare-styleable>
+
 
 </resources>
