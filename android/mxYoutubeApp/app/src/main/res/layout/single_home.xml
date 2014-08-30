@@ -10,7 +10,7 @@
             android:layout_height="match_parent"
             android:horizontalSpacing="18dp"
             android:verticalSpacing="20dp"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:gravity="center"
             android:numColumns="4"
             android:columnWidth="180dp"
