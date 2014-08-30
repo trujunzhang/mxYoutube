@@ -5,37 +5,42 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:background="@color/solid_white"
-              android:paddingLeft="8dp" android:paddingRight="8dp" android:paddingTop="7dp" android:paddingBottom="7dp">
+              android:paddingLeft="8dp"
+              android:paddingRight="8dp"
+              android:paddingTop="7dp"
+              android:paddingBottom="7dp">
     <!--line-01:[thumbnails,duration]-->
-    <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/solid_blue">
-
-        <ImageView
-                android:id="@+id/thumbnails"
-                android:layout_width="fill_parent"
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="fill_parent">
+        <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/hqdefault"
-                android:scaleType="fitXY"/>
+                android:background="@color/solid_blue">
 
+            <ImageView
+                    android:id="@+id/thumbnails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hqdefault"
+                    android:scaleType="fitXY"/>
 
-        <TextView
-                android:id="@+id/duration"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:background="@color/duration_background"
-                android:textSize="14sp"
-                android:text="12:00"
-                android:singleLine="true"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:textColor="#FFFFFF"/>
-    </RelativeLayout>
+            <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:background="@color/duration_background"
+                    android:textSize="14sp"
+                    android:text="12:00"
+                    android:singleLine="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#FFFFFF"/>
+        </RelativeLayout>
+    </LinearLayout>
 
     <!--line-02:[title]-->
     <LinearLayout android:layout_width="match_parent"
