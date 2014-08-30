@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import com.google.api.services.youtube.model.SearchResult;
+import com.google.api.services.youtube.model.Video;
 import com.mxtube.app.adapter.views.YoutubeItemView;
 import com.mxtube.app.adapter.views.YoutubeItemView_;
 import org.androidannotations.annotations.AfterInject;
@@ -17,12 +17,12 @@ import java.util.List;
 @EBean
 public class YoutubeListAdapter extends BaseAdapter {
 
-	private List<SearchResult> youtubeList = Collections.emptyList();
+	private List<Video> videoList = Collections.emptyList();
 
-	public void updateSearchResult(List<SearchResult> bananaPhones) {
+	public void updateVideo(List<Video> bananaPhones) {
 		if (bananaPhones == null)
 			return;
-		this.youtubeList = bananaPhones;
+		this.videoList = bananaPhones;
 		notifyDataSetChanged();
 	}
 
@@ -51,12 +51,12 @@ public class YoutubeListAdapter extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		return youtubeList.size();
+		return videoList.size();
 	}
 
 	@Override
-	public SearchResult getItem(int position) {
-		return youtubeList.get(position);
+	public Video getItem(int position) {
+		return videoList.get(position);
 	}
 
 	@Override

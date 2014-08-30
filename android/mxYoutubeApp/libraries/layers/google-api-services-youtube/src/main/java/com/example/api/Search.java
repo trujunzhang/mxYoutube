@@ -19,16 +19,13 @@ import com.google.api.client.http.HttpRequest;
 import com.google.api.client.http.HttpRequestInitializer;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
+import com.google.api.client.util.Joiner;
 import com.google.api.services.youtube.YouTube;
-import com.google.api.services.youtube.model.ResourceId;
-import com.google.api.services.youtube.model.SearchListResponse;
-import com.google.api.services.youtube.model.SearchResult;
-import com.google.api.services.youtube.model.Thumbnail;
+import com.google.api.services.youtube.model.*;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
@@ -64,7 +61,7 @@ public class Search {
 		// searchByQuery(in);
 	}
 
-	public static List<SearchResult> searchByQuery(InputStream in) {
+	public static List<Video> searchByQuery(InputStream in, String queryTerm) {
 		// Read the developer key from the properties file.
 		Properties properties = new Properties();
 		try {
@@ -86,9 +83,6 @@ public class Search {
 				}
 			}).setApplicationName("youtube-cmdline-search-sample").build();
 
-			// Prompt the user to enter a query term.
-			String queryTerm = getInputQuery();
-
 			// Define the API request for retrieving search results.
 			YouTube.Search.List search = youtube.search().list("id,snippet");
 
@@ -105,15 +99,35 @@ public class Search {
 
 			// To increase efficiency, only retrieve the fields that the
 			// application uses.
-			search.setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)");
+			// search.setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)");
+			search.setFields("items(id/videoId)");
 			search.setMaxResults(NUMBER_OF_VIDEOS_RETURNED);
 
 			// Call the API and print results.
 			SearchListResponse searchResponse = search.execute();
 			List<SearchResult> searchResultList = searchResponse.getItems();
+			List<String> videoIds = new ArrayList<String>();
+
 			if (searchResultList != null) {
-				return searchResultList;
-				// prettyPrint(searchResultList.iterator(), queryTerm);
+
+				// Merge video IDs
+				for (SearchResult searchResult : searchResultList) {
+					videoIds.add(searchResult.getId().getVideoId());
+				}
+				Joiner stringJoiner = Joiner.on(',');
+				String videoId = stringJoiner.join(videoIds);
+
+				// Call the YouTube Data API's youtube.videos.list method to
+				// retrieve the resources that represent the specified videos.
+				YouTube.Videos.List listVideosRequest = youtube.videos().list("snippet, recordingDetails").setId(
+						videoId);
+				VideoListResponse listResponse = listVideosRequest.execute();
+
+				List<Video> videoList = listResponse.getItems();
+
+				if (videoList != null) {
+					return videoList;
+				}
 			}
 		} catch (GoogleJsonResponseException e) {
 			System.err.println("There was a service error: " + e.getDetails().getCode() + " : "
@@ -128,28 +142,6 @@ public class Search {
 		}
 
 		return null;
-	}
-
-	/*
-	 * Prompt the user to enter a query term and return the user-specified term.
-	 */
-	private static String getInputQuery() throws IOException {
-
-		if (true)
-			return "sketch3";
-
-		String inputQuery = "";
-
-		System.out.print("Please enter a search term: ");
-		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
-		inputQuery = bReader.readLine();
-
-		if (inputQuery.length() < 1) {
-			// Use the string "YouTube Developers Live" as a default.
-			inputQuery = "YouTube Developers Live";
-		}
-
-		return inputQuery;
 	}
 
 	/*
