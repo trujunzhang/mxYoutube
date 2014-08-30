@@ -11,7 +11,7 @@
             android:layout_margin="5dp"
             android:columnWidth="100dp"
             android:gravity="center"
-            android:numColumns="4"
+            android:numColumns="3"
             android:verticalSpacing="5dp"
             android:drawSelectorOnTop="true"
             android:stretchMode="columnWidth">
