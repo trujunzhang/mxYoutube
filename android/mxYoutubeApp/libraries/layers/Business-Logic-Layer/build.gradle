@@ -1,0 +1,25 @@
+apply plugin: 'android-library'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 19
+    }
+    buildTypes {
+        release {
+        }
+    }
+}
+
+dependencies {
+
+//-------- v1.0
+    compile project(':libraries:layers:google-api-services-youtube');
+
+//-------- v2.0
+
+
+}

@@ -1,6 +1,9 @@
 package com.mxtube.app.ui.single;
 
 import com.google.api.services.youtube.model.SearchResult;
+import com.google.api.services.youtube.model.Video;
+import com.layer.business.SearchInterface;
+import com.layer.business.impl.SearchImplementation;
 import com.mxtube.app.R;
 import com.mxtube.app.adapter.YoutubeListAdapter;
 import org.androidannotations.annotations.*;
@@ -15,6 +18,9 @@ public class Home extends Single {
 
 	@Bean
 	YoutubeListAdapter adapter;
+
+	@Bean(SearchImplementation.class)
+	SearchInterface searchInterface;
 
 	@AfterInject
 	void calledAfterInjection() {
@@ -34,8 +40,9 @@ public class Home extends Single {
 
 	@Background
 	void getYoutubeInBackground() {
-		List<SearchResult> resultList = search();
-		showResult(resultList);
+		List<Video> resultList = searchInterface.search(getContext());
+		// List<SearchResult> resultList = search();
+		// showResult(resultList);
 	}
 
 	@UiThread

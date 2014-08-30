@@ -11,7 +11,8 @@ repositories {
 
 
 dependencies {
-    compile project(':libraries:layers:google-api-services-youtube');
+//    compile project(':libraries:layers:google-api-services-youtube');
+    compile project(':libraries:layers:Business-Logic-Layer');
 
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
