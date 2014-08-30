@@ -4,15 +4,12 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:background="@color/solid_white"
-              android:paddingLeft="8dp"
-              android:paddingRight="8dp"
-              android:paddingTop="7dp"
-              android:paddingBottom="7dp">
+              android:background="@color/solid_white">
+
     <!--line-01:[thumbnails,duration]-->
     <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             >
 
         <ImageView
@@ -50,7 +47,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp"
                 android:paddingLeft="4dp"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textColor="@color/solid_black"
                 android:maxLines="2"
                 android:minLines="2"/>
@@ -76,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp"
-                android:textSize="12sp"
+                android:textSize="10sp"
                 android:maxLines="2" android:layout_gravity="center_vertical"/>
         <ImageView
                 android:layout_width="wrap_content"
@@ -92,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp"
-                android:textSize="12sp"
+                android:textSize="10sp"
                 android:maxLines="2" android:layout_gravity="center_vertical"/>
     </LinearLayout>
 

@@ -6,13 +6,13 @@
               android:layout_height="match_parent">
     <GridView
             android:id="@+id/gridView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="8dp"
+            android:verticalSpacing="10dp"
             android:layout_margin="5dp"
-            android:columnWidth="100dp"
             android:gravity="center"
-            android:numColumns="3"
-            android:verticalSpacing="5dp"
+            android:numColumns="4"
             android:drawSelectorOnTop="true"
             android:stretchMode="columnWidth">
     </GridView>
