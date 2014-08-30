@@ -12,7 +12,8 @@
             android:verticalSpacing="10dp"
             android:layout_margin="5dp"
             android:gravity="center"
-            android:numColumns="4"
+            android:numColumns="5"
+            android:columnWidth="180dp"
             android:drawSelectorOnTop="true"
             android:stretchMode="columnWidth">
     </GridView>

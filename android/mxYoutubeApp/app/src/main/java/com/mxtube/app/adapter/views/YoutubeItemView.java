@@ -9,6 +9,7 @@ import com.squareup.picasso.Picasso;
 import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 
 @EViewGroup(R.layout.youtube_item)
@@ -42,18 +43,27 @@ public class YoutubeItemView extends LinearLayout {
 		System.out.println(" Video Id" + singleVideo.getId());
 		System.out.println(" Title: " + singleVideo.getSnippet().getTitle());
 		System.out.println(" Thumbnail: " + thumbnail.getUrl());
+		System.out.println(" width: " + thumbnail.getWidth() + " height: " + thumbnail.getHeight());
 		System.out.println("\n-------------------------------------------------------------\n");
 
-		BigInteger favoriteCount = singleVideo.getStatistics().getFavoriteCount();
-		String duration = singleVideo.getContentDetails().getDuration();
-		BigInteger viewCount = singleVideo.getStatistics().getViewCount();
-		String title = singleVideo.getSnippet().getTitle();
+		String _title = singleVideo.getSnippet().getTitle();
+		String _duration = singleVideo.getContentDetails().getDuration();
+
+		BigInteger _viewCount = singleVideo.getStatistics().getViewCount();
+
+		BigInteger likeCount = singleVideo.getStatistics().getLikeCount();
+		BigInteger dislikeCount = singleVideo.getStatistics().getDislikeCount();
+		BigInteger count = likeCount.add(dislikeCount);
+		BigDecimal bigDecX = new BigDecimal(likeCount);
+		BigDecimal bigDecY = new BigDecimal(count);
+		// to divide:
+//		BigDecimal _rating = bigDecX.divide(bigDecY);
 
 		Picasso.with(context).load(thumbnail.getUrl()).into(this.thumbnails);
 
-		this.title.setText(title);
-		this.duration.setText(duration.replace("PT", "").replace("M", ":").replace("S", ""));
-		this.rating.setText(String.valueOf(favoriteCount));
-		this.viewCount.setText(String.valueOf(viewCount));
+		this.title.setText(_title);
+		this.duration.setText(_duration.replace("PT", "").replace("M", ":").replace("S", ""));
+//		this.rating.setText(String.valueOf(_rating));
+		this.viewCount.setText(String.valueOf(_viewCount));
 	}
 }
