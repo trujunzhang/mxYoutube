@@ -20,12 +20,12 @@ public class SquareImageView extends ImageView {
 
 	public SquareImageView(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		loadStateFromAttrs(attrs);
 	}
 
 	public SquareImageView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		loadStateFromAttrs(attrs);
-		/* other code */
 	}
 
 	private void loadStateFromAttrs(AttributeSet attributeSet) {
