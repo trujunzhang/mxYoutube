@@ -2,7 +2,6 @@ package com.mxtube.app.ui.single;
 
 import com.google.api.services.youtube.model.SearchResult;
 import com.google.api.services.youtube.model.Video;
-import com.layer.business.SearchInterface;
 import com.layer.business.impl.SearchImplementation;
 import com.mxtube.app.R;
 import com.mxtube.app.adapter.YoutubeListAdapter;
@@ -19,8 +18,7 @@ public class Home extends Single {
 	@Bean
 	YoutubeListAdapter adapter;
 
-	@Bean(SearchImplementation.class)
-	SearchInterface searchInterface;
+	SearchImplementation searchInterface = new SearchImplementation();
 
 	@AfterInject
 	void calledAfterInjection() {

@@ -16,11 +16,11 @@ public abstract class Single extends SherlockFragment {
 		return AppContext.instance.index.getApplicationContext();
 	}
 
-	public List<SearchResult> search() {
-		InputStream in = this.getResources().openRawResource(R.raw.youtube);
-		List<SearchResult> resultList = Search.searchByQuery(in);
-		return resultList;
-	}
+//	public List<SearchResult> search() {
+//		InputStream in = this.getResources().openRawResource(R.raw.youtube);
+//		List<SearchResult> resultList = Search.searchByQuery(in);
+//		return resultList;
+//	}
 
 	public abstract void initSingle();
 
