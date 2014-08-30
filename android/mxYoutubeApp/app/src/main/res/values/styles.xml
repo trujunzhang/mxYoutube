@@ -1,4 +1,8 @@
 <resources>
 
-
+    <style name="detail_cut_line">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">2.0dip</item>
+        <item name="android:background">@drawable/line_bluegray</item>
+    </style>
 </resources>
