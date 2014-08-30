@@ -19,7 +19,7 @@ public class YoutubeListAdapter extends BaseAdapter {
 
 	private List<Video> videoList = Collections.emptyList();
 
-	public void updateVideo(List<Video> bananaPhones) {
+	public void updateVideoList(List<Video> bananaPhones) {
 		if (bananaPhones == null)
 			return;
 		this.videoList = bananaPhones;

@@ -44,7 +44,7 @@ public class Home extends Single {
 
 	@UiThread
 	void showResult(List<Video> videoList) {
-		adapter.updateSearchResult(videoList);
+		adapter.updateVideoList(videoList);
 		gridView.setAdapter(adapter);
 	}
 
