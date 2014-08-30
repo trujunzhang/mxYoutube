@@ -38,11 +38,11 @@ public class Home extends Single {
 	@Background
 	void getYoutubeInBackground() {
 		List<Video> videoList = searchInterface.search(getContext());
-		showResult(videoList);
+		update(videoList);
 	}
 
 	@UiThread
-	void showResult(List<Video> videoList) {
+	void update(List<Video> videoList) {
 		adapter.updateVideoList(videoList);
 		gridView.setAdapter(adapter);
 	}

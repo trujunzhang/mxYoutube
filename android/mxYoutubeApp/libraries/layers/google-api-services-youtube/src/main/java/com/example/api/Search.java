@@ -119,8 +119,8 @@ public class Search {
 
 				// Call the YouTube Data API's youtube.videos.list method to
 				// retrieve the resources that represent the specified videos.
-				YouTube.Videos.List listVideosRequest = youtube.videos().list("snippet, recordingDetails").setId(
-						videoId);
+				YouTube.Videos.List listVideosRequest = youtube.videos().list("snippet,contentDetails, statistics").setId(
+						videoId).setKey(apiKey);
 				VideoListResponse listResponse = listVideosRequest.execute();
 
 				List<Video> videoList = listResponse.getItems();
