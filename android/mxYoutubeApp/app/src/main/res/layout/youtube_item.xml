@@ -47,7 +47,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp"
-                android:textSize="20sp"
+                android:paddingLeft="4dp"
+                android:textSize="18sp"
                 android:textColor="@color/solid_black"
                 android:maxLines="2"
                 android:minLines="2"/>
