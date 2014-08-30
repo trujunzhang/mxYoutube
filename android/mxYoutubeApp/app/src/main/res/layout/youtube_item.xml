@@ -74,12 +74,14 @@
             <TextView
                     android:id="@+id/rating"
                     android:text="100%"
+                    android:textColor="@color/youtube_cell_rating_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
                     android:textSize="10sp"
-                    android:maxLines="2" android:layout_gravity="center_vertical"/>
+                    android:maxLines="2"
+                    android:layout_gravity="center_vertical"/>
             <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -90,12 +92,14 @@
             <TextView
                     android:id="@+id/viewCount"
                     android:text="117"
+                    android:textColor="@color/youtube_cell_rating_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
                     android:textSize="10sp"
-                    android:maxLines="2" android:layout_gravity="center_vertical"/>
+                    android:maxLines="2"
+                    android:layout_gravity="center_vertical"/>
         </LinearLayout>
     </LinearLayout>
     <!--line-04:[user]-->
@@ -119,8 +123,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="DesignCourse"
-                android:textColor="@color/solid_red"
-                android:layout_gravity="center_vertical" android:layout_marginLeft="40dp"/>
+                android:textColor="@color/youtube_cell_user"
+                android:layout_gravity="center_vertical" android:layout_marginLeft="34dp"/>
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

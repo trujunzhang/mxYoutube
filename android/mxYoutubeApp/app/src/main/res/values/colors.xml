@@ -2,4 +2,6 @@
 <resources>
     <color name="duration_background">#4417130e</color>
     <color name="youtube_cell_title">#1e1e1e</color>
+    <color name="youtube_cell_user">#de4f28</color>
+    <color name="youtube_cell_rating_count">#666</color>
 </resources>
