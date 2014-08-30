@@ -1,6 +1,5 @@
 package com.mxtube.app.ui.single;
 
-import com.google.api.services.youtube.model.SearchResult;
 import com.google.api.services.youtube.model.Video;
 import com.layer.business.impl.SearchImplementation;
 import com.mxtube.app.R;
@@ -32,7 +31,7 @@ public class Home extends Single {
 	}
 
 	@ItemClick(R.id.gridView)
-	void youtubeListItemClicked(SearchResult person) {
+	void youtubeListItemClicked(Video video) {
 
 	}
 
