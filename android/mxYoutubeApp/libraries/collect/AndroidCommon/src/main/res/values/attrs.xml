@@ -79,7 +79,7 @@
 
     </declare-styleable>
 
-    <declare-styleable name="CustomImageView">
+    <declare-styleable name="SquareImageView">
         <!-- Style of ImageView should be used when measured dimension. -->
         <attr name="defaultWidth" format="integer"/>
         <attr name="defaultHeight" format="integer"/>

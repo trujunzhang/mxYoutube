@@ -26,7 +26,6 @@ public class SquareImageView extends ImageView {
 		super(context, attrs, defStyle);
 		loadStateFromAttrs(attrs);
 		/* other code */
-
 	}
 
 	private void loadStateFromAttrs(AttributeSet attributeSet) {
@@ -36,9 +35,9 @@ public class SquareImageView extends ImageView {
 
 		TypedArray a = null;
 		try {
-			a = getContext().obtainStyledAttributes(attributeSet, R.styleable.CustomImageView);
-			defaultWidth = a.getInt(R.styleable.CustomImageView_defaultWidth, DEF_WIDTH);
-			defaultHeight = a.getInt(R.styleable.CustomImageView_defaultHeight, DEF_HEIGHT);
+			a = getContext().obtainStyledAttributes(attributeSet, R.styleable.SquareImageView);
+			defaultWidth = a.getInt(R.styleable.SquareImageView_defaultWidth, DEF_WIDTH);
+			defaultHeight = a.getInt(R.styleable.SquareImageView_defaultHeight, DEF_HEIGHT);
 		} finally {
 			if (a != null) {
 				a.recycle(); // ensure this is always called
