@@ -10,17 +10,17 @@
               android:paddingTop="7dp"
               android:paddingBottom="7dp">
     <!--line-01:[thumbnails,duration]-->
-    <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="120dp"
-            android:background="@color/solid_blue">
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
 
         <ImageView
                 android:id="@+id/thumbnails"
                 android:layout_width="match_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
                 android:src="@drawable/hqdefault"
-                android:scaleType="fitXY"/>
+                android:scaleType="fitXY" android:layout_gravity="center"/>
 
         <TextView
                 android:id="@+id/duration"
@@ -34,10 +34,9 @@
                 android:textSize="14sp"
                 android:text="12:00"
                 android:singleLine="true"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:textColor="#FFFFFF"/>
-    </RelativeLayout>
+                android:textColor="#FFFFFF"
+                android:layout_gravity="bottom|right"/>
+    </FrameLayout>
 
     <!--line-02:[title]-->
     <LinearLayout android:layout_width="match_parent"
@@ -104,14 +103,14 @@
     </LinearLayout>
 
     <!--<RelativeLayout-->
-    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_width="match_parent"-->
     <!--android:layout_height="10dp"-->
     <!--android:visibility="gone"-->
     <!-->-->
     <!--<ImageView-->
     <!--android:id="@+id/thumbnails123"-->
-    <!--android:layout_width="fill_parent"-->
-    <!--android:layout_height="fill_parent"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
     <!--android:src="@drawable/background"-->
     <!--android:scaleType="fitXY"/>-->
 
