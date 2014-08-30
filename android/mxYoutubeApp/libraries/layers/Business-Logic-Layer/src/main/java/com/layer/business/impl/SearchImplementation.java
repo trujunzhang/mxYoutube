@@ -6,7 +6,6 @@ import com.layer.business.SearchInterface;
 
 import java.io.InputStream;
 import java.util.List;
-import com.layer.business.R;
 
 public class SearchImplementation implements SearchInterface {
 
