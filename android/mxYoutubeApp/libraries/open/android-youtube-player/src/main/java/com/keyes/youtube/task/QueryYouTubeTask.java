@@ -58,12 +58,11 @@ public class QueryYouTubeTask extends AsyncTask<YouTubeId, ProgressUpdateInfo, U
 						|| ((lTelephonyManager.getNetworkType() == TelephonyManager.NETWORK_TYPE_UMTS ||
 
 						/* icky... using literals to make backwards compatible with 1.5 and 1.6 */
-						lTelephonyManager.getNetworkType() == 9 /* HSUPA */|| lTelephonyManager.getNetworkType() == 10 /* HSPA */
+						lTelephonyManager.getNetworkType() == 9 /* HSUPA */
+								|| lTelephonyManager.getNetworkType() == 10 /* HSPA */
 								|| lTelephonyManager.getNetworkType() == 8 /* HSDPA */
-								|| lTelephonyManager.getNetworkType() == 5 /* EVDO_0 */|| lTelephonyManager.getNetworkType() == 6 /*
-																																	 * EVDO
-																																	 * A
-																																	 */)
+								|| lTelephonyManager.getNetworkType() == 5 /* EVDO_0 */
+						|| lTelephonyManager.getNetworkType() == 6)/* EVDO A */
 
 						&& lTelephonyManager.getDataState() == TelephonyManager.DATA_CONNECTED)) {
 					lYouTubeFmtQuality = "18";
