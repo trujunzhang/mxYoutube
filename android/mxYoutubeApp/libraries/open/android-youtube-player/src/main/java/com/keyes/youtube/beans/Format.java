@@ -1,4 +1,4 @@
-package com.keyes.youtube;
+package com.keyes.youtube.beans;
 
 /**
  * Represents a format in the "fmt_list" parameter

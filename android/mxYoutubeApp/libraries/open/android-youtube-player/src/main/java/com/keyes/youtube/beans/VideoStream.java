@@ -1,4 +1,4 @@
-package com.keyes.youtube;
+package com.keyes.youtube.beans;
 
 import java.util.HashMap;
 import java.util.Map;

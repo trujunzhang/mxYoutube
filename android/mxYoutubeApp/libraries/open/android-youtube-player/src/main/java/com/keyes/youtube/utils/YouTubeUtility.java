@@ -1,4 +1,4 @@
-package com.keyes.youtube;
+package com.keyes.youtube.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -12,6 +12,11 @@ import java.util.Set;
 
 import javax.xml.parsers.FactoryConfigurationError;
 
+import com.keyes.youtube.beans.Format;
+import com.keyes.youtube.beans.PlaylistId;
+import com.keyes.youtube.beans.VideoStream;
+import com.keyes.youtube.beans.Youtube_URL;
+import com.keyes.youtube.ui.OpenYouTubePlayerActivity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -47,7 +52,7 @@ public class YouTubeUtility {
 
         HttpClient lClient = new DefaultHttpClient();
 
-        HttpGet lGetMethod = new HttpGet(OpenYouTubePlayerActivity.YOUTUBE_PLAYLIST_ATOM_FEED_URL +
+        HttpGet lGetMethod = new HttpGet(Youtube_URL.YOUTUBE_PLAYLIST_ATOM_FEED_URL +
                 pPlaylistId.getId() + "?v=2&max-results=50&alt=json");
 
         HttpResponse lResp = null;
@@ -95,7 +100,7 @@ public class YouTubeUtility {
      * requires to play the video.
      *
      * @param pYouTubeFmtQuality quality of the video.  17=low, 18=high
-     * @param bFallback          whether to fallback to lower quality in case the supplied quality is not available
+     * @param pFallback          whether to fallback to lower quality in case the supplied quality is not available
      * @param pYouTubeVideoId    the id of the video
      * @return the url string that will retrieve the video
      * @throws IOException
@@ -109,7 +114,7 @@ public class YouTubeUtility {
         String lUriStr = null;
         HttpClient lClient = new DefaultHttpClient();
 
-        HttpGet lGetMethod = new HttpGet(OpenYouTubePlayerActivity.YOUTUBE_VIDEO_INFORMATION_URL +
+        HttpGet lGetMethod = new HttpGet(Youtube_URL.YOUTUBE_VIDEO_INFORMATION_URL +
                 pYouTubeVideoId);
 
         HttpResponse lResp = null;

@@ -42,7 +42,7 @@ include ':libraries:open:android-youtube-player'
 //include ':libraries:openexamples:smoothieexample:bitmap-cache'
 //include ':libraries:openexamples:smoothieexample:gallery'
 // ..........cwac-endless
-include ':libraries:openexamples:cwac-endless'
+//include ':libraries:openexamples:cwac-endless'
 // ..........picasso
 //include ':libraries:openexamples:picasso'
 

@@ -22,8 +22,6 @@
             <option value="$PROJECT_DIR$/libraries/open/actionbarsherlock" />
             <option value="$PROJECT_DIR$/libraries/open/android-youtube-player" />
             <option value="$PROJECT_DIR$/libraries/open/cwac-endless" />
-            <option value="$PROJECT_DIR$/libraries/openexamples" />
-            <option value="$PROJECT_DIR$/libraries/openexamples/cwac-endless" />
           </set>
         </option>
       </GradleProjectSettings>

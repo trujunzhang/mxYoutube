@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.keyes.youtube;
+package com.keyes.youtube.beans;
 
 public abstract class YouTubeId {
 	protected String mId;
