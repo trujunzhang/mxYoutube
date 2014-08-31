@@ -11,7 +11,7 @@ public class Index extends SherlockFragmentActivity {
 	public AppContext appContext;
 
 	@FragmentById(R.id.fragment_footer_tab)
-	Footer fragmentFooterTab;
+	public Footer fragmentFooterTab;
 
 	@AfterInject
 	public void calledAfterInjection() {

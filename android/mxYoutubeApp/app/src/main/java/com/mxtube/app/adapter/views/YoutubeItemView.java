@@ -40,7 +40,7 @@ public class YoutubeItemView extends LinearLayout {
 		// item will not contain a video ID.
 		Thumbnail thumbnail = singleVideo.getSnippet().getThumbnails().getHigh();
 
-		System.out.println(" Video Id" + singleVideo.getId());
+		System.out.println(" Video Id:" + singleVideo.getId());
 		System.out.println(" Title: " + singleVideo.getSnippet().getTitle());
 		System.out.println(" Thumbnail: " + thumbnail.getUrl());
 		System.out.println(" width: " + thumbnail.getWidth() + " height: " + thumbnail.getHeight());

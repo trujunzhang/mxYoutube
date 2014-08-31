@@ -97,13 +97,16 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.mxtube.app" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40b4ff95-6454-4327-83b2-70fa6b42ff96" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/Footer.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/Footer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/utils/YoutubeQuality.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/utils/YoutubeQuality.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Home.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Home.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/Index.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/Index.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/MediaPlayer.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/MediaPlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Single.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Single.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/adapter/views/YoutubeItemView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/adapter/views/YoutubeItemView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mxYoutubeApp.iws" />
@@ -8191,7 +8194,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/libraries/openexamples/cwac-endless/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/libraries/openexamples/cwac-endless/src/main/java/com/commonsware/cwac/endless/demo/EndlessAdapterDemo.java" />
         <option value="$PROJECT_DIR$/libraries/openexamples/cwac-endless/src/main/java/com/commonsware/cwac/endless/demo/DemoAdapter.java" />
         <option value="$PROJECT_DIR$/libraries/layers/Business-Logic-Layer/src/main/java/com/layer/business/impl/SearchInterface.java" />
@@ -8211,7 +8213,6 @@
         <option value="$PROJECT_DIR$/libraries/collect/AndroidCommon/src/main/java/com/views/SquareImageView.java" />
         <option value="$PROJECT_DIR$/libraries/layers/google-api-services-youtube/src/main/java/com/example/api/Search.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/adapter/views/YoutubeItemView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/youtube_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/single_home.xml" />
@@ -8234,14 +8235,16 @@
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/build.gradle" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Home.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Single.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/ui/Sample.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/ui/YouTubePlayerHelper.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/ui/OpenYouTubePlayerActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/MediaPlayer.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/Footer.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/utils/YoutubeQuality.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/Index.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/adapter/views/YoutubeItemView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/Footer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Home.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Single.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/MediaPlayer.java" />
       </list>
     </option>
   </component>
@@ -9036,6 +9039,78 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mxYoutubeApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mxYoutubeApp" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adapter" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mxYoutubeApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mxYoutubeApp" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adapter" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -9477,7 +9552,7 @@
       <workItem from="1409449421670" duration="212000" />
       <workItem from="1409461709368" duration="131000" />
       <workItem from="1409463629227" duration="5438000" />
-      <workItem from="1409469707395" duration="1002000" />
+      <workItem from="1409469707395" duration="1617000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1408861027733</created>
@@ -9863,11 +9938,15 @@
       <created>1409470220861</created>
       <updated>1409470220861</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="developing app.">
+      <created>1409470713650</created>
+      <updated>1409470713650</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69540000" />
+    <option name="totallyTimeSpent" value="70155000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1366" height="689" extended-state="6" />
@@ -10063,13 +10142,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/adapter/views/YoutubeItemView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="621" max-vertical-offset="1188">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/youtube_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.090909" vertical-offset="2112" max-vertical-offset="2628">
@@ -10252,24 +10324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../../../../../macshare/SHARE/HomeBrew/Library/Android-adt-bundle/Home/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0-sources.jar!/android/support/v4/app/FragmentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3146718" vertical-offset="521" max-vertical-offset="15372">
@@ -10298,16 +10352,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40112993" vertical-offset="93" max-vertical-offset="1260">
           <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Single.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20338982" vertical-offset="0" max-vertical-offset="531">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -10351,28 +10395,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/Footer.java">
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/utils/YoutubeQuality.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1710">
-          <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/MediaPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1062">
-          <caret line="42" column="63" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.93822396" vertical-offset="0" max-vertical-offset="684">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/utils/YoutubeQuality.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/Index.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93822396" vertical-offset="0" max-vertical-offset="684">
-          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.37288135" vertical-offset="0" max-vertical-offset="531">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/adapter/views/YoutubeItemView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.084745765" vertical-offset="477" max-vertical-offset="1188">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="1116">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/Footer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36723164" vertical-offset="255" max-vertical-offset="1710">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Single.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30508474" vertical-offset="0" max-vertical-offset="531">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/MediaPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45762712" vertical-offset="45" max-vertical-offset="1062">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

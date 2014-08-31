@@ -27,11 +27,11 @@ public class Footer extends SherlockFragment {
 	@AfterViews
 	protected void calledAfterViewInjection() {
 		this.mCurSel = -1;
-		// setButtonClickEvent(null, TYPE_FRAGMENT_HOME);
-		setButtonClickEvent(null, TYPE_FRAGMENT_MEDIA_PLAYER);
+		setButtonClickEvent(null, TYPE_FRAGMENT_HOME);
+		// setButtonClickEvent(null, TYPE_FRAGMENT_MEDIA_PLAYER);
 	}
 
-	void setButtonClickEvent(View view, int pos) {
+	public void setButtonClickEvent(View view, int pos) {
 		setTabFragment(pos);
 		setCurPoint(view, pos);
 	}

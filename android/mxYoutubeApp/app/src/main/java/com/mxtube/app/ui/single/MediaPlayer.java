@@ -29,7 +29,7 @@ public class MediaPlayer extends Single {
 
 		this.playerHelper.initProgressBar();
 
-		Uri lVideoIdUri = Uri.parse("ytv://" + "zcPfh0ePokM");
+		Uri lVideoIdUri = Uri.parse("ytv://" + this.selectedVideo.getId());
 
 		this.playerHelper.makeAndExecuteYoutubeTask(this.getSherlockActivity(), lVideoIdUri);
 	}
