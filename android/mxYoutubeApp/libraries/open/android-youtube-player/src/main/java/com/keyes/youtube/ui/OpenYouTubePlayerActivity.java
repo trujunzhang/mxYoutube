@@ -42,7 +42,7 @@ public class OpenYouTubePlayerActivity extends Activity {
 			Log.i(this.getClass().getSimpleName(), "No video ID was specified in the intent.  Closing video activity.");
 			finish();
 		}
-		String lVideoSchemeStr = lVideoIdUri.getScheme();
+
 		String lVideoIdStr = lVideoIdUri.getEncodedSchemeSpecificPart();
 		if (lVideoIdStr == null) {
 			Log.i(this.getClass().getSimpleName(), "No video ID was specified in the intent.  Closing video activity.");
@@ -58,7 +58,7 @@ public class OpenYouTubePlayerActivity extends Activity {
 			}
 		}
 
-		YouTubeId lYouTubeId = this.playerHelper.getYouTubeId(lVideoSchemeStr, lVideoIdStr);
+		YouTubeId lYouTubeId = this.playerHelper.getYouTubeId(lVideoIdUri.getScheme(), lVideoIdStr);
 
 		if (lYouTubeId == null) {
 			Log.i(this.getClass().getSimpleName(),
@@ -66,7 +66,7 @@ public class OpenYouTubePlayerActivity extends Activity {
 			finish();
 		}
 
-		this.playerHelper.makeAndExecuteYoutubeTask(this,lYouTubeId);
+		this.playerHelper.makeAndExecuteYoutubeTask(this, lYouTubeId);
 	}
 
 	/**
