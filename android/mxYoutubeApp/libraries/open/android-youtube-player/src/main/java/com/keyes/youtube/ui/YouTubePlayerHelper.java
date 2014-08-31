@@ -2,6 +2,7 @@ package com.keyes.youtube.ui;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.net.Uri;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -111,6 +112,25 @@ public class YouTubePlayerHelper {
 
 	public String mVideoId = null;
 
+	private String getVideoString(Uri lVideoIdUri) {
+		String lVideoIdStr = lVideoIdUri.getEncodedSchemeSpecificPart();
+		if (lVideoIdStr.startsWith("//")) {
+			if (lVideoIdStr.length() > 2) {
+				lVideoIdStr = lVideoIdStr.substring(2);
+			} else {
+				Log.i(this.getClass().getSimpleName(),
+						"No video ID was specified in the intent.  Closing video activity.");
+			}
+		}
+		return lVideoIdStr;
+	}
+
+	public YouTubeId getYouTubeId(Uri lVideoIdUri) {
+		String lVideoIdStr = getVideoString(lVideoIdUri);
+
+		return this.getYouTubeId(lVideoIdUri.getScheme(), lVideoIdStr);
+	}
+
 	public YouTubeId getYouTubeId(String lVideoSchemeStr, String lVideoIdStr) {
 		// /////////////////
 		// extract either a video id or a playlist id, depending on the uri scheme
@@ -128,7 +148,7 @@ public class YouTubePlayerHelper {
 	/**
 	 * Create the view in which the video will be rendered.
 	 */
-    public View setupView(Context context) {
+	public View setupView(Context context) {
 		LinearLayout lLinLayout = new LinearLayout(context);
 		lLinLayout.setId(1);
 		lLinLayout.setOrientation(LinearLayout.VERTICAL);
@@ -201,6 +221,10 @@ public class YouTubePlayerHelper {
 		} catch (Exception e) {
 			Log.e(this.getClass().getSimpleName(), "Error updating video status!", e);
 		}
+	}
+
+	public void makeAndExecuteYoutubeTask(Context context, Uri lVideoIdUri) {
+		makeAndExecuteYoutubeTask(context, this.getYouTubeId(lVideoIdUri));
 	}
 
 	public void makeAndExecuteYoutubeTask(Context context, YouTubeId lYouTubeId) {

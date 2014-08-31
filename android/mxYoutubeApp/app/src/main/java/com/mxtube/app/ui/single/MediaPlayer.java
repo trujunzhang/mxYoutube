@@ -1,5 +1,6 @@
 package com.mxtube.app.ui.single;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,12 +23,16 @@ public class MediaPlayer extends Single {
 
 	@AfterViews
 	protected void calledAfterViewInjection() {
+
 		// determine the messages to be displayed as the view loads the video
 		this.playerHelper.taskInfo = getExtractMessages();
 
-        this.playerHelper.initProgressBar();
+		this.playerHelper.initProgressBar();
 
-    }
+		Uri lVideoIdUri = Uri.parse("ytv://" + "zcPfh0ePokM");
+
+		this.playerHelper.makeAndExecuteYoutubeTask(this.getSherlockActivity(), lVideoIdUri);
+	}
 
 	/**
 	 * Determine the messages to display during video load and initialization.

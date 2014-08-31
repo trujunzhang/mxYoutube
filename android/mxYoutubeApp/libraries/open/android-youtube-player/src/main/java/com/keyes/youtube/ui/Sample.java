@@ -30,7 +30,8 @@ public class Sample extends Activity {
                     return;
                 }
 
-                Intent lVideoIntent = new Intent(null, Uri.parse("ytv://" + videoId), Sample.this, OpenYouTubePlayerActivity.class);
+                Uri parse = Uri.parse("ytv://" + videoId);
+                Intent lVideoIntent = new Intent(null, parse, Sample.this, OpenYouTubePlayerActivity.class);
                 startActivity(lVideoIntent);
 
             }

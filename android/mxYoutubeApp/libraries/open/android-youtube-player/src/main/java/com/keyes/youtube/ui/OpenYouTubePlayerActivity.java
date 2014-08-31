@@ -4,10 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
-import com.keyes.youtube.beans.YouTubeId;
 import com.keyes.youtube.beans.YoutubeTaskInfo;
 import com.keyes.youtube.utils.YoutubeQuality;
 
@@ -38,35 +36,24 @@ public class OpenYouTubePlayerActivity extends Activity {
 
 		Uri lVideoIdUri = this.getIntent().getData();
 
-		if (lVideoIdUri == null) {
-			Log.i(this.getClass().getSimpleName(), "No video ID was specified in the intent.  Closing video activity.");
-			finish();
-		}
+		// if (lVideoIdUri == null) {
+		// Log.i(this.getClass().getSimpleName(), "No video ID was specified in the intent.  Closing video activity.");
+		// finish();
+		// }
 
-		String lVideoIdStr = lVideoIdUri.getEncodedSchemeSpecificPart();
-		if (lVideoIdStr == null) {
-			Log.i(this.getClass().getSimpleName(), "No video ID was specified in the intent.  Closing video activity.");
-			finish();
-		}
-		if (lVideoIdStr.startsWith("//")) {
-			if (lVideoIdStr.length() > 2) {
-				lVideoIdStr = lVideoIdStr.substring(2);
-			} else {
-				Log.i(this.getClass().getSimpleName(),
-						"No video ID was specified in the intent.  Closing video activity.");
-				finish();
-			}
-		}
+		// String lVideoIdStr = lVideoIdUri.getEncodedSchemeSpecificPart();
+		// if (lVideoIdStr == null) {
+		// Log.i(this.getClass().getSimpleName(), "No video ID was specified in the intent.  Closing video activity.");
+		// finish();
+		// }
 
-		YouTubeId lYouTubeId = this.playerHelper.getYouTubeId(lVideoIdUri.getScheme(), lVideoIdStr);
+		// if (lYouTubeId == null) {
+		// Log.i(this.getClass().getSimpleName(),
+		// "Unable to extract video ID from the intent.  Closing video activity.");
+		// finish();
+		// }
 
-		if (lYouTubeId == null) {
-			Log.i(this.getClass().getSimpleName(),
-					"Unable to extract video ID from the intent.  Closing video activity.");
-			finish();
-		}
-
-		this.playerHelper.makeAndExecuteYoutubeTask(this, lYouTubeId);
+		this.playerHelper.makeAndExecuteYoutubeTask(this, lVideoIdUri);
 	}
 
 	/**
