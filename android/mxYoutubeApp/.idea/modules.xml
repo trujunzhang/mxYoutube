@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/libraries/open/GreenDroid/GreenDroid.iml" filepath="$PROJECT_DIR$/libraries/open/GreenDroid/GreenDroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/SlidingMenu/SlidingMenu.iml" filepath="$PROJECT_DIR$/libraries/open/SlidingMenu/SlidingMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/libraries/open/actionbarsherlock/actionbarsherlock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/open/android-youtube-player/android-youtube-player.iml" filepath="$PROJECT_DIR$/libraries/open/android-youtube-player/android-youtube-player.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/collect/collect.iml" filepath="$PROJECT_DIR$/libraries/collect/collect.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/cwac-endless/cwac-endless.iml" filepath="$PROJECT_DIR$/libraries/open/cwac-endless/cwac-endless.iml" />

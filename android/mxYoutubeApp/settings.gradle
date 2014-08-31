@@ -20,6 +20,7 @@ include ':libraries:open:GreenDroid'
 //include ':libraries:open:smoothie'
 include ':libraries:open:cwac-endless'
 //include ':libraries:open:picasso'
+include ':libraries:open:android-youtube-player'
 
 // ---------------------------
 //       open project examples
