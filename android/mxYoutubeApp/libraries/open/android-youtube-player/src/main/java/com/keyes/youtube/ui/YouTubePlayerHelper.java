@@ -98,9 +98,9 @@ import com.keyes.youtube.utils.YouTubeUtility;
  */
 public class YouTubePlayerHelper {
 
-	protected ProgressBar mProgressBar;
-	protected TextView mProgressMessage;
-	protected VideoView mVideoView;
+	public ProgressBar mProgressBar;
+	public TextView mProgressMessage;
+	public VideoView mVideoView;
 
 	public YoutubeTaskInfo taskInfo;
 
@@ -109,7 +109,7 @@ public class YouTubePlayerHelper {
 	 */
 	protected QueryYouTubeTask mQueryYouTubeTask;
 
-	protected String mVideoId = null;
+	public String mVideoId = null;
 
 	public YouTubeId getYouTubeId(String lVideoSchemeStr, String lVideoIdStr) {
 		// /////////////////
@@ -128,8 +128,8 @@ public class YouTubePlayerHelper {
 	/**
 	 * Create the view in which the video will be rendered.
 	 */
-	protected void setupView() {
-		LinearLayout lLinLayout = new LinearLayout(this);
+	protected View setupView(Context context) {
+		LinearLayout lLinLayout = new LinearLayout(context);
 		lLinLayout.setId(1);
 		lLinLayout.setOrientation(LinearLayout.VERTICAL);
 		lLinLayout.setGravity(Gravity.CENTER);
@@ -139,9 +139,9 @@ public class YouTubePlayerHelper {
 				ViewGroup.LayoutParams.FILL_PARENT);
 		lLinLayout.setLayoutParams(lLinLayoutParms);
 
-		this.setContentView(lLinLayout);
+//		this.setContentView(lLinLayout);
 
-		RelativeLayout lRelLayout = new RelativeLayout(this);
+		RelativeLayout lRelLayout = new RelativeLayout(context);
 		lRelLayout.setId(2);
 		lRelLayout.setGravity(Gravity.CENTER);
 		lRelLayout.setBackgroundColor(Color.BLACK);
@@ -150,7 +150,7 @@ public class YouTubePlayerHelper {
 		lRelLayout.setLayoutParams(lRelLayoutParms);
 		lLinLayout.addView(lRelLayout);
 
-		mVideoView = new VideoView(this);
+		mVideoView = new VideoView(context);
 		mVideoView.setId(3);
 		RelativeLayout.LayoutParams lVidViewLayoutParams = new RelativeLayout.LayoutParams(
 				ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
@@ -158,7 +158,7 @@ public class YouTubePlayerHelper {
 		mVideoView.setLayoutParams(lVidViewLayoutParams);
 		lRelLayout.addView(mVideoView);
 
-		mProgressBar = new ProgressBar(this);
+		mProgressBar = new ProgressBar(context);
 		mProgressBar.setIndeterminate(true);
 		mProgressBar.setVisibility(View.VISIBLE);
 		mProgressBar.setEnabled(true);
@@ -169,7 +169,7 @@ public class YouTubePlayerHelper {
 		mProgressBar.setLayoutParams(lProgressBarLayoutParms);
 		lRelLayout.addView(mProgressBar);
 
-		mProgressMessage = new TextView(this);
+		mProgressMessage = new TextView(context);
 		mProgressMessage.setId(5);
 		RelativeLayout.LayoutParams lProgressMsgLayoutParms = new RelativeLayout.LayoutParams(
 				ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -180,12 +180,14 @@ public class YouTubePlayerHelper {
 		mProgressMessage.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
 		mProgressMessage.setText("...");
 		lRelLayout.addView(mProgressMessage);
+
+		return lLinLayout;
 	}
 
-    public void destroyView() {
-        this.mQueryYouTubeTask = null;
-        this.mVideoView = null;
-    }
+	public void destroyView() {
+		this.mQueryYouTubeTask = null;
+		this.mVideoView = null;
+	}
 
 	public void initProgressBar() {
 		mProgressBar.bringToFront();
