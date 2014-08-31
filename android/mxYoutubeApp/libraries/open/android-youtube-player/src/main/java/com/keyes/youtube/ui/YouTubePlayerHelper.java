@@ -128,7 +128,7 @@ public class YouTubePlayerHelper {
 	/**
 	 * Create the view in which the video will be rendered.
 	 */
-	protected View setupView(Context context) {
+    public View setupView(Context context) {
 		LinearLayout lLinLayout = new LinearLayout(context);
 		lLinLayout.setId(1);
 		lLinLayout.setOrientation(LinearLayout.VERTICAL);

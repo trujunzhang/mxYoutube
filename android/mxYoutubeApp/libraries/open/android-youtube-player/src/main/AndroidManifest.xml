@@ -28,7 +28,7 @@
         <!-- the OpenYouTubeActivity in your project                         -->
         <!-- =============================================================== -->
         <activity
-                android:name=".OpenYouTubePlayerActivity"
+                android:name=".ui.OpenYouTubePlayerActivity"
                 android:screenOrientation="landscape"
                 android:configChanges="orientation"
                 android:theme="@android:style/Theme.Black"

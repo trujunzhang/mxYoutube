@@ -26,6 +26,8 @@ dependencies {
     compile project(':libraries:open:SlidingMenu');
     compile project(':libraries:open:GreenDroid');
     compile project(':libraries:open:cwac-endless');
+    compile project(':libraries:open:android-youtube-player');
+
 
     compile 'com.squareup.picasso:picasso:2.3.4'
 
