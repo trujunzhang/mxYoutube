@@ -1,14 +1,9 @@
 package com.keyes.youtube.task;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
-import android.os.Bundle;
-import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.MediaController;
@@ -27,8 +22,10 @@ public class QueryYouTubeTask extends AsyncTask<YouTubeId, ProgressUpdateInfo, U
 
 	private YouTubePlayerHelper playerHelper = new YouTubePlayerHelper();
 	private boolean mShowedError = false;
+	private Context mContext;
 
-	public QueryYouTubeTask(YouTubePlayerHelper playerHelper) {
+	public QueryYouTubeTask(Context context, YouTubePlayerHelper playerHelper) {
+		this.mContext = context;
 		this.playerHelper = playerHelper;
 	}
 
@@ -38,35 +35,14 @@ public class QueryYouTubeTask extends AsyncTask<YouTubeId, ProgressUpdateInfo, U
 			return Uri.parse(pParams[0].getId());
 		} else {
 			String lUriStr = null;
-			String lYouTubeFmtQuality = "17"; // 3gpp medium quality, which should be fast enough to view over EDGE
-												// connection
+
 			String lYouTubeVideoId = null;
 
 			if (isCancelled())
 				return null;
 
 			try {
-
 				publishProgress(new ProgressUpdateInfo(playerHelper.taskInfo.mMsgDetect));
-
-				WifiManager lWifiManager = (WifiManager) openYouTubePlayerActivity.getSystemService(Context.WIFI_SERVICE);
-				TelephonyManager lTelephonyManager = (TelephonyManager) openYouTubePlayerActivity.getSystemService(Context.TELEPHONY_SERVICE);
-
-				// //////////////////////////
-				// if we have a fast connection (wifi or 3g), then we'll get a high quality YouTube video
-				if ((lWifiManager.isWifiEnabled() && lWifiManager.getConnectionInfo() != null && lWifiManager.getConnectionInfo().getIpAddress() != 0)
-						|| ((lTelephonyManager.getNetworkType() == TelephonyManager.NETWORK_TYPE_UMTS ||
-
-						/* icky... using literals to make backwards compatible with 1.5 and 1.6 */
-						lTelephonyManager.getNetworkType() == 9 /* HSUPA */
-								|| lTelephonyManager.getNetworkType() == 10 /* HSPA */
-								|| lTelephonyManager.getNetworkType() == 8 /* HSDPA */
-								|| lTelephonyManager.getNetworkType() == 5 /* EVDO_0 */
-						|| lTelephonyManager.getNetworkType() == 6)/* EVDO A */
-
-						&& lTelephonyManager.getDataState() == TelephonyManager.DATA_CONNECTED)) {
-					lYouTubeFmtQuality = "18";
-				}
 
 				// /////////////////////////////////
 				// if the intent is to show a playlist, get the latest video id from the playlist, otherwise the video
@@ -87,12 +63,13 @@ public class QueryYouTubeTask extends AsyncTask<YouTubeId, ProgressUpdateInfo, U
 
 				// //////////////////////////////////
 				// calculate the actual URL of the video, encoded with proper YouTube token
-				lUriStr = YouTubeUtility.calculateYouTubeUrl(lYouTubeFmtQuality, true, lYouTubeVideoId);
+				lUriStr = YouTubeUtility.calculateYouTubeUrl(playerHelper.taskInfo.lYouTubeFmtQuality, true,
+						lYouTubeVideoId);
 
 				if (isCancelled())
 					return null;
 
-				if (lYouTubeFmtQuality.equals("17")) {
+				if (playerHelper.taskInfo.lYouTubeFmtQuality.equals("17")) {
 					publishProgress(new ProgressUpdateInfo(playerHelper.taskInfo.mMsgLowBand));
 				} else {
 					publishProgress(new ProgressUpdateInfo(playerHelper.taskInfo.mMsgHiBand));
@@ -133,7 +110,7 @@ public class QueryYouTubeTask extends AsyncTask<YouTubeId, ProgressUpdateInfo, U
 				public void onCompletion(MediaPlayer pMp) {
 					if (isCancelled())
 						return;
-					openYouTubePlayerActivity.finish();
+					// openYouTubePlayerActivity.finish(); // TODO [USED]
 				}
 
 			});
@@ -141,17 +118,10 @@ public class QueryYouTubeTask extends AsyncTask<YouTubeId, ProgressUpdateInfo, U
 			if (isCancelled())
 				return;
 
-			final MediaController lMediaController = new MediaController(openYouTubePlayerActivity);
+			final MediaController lMediaController = new MediaController(mContext);
 			playerHelper.mVideoView.setMediaController(lMediaController);
 
-			Bundle bundle = openYouTubePlayerActivity.getIntent().getExtras();
-
-			boolean showControllerOnStartup = false;
-
-			if (!(bundle == null))
-				showControllerOnStartup = bundle.getBoolean("show_controller_on_startup", false);
-
-			if (showControllerOnStartup)
+			if (playerHelper.taskInfo.showControllerOnStartup)
 				lMediaController.show(0);
 
 			// mVideoView.setKeepScreenOn(true);
@@ -180,27 +150,26 @@ public class QueryYouTubeTask extends AsyncTask<YouTubeId, ProgressUpdateInfo, U
 		}
 	}
 
-	private void showErrorAlert() {
-
-		try {
-			AlertDialog.Builder lBuilder = new AlertDialog.Builder(openYouTubePlayerActivity);
-			lBuilder.setTitle(playerHelper.taskInfo.mMsgErrorTitle);
-			lBuilder.setCancelable(false);
-			lBuilder.setMessage(playerHelper.taskInfo.mMsgError);
-
-			lBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-
-				public void onClick(DialogInterface pDialog, int pWhich) {
-					openYouTubePlayerActivity.finish();
-				}
-
-			});
-
-			AlertDialog lDialog = lBuilder.create();
-			lDialog.show();
-		} catch (Exception e) {
-			Log.e(this.getClass().getSimpleName(), "Problem showing error dialog.", e);
-		}
+	private void showErrorAlert() {// TODO [USED]
+		// try {
+		// AlertDialog.Builder lBuilder = new AlertDialog.Builder(openYouTubePlayerActivity);
+		// lBuilder.setTitle(playerHelper.taskInfo.mMsgErrorTitle);
+		// lBuilder.setCancelable(false);
+		// lBuilder.setMessage(playerHelper.taskInfo.mMsgError);
+		//
+		// lBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+		//
+		// public void onClick(DialogInterface pDialog, int pWhich) {
+		// openYouTubePlayerActivity.finish();
+		// }
+		//
+		// });
+		//
+		// AlertDialog lDialog = lBuilder.create();
+		// lDialog.show();
+		// } catch (Exception e) {
+		// Log.e(this.getClass().getSimpleName(), "Problem showing error dialog.", e);
+		// }
 	}
 
 	@Override

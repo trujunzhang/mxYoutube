@@ -5,11 +5,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import com.keyes.youtube.beans.YouTubeId;
 import com.keyes.youtube.beans.YoutubeTaskInfo;
+import com.keyes.youtube.utils.YoutubeQuality;
 
 public class OpenYouTubePlayerActivity extends Activity {
 	private YouTubePlayerHelper playerHelper = new YouTubePlayerHelper();
@@ -23,7 +23,7 @@ public class OpenYouTubePlayerActivity extends Activity {
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		// create the layout of the view
-        this.setContentView(this.playerHelper.setupView(this));
+		this.setContentView(this.playerHelper.setupView(this));
 
 		// determine the messages to be displayed as the view loads the video
 		this.playerHelper.taskInfo = getExtractMessages();
@@ -66,7 +66,7 @@ public class OpenYouTubePlayerActivity extends Activity {
 			finish();
 		}
 
-		this.playerHelper.makeAndExecuteYoutubeTask(lYouTubeId);
+		this.playerHelper.makeAndExecuteYoutubeTask(this,lYouTubeId);
 	}
 
 	/**
@@ -107,6 +107,9 @@ public class OpenYouTubePlayerActivity extends Activity {
 		if (lMsgErrMsg != null) {
 			_taskInfo.mMsgError = lMsgErrMsg;
 		}
+
+		_taskInfo.lYouTubeFmtQuality = YoutubeQuality.getYoutubeFmtQuality(this);
+		_taskInfo.showControllerOnStartup = false;
 
 		return _taskInfo;
 	}

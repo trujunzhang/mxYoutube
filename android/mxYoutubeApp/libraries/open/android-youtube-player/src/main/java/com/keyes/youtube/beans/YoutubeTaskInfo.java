@@ -2,6 +2,11 @@ package com.keyes.youtube.beans;
 
 public class YoutubeTaskInfo {
 
+	public boolean showControllerOnStartup = false;
+
+	// 3gpp medium quality, which should be fast enough to view over EDGE connection
+	public String lYouTubeFmtQuality = "17";
+
 	public final static String MSG_INIT = "com.keyes.video.msg.init";
 	public String mMsgInit = "Initializing";
 

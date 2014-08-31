@@ -139,7 +139,7 @@ public class YouTubePlayerHelper {
 				ViewGroup.LayoutParams.FILL_PARENT);
 		lLinLayout.setLayoutParams(lLinLayoutParms);
 
-//		this.setContentView(lLinLayout);
+		// this.setContentView(lLinLayout);
 
 		RelativeLayout lRelLayout = new RelativeLayout(context);
 		lRelLayout.setId(2);
@@ -203,8 +203,8 @@ public class YouTubePlayerHelper {
 		}
 	}
 
-	public void makeAndExecuteYoutubeTask(YouTubeId lYouTubeId) {
-		mQueryYouTubeTask = (QueryYouTubeTask) new QueryYouTubeTask(this).execute(lYouTubeId);
+	public void makeAndExecuteYoutubeTask(Context context, YouTubeId lYouTubeId) {
+		mQueryYouTubeTask = (QueryYouTubeTask) new QueryYouTubeTask(context, this).execute(lYouTubeId);
 	}
 
 	public void stopYoutubeTask(Context context) {
