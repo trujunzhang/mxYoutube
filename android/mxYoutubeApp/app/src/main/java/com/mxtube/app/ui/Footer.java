@@ -8,12 +8,17 @@ import com.actionbarsherlock.app.SherlockFragment;
 import com.mxtube.app.Index;
 import com.mxtube.app.R;
 import com.mxtube.app.ui.single.Home_;
+import com.mxtube.app.ui.single.MediaPlayer_;
 import com.mxtube.app.ui.single.Single;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
 
 @EFragment(R.layout.main_footer)
 public class Footer extends SherlockFragment {
+
+	public static final int TYPE_FRAGMENT_HOME = 0;
+	public static final int TYPE_FRAGMENT_MEDIA_PLAYER = 1;
+
 	private int mCurSel;
 	private RadioButton lastRadioButton;
 
@@ -22,7 +27,8 @@ public class Footer extends SherlockFragment {
 	@AfterViews
 	protected void calledAfterViewInjection() {
 		this.mCurSel = -1;
-		setButtonClickEvent(null, 0);
+		// setButtonClickEvent(null, TYPE_FRAGMENT_HOME);
+		setButtonClickEvent(null, TYPE_FRAGMENT_MEDIA_PLAYER);
 	}
 
 	void setButtonClickEvent(View view, int pos) {
@@ -63,11 +69,11 @@ public class Footer extends SherlockFragment {
 	private Single getFragment(int pos) {
 		Single fragment = null;
 		switch (pos) {
-		case 0:// Home
+		case TYPE_FRAGMENT_HOME:// Home
 			fragment = new Home_();
 			break;
-		case 1:// Search
-				// fragment = new QuestionMenuFragment_();
+		case TYPE_FRAGMENT_MEDIA_PLAYER:// Media Player
+			fragment = new MediaPlayer_();
 			break;
 		case 2:// Recent
 				// fragment = new TweetMenuFragment_();
@@ -87,7 +93,7 @@ public class Footer extends SherlockFragment {
 		}
 		// newButton.setChecked(true);
 		Index activity = (Index) getSherlockActivity();
-//		activity.setTitle(index);
+		// activity.setTitle(index);
 		mCurSel = index;
 
 		// lastRadioButton = newButton;

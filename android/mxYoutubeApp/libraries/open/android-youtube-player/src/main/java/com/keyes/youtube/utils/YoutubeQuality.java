@@ -25,7 +25,7 @@ public class YoutubeQuality {
 				|| lTelephonyManager.getNetworkType() == 6)/* EVDO A */
 
 				&& lTelephonyManager.getDataState() == TelephonyManager.DATA_CONNECTED)) {
-			lYouTubeFmtQuality = "18";
+			// lYouTubeFmtQuality = "18";
 		}
 		return lYouTubeFmtQuality;
 	}
