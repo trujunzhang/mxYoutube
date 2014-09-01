@@ -98,7 +98,7 @@ public class QueryYouTubeTask extends AsyncTask<YouTubeId, ProgressUpdateInfo, U
 			if (pResult == null) {
 				throw new RuntimeException("Invalid NULL Url.");
 			}
-
+			// http%3A%2F%2Fr7---sn-i3b7snl7.googlevideo.com%2Fvideoplayback%3Finitcwndbps%3D210375%26source%3Dyoutube%26expire%3D1409580367%26ipbits%3D0%26key%3Dyt5%26ms%3Dau%26upn%3DG_8WcfW6ibo%26mv%3Dm%26mt%3D1409558662%26fexp%3D902408%252C916600%252C916630%252C918015%252C923345%252C927622%252C931983%252C932404%252C932625%252C934024%252C934030%252C946010%252C946506%252C949501%252C953801%26id%3Do-ACP0TRiYWc7qkIrOsVu0oqPQv08yryrLy80WpqGVpVUu%26signature%3D42EA1C0406FDEEC1E65C0B4FA20558FE2931975B.A47599A424514B7A78D726A5DECCABAFA470B462%26sver%3D3%26sparams%3Did%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Cmm%252Cms%252Cmv%252Csource%252Cupn%252Cexpire%26itag%3D17%26mm%3D31%26ip%3D121.127.250.133&signature=null
 			playerHelper.mVideoView.setVideoURI(pResult);
 
 			if (isCancelled())

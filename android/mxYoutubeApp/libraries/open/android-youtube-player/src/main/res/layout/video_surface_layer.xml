@@ -15,8 +15,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<resources>
-    <string name="app_name">Google Media Framework</string>
-    <string name="select_an_action">Select an action...</string>
-    <string name="overflow">Overflow</string>
-</resources>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+    <com.google.android.libraries.mediaframework.layeredvideo.VideoSurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:clickable="false"/>
+</FrameLayout>

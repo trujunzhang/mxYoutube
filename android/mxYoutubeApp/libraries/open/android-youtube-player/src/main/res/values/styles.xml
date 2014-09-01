@@ -15,8 +15,20 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<resources>
-    <string name="app_name">Google Media Framework</string>
-    <string name="select_an_action">Select an action...</string>
-    <string name="overflow">Overflow</string>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="RootTheme" parent="android:Theme.Holo">
+    </style>
+
+    <style name="PlayerTheme" parent="@style/RootTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="DemoButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">40dp</item>
+    </style>
+
 </resources>
