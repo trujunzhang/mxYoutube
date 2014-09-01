@@ -31,9 +31,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
-import com.google.android.exoplayer.util.PlayerControl;
 import com.google.android.libraries.mediaframework.R;
-
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -90,7 +88,7 @@ import java.util.Locale;
  */
 public class PlaybackControlLayer implements Layer {
 
-    /**
+	/**
 	 * Message handler which allows us to send delayed messages to the {@link PlaybackControlLayer} This is useful for
 	 * fading out the view after a certain time.
 	 */
@@ -196,8 +194,8 @@ public class PlaybackControlLayer implements Layer {
 
 	/**
 	 * <p>
-	 * Derived from the Color class (ex. {@link android.graphics.Color#RED}), the chrome consists of three views, which are are tinted
-	 * with the the chrome color.
+	 * Derived from the Color class (ex. {@link android.graphics.Color#RED}), the chrome consists of three views, which
+	 * are are tinted with the the chrome color.
 	 *
 	 * <p>
 	 * The views are:
@@ -217,18 +215,20 @@ public class PlaybackControlLayer implements Layer {
 	private int chromeColor;
 
 	/**
-	 * Derived from the {@link android.graphics.Color} class (ex {@link android.graphics.Color#RED}), this is the color of the play/pause button,
-	 * fullscreen button, seek bar, and action buttons.
+	 * Derived from the {@link android.graphics.Color} class (ex {@link android.graphics.Color#RED}), this is the color
+	 * of the play/pause button, fullscreen button, seek bar, and action buttons.
 	 */
 	private int controlColor;
 
 	/**
-	 * Derived from the {@link android.graphics.Color} class (ex {@link android.graphics.Color#RED}), this is the color of the text views.
+	 * Derived from the {@link android.graphics.Color} class (ex {@link android.graphics.Color#RED}), this is the color
+	 * of the text views.
 	 */
 	private int textColor;
 
 	/**
-	 * Derived from the {@link android.graphics.Color} class (ex {@link android.graphics.Color#RED}), this is the color of the seekbar track and thumb.
+	 * Derived from the {@link android.graphics.Color} class (ex {@link android.graphics.Color#RED}), this is the color
+	 * of the seekbar track and thumb.
 	 */
 	private int seekbarColor;
 
@@ -421,7 +421,7 @@ public class PlaybackControlLayer implements Layer {
 
 		originalContainerLayoutParams = layerManager.getContainer().getLayoutParams();
 
-		layerManager.getControl().addCallback(this);
+//		layerManager.getControl().addCallback(this);
 
 		textColor = DEFAULT_TEXT_COLOR;
 		chromeColor = DEFAULT_CHROME_COLOR;
@@ -477,7 +477,7 @@ public class PlaybackControlLayer implements Layer {
 		if (fullscreenCallback == null) {
 			return;
 		}
-		PlayerControl playerControl = getLayerManager().getControl();
+		VideoView playerControl = getLayerManager().getControl();
 		if (playerControl == null) {
 			return;
 		}
@@ -521,7 +521,7 @@ public class PlaybackControlLayer implements Layer {
 					});
 
 			container.setLayoutParams(Util.getLayoutParamsBasedOnParent(container, ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.MATCH_PARENT));
+					ViewGroup.LayoutParams.MATCH_PARENT));
 
 			fullscreenButton.setImageResource(R.drawable.ic_action_return_from_full_screen);
 
@@ -561,35 +561,35 @@ public class PlaybackControlLayer implements Layer {
 		if (isVisible) {
 			isFadingOut = true;
 			playbackControlRootView.animate().alpha(0.0f).setDuration(FADE_OUT_DURATION_MS).setListener(
-                    new Animator.AnimatorListener() {
-                        @Override
-                        public void onAnimationStart(Animator animation) {
-                        }
+					new Animator.AnimatorListener() {
+						@Override
+						public void onAnimationStart(Animator animation) {
+						}
 
-                        @Override
-                        public void onAnimationEnd(Animator animation) {
-                            isFadingOut = false;
-                            playbackControlRootView.setVisibility(View.INVISIBLE);
-                            container.removeView(view);
+						@Override
+						public void onAnimationEnd(Animator animation) {
+							isFadingOut = false;
+							playbackControlRootView.setVisibility(View.INVISIBLE);
+							container.removeView(view);
 
-                            // Make sure that the status bar and navigation bar are hidden when the playback
-                            // controls are hidden.
-                            if (isFullscreen) {
-                                getLayerManager().getActivity().getWindow().getDecorView().setSystemUiVisibility(
-                                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN);
-                            }
-                            handler.removeMessages(SHOW_PROGRESS);
-                            isVisible = false;
-                        }
+							// Make sure that the status bar and navigation bar are hidden when the playback
+							// controls are hidden.
+							if (isFullscreen) {
+								getLayerManager().getActivity().getWindow().getDecorView().setSystemUiVisibility(
+										View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN);
+							}
+							handler.removeMessages(SHOW_PROGRESS);
+							isVisible = false;
+						}
 
-                        @Override
-                        public void onAnimationCancel(Animator animation) {
-                        }
+						@Override
+						public void onAnimationCancel(Animator animation) {
+						}
 
-                        @Override
-                        public void onAnimationRepeat(Animator animation) {
-                        }
-                    });
+						@Override
+						public void onAnimationRepeat(Animator animation) {
+						}
+					});
 		}
 	}
 
@@ -676,7 +676,7 @@ public class PlaybackControlLayer implements Layer {
 	/**
 	 * Updates the play/pause button to the play icon.
 	 */
-	@Override
+//	@Override
 	public void onPause() {
 		updatePlayPauseButton();
 	}
@@ -684,7 +684,7 @@ public class PlaybackControlLayer implements Layer {
 	/**
 	 * Updates the play/pause button to the pause icon.
 	 */
-	@Override
+//	@Override
 	public void onPlay() {
 		updatePlayPauseButton();
 	}
@@ -778,7 +778,7 @@ public class PlaybackControlLayer implements Layer {
 	 *            If true, then the player starts playing. If false, the player pauses.
 	 */
 	public void setPlayPause(boolean shouldPlay) {
-		PlayerControl playerControl = getLayerManager().getControl();
+		VideoView playerControl = getLayerManager().getControl();
 		if (playerControl == null) {
 			return;
 		}
@@ -856,7 +856,7 @@ public class PlaybackControlLayer implements Layer {
 					return;
 				}
 
-				PlayerControl playerControl = getLayerManager().getControl();
+				VideoView playerControl = getLayerManager().getControl();
 				long duration = playerControl.getDuration();
 				long newposition = (duration * progress) / 1000L;
 				playerControl.seekTo((int) newposition);
@@ -941,7 +941,7 @@ public class PlaybackControlLayer implements Layer {
 			ImageButton overflowButton = new ImageButton(getLayerManager().getActivity());
 			overflowButton.setContentDescription(getLayerManager().getActivity().getString(R.string.overflow));
 			overflowButton.setImageDrawable(getLayerManager().getActivity().getResources().getDrawable(
-                    R.drawable.ic_action_overflow));
+					R.drawable.ic_action_overflow));
 
 			AlertDialog.Builder builder = new AlertDialog.Builder(getLayerManager().getActivity());
 			builder.setTitle(getLayerManager().getActivity().getString(R.string.select_an_action));
@@ -1009,7 +1009,7 @@ public class PlaybackControlLayer implements Layer {
 	 * Change the icon of the play/pause button to indicate play or pause based on the state of the video player.
 	 */
 	public void updatePlayPauseButton() {
-		PlayerControl playerControl = getLayerManager().getControl();
+		VideoView playerControl = getLayerManager().getControl();
 		if (view == null || pausePlayButton == null || playerControl == null) {
 			return;
 		}
@@ -1025,7 +1025,7 @@ public class PlaybackControlLayer implements Layer {
 	 * Adjust the position of the action bar to reflect the progress of the video.
 	 */
 	public int updateProgress() {
-		PlayerControl playerControl = getLayerManager().getControl();
+		VideoView playerControl = getLayerManager().getControl();
 		if (playerControl == null || isSeekbarDragging) {
 			return 0;
 		}

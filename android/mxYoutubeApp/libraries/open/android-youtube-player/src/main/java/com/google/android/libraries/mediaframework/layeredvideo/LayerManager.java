@@ -101,7 +101,7 @@ public class LayerManager {
 	/**
 	 * Returns the which can be used to control the video playback (ex. pause, play, seek).
 	 */
-	public View getControl() {
+	public VideoView getControl() {
 		return control;
 	}
 

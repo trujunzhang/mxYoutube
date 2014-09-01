@@ -19,10 +19,10 @@ public class YoutubeActivity extends Activity {
 
 		videoPlayerContainer = (FrameLayout) this.findViewById(R.id.video_frame);
 
-        Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
+		Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
 
 		// Video video = new Video("https://www.youtube.com/v/izA_Xgbj7II", Video.VideoType.MP4);
-		videoPlayer = new SimpleVideoPlayer(this, videoPlayerContainer, null, "wanghao", false);
+		videoPlayer = new SimpleVideoPlayer(this, videoPlayerContainer, "wanghao", false);
 		videoPlayer.play();
 
 	}
