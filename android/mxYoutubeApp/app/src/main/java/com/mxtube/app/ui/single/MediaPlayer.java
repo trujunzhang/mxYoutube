@@ -21,21 +21,21 @@ public class MediaPlayer extends Single {
 
 	@AfterInject
 	void calledAfterInjection() {
-
+		this.playerHelper.setupView(this.getSherlockActivity());
 	}
 
 	@AfterViews
 	protected void calledAfterViewInjection() {
 
 		// determine the messages to be displayed as the view loads the video
-//		this.playerHelper.taskInfo = getExtractMessages();
+		// this.playerHelper.taskInfo = getExtractMessages();
 
-//		this.playerHelper.initProgressBar();
+		// this.playerHelper.initProgressBar();
 
 		Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
 		// Uri lVideoIdUri = Uri.parse("ytv://" + this.selectedVideo.getId());
 
-//		this.playerHelper.makeAndExecuteYoutubeTask(this.getSherlockActivity(), lVideoIdUri);
+		// this.playerHelper.makeAndExecuteYoutubeTask(this.getSherlockActivity(), lVideoIdUri);
 	}
 
 	/**

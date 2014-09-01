@@ -1,107 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
 
-    <!--line-01:[thumbnails,duration]-->
-    <FrameLayout
+    <!--line-01:[media player panel]-->
+    <com.views.MediaPlayerLinearLayout
+            android:id="@+id/media_player_linear_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+            app:default_width="480"
+            app:default_height="360"
+            android:layout_gravity="center"/>
 
-        <com.views.SquareImageView
-                android:id="@+id/thumbnails"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/hqdefault"
-                app:default_width="480"
-                app:default_height="360"
-                android:scaleType="fitXY"
-                android:layout_gravity="center"/>
-
-        <TextView
-                android:id="@+id/duration"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:background="@color/duration_background"
-                android:textSize="14sp"
-                android:text="12:00"
-                android:singleLine="true"
-                android:textColor="#FFFFFF"
-                android:layout_gravity="bottom|right"/>
-    </FrameLayout>
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="vertical"
-                  android:background="@drawable/table_cell_tile_bg">
-        <!--line-02:[title]-->
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content">
-            <TextView
-                    android:id="@+id/title"
-                    android:text="Sony Vegas Pro 13 - Tutorial for Beginners [COMPLETE]"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:paddingLeft="4dp"
-                    android:textSize="14sp"
-                    android:textColor="@color/youtube_cell_title"
-                    android:maxLines="2"
-                    android:minLines="2"/>
-        </LinearLayout>
-
-        <!--line-03:[rating and statistics]-->
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:orientation="horizontal"
-                      android:layout_marginTop="8dp"
-                      android:layout_marginBottom="8dp">
-            <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/mt_video_rating_count"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="10dp"/>
-            <TextView
-                    android:id="@+id/rating"
-                    android:text="100%"
-                    android:textColor="@color/youtube_cell_rating_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:textSize="10sp"
-                    android:maxLines="2"
-                    android:layout_gravity="center_vertical"/>
-            <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/mt_video_view_count"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginRight="10dp"/>
-            <TextView
-                    android:id="@+id/viewCount"
-                    android:text="117"
-                    android:textColor="@color/youtube_cell_rating_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:textSize="10sp"
-                    android:maxLines="2"
-                    android:layout_gravity="center_vertical"/>
-        </LinearLayout>
-    </LinearLayout>
-    <!--line-04:[user]-->
+    <!--line-04:[user information]-->
     <FrameLayout android:layout_width="match_parent"
                  android:layout_height="29dp"
                  android:background="@drawable/table_cell_bg_dark"
@@ -136,4 +50,5 @@
             <!--android:layout_height="wrap_content"/>-->
         </LinearLayout>
     </FrameLayout>
+
 </LinearLayout>
