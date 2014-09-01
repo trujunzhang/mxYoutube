@@ -21,100 +21,96 @@ import android.graphics.Color;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.VideoView;
-import com.google.android.libraries.mediaframework.exoplayerextensions.ExoplayerWrapper;
-import com.google.android.libraries.mediaframework.exoplayerextensions.ObservablePlayerControl;
-import com.google.android.libraries.mediaframework.exoplayerextensions.RendererBuilderFactory;
-import com.google.android.libraries.mediaframework.exoplayerextensions.Video;
 
 import java.util.List;
 
 /**
- * This is the basis for building a layered video player
- * (i.e. a video player with views overlaid on top of it).
+ * This is the basis for building a layered video player (i.e. a video player with views overlaid on top of it).
  *
- * <p>Given a {@link android.widget.FrameLayout}, a {@link Video}, and a set of {@link Layer} objects, the
- * {@link LayerManager} will create an {@link ExoplayerWrapper} for the {@link Video} object and
- * create each {@link Layer} object's view and overlay it on the {@link android.widget.FrameLayout} object.
+ * <p>
+ * Given a {@link android.widget.FrameLayout}, a , and a set of {@link Layer} objects, the {@link LayerManager} will
+ * create an for the object and create each {@link Layer} object's view and overlay it on the
+ * {@link android.widget.FrameLayout} object.
  *
- * <p>Look at {@link SimpleVideoPlayer} to see {@link LayerManager} in action.
+ * <p>
+ * Look at {@link SimpleVideoPlayer} to see {@link LayerManager} in action.
  */
 public class LayerManager {
 
-  /**
-   * The activity that will display the video.
-   */
-  private Activity activity;
+	/**
+	 * The activity that will display the video.
+	 */
+	private Activity activity;
 
-  /**
-   * All the views created by the {@link Layer} objects will be overlaid on this container.
-   */
-  private FrameLayout container;
+	/**
+	 * All the views created by the {@link Layer} objects will be overlaid on this container.
+	 */
+	private FrameLayout container;
 
-  /**
-   * Allows controlling video playback, reading video state, and registering callbacks for state
-   * changes.
-   */
-  private VideoView control;
+	/**
+	 * Allows controlling video playback, reading video state, and registering callbacks for state changes.
+	 */
+	private VideoView control;
 
-  /**
-   * Given a container, create the video layers and add them to the container.
-   * @param activity The activity which will display the video player.
-   * @param container The frame layout which will contain the views.
-   * @param video the video that will be played by this LayerManager.
-   * @param layers The layers which should be displayed on top of the container.
-   */
-  public LayerManager(Activity activity,
-                      FrameLayout container,
-                      Video video,
-                      List<Layer> layers) {
-    this.activity = activity;
-    this.container = container;
-    container.setBackgroundColor(Color.BLACK);
+	/**
+	 * Given a container, create the video layers and add them to the container.
+	 * 
+	 * @param activity
+	 *            The activity which will display the video player.
+	 * @param container
+	 *            The frame layout which will contain the views.
+	 * @param video
+	 *            the video that will be played by this LayerManager.
+	 * @param layers
+	 *            The layers which should be displayed on top of the container.
+	 */
+	public LayerManager(Activity activity, FrameLayout container, Video video, List<Layer> layers) {
+		this.activity = activity;
+		this.container = container;
+		container.setBackgroundColor(Color.BLACK);
 
-//    ExoplayerWrapper.RendererBuilder rendererBuilder =
-//        RendererBuilderFactory.createRendererBuilder(activity, video);
-//
-//    exoplayerWrapper = new ExoplayerWrapper(rendererBuilder);
-//    exoplayerWrapper.prepare();
+		// ExoplayerWrapper.RendererBuilder rendererBuilder =
+		// RendererBuilderFactory.createRendererBuilder(activity, video);
+		//
+		// exoplayerWrapper = new ExoplayerWrapper(rendererBuilder);
+		// exoplayerWrapper.prepare();
 
-//    this.control = exoplayerWrapper.getPlayerControl();
+		// this.control = exoplayerWrapper.getPlayerControl();
 
-    // Put the layers into the container.
-    container.removeAllViews();
-    for (Layer layer : layers) {
-      container.addView(layer.createView(this));
-      layer.onLayerDisplayed(this);
-    }
-  }
+		// Put the layers into the container.
+		container.removeAllViews();
+		for (Layer layer : layers) {
+			container.addView(layer.createView(this));
+			layer.onLayerDisplayed(this);
+		}
+	}
 
-  /**
-   * Returns the activity which displays the video player created by this {@link LayerManager}.
-   */
-  public Activity getActivity() {
-    return activity;
-  }
+	/**
+	 * Returns the activity which displays the video player created by this {@link LayerManager}.
+	 */
+	public Activity getActivity() {
+		return activity;
+	}
 
-  /**
-   * Returns the {@link android.widget.FrameLayout} which contains the views of the {@link Layer}s that this
-   * {@link LayerManager} manages.
-   */
-  public FrameLayout getContainer() {
-    return container;
-  }
+	/**
+	 * Returns the {@link android.widget.FrameLayout} which contains the views of the {@link Layer}s that this
+	 * {@link LayerManager} manages.
+	 */
+	public FrameLayout getContainer() {
+		return container;
+	}
 
-  /**
-   * Returns the {@link ObservablePlayerControl} which can be used to control the video playback
-   * (ex. pause, play, seek).
-   */
-  public View getControl() {
-    return control;
-  }
+	/**
+	 * Returns the which can be used to control the video playback (ex. pause, play, seek).
+	 */
+	public View getControl() {
+		return control;
+	}
 
-
-  /**
-   * When the video player is no longer needed, call this method.
-   */
-  public void release() {
-    container.removeAllViews();
-  }
+	/**
+	 * When the video player is no longer needed, call this method.
+	 */
+	public void release() {
+		container.removeAllViews();
+	}
 }
