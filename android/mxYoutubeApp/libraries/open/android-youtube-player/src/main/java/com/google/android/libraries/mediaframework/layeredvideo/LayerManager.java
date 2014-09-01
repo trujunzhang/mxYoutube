@@ -18,7 +18,9 @@ package com.google.android.libraries.mediaframework.layeredvideo;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.VideoView;
 import com.google.android.libraries.mediaframework.exoplayerextensions.ExoplayerWrapper;
 import com.google.android.libraries.mediaframework.exoplayerextensions.ObservablePlayerControl;
 import com.google.android.libraries.mediaframework.exoplayerextensions.RendererBuilderFactory;
@@ -52,12 +54,7 @@ public class LayerManager {
    * Allows controlling video playback, reading video state, and registering callbacks for state
    * changes.
    */
-  private ObservablePlayerControl control;
-
-  /**
-   * Wrapper around ExoPlayer, which is the underlying video player.
-   */
-  private ExoplayerWrapper exoplayerWrapper;
+  private VideoView control;
 
   /**
    * Given a container, create the video layers and add them to the container.
@@ -74,13 +71,13 @@ public class LayerManager {
     this.container = container;
     container.setBackgroundColor(Color.BLACK);
 
-    ExoplayerWrapper.RendererBuilder rendererBuilder =
-        RendererBuilderFactory.createRendererBuilder(activity, video);
+//    ExoplayerWrapper.RendererBuilder rendererBuilder =
+//        RendererBuilderFactory.createRendererBuilder(activity, video);
+//
+//    exoplayerWrapper = new ExoplayerWrapper(rendererBuilder);
+//    exoplayerWrapper.prepare();
 
-    exoplayerWrapper = new ExoplayerWrapper(rendererBuilder);
-    exoplayerWrapper.prepare();
-
-    this.control = exoplayerWrapper.getPlayerControl();
+//    this.control = exoplayerWrapper.getPlayerControl();
 
     // Put the layers into the container.
     container.removeAllViews();
@@ -109,26 +106,15 @@ public class LayerManager {
    * Returns the {@link ObservablePlayerControl} which can be used to control the video playback
    * (ex. pause, play, seek).
    */
-  public ObservablePlayerControl getControl() {
+  public View getControl() {
     return control;
   }
 
-  /**
-   * Returns the wrapper which ties the video player to
-   * {@link com.google.android.exoplayer.ExoPlayer}.
-   */
-  public ExoplayerWrapper getExoplayerWrapper() {
-    return exoplayerWrapper;
-  }
 
   /**
    * When the video player is no longer needed, call this method.
    */
   public void release() {
     container.removeAllViews();
-    if (exoplayerWrapper != null) {
-      exoplayerWrapper.release();
-      exoplayerWrapper = null;
-    }
   }
 }
