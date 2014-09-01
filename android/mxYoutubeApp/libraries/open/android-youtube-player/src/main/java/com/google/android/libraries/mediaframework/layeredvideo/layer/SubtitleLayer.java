@@ -14,18 +14,19 @@
  limitations under the License.
  */
 
-package com.google.android.libraries.mediaframework.layeredvideo;
+package com.google.android.libraries.mediaframework.layeredvideo.layer;
 
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import com.google.android.libraries.mediaframework.R;
-import com.google.android.libraries.mediaframework.exoplayerextensions.ExoplayerWrapper;
+import com.google.android.libraries.mediaframework.layeredvideo.Layer;
+import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 
 /**
  * Creates a view which displays subtitles.
  */
-public class SubtitleLayer implements Layer, ExoplayerWrapper.TextListener {
+public class SubtitleLayer implements Layer {
 
   /**
    * The text view that displays the subtitles.
@@ -44,7 +45,7 @@ public class SubtitleLayer implements Layer, ExoplayerWrapper.TextListener {
     view = (FrameLayout) inflater.inflate(R.layout.subtitle_layer, null);
     subtitles = (TextView) view.findViewById(R.id.subtitles);
 
-    layerManager.getExoplayerWrapper().setTextListener(this);
+//    layerManager.getExoplayerWrapper().setTextListener(this);
     return view;
   }
 
@@ -57,7 +58,7 @@ public class SubtitleLayer implements Layer, ExoplayerWrapper.TextListener {
    * When subtitles arrive, display them in the text view.
    * @param text The subtitles that must be displayed.
    */
-  @Override
+//  @Override
   public void onText(String text) {
     this.subtitles.setText(text);
   }

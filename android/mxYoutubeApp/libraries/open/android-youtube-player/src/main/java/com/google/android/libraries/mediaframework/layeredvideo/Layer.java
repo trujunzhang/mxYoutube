@@ -24,7 +24,7 @@ import android.widget.FrameLayout;
  * <p>In order to ensure that layers' views can be overlaid ON TOP of each other, they must be of
  * type {@link android.widget.FrameLayout}.
  *
- * <p>See {@link SubtitleLayer}, {@link VideoSurfaceLayer}, and {@link PlaybackControlLayer}
+ * <p>See {@link com.google.android.libraries.mediaframework.layeredvideo.layer.SubtitleLayer}, {@link com.google.android.libraries.mediaframework.layeredvideo.layer.VideoSurfaceLayer}, and {@link com.google.android.libraries.mediaframework.layeredvideo.layer.PlaybackControlLayer}
  * for examples.
  */
 public interface Layer {

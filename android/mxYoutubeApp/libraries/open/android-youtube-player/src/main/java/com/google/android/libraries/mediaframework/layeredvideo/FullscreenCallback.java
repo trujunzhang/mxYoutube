@@ -1,7 +1,7 @@
 package com.google.android.libraries.mediaframework.layeredvideo;
 
 /**
- * In order to imbue the {@link com.google.android.libraries.mediaframework.layeredvideo.PlaybackControlLayer} with the ability make the player fullscreen, a
+ * In order to imbue the {@link com.google.android.libraries.mediaframework.layeredvideo.layer.PlaybackControlLayer} with the ability make the player fullscreen, a
  * {@link FullscreenCallback} must be assigned to it. The
  * {@link FullscreenCallback} implementation is responsible for hiding/showing the other views
  * on the screen when the player enters/leaves fullscreen mode.

@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-package com.google.android.libraries.mediaframework.layeredvideo;
+package com.google.android.libraries.mediaframework.layeredvideo.layer;
 
 import android.animation.Animator;
 import android.app.Activity;
@@ -32,6 +32,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 import com.google.android.libraries.mediaframework.R;
+import com.google.android.libraries.mediaframework.layeredvideo.FullscreenCallback;
+import com.google.android.libraries.mediaframework.layeredvideo.Layer;
+import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
+import com.google.android.libraries.mediaframework.layeredvideo.Util;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -40,7 +44,7 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * A {@link Layer} that creates a customizable view for controlling video playback.
+ * A {@link com.google.android.libraries.mediaframework.layeredvideo.Layer} that creates a customizable view for controlling video playback.
  *
  * <p>
  * The view consists of:
@@ -243,7 +247,7 @@ public class PlaybackControlLayer implements Layer {
 	private TextView endTime;
 
 	/**
-	 * Makes player enter or leave fullscreen. This button is not displayed unless there is a {@link FullscreenCallback}
+	 * Makes player enter or leave fullscreen. This button is not displayed unless there is a {@link com.google.android.libraries.mediaframework.layeredvideo.FullscreenCallback}
 	 * associated with this object.
 	 */
 	private ImageButton fullscreenButton;
@@ -270,7 +274,7 @@ public class PlaybackControlLayer implements Layer {
 	private boolean isSeekbarDragging;
 
 	/**
-	 * The {@link LayerManager} which is responsible for adding this layer to the container and displaying it on top of
+	 * The {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager} which is responsible for adding this layer to the container and displaying it on top of
 	 * the video player.
 	 */
 	private LayerManager layerManager;
@@ -521,7 +525,7 @@ public class PlaybackControlLayer implements Layer {
 					});
 
 			container.setLayoutParams(Util.getLayoutParamsBasedOnParent(container, ViewGroup.LayoutParams.MATCH_PARENT,
-					ViewGroup.LayoutParams.MATCH_PARENT));
+                    ViewGroup.LayoutParams.MATCH_PARENT));
 
 			fullscreenButton.setImageResource(R.drawable.ic_action_return_from_full_screen);
 
