@@ -148,8 +148,8 @@ public class YouTubePlayerHelper {
 	/**
 	 * Create the view in which the video will be rendered.
 	 */
-	public View setupView(Context context) {
-		LinearLayout lLinLayout = new LinearLayout(context);
+	public void setupView(Context context, LinearLayout lLinLayout) {
+		// LinearLayout lLinLayout = new LinearLayout(context);
 		lLinLayout.setId(1);
 		lLinLayout.setOrientation(LinearLayout.VERTICAL);
 		lLinLayout.setGravity(Gravity.CENTER);
@@ -200,8 +200,6 @@ public class YouTubePlayerHelper {
 		mProgressMessage.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
 		mProgressMessage.setText("...");
 		lRelLayout.addView(mProgressMessage);
-
-		return lLinLayout;
 	}
 
 	public void destroyView() {

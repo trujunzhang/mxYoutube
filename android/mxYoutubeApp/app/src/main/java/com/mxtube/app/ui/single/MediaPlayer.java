@@ -8,34 +8,39 @@ import com.mxtube.app.R;
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.ViewById;
 
 @EFragment(R.layout.single_media_player)
 public class MediaPlayer extends Single {
+
+	// ................ include [*media_player_fragment.xml*] .......................
+	@ViewById(R.id.media_player_linear_layout)
+	com.views.MediaPlayerLinearLayout mediaPlayerLinearLayout;
+	@ViewById(R.id.user_header)
+	android.widget.ImageView userHeader;
+	@ViewById(R.id.user_name)
+	android.widget.TextView userName;
+
 	private YouTubePlayerHelper playerHelper = new YouTubePlayerHelper();
-
-	// @Override
-	// public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-	// return this.playerHelper.setupView(this.getSherlockActivity());
-	// }
 
 	@AfterInject
 	void calledAfterInjection() {
-		this.playerHelper.setupView(this.getSherlockActivity());
+
+		this.playerHelper.setupView(this.getSherlockActivity(), mediaPlayerLinearLayout);
 	}
 
 	@AfterViews
 	protected void calledAfterViewInjection() {
 
 		// determine the messages to be displayed as the view loads the video
-		// this.playerHelper.taskInfo = getExtractMessages();
+		this.playerHelper.taskInfo = getExtractMessages();
 
-		// this.playerHelper.initProgressBar();
+		this.playerHelper.initProgressBar();
 
 		Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
 		// Uri lVideoIdUri = Uri.parse("ytv://" + this.selectedVideo.getId());
 
-		// this.playerHelper.makeAndExecuteYoutubeTask(this.getSherlockActivity(), lVideoIdUri);
+		this.playerHelper.makeAndExecuteYoutubeTask(this.getSherlockActivity(), lVideoIdUri);
 	}
 
 	/**
