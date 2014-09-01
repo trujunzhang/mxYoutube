@@ -160,8 +160,8 @@ public class YouTubePlayerHelper {
 		lLinLayout.setGravity(Gravity.CENTER);
 		lLinLayout.setBackgroundColor(Color.BLACK);
 
-		LayoutParams lLinLayoutParms = new LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
-				ViewGroup.LayoutParams.FILL_PARENT);
+		LayoutParams lLinLayoutParms = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+				ViewGroup.LayoutParams.MATCH_PARENT);
 		lLinLayout.setLayoutParams(lLinLayoutParms);
 
 		RelativeLayout lRelLayout = new RelativeLayout(context);

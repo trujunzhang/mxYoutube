@@ -17,6 +17,10 @@
                  android:layout_height="wrap_content"
                  layout="@layout/media_player_fragment"/>
 
+        <!--02:media user panel-->
+        <include android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 layout="@layout/media_user_fragment"/>
 
     </LinearLayout>
 
