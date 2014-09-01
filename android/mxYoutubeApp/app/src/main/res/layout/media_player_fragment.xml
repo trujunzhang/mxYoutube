@@ -1,20 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="match_parent">
 
     <!--line-01:[media player panel]-->
-    <com.views.MediaPlayerLinearLayout
+    <!--<com.views.MediaPlayerLinearLayout-->
+    <FrameLayout
             android:id="@+id/media_player_linear_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:default_width="480"
-            app:default_height="360"
+            android:layout_height="match_parent"
             android:layout_gravity="center">
 
-    </com.views.MediaPlayerLinearLayout>
+        <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        <!--01:top panel-->
+        <LinearLayout
+                android:id="@+id/media_player_top_linear_line"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:background="@color/orange"
+                android:layout_gravity="center_horizontal|top">
+
+        </LinearLayout>
+
+        <!--02:bottom panel-->
+        <LinearLayout
+                android:id="@+id/media_player_bottom_linear_line"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:background="@color/solid_green"
+                android:layout_gravity="center_horizontal|bottom">
+        </LinearLayout>
+
+    </FrameLayout>
 
 </LinearLayout>
