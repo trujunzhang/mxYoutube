@@ -151,6 +151,12 @@ public class YouTubePlayerHelper {
 		return lLinLayout;
 	}
 
+	public void setupView(VideoView videoView, ProgressBar progressBar, TextView textView) {
+		this.mVideoView = videoView;
+		this.mProgressBar = progressBar;
+		this.mProgressMessage = textView;
+	}
+
 	/**
 	 * Create the view in which the video will be rendered.
 	 */

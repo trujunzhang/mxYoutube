@@ -12,14 +12,24 @@ import org.androidannotations.annotations.ViewById;
 
 @EFragment(R.layout.single_media_player)
 public class MediaPlayer extends Single {
-
-	// ................ include [*media_player_fragment.xml*] .......................
+	@ViewById(R.id.videoView)
+	android.widget.VideoView videoView;
+	@ViewById(R.id.progressBar_message)
+	android.widget.TextView progressBarMessage;
+	@ViewById(R.id.media_player_top_linear_line)
+	android.widget.LinearLayout mediaPlayerTopLinearLine;
+	@ViewById(R.id.progressBar)
+	android.widget.ProgressBar progressBar;
+	@ViewById(R.id.media_player_bottom_linear_line)
+	android.widget.LinearLayout mediaPlayerBottomLinearLine;
 	@ViewById(R.id.media_player_linear_layout)
-	com.views.MediaPlayerLinearLayout mediaPlayerLinearLayout;
+	android.widget.FrameLayout mediaPlayerLinearLayout;
 	@ViewById(R.id.user_header)
 	android.widget.ImageView userHeader;
 	@ViewById(R.id.user_name)
 	android.widget.TextView userName;
+
+	// ................ include [*media_player_fragment.xml*] .......................
 
 	private YouTubePlayerHelper playerHelper = new YouTubePlayerHelper();
 
@@ -29,7 +39,8 @@ public class MediaPlayer extends Single {
 
 	@AfterViews
 	protected void calledAfterViewInjection() {
-		this.playerHelper.setupView(this.getSherlockActivity(), mediaPlayerLinearLayout);
+		this.playerHelper.setupView(this.videoView, this.progressBar, this.progressBarMessage);
+		// this.playerHelper.setupView(this.getSherlockActivity(), mediaPlayerLinearLayout);
 
 		// determine the messages to be displayed as the view loads the video
 		this.playerHelper.taskInfo = getExtractMessages();
