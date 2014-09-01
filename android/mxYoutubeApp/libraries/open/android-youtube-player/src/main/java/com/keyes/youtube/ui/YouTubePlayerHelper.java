@@ -145,11 +145,17 @@ public class YouTubePlayerHelper {
 		return lYouTubeId;
 	}
 
+	public View setupView(Context context) {
+		LinearLayout lLinLayout = new LinearLayout(context);
+		setupView(context, lLinLayout);
+		return lLinLayout;
+	}
+
 	/**
 	 * Create the view in which the video will be rendered.
 	 */
 	public void setupView(Context context, LinearLayout lLinLayout) {
-		// LinearLayout lLinLayout = new LinearLayout(context);
+
 		lLinLayout.setId(1);
 		lLinLayout.setOrientation(LinearLayout.VERTICAL);
 		lLinLayout.setGravity(Gravity.CENTER);

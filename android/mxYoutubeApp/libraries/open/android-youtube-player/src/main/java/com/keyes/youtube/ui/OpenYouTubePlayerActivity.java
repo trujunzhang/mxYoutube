@@ -21,7 +21,7 @@ public class OpenYouTubePlayerActivity extends Activity {
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		// create the layout of the view
-//		this.setContentView(this.playerHelper.setupView(this));
+		this.setContentView(this.playerHelper.setupView(this));
 
 		// determine the messages to be displayed as the view loads the video
 		this.playerHelper.taskInfo = getExtractMessages();
