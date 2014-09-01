@@ -114,6 +114,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40b4ff95-6454-4327-83b2-70fa6b42ff96" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/MediaPlayer.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/MediaPlayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/media_player_fragment.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/media_player_fragment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -183,50 +184,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="single_media_player.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/single_media_player.xml">
+      <file leaf-file-name="MediaPlayer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/MediaPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0909091" vertical-offset="90" max-vertical-offset="810">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.37288135" vertical-offset="18" max-vertical-offset="1062">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="media_player_fragment.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="media_player_fragment.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/media_player_fragment.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4698795" vertical-offset="108" max-vertical-offset="900">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-6.3636365" vertical-offset="168" max-vertical-offset="1116">
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+              <folding>
+                <element signature="e#1030#1051#0" expanded="true" />
+              </folding>
             </state>
           </provider>
           <provider editor-type-id="android-designer">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colors.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/collect/AndroidCommon/src/main/res/values/colors.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1044">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="28" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="YouTubePlayerHelper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/ui/YouTubePlayerHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2973" max-vertical-offset="4518">
-              <caret line="181" column="39" selection-start-line="181" selection-start-column="39" selection-end-line="181" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2603" max-vertical-offset="4518">
+              <caret line="191" column="50" selection-start-line="191" selection-start-column="50" selection-end-line="191" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YoutubeTaskInfo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/beans/YoutubeTaskInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -8295,12 +8295,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Home.java" />
         <option value="$PROJECT_DIR$/libraries/collect/AndroidCommon/src/main/java/com/views/MediaPlayerLinearLayout.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/ui/OpenYouTubePlayerActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/MediaPlayer.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/media_user_fragment.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/single_media_player.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/youtube_item.xml" />
-        <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/ui/YouTubePlayerHelper.java" />
         <option value="$PROJECT_DIR$/libraries/collect/AndroidCommon/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/MediaPlayer.java" />
+        <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/ui/YouTubePlayerHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/media_player_fragment.xml" />
       </list>
     </option>
@@ -9393,7 +9393,7 @@
       <workItem from="1409463629227" duration="5438000" />
       <workItem from="1409469707395" duration="3772000" />
       <workItem from="1409529262773" duration="1339000" />
-      <workItem from="1409533774811" duration="5940000" />
+      <workItem from="1409533774811" duration="6377000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1408861027733</created>
@@ -9843,11 +9843,15 @@
       <created>1409539236755</created>
       <updated>1409539236755</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="developing app.">
+      <created>1409539920058</created>
+      <updated>1409539920058</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79589000" />
+    <option name="totallyTimeSpent" value="80026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1366" height="689" extended-state="0" />
@@ -9870,6 +9874,7 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952815" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle View" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920355" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Generate code Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20395738" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -9884,7 +9889,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Properties Pane" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -9913,7 +9917,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle View" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920355" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Generate code Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20395738" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Generate code Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20395738" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920355" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -9978,25 +9982,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/table_cell_tile_bg.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/cwac-endless/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6086956" vertical-offset="124" max-vertical-offset="630">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/beans/VideoId.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
@@ -10057,14 +10042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="9.977505" vertical-offset="1997" max-vertical-offset="8010">
           <caret line="383" column="28" selection-start-line="383" selection-start-column="28" selection-end-line="383" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/beans/YoutubeTaskInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13899614" vertical-offset="0" max-vertical-offset="720">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -10310,14 +10287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/MediaPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1062">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/media_user_fragment.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="828">
@@ -10340,16 +10309,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/ui/YouTubePlayerHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2973" max-vertical-offset="4518">
-          <caret line="181" column="39" selection-start-line="181" selection-start-column="39" selection-end-line="181" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/collect/AndroidCommon/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1044">
@@ -10369,15 +10328,67 @@
         <state />
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../../../macshare/SHARE/HomeBrew/Library/Android-adt-bundle/Home/platforms/android-19/android.jar!/android/util/TypedValue.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="327" max-vertical-offset="1566">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../../../macshare/SHARE/HomeBrew/Library/Android-adt-bundle/Home/platforms/android-19/android.jar!/android/graphics/Color.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/collect/AndroidCommon/src/main/res/values/tencent_dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="1083" max-vertical-offset="6282">
+          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/beans/YoutubeTaskInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/media_player_fragment.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4698795" vertical-offset="108" max-vertical-offset="900">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-6.3636365" vertical-offset="168" max-vertical-offset="1116">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="e#1030#1051#0" expanded="true" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/ui/YouTubePlayerHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2603" max-vertical-offset="4518">
+          <caret line="191" column="50" selection-start-line="191" selection-start-column="50" selection-end-line="191" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/MediaPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37288135" vertical-offset="18" max-vertical-offset="1062">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
