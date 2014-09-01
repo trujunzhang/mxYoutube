@@ -16,6 +16,8 @@
       <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
       <module fileurl="file://$PROJECT_DIR$/mxYoutubeApp.iml" filepath="$PROJECT_DIR$/mxYoutubeApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/open.iml" filepath="$PROJECT_DIR$/libraries/open/open.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/openexamples.iml" filepath="$PROJECT_DIR$/libraries/openexamples/openexamples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/android-youtube-player/openexamples-android-youtube-player.iml" filepath="$PROJECT_DIR$/libraries/openexamples/android-youtube-player/openexamples-android-youtube-player.iml" />
     </modules>
   </component>
 </project>

@@ -33,7 +33,7 @@ import android.view.ViewGroup;
 import android.widget.*;
 import com.google.android.exoplayer.util.PlayerControl;
 import com.google.android.libraries.mediaframework.R;
-import com.google.android.libraries.mediaframework.exoplayerextensions.PlayerControlCallback;
+
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -88,7 +88,7 @@ import java.util.Locale;
  * <p>
  * The view is defined in the layout file: res/layout/playback_control_layer.xml.
  */
-public class PlaybackControlLayer implements Layer, PlayerControlCallback {
+public class PlaybackControlLayer implements Layer {
 
     /**
 	 * Message handler which allows us to send delayed messages to the {@link PlaybackControlLayer} This is useful for
