@@ -155,7 +155,6 @@ public class YouTubePlayerHelper {
 	 * Create the view in which the video will be rendered.
 	 */
 	public void setupView(Context context, LinearLayout lLinLayout) {
-
 		lLinLayout.setId(1);
 		lLinLayout.setOrientation(LinearLayout.VERTICAL);
 		lLinLayout.setGravity(Gravity.CENTER);
@@ -164,8 +163,6 @@ public class YouTubePlayerHelper {
 		LayoutParams lLinLayoutParms = new LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
 				ViewGroup.LayoutParams.FILL_PARENT);
 		lLinLayout.setLayoutParams(lLinLayoutParms);
-
-		// this.setContentView(lLinLayout);
 
 		RelativeLayout lRelLayout = new RelativeLayout(context);
 		lRelLayout.setId(2);

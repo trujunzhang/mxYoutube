@@ -26,11 +26,12 @@ public class MediaPlayer extends Single {
 	@AfterInject
 	void calledAfterInjection() {
 
-		this.playerHelper.setupView(this.getSherlockActivity(), mediaPlayerLinearLayout);
+//		this.playerHelper.setupView(this.getSherlockActivity(), mediaPlayerLinearLayout);
 	}
 
 	@AfterViews
 	protected void calledAfterViewInjection() {
+        this.playerHelper.setupView(this.getSherlockActivity(), mediaPlayerLinearLayout);
 
 		// determine the messages to be displayed as the view loads the video
 		this.playerHelper.taskInfo = getExtractMessages();
