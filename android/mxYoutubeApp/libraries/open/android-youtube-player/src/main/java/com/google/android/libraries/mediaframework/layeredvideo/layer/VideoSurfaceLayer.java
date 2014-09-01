@@ -20,7 +20,6 @@ import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.widget.FrameLayout;
 import com.google.android.libraries.mediaframework.R;
-import com.google.android.libraries.mediaframework.layeredvideo.Layer;
 import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 import com.google.android.libraries.mediaframework.layeredvideo.VideoSurfaceView;
 

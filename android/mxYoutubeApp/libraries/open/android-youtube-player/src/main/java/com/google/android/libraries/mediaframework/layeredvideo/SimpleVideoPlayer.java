@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.FrameLayout;
+import com.google.android.libraries.mediaframework.layeredvideo.layer.Layer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.PlaybackControlLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.SubtitleLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.VideoSurfaceLayer;

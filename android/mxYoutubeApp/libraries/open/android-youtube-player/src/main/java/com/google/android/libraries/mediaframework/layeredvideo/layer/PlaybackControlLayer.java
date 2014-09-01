@@ -33,7 +33,6 @@ import android.view.ViewGroup;
 import android.widget.*;
 import com.google.android.libraries.mediaframework.R;
 import com.google.android.libraries.mediaframework.layeredvideo.FullscreenCallback;
-import com.google.android.libraries.mediaframework.layeredvideo.Layer;
 import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 import com.google.android.libraries.mediaframework.layeredvideo.Util;
 
@@ -44,7 +43,7 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * A {@link com.google.android.libraries.mediaframework.layeredvideo.Layer} that creates a customizable view for controlling video playback.
+ * A {@link Layer} that creates a customizable view for controlling video playback.
  *
  * <p>
  * The view consists of:

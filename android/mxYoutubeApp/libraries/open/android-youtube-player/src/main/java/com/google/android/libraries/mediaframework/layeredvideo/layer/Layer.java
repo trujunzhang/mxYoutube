@@ -14,9 +14,10 @@
  limitations under the License.
  */
 
-package com.google.android.libraries.mediaframework.layeredvideo;
+package com.google.android.libraries.mediaframework.layeredvideo.layer;
 
 import android.widget.FrameLayout;
+import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 
 /**
  * Creates a custom view which can be added on top of a LayerManager.
@@ -31,10 +32,10 @@ public interface Layer {
 
   /**
    * Builds and sets up the view that will be layered onto the video player. The returned view
-   * must be a {@link android.widget.FrameLayout} to ensure that the {@link LayerManager} can overlay it on top
+   * must be a {@link android.widget.FrameLayout} to ensure that the {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager} can overlay it on top
    * of the other layers.
-   * @param layerManager The {@link LayerManager} which will contain this layer.
-   * @return The view to be layered onto the video player by the {@link LayerManager}
+   * @param layerManager The {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager} which will contain this layer.
+   * @return The view to be layered onto the video player by the {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager}
    */
   public FrameLayout createView(LayerManager layerManager);
 
