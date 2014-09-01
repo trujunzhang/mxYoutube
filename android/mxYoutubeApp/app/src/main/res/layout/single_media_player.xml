@@ -4,13 +4,22 @@
               android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
+    <!--left panel-->
     <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@color/solid_blue"
+            android:orientation="vertical"
             android:layout_weight="1">
 
+        <!--media player panel-->
+        <include android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 layout="@layout/media_player_fragment"/>
+
     </LinearLayout>
+
+    <!--right panel-->
     <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
