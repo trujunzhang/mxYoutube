@@ -11,12 +11,11 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
 
-    <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="4"/>
+    <uses-sdk android:minSdkVersion="3"/>
 
 
     <application android:label="youtube-player-example">
-        <activity android:name=".YoutubeActivity"
-                >
+        <activity android:name=".YoutubeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

@@ -59,12 +59,10 @@ public class LayerManager {
 	 *            The activity which will display the video player.
 	 * @param container
 	 *            The frame layout which will contain the views.
-	 * @param video
-	 *            the video that will be played by this LayerManager.
 	 * @param layers
 	 *            The layers which should be displayed on top of the container.
 	 */
-	public LayerManager(Activity activity, FrameLayout container, Video video, List<Layer> layers) {
+	public LayerManager(Activity activity, FrameLayout container, List<Layer> layers) {
 		this.activity = activity;
 		this.container = container;
 		container.setBackgroundColor(Color.BLACK);

@@ -64,15 +64,13 @@ public class SimpleVideoPlayer {
 	 *            The activity that will contain the video player.
 	 * @param container
 	 *            The {@link android.widget.FrameLayout} which will contain the video player.
-	 * @param video
-	 *            The video that should be played.
 	 * @param videoTitle
 	 *            The title of the video (displayed on the left of the top chrome).
 	 * @param autoplay
 	 *            Whether the video should start playing immediately.
 	 */
-	public SimpleVideoPlayer(Activity activity, FrameLayout container, Video video, String videoTitle, boolean autoplay) {
-		this(activity, container, video, videoTitle, autoplay, null);
+	public SimpleVideoPlayer(Activity activity, FrameLayout container, String videoTitle, boolean autoplay) {
+		this(activity, container, videoTitle, autoplay, null);
 	}
 
 	/**
@@ -80,8 +78,6 @@ public class SimpleVideoPlayer {
 	 *            The activity that will contain the video player.
 	 * @param container
 	 *            The {@link android.widget.FrameLayout} which will contain the video player.
-	 * @param video
-	 *            The video that should be played.
 	 * @param videoTitle
 	 *            The title of the video (displayed on the left of the top chrome).
 	 * @param autoplay
@@ -89,8 +85,8 @@ public class SimpleVideoPlayer {
 	 * @param fullscreenCallback
 	 *            The callback which gets triggered when the player enters or leaves fullscreen mode.
 	 */
-	public SimpleVideoPlayer(Activity activity, FrameLayout container, Video video, String videoTitle,
-			boolean autoplay, FullscreenCallback fullscreenCallback) {
+	public SimpleVideoPlayer(Activity activity, FrameLayout container, String videoTitle, boolean autoplay,
+			FullscreenCallback fullscreenCallback) {
 		this.activity = activity;
 
 		playbackControlLayer = new PlaybackControlLayer(videoTitle, fullscreenCallback);
@@ -102,9 +98,7 @@ public class SimpleVideoPlayer {
 		layers.add(playbackControlLayer);
 		layers.add(subtitleLayer);
 
-		layerManager = new LayerManager(activity, container, video, layers);
-
-		layerManager.getExoplayerWrapper().setTextListener(subtitleLayer);
+		layerManager = new LayerManager(activity, container, layers);
 	}
 
 	/**
@@ -124,16 +118,6 @@ public class SimpleVideoPlayer {
 	}
 
 	/**
-	 * Set a listener which reacts to state changes, video size changes, and errors.
-	 * 
-	 * @param listener
-	 *            Listens to playback events.
-	 */
-	public void addPlaybackListener(ExoplayerWrapper.PlaybackListener listener) {
-		layerManager.getExoplayerWrapper().addListener(listener);
-	}
-
-	/**
 	 * Hides the seek bar thumb and prevents the user from seeking to different time points in the video.
 	 */
 	public void disableSeeking() {
@@ -145,21 +129,6 @@ public class SimpleVideoPlayer {
 	 */
 	public void enableSeeking() {
 		playbackControlLayer.enableSeeking();
-	}
-
-	/**
-	 * Returns the current playback position in milliseconds.
-	 */
-	public int getCurrentPosition() {
-		return layerManager.getControl().getCurrentPosition();
-	}
-
-	/**
-	 * Returns the duration of the track in milliseconds or {@link com.google.android.exoplayer.ExoPlayer#UNKNOWN_TIME}
-	 * if the duration is unknown.
-	 */
-	public int getDuration() {
-		return layerManager.getControl().getDuration();
 	}
 
 	/**
@@ -220,7 +189,7 @@ public class SimpleVideoPlayer {
 		// This way, when the surface is created, it won't start playing.
 		videoSurfaceLayer.setAutoplay(false);
 
-		layerManager.getControl().pause();
+//		layerManager.getControl().pause();
 	}
 
 	/**
@@ -231,7 +200,7 @@ public class SimpleVideoPlayer {
 		// This way, when the surface is created, it will automatically start playing.
 		videoSurfaceLayer.setAutoplay(true);
 
-		layerManager.getControl().start();
+//		layerManager.getControl().start();
 	}
 
 	/**
