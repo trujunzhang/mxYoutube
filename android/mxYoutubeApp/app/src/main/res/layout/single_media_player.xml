@@ -3,14 +3,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:weightSum="1.0">
+
     <!--left panel-->
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="fill_parent"
             android:background="@color/solid_blue"
             android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_marginLeft="20dp"
+            android:layout_weight=".50">
 
         <!--01:media player panel-->
         <include android:layout_width="match_parent"
@@ -27,9 +30,10 @@
     <!--right panel-->
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="fill_parent"
             android:background="@color/solid_red"
-            android:layout_weight="1">
+            android:orientation="vertical"
+            android:layout_weight=".50">
 
 
     </LinearLayout>
