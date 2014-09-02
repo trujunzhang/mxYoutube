@@ -30,7 +30,6 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.*;
 import com.google.android.libraries.mediaframework.R;
 import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
@@ -827,10 +826,7 @@ public class PlaybackControlLayer implements Layer {
 		bottomChrome = (LinearLayout) view.findViewById(R.id.bottom_chrome);
 		actionButtonsContainer = (LinearLayout) view.findViewById(R.id.actions_container);
 
-		WebView webView = (WebView) view.findViewById(R.id.webView);
-        webView.getSettings().setJavaScriptEnabled(true);
-        String customHtml = "<html><body><h1>Hello, WebView</h1></body></html>";
-        webView.loadData(customHtml, "text/html", "UTF-8");
+		VideoView videoView = (VideoView) view.findViewById(R.id.video_view);
 
 		// The play button should toggle play/pause when the play/pause button is clicked.
 		pausePlayButton.setOnClickListener(new View.OnClickListener() {
@@ -931,8 +927,8 @@ public class PlaybackControlLayer implements Layer {
 	 * If the player is paused, play it and if the player is playing, pause it.
 	 */
 	public void togglePlayPause() {
-//		this.shouldBePlaying = !getLayerManager().getControl().isPlaying();
-//		setPlayPause(shouldBePlaying);
+		// this.shouldBePlaying = !getLayerManager().getControl().isPlaying();
+		// setPlayPause(shouldBePlaying);
 	}
 
 	/**
