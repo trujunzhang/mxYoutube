@@ -110,6 +110,7 @@ public class YouTubeUtility {
 		String uri = Youtube_URL.YOUTUBE_VIDEO_INFORMATION_URL + pYouTubeVideoId;
 		HttpGet lGetMethod = new HttpGet(uri);
 
+        //http://www.youtube.com/get_video_info?&video_id=AV2OkzIGykA
 		HttpResponse lResp = null;
 
 		lResp = lClient.execute(lGetMethod);
