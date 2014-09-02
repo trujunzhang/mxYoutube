@@ -239,20 +239,14 @@ public class YouTubePlayerHelper {
 	}
 
 	public void makeAndExecuteYoutubeTask(Context context, YouTubeId lYouTubeId) {
-		// mQueryYouTubeTask = (QueryYouTubeTask) new QueryYouTubeTask(context, this).execute(lYouTubeId);
-		String uri = Youtube_URL.YOUTUBE_VIDEO_INFORMATION_URL + lYouTubeId.getId();
-		parseReponseByUrl(context, uri);
+		prepareAndPlay(context, Youtube_URL.YOUTUBE_VIDEO_INFORMATION_URL + lYouTubeId.getId());
 	}
 
-	private void parseReponseByUrl(final Context context, String uri) {
-
+	private void prepareAndPlay(final Context context, String uri) {
+		// AV2OkzIGykA
 		// perform a Google search in just a few lines of code
-
-		String url = "http://www.google.com/uds/GnewsSearch?q=Obama&v=1.0";
-
 		final AbstractAQuery aq = new AQuery(context);
-		aq.ajax(url, String.class, new AjaxCallback<String>() {
-
+		aq.ajax(uri, String.class, new AjaxCallback<String>() {
 			@Override
 			public void callback(String url, String json, AjaxStatus status) {
 				if (json != null) {
