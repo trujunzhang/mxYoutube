@@ -30,10 +30,11 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.*;
 import com.google.android.libraries.mediaframework.R;
-import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
+import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
 
 import java.lang.ref.WeakReference;
@@ -246,8 +247,9 @@ public class PlaybackControlLayer implements Layer {
 	private TextView endTime;
 
 	/**
-	 * Makes player enter or leave fullscreen. This button is not displayed unless there is a {@link com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback}
-	 * associated with this object.
+	 * Makes player enter or leave fullscreen. This button is not displayed unless there is a
+	 * {@link com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback} associated with this
+	 * object.
 	 */
 	private ImageButton fullscreenButton;
 
@@ -273,8 +275,8 @@ public class PlaybackControlLayer implements Layer {
 	private boolean isSeekbarDragging;
 
 	/**
-	 * The {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager} which is responsible for adding this layer to the container and displaying it on top of
-	 * the video player.
+	 * The {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager} which is responsible for adding
+	 * this layer to the container and displaying it on top of the video player.
 	 */
 	private LayerManager layerManager;
 
@@ -424,7 +426,7 @@ public class PlaybackControlLayer implements Layer {
 
 		originalContainerLayoutParams = layerManager.getContainer().getLayoutParams();
 
-//		layerManager.getControl().addCallback(this);
+		// layerManager.getControl().addCallback(this);
 
 		textColor = DEFAULT_TEXT_COLOR;
 		chromeColor = DEFAULT_CHROME_COLOR;
@@ -524,7 +526,7 @@ public class PlaybackControlLayer implements Layer {
 					});
 
 			container.setLayoutParams(Util.getLayoutParamsBasedOnParent(container, ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.MATCH_PARENT));
+					ViewGroup.LayoutParams.MATCH_PARENT));
 
 			fullscreenButton.setImageResource(R.drawable.ic_action_return_from_full_screen);
 
@@ -679,7 +681,7 @@ public class PlaybackControlLayer implements Layer {
 	/**
 	 * Updates the play/pause button to the play icon.
 	 */
-//	@Override
+	// @Override
 	public void onPause() {
 		updatePlayPauseButton();
 	}
@@ -687,7 +689,7 @@ public class PlaybackControlLayer implements Layer {
 	/**
 	 * Updates the play/pause button to the pause icon.
 	 */
-//	@Override
+	// @Override
 	public void onPlay() {
 		updatePlayPauseButton();
 	}
@@ -825,6 +827,11 @@ public class PlaybackControlLayer implements Layer {
 		bottomChrome = (LinearLayout) view.findViewById(R.id.bottom_chrome);
 		actionButtonsContainer = (LinearLayout) view.findViewById(R.id.actions_container);
 
+		WebView webView = (WebView) view.findViewById(R.id.webView);
+        webView.getSettings().setJavaScriptEnabled(true);
+        String customHtml = "<html><body><h1>Hello, WebView</h1></body></html>";
+        webView.loadData(customHtml, "text/html", "UTF-8");
+
 		// The play button should toggle play/pause when the play/pause button is clicked.
 		pausePlayButton.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -924,8 +931,8 @@ public class PlaybackControlLayer implements Layer {
 	 * If the player is paused, play it and if the player is playing, pause it.
 	 */
 	public void togglePlayPause() {
-		this.shouldBePlaying = !getLayerManager().getControl().isPlaying();
-		setPlayPause(shouldBePlaying);
+//		this.shouldBePlaying = !getLayerManager().getControl().isPlaying();
+//		setPlayPause(shouldBePlaying);
 	}
 
 	/**
