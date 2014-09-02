@@ -244,7 +244,7 @@ public class YouTubePlayerHelper {
 		parseReponseByUrl(context, uri);
 	}
 
-	private void parseReponseByUrl(Context context, String uri) {
+	private void parseReponseByUrl(final Context context, String uri) {
 
 		// perform a Google search in just a few lines of code
 
@@ -258,7 +258,7 @@ public class YouTubePlayerHelper {
 				if (json != null) {
 					// successful ajax call, show status code and json content
 					String lUriStr = YouTubeUtility.getFinalUri(taskInfo.lYouTubeFmtQuality, true, json);
-
+					startYoutubeTask(context, Uri.parse(lUriStr));
 				} else {
 					// ajax error, show error code
 					Toast.makeText(aq.getContext(), "Error:" + status.getCode(), Toast.LENGTH_LONG).show();
