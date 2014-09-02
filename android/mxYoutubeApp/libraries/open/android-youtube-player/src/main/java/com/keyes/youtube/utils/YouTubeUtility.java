@@ -105,22 +105,19 @@ public class YouTubeUtility {
 			throws IOException, ClientProtocolException, UnsupportedEncodingException {
 
 		String lUriStr = null;
-		HttpClient lClient = new DefaultHttpClient();
 
 		String uri = Youtube_URL.YOUTUBE_VIDEO_INFORMATION_URL + pYouTubeVideoId;
-		HttpGet lGetMethod = new HttpGet(uri);
 
-        //http://www.youtube.com/get_video_info?&video_id=AV2OkzIGykA
-		HttpResponse lResp = null;
+		String lInfoStr = getReponseByUrl(uri);
 
-		lResp = lClient.execute(lGetMethod);
+		lUriStr = getFinalUri(pYouTubeFmtQuality, pFallback, lInfoStr);
+		// Return the URI string. It may be null if the format (or a fallback format if enabled)
+		// is not found in the list of formats for the video
+		return lUriStr;
+	}
 
-		ByteArrayOutputStream lBOS = new ByteArrayOutputStream();
-		String lInfoStr = null;
-
-		lResp.getEntity().writeTo(lBOS);
-		lInfoStr = new String(lBOS.toString("UTF-8"));
-
+	public static String getFinalUri(String pYouTubeFmtQuality, boolean pFallback, String lInfoStr) {
+		String lUriStr = null;
 		String[] lArgs = lInfoStr.split("&");
 		Map<String, String> lArgMap = new HashMap<String, String>();
 		for (int i = 0; i < lArgs.length; i++) {
@@ -179,9 +176,24 @@ public class YouTubeUtility {
 			}
 
 		}
-		// Return the URI string. It may be null if the format (or a fallback format if enabled)
-		// is not found in the list of formats for the video
 		return lUriStr;
+	}
+
+	private static String getReponseByUrl(String uri) throws IOException {
+		HttpClient lClient = new DefaultHttpClient();
+		HttpGet lGetMethod = new HttpGet(uri);
+
+		// http://www.youtube.com/get_video_info?&video_id=AV2OkzIGykA
+		HttpResponse lResp = null;
+
+		lResp = lClient.execute(lGetMethod);
+
+		ByteArrayOutputStream lBOS = new ByteArrayOutputStream();
+		String lInfoStr = null;
+
+		lResp.getEntity().writeTo(lBOS);
+		lInfoStr = new String(lBOS.toString("UTF-8"));
+		return lInfoStr;
 	}
 
 	public static boolean hasVideoBeenViewed(Context pCtxt, String pVideoId) {

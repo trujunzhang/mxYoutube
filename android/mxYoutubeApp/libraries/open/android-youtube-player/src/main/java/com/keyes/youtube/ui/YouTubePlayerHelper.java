@@ -2,6 +2,7 @@ package com.keyes.youtube.ui;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.util.Log;
 import android.util.TypedValue;
@@ -10,8 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 import android.widget.LinearLayout.LayoutParams;
+import com.androidquery.AQuery;
+import com.androidquery.AbstractAQuery;
+import com.androidquery.callback.AjaxCallback;
+import com.androidquery.callback.AjaxStatus;
 import com.keyes.youtube.beans.*;
-import com.keyes.youtube.task.QueryYouTubeTask;
 import com.keyes.youtube.utils.YouTubeUtility;
 
 /**
@@ -108,7 +112,7 @@ public class YouTubePlayerHelper {
 	/**
 	 * Background task on which all of the interaction with YouTube is done
 	 */
-	protected QueryYouTubeTask mQueryYouTubeTask;
+	// protected QueryYouTubeTask mQueryYouTubeTask;
 
 	public String mVideoId = null;
 
@@ -212,7 +216,7 @@ public class YouTubePlayerHelper {
 	}
 
 	public void destroyView() {
-		this.mQueryYouTubeTask = null;
+		// this.mQueryYouTubeTask = null;
 		this.mVideoView = null;
 	}
 
@@ -235,15 +239,91 @@ public class YouTubePlayerHelper {
 	}
 
 	public void makeAndExecuteYoutubeTask(Context context, YouTubeId lYouTubeId) {
-		mQueryYouTubeTask = (QueryYouTubeTask) new QueryYouTubeTask(context, this).execute(lYouTubeId);
+		// mQueryYouTubeTask = (QueryYouTubeTask) new QueryYouTubeTask(context, this).execute(lYouTubeId);
+		String uri = Youtube_URL.YOUTUBE_VIDEO_INFORMATION_URL + lYouTubeId.getId();
+		parseReponseByUrl(context, uri);
+	}
+
+	private void parseReponseByUrl(Context context, String uri) {
+
+		// perform a Google search in just a few lines of code
+
+		String url = "http://www.google.com/uds/GnewsSearch?q=Obama&v=1.0";
+
+		final AbstractAQuery aq = new AQuery(context);
+		aq.ajax(url, String.class, new AjaxCallback<String>() {
+
+			@Override
+			public void callback(String url, String json, AjaxStatus status) {
+				if (json != null) {
+					// successful ajax call, show status code and json content
+					String lUriStr = YouTubeUtility.getFinalUri(taskInfo.lYouTubeFmtQuality, true, json);
+
+				} else {
+					// ajax error, show error code
+					Toast.makeText(aq.getContext(), "Error:" + status.getCode(), Toast.LENGTH_LONG).show();
+				}
+			}
+		});
+	}
+
+	protected void startYoutubeTask(Context context, Uri pResult) {
+		try {
+			if (pResult == null) {
+				throw new RuntimeException("Invalid NULL Url.");
+			}
+			// http%3A%2F%2Fr7---sn-i3b7snl7.googlevideo.com%2Fvideoplayback%3Finitcwndbps%3D210375%26source%3Dyoutube%26expire%3D1409580367%26ipbits%3D0%26key%3Dyt5%26ms%3Dau%26upn%3DG_8WcfW6ibo%26mv%3Dm%26mt%3D1409558662%26fexp%3D902408%252C916600%252C916630%252C918015%252C923345%252C927622%252C931983%252C932404%252C932625%252C934024%252C934030%252C946010%252C946506%252C949501%252C953801%26id%3Do-ACP0TRiYWc7qkIrOsVu0oqPQv08yryrLy80WpqGVpVUu%26signature%3D42EA1C0406FDEEC1E65C0B4FA20558FE2931975B.A47599A424514B7A78D726A5DECCABAFA470B462%26sver%3D3%26sparams%3Did%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Cmm%252Cms%252Cmv%252Csource%252Cupn%252Cexpire%26itag%3D17%26mm%3D31%26ip%3D121.127.250.133&signature=null
+			mVideoView.setVideoURI(pResult);
+
+			// TODO: add listeners for finish of video
+			mVideoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+				public void onCompletion(MediaPlayer pMp) {
+					// if (isCancelled())
+					// return;
+					// openYouTubePlayerActivity.finish(); // TODO [USED]
+				}
+
+			});
+
+			final MediaController lMediaController = new MediaController(context);
+			mVideoView.setMediaController(lMediaController);
+
+			if (taskInfo.showControllerOnStartup)
+				lMediaController.show(0);
+
+			// mVideoView.setKeepScreenOn(true);
+			mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+
+				public void onPrepared(MediaPlayer pMp) {
+					// if (isCancelled())
+					// return;
+					mProgressBar.setVisibility(View.GONE);
+					mProgressMessage.setVisibility(View.GONE);
+				}
+
+			});
+
+			// if (isCancelled())
+			// return;
+
+			mVideoView.requestFocus();
+			mVideoView.start();
+		} catch (Exception e) {
+			Log.e(this.getClass().getSimpleName(), "Error playing video!", e);
+
+			// if (!mShowedError) {
+			// showErrorAlert();
+			// }
+		}
 	}
 
 	public void stopYoutubeTask(Context context) {
 		YouTubeUtility.markVideoAsViewed(context, mVideoId);
 
-		if (mQueryYouTubeTask != null) {
-			mQueryYouTubeTask.cancel(true);
-		}
+		// if (mQueryYouTubeTask != null) {
+		// mQueryYouTubeTask.cancel(true);
+		// }
 
 		if (mVideoView != null) {
 			mVideoView.stopPlayback();
