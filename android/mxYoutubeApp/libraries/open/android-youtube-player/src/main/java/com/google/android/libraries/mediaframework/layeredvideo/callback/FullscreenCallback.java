@@ -1,4 +1,4 @@
-package com.google.android.libraries.mediaframework.layeredvideo;
+package com.google.android.libraries.mediaframework.layeredvideo.callback;
 
 /**
  * In order to imbue the {@link com.google.android.libraries.mediaframework.layeredvideo.layer.PlaybackControlLayer} with the ability make the player fullscreen, a

@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-package com.google.android.libraries.mediaframework.layeredvideo;
+package com.google.android.libraries.mediaframework.layeredvideo.utils;
 
 import android.view.View;
 import android.view.ViewGroup;

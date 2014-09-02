@@ -32,9 +32,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 import com.google.android.libraries.mediaframework.R;
-import com.google.android.libraries.mediaframework.layeredvideo.FullscreenCallback;
+import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
-import com.google.android.libraries.mediaframework.layeredvideo.Util;
+import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -246,7 +246,7 @@ public class PlaybackControlLayer implements Layer {
 	private TextView endTime;
 
 	/**
-	 * Makes player enter or leave fullscreen. This button is not displayed unless there is a {@link com.google.android.libraries.mediaframework.layeredvideo.FullscreenCallback}
+	 * Makes player enter or leave fullscreen. This button is not displayed unless there is a {@link com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback}
 	 * associated with this object.
 	 */
 	private ImageButton fullscreenButton;
