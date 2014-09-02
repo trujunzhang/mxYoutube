@@ -3,8 +3,10 @@ package com.google.android.libraries.example;
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import com.google.android.libraries.mediaframework.layeredvideo.SimpleVideoPlayer;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
@@ -25,6 +27,7 @@ public class YoutubeActivity extends Activity implements FullscreenCallback {
 	 * The callback that is triggered when fullscreen mode is entered or closed.
 	 */
 	private FullscreenCallback fullscreenCallback;
+	private LinearLayout info_linear_layout;
 
 	/**
 	 * Set the callback which will be called when the player enters and leaves fullscreen mode.
@@ -59,6 +62,7 @@ public class YoutubeActivity extends Activity implements FullscreenCallback {
 		setContentView(R.layout.activity_youtube);
 
 		videoPlayerContainer = (FrameLayout) this.findViewById(R.id.video_frame);
+		info_linear_layout = (LinearLayout) this.findViewById(R.id.info_linear_layout);
 
 		Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
 
@@ -77,6 +81,7 @@ public class YoutubeActivity extends Activity implements FullscreenCallback {
 	 */
 	@Override
 	public void onGoToFullscreen() {
+		info_linear_layout.setVisibility(View.INVISIBLE);
 		// videoListView.setVisibility(View.INVISIBLE);
 	}
 
@@ -85,6 +90,7 @@ public class YoutubeActivity extends Activity implements FullscreenCallback {
 	 */
 	@Override
 	public void onReturnFromFullscreen() {
+		info_linear_layout.setVisibility(View.VISIBLE);
 		// videoListView.setVisibility(View.VISIBLE);
 	}
 

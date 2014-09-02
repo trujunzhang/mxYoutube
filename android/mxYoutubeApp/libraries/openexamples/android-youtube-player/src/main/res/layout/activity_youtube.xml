@@ -13,4 +13,14 @@
             android:background="@android:color/background_light">
     </FrameLayout>
 
+    <LinearLayout
+            android:id="@+id/info_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+        <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </LinearLayout>
+
 </LinearLayout>
