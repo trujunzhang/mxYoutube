@@ -2,6 +2,7 @@ package com.google.android.libraries.example;
 
 import android.app.Activity;
 import android.net.Uri;
+import android.widget.FrameLayout;
 import com.keyes.youtube.beans.YoutubeTaskInfo;
 import com.keyes.youtube.ui.YouTubePlayerHelper;
 import com.keyes.youtube.utils.YoutubeQuality;
@@ -21,7 +22,7 @@ public class MediaPlayerActivity extends Activity {
 	@ViewById(R.id.progressBar)
 	android.widget.ProgressBar progressBar;
 	@ViewById(R.id.media_player_bottom_linear_line)
-	android.widget.LinearLayout mediaPlayerBottomLinearLine;
+    FrameLayout mediaPlayerBottomLinearLine;
 	@ViewById(R.id.media_player_linear_layout)
 	android.widget.FrameLayout mediaPlayerLinearLayout;
 
