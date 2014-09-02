@@ -15,7 +15,7 @@
 
 
     <application android:label="youtube-player-example">
-        <activity android:name=".YoutubeActivity">
+        <activity android:name=".YoutubeActivity_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
