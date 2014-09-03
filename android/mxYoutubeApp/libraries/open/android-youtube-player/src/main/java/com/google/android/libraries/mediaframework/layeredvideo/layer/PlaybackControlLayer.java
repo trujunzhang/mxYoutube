@@ -38,6 +38,7 @@ import com.google.android.libraries.mediaframework.layeredvideo.callback.Fullscr
 import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
 import com.keyes.youtube.beans.YoutubeTaskInfo;
 import com.keyes.youtube.ui.YouTubePlayerHelper;
+import com.keyes.youtube.utils.YoutubeQuality;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -94,7 +95,7 @@ import java.util.Locale;
  */
 public class PlaybackControlLayer implements Layer {
 
-	private YouTubePlayerHelper playerHelper;
+	private YouTubePlayerHelper playerHelper=new YouTubePlayerHelper();
 	private VideoView videoView;
 
 	/**
@@ -428,6 +429,7 @@ public class PlaybackControlLayer implements Layer {
 
 		view = (FrameLayout) inflater.inflate(R.layout.playback_control_layer, null);
 		setupView();
+		layerManager.setControl(this.videoView);
 
 		originalContainerLayoutParams = layerManager.getContainer().getLayoutParams();
 
@@ -458,7 +460,7 @@ public class PlaybackControlLayer implements Layer {
 
 		this.playerHelper.setupView(this.videoView, null, null);
 
-		this.playerHelper.taskInfo = new YoutubeTaskInfo();
+		this.playerHelper.taskInfo = this.getExtractMessages(layerManager.getActivity());
 
 		this.playerHelper.initProgressBar();
 
@@ -468,6 +470,15 @@ public class PlaybackControlLayer implements Layer {
 		this.playerHelper.makeAndExecuteYoutubeTask(layerManager.getActivity(), lVideoIdUri);
 
 		return view;
+	}
+
+	protected YoutubeTaskInfo getExtractMessages(Activity activity) {
+		YoutubeTaskInfo _taskInfo = new YoutubeTaskInfo();
+
+		_taskInfo.lYouTubeFmtQuality = YoutubeQuality.getYoutubeFmtQuality(activity);
+		_taskInfo.showControllerOnStartup = false;
+
+		return _taskInfo;
 	}
 
 	/**

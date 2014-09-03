@@ -28,9 +28,10 @@ import java.util.List;
  * This is the basis for building a layered video player (i.e. a video player with views overlaid on top of it).
  *
  * <p>
- * Given a {@link android.widget.FrameLayout}, a , and a set of {@link com.google.android.libraries.mediaframework.layeredvideo.layer.Layer} objects, the {@link LayerManager} will
- * create an for the object and create each {@link com.google.android.libraries.mediaframework.layeredvideo.layer.Layer} object's view and overlay it on the
- * {@link android.widget.FrameLayout} object.
+ * Given a {@link android.widget.FrameLayout}, a , and a set of
+ * {@link com.google.android.libraries.mediaframework.layeredvideo.layer.Layer} objects, the {@link LayerManager} will
+ * create an for the object and create each {@link com.google.android.libraries.mediaframework.layeredvideo.layer.Layer}
+ * object's view and overlay it on the {@link android.widget.FrameLayout} object.
  *
  * <p>
  * Look at {@link SimpleVideoPlayer} to see {@link LayerManager} in action.
@@ -43,7 +44,8 @@ public class LayerManager {
 	private Activity activity;
 
 	/**
-	 * All the views created by the {@link com.google.android.libraries.mediaframework.layeredvideo.layer.Layer} objects will be overlaid on this container.
+	 * All the views created by the {@link com.google.android.libraries.mediaframework.layeredvideo.layer.Layer} objects
+	 * will be overlaid on this container.
 	 */
 	private FrameLayout container;
 
@@ -103,6 +105,10 @@ public class LayerManager {
 	 */
 	public VideoView getControl() {
 		return control;
+	}
+
+	public void setControl(VideoView videoView) {
+		this.control = videoView;
 	}
 
 	/**
