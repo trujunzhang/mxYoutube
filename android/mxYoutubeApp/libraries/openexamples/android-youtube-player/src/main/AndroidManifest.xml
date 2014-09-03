@@ -16,15 +16,15 @@
 
     <application android:label="youtube-player-example">
         <activity android:name=".YoutubeActivity_">
-
-        </activity>
-
-
-        <activity android:name=".MediaPlayerActivity_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+
+        <activity android:name=".MediaPlayerActivity_">
+
         </activity>
     </application>
 

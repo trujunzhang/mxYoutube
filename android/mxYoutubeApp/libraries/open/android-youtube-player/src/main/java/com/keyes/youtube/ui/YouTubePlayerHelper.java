@@ -223,7 +223,7 @@ public class YouTubePlayerHelper {
 	public void initProgressBar() {
 //		mProgressBar.bringToFront();
 //		mProgressBar.setVisibility(View.VISIBLE);
-		mProgressMessage.setText(taskInfo.mMsgInit);
+//		mProgressMessage.setText(taskInfo.mMsgInit);
 	}
 
 	public void updateProgress(String pProgressMsg) {

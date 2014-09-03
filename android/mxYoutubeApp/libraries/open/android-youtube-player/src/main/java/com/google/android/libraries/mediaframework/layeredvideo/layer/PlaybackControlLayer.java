@@ -24,6 +24,7 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.view.Gravity;
@@ -35,6 +36,8 @@ import com.google.android.libraries.mediaframework.R;
 import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
+import com.keyes.youtube.beans.YoutubeTaskInfo;
+import com.keyes.youtube.ui.YouTubePlayerHelper;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -90,6 +93,9 @@ import java.util.Locale;
  * The view is defined in the layout file: res/layout/playback_control_layer.xml.
  */
 public class PlaybackControlLayer implements Layer {
+
+	private YouTubePlayerHelper playerHelper;
+	private VideoView videoView;
 
 	/**
 	 * Message handler which allows us to send delayed messages to the {@link PlaybackControlLayer} This is useful for
@@ -449,6 +455,17 @@ public class PlaybackControlLayer implements Layer {
 
 		// Make the view hidden initially. It will be made visible again in the show(timeout) method.
 		playbackControlRootView.setVisibility(View.INVISIBLE);
+
+		this.playerHelper.setupView(this.videoView, null, null);
+
+		this.playerHelper.taskInfo = new YoutubeTaskInfo();
+
+		this.playerHelper.initProgressBar();
+
+		Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
+		// Uri lVideoIdUri = Uri.parse("ytv://" + this.selectedVideo.getId());
+
+		this.playerHelper.makeAndExecuteYoutubeTask(layerManager.getActivity(), lVideoIdUri);
 
 		return view;
 	}
@@ -826,7 +843,7 @@ public class PlaybackControlLayer implements Layer {
 		bottomChrome = (LinearLayout) view.findViewById(R.id.bottom_chrome);
 		actionButtonsContainer = (LinearLayout) view.findViewById(R.id.actions_container);
 
-		VideoView videoView = (VideoView) view.findViewById(R.id.video_view);
+		videoView = (VideoView) view.findViewById(R.id.video_view);
 
 		// The play button should toggle play/pause when the play/pause button is clicked.
 		pausePlayButton.setOnClickListener(new View.OnClickListener() {
