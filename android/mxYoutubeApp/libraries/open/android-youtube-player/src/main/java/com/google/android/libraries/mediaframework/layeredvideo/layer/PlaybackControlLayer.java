@@ -95,7 +95,7 @@ import java.util.Locale;
  */
 public class PlaybackControlLayer implements Layer {
 
-	private YouTubePlayerHelper playerHelper=new YouTubePlayerHelper();
+	private YouTubePlayerHelper playerHelper = new YouTubePlayerHelper();
 	private VideoView videoView;
 
 	/**
@@ -429,7 +429,7 @@ public class PlaybackControlLayer implements Layer {
 
 		view = (FrameLayout) inflater.inflate(R.layout.playback_control_layer, null);
 		setupView();
-		layerManager.setControl(this.videoView);
+		// layerManager.setControl(this.videoView);
 
 		originalContainerLayoutParams = layerManager.getContainer().getLayoutParams();
 
@@ -810,18 +810,18 @@ public class PlaybackControlLayer implements Layer {
 	 *            If true, then the player starts playing. If false, the player pauses.
 	 */
 	public void setPlayPause(boolean shouldPlay) {
-		VideoView playerControl = getLayerManager().getControl();
-		if (playerControl == null) {
-			return;
-		}
-
-		if (shouldPlay) {
-			playerControl.start();
-		} else {
-			playerControl.pause();
-		}
-
-		updatePlayPauseButton();
+		// VideoView playerControl = getLayerManager().getControl();
+		// if (playerControl == null) {
+		// return;
+		// }
+		//
+		// if (shouldPlay) {
+		// playerControl.start();
+		// } else {
+		// playerControl.pause();
+		// }
+		//
+		// updatePlayPauseButton();
 	}
 
 	/**
@@ -890,13 +890,13 @@ public class PlaybackControlLayer implements Layer {
 					return;
 				}
 
-				VideoView playerControl = getLayerManager().getControl();
-				long duration = playerControl.getDuration();
-				long newposition = (duration * progress) / 1000L;
-				playerControl.seekTo((int) newposition);
-				if (currentTime != null) {
-					currentTime.setText(stringForTime((int) newposition));
-				}
+				// VideoView playerControl = getLayerManager().getControl();
+				// long duration = playerControl.getDuration();
+				// long newposition = (duration * progress) / 1000L;
+				// playerControl.seekTo((int) newposition);
+				// if (currentTime != null) {
+				// currentTime.setText(stringForTime((int) newposition));
+				// }
 			}
 
 			@Override
