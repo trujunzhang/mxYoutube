@@ -157,7 +157,7 @@ public class YouTubePlayerHelper {
 
 	public void setupView(VideoView videoView, ProgressBar progressBar, TextView textView) {
 		this.mVideoView = videoView;
-		this.mProgressBar = progressBar;
+//		this.mProgressBar = progressBar;
 		this.mProgressMessage = textView;
 	}
 
@@ -221,8 +221,8 @@ public class YouTubePlayerHelper {
 	}
 
 	public void initProgressBar() {
-		mProgressBar.bringToFront();
-		mProgressBar.setVisibility(View.VISIBLE);
+//		mProgressBar.bringToFront();
+//		mProgressBar.setVisibility(View.VISIBLE);
 		mProgressMessage.setText(taskInfo.mMsgInit);
 	}
 
@@ -292,8 +292,8 @@ public class YouTubePlayerHelper {
 				public void onPrepared(MediaPlayer pMp) {
 					// if (isCancelled())
 					// return;
-					mProgressBar.setVisibility(View.GONE);
-					mProgressMessage.setVisibility(View.GONE);
+//					mProgressBar.setVisibility(View.GONE);
+//					mProgressMessage.setVisibility(View.GONE);
 				}
 
 			});
