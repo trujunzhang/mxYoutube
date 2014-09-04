@@ -149,7 +149,7 @@ public class YoutubeControlLayer implements Layer {
 
 		LayoutInflater inflater = layerManager.getActivity().getLayoutInflater();
 
-		view = (FrameLayout) inflater.inflate(R.layout.media_player_fragment, null);
+		view = (FrameLayout) inflater.inflate(R.layout.normal_control_layer, null);
 		setupView();
 
 		originalContainerLayoutParams = layerManager.getContainer().getLayoutParams();
