@@ -14,10 +14,17 @@
             android:layout_gravity="center|top">
 
         <RadioButton
-                android:id="@+id/main_footbar_news"
+                android:id="@+id/main_footbar_repeat"
                 style="@style/main_footbar_radio"
                 android:drawableTop="@drawable/widget_bar_repeat"/>
-
+        <RadioButton
+                android:id="@+id/main_footbar_thumbs_up"
+                style="@style/main_footbar_radio"
+                android:drawableTop="@drawable/widget_bar_thumbs_up"/>
+        <RadioButton
+                android:id="@+id/main_footbar_thumbs_down"
+                style="@style/main_footbar_radio"
+                android:drawableTop="@drawable/widget_bar_thumbs_down"/>
     </LinearLayout>
 
     <RelativeLayout
