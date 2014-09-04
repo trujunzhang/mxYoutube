@@ -78,14 +78,6 @@ public class LayerManager {
 
 		this.fullscreenCallback = fullscreenCallback;
 
-		// ExoplayerWrapper.RendererBuilder rendererBuilder =
-		// RendererBuilderFactory.createRendererBuilder(activity, video);
-		//
-		// exoplayerWrapper = new ExoplayerWrapper(rendererBuilder);
-		// exoplayerWrapper.prepare();
-
-		// this.control = exoplayerWrapper.getPlayerControl();
-
 		// Put the layers into the container.
 		container.removeAllViews();
 		for (Layer layer : layers) {
