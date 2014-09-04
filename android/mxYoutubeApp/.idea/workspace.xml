@@ -118,10 +118,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40b4ff95-6454-4327-83b2-70fa6b42ff96" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/jit/video/DensityUtil.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/utils/DensityUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/jit/video/FullScreenVideoView.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/widgets/FullScreenVideoView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/YoutubeControlLayer.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/YoutubeControlLayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/res/layout/media_player_view_layer.xml" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/res/layout/media_player_view_layer.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/NormalPlayBackControlLayer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/YoutubeControlLayer.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/PlayBackControlLayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mxYoutubeApp.iws" />
@@ -189,18 +188,7 @@
     <favorites_list name="mxYoutubeApp" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="YoutubeControlLayer.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/YoutubeControlLayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.527027" vertical-offset="1545" max-vertical-offset="7236">
-              <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -9199,8 +9187,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/Footer.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/Home.java" />
         <option value="$PROJECT_DIR$/libraries/collect/AndroidCommon/src/main/java/com/views/MediaPlayerLinearLayout.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/ui/OpenYouTubePlayerActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/media_user_fragment.xml" />
@@ -9250,6 +9236,8 @@
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/_PlaybackControlLayer.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/widgets/FullScreenVideoView.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/utils/DensityUtil.java" />
+        <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/PlayBackControlLayer.java" />
+        <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/NormalPlayBackControlLayer.java" />
       </list>
     </option>
   </component>
@@ -9895,11 +9883,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.google.android.libraries.mediaframework.layeredvideo.layer" />
       <recent name="com.google.android.libraries.example" />
       <recent name="com.views" />
       <recent name="com.keyes.youtube.ui" />
       <recent name="com.mxtube.app.ui.single" />
-      <recent name="com.mxtube.app.ui" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/res/layout" />
@@ -10340,7 +10328,7 @@
       <workItem from="1409710919298" duration="669000" />
       <workItem from="1409719876430" duration="1576000" />
       <workItem from="1409799870808" duration="724000" />
-      <workItem from="1409807011891" duration="1402000" />
+      <workItem from="1409807011891" duration="2209000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1408861027733</created>
@@ -10950,15 +10938,19 @@
       <created>1409808382344</created>
       <updated>1409808382344</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="add [android-youtube-query] library.">
+      <created>1409808506972</created>
+      <updated>1409808506973</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108044000" />
+    <option name="totallyTimeSpent" value="108851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1366" height="689" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -10971,7 +10963,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.05022831" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5372907" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32035398" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952815" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -11008,7 +11000,7 @@
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.05022831" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26331812" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32952815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message Pane" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32922536" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32035398" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -11020,14 +11012,14 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32566372" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle View" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920355" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Generate code Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17047185" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Generate code Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17047185" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5097345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920355" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49557522" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24931756" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24931756" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties Pane" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -11241,13 +11233,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59289175" vertical-offset="2045" max-vertical-offset="2664">
-          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/res/drawable-hdpi/ic_action_play.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -11432,17 +11417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/_PlaybackControlLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45173746" vertical-offset="6192" max-vertical-offset="18468">
-          <caret line="357" column="7" selection-start-line="357" selection-start-column="7" selection-end-line="357" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/utils/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13899614" vertical-offset="0" max-vertical-offset="1044">
@@ -11459,19 +11433,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/utils/DensityUtil.java">
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceLayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55598456" vertical-offset="468" max-vertical-offset="990">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5212355" vertical-offset="0" max-vertical-offset="1782">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/YoutubeControlLayer.java">
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/_PlaybackControlLayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.527027" vertical-offset="1545" max-vertical-offset="7236">
-          <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.4169884" vertical-offset="6192" max-vertical-offset="18468">
+          <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../../../macshare/SHARE/HomeBrew/Library/Android-adt-bundle/Home/platforms/android-19/android.jar!/java/lang/Object.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20338982" vertical-offset="0" max-vertical-offset="630">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/PlayBackControlLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2844">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding>
+            <element signature="e#4794#4795#0" expanded="true" />
+            <element signature="e#4834#4835#0" expanded="true" />
+            <element signature="e#4886#4887#0" expanded="true" />
+            <element signature="e#4932#4933#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/utils/DensityUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="21" max-vertical-offset="990">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/NormalPlayBackControlLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40677965" vertical-offset="0" max-vertical-offset="5202">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#1486#1487#0" expanded="true" />
+            <element signature="e#1510#1511#0" expanded="true" />
+            <element signature="e#2541#2823#0" expanded="true" />
+            <element signature="e#2818#2819#0" expanded="true" />
+            <element signature="e#2927#3034#0" expanded="true" />
+            <element signature="e#3029#3030#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

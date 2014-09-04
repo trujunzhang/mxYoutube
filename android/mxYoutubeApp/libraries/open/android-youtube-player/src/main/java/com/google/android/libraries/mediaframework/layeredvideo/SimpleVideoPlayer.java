@@ -27,9 +27,9 @@ import android.view.View;
 import android.widget.FrameLayout;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.Layer;
+import com.google.android.libraries.mediaframework.layeredvideo.layer.PlayBackControlLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.SubtitleLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.VideoSurfaceLayer;
-import com.google.android.libraries.mediaframework.layeredvideo.layer.YoutubeControlLayer;
 import com.keyes.youtube.beans.YoutubeTaskInfo;
 import com.keyes.youtube.callback.VideoInfoTaskCallback;
 import com.keyes.youtube.ui.YouTubePlayerHelper;
@@ -118,7 +118,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	 * The customizable view for playback control. It handles pause/play, fullscreen, seeking, title, and action
 	 * buttons.
 	 */
-	private final YoutubeControlLayer playbackControlLayer;
+	private final PlayBackControlLayer playbackControlLayer;
 
 	/**
 	 * Displays subtitles at bottom center of video player.
@@ -155,7 +155,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 			FullscreenCallback fullscreenCallback) {
 		this.activity = activity;
 
-		playbackControlLayer = new YoutubeControlLayer(videoTitle, fullscreenCallback);
+		playbackControlLayer = new PlayBackControlLayer(videoTitle, fullscreenCallback);
 		subtitleLayer = new SubtitleLayer();
 		videoSurfaceLayer = new VideoSurfaceLayer(autoplay);
 
