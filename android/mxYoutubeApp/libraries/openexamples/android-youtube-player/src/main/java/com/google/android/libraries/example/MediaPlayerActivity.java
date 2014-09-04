@@ -22,7 +22,7 @@ public class MediaPlayerActivity extends Activity {
 	@ViewById(R.id.progressBar)
 	android.widget.ProgressBar progressBar;
 	@ViewById(R.id.media_player_bottom_linear_line)
-    FrameLayout mediaPlayerBottomLinearLine;
+	FrameLayout mediaPlayerBottomLinearLine;
 	@ViewById(R.id.media_player_linear_layout)
 	android.widget.FrameLayout mediaPlayerLinearLayout;
 
@@ -36,13 +36,10 @@ public class MediaPlayerActivity extends Activity {
 
 	@AfterViews
 	protected void calledAfterViewInjection() {
-		this.playerHelper.setupView(this.videoView, this.progressBar, this.progressBarMessage);
 		// this.playerHelper.setupView(this.getSherlockActivity(), mediaPlayerLinearLayout);
 
 		// determine the messages to be displayed as the view loads the video
 		this.playerHelper.taskInfo = getExtractMessages();
-
-		this.playerHelper.initProgressBar();
 
 		Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
 		// Uri lVideoIdUri = Uri.parse("ytv://" + this.selectedVideo.getId());

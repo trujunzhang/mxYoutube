@@ -39,13 +39,8 @@ public class MediaPlayer extends Single {
 
 	@AfterViews
 	protected void calledAfterViewInjection() {
-		this.playerHelper.setupView(this.videoView, this.progressBar, this.progressBarMessage);
-		// this.playerHelper.setupView(this.getSherlockActivity(), mediaPlayerLinearLayout);
-
 		// determine the messages to be displayed as the view loads the video
 		this.playerHelper.taskInfo = getExtractMessages();
-
-		this.playerHelper.initProgressBar();
 
 		Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
 		// Uri lVideoIdUri = Uri.parse("ytv://" + this.selectedVideo.getId());
