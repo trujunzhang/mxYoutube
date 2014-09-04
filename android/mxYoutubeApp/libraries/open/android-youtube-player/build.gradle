@@ -22,7 +22,6 @@ android {
     }
 }
 
-def AQVersion = '0.24.3'
 
 dependencies {
 
@@ -30,7 +29,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
 //    compile 'com.android.support:support-v4:+'
 
-    compile "com.googlecode.android-query:android-query:$AQVersion"
-
+    compile project(':libraries:open:android-youtube-query');
 }
 

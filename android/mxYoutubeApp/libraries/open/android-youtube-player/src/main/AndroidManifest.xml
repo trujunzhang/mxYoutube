@@ -25,28 +25,6 @@
 
     <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="4"/>
 
-
-    <!--<application android:icon="@drawable/icon" android:label="@string/app_name">-->
-    <!--<activity android:name=".ui.Sample"-->
-    <!-->-->
-    <!--<intent-filter>-->
-    <!--<action android:name="android.intent.action.MAIN"/>-->
-    <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-    <!--</intent-filter>-->
-    <!--</activity>-->
-
-    <!--&lt;!&ndash; =============================================================== &ndash;&gt;-->
-    <!--&lt;!&ndash; This is what you'll need to include in your manifest to declare &ndash;&gt;-->
-    <!--&lt;!&ndash; the OpenYouTubeActivity in your project                         &ndash;&gt;-->
-    <!--&lt;!&ndash; =============================================================== &ndash;&gt;-->
-    <!--<activity-->
-    <!--android:name=".ui.OpenYouTubePlayerActivity"-->
-    <!--android:screenOrientation="landscape"-->
-    <!--android:configChanges="orientation"-->
-    <!--android:theme="@android:style/Theme.Black"-->
-    <!--android:label="@string/app_name">-->
-    <!--</activity>-->
-
-    <!--</application>-->
+    <application></application>
 
 </manifest>

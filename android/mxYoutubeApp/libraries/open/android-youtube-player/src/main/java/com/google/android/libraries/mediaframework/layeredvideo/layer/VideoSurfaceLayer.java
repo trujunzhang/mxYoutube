@@ -17,11 +17,12 @@
 package com.google.android.libraries.mediaframework.layeredvideo.layer;
 
 import android.view.LayoutInflater;
-import android.view.SurfaceHolder;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import com.google.android.libraries.mediaframework.R;
 import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
-import com.google.android.libraries.mediaframework.layeredvideo.VideoSurfaceView;
 
 /**
  * Creates a view which can render video.
@@ -40,65 +41,13 @@ public class VideoSurfaceLayer implements Layer {
 	private LayerManager layerManager;
 
 	/**
-	 * When a size change occurs, change the size of the surface view.
-	 */
-	// private ExoplayerWrapper.PlaybackListener playbackListener
-	// = new ExoplayerWrapper.PlaybackListener() {
-	// @Override
-	// public void onStateChanged(boolean playWhenReady, int playbackState) {
-	//
-	// }
-	//
-	// @Override
-	// public void onError(Exception e) {
-	// Log.d(VideoSurfaceLayer.class.getSimpleName(), e.getMessage());
-	// }
-	//
-	// @Override
-	// public void onVideoSizeChanged(int width, int height) {
-	// surfaceView.setVideoWidthHeightRatio(height == 0 ? 1 : (float) width / height);
-	// }
-	// };
-
-	/**
-	 * Bind the surface view to the and unbind them when the surface view is destroyed.
-	 */
-	// private SurfaceHolder.Callback surfaceHolderCallback = new SurfaceHolder.Callback() {
-	// @Override
-	// public void surfaceCreated(SurfaceHolder surfaceHolder) {
-	// ExoplayerWrapper wrapper = layerManager.getExoplayerWrapper();
-	// if (wrapper != null) {
-	// wrapper.setSurface(surfaceHolder.getSurface());
-	// if (wrapper.getSurface().isValid() ||
-	// wrapper.getStateForTrackType(ExoplayerWrapper.TYPE_VIDEO)
-	// == ExoplayerWrapper.DISABLED_TRACK) {
-	// wrapper.setPlayWhenReady(autoplay);
-	// }
-	// }
-	// }
-	//
-	// @Override
-	// public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
-	//
-	// }
-	//
-	// @Override
-	// public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
-	// if (layerManager.getExoplayerWrapper() != null) {
-	// layerManager.getExoplayerWrapper().blockingClearSurface();
-	// }
-	// }
-	// };
-
-	/**
-	 * This is where the video is displayed.
-	 */
-	private VideoSurfaceView surfaceView;
-
-	/**
-	 * This is created by the {@link VideoSurfaceLayer#createView(LayerManager)} function.
+	 * This is created by the
+	 * {@link VideoSurfaceLayer#createView(com.google.android.libraries.mediaframework.layeredvideo.LayerManager)}
+	 * function.
 	 */
 	private FrameLayout view;
+	private LinearLayout frameLayout;
+	private ProgressBar progressBar;
 
 	/**
 	 * @param autoplay
@@ -115,13 +64,8 @@ public class VideoSurfaceLayer implements Layer {
 		LayoutInflater inflater = layerManager.getActivity().getLayoutInflater();
 		view = (FrameLayout) inflater.inflate(R.layout.video_surface_layer, null);
 
-		// layerManager.getExoplayerWrapper().addListener(playbackListener);
-
-		surfaceView = (VideoSurfaceView) view.findViewById(R.id.surface_view);
-		if (surfaceView != null) {
-			SurfaceHolder holder = surfaceView.getHolder();
-			// holder.addCallback(surfaceHolderCallback);
-		}
+		this.frameLayout = (LinearLayout) view.findViewById(R.id.bottom_layout);
+		this.progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
 
 		return view;
 	}
@@ -137,7 +81,8 @@ public class VideoSurfaceLayer implements Layer {
 	 * overlaid on top of it.
 	 */
 	public void moveSurfaceToBackground() {
-		surfaceView.setZOrderMediaOverlay(false);
+		this.frameLayout.setVisibility(View.GONE);
+		// surfaceView.setZOrderMediaOverlay(false);
 	}
 
 	/**
@@ -146,7 +91,8 @@ public class VideoSurfaceLayer implements Layer {
 	 * layers which are in the background.
 	 */
 	public void moveSurfaceToForeground() {
-		surfaceView.setZOrderMediaOverlay(true);
+		this.frameLayout.setVisibility(View.VISIBLE);
+		// surfaceView.setZOrderMediaOverlay(true);
 	}
 
 	/**
@@ -165,5 +111,9 @@ public class VideoSurfaceLayer implements Layer {
 	 */
 	public void release() {
 		// layerManager.getExoplayerWrapper().removeListener(playbackListener);
+	}
+
+	public ProgressBar getProgressBar() {
+		return progressBar;
 	}
 }

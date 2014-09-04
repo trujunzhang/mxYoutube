@@ -22,27 +22,36 @@ import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 /**
  * Creates a custom view which can be added on top of a LayerManager.
  *
- * <p>In order to ensure that layers' views can be overlaid ON TOP of each other, they must be of
- * type {@link android.widget.FrameLayout}.
+ * <p>
+ * In order to ensure that layers' views can be overlaid ON TOP of each other, they must be of type
+ * {@link android.widget.FrameLayout}.
  *
- * <p>See {@link com.google.android.libraries.mediaframework.layeredvideo.layer.SubtitleLayer}, {@link com.google.android.libraries.mediaframework.layeredvideo.layer.VideoSurfaceLayer}, and {@link com.google.android.libraries.mediaframework.layeredvideo.layer.PlaybackControlLayer}
- * for examples.
+ * <p>
+ * See {@link com.google.android.libraries.mediaframework.layeredvideo.layer.SubtitleLayer}, and
+ * {@link com.google.android.libraries.mediaframework.layeredvideo.layer.PlaybackControlLayer} for examples.
  */
 public interface Layer {
 
-  /**
-   * Builds and sets up the view that will be layered onto the video player. The returned view
-   * must be a {@link android.widget.FrameLayout} to ensure that the {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager} can overlay it on top
-   * of the other layers.
-   * @param layerManager The {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager} which will contain this layer.
-   * @return The view to be layered onto the video player by the {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager}
-   */
-  public FrameLayout createView(LayerManager layerManager);
+	/**
+	 * Builds and sets up the view that will be layered onto the video player. The returned view must be a
+	 * {@link android.widget.FrameLayout} to ensure that the
+	 * {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager} can overlay it on top of the other
+	 * layers.
+	 * 
+	 * @param layerManager
+	 *            The {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager} which will contain
+	 *            this layer.
+	 * @return The view to be layered onto the video player by the
+	 *         {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager}
+	 */
+	public FrameLayout createView(LayerManager layerManager);
 
-  /**
-   * Called when a Layer's view has been displayed on the screen. Any additional setup which
-   * can only be performed after the layer is displayed should be done here.
-   * @param layerManager The {@link LayerManager} which will contain this layer.
-   */
-  public void onLayerDisplayed(LayerManager layerManager);
+	/**
+	 * Called when a Layer's view has been displayed on the screen. Any additional setup which can only be performed
+	 * after the layer is displayed should be done here.
+	 * 
+	 * @param layerManager
+	 *            The {@link LayerManager} which will contain this layer.
+	 */
+	public void onLayerDisplayed(LayerManager layerManager);
 }

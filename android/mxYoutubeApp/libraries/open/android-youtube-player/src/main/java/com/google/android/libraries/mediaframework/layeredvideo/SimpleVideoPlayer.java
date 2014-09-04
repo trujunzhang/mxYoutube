@@ -16,15 +16,23 @@
 
 package com.google.android.libraries.mediaframework.layeredvideo;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.FrameLayout;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.Layer;
-import com.google.android.libraries.mediaframework.layeredvideo.layer.PlaybackControlLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.SubtitleLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.VideoSurfaceLayer;
+import com.google.android.libraries.mediaframework.layeredvideo.layer.YoutubeControlLayer;
+import com.keyes.youtube.beans.YoutubeTaskInfo;
+import com.keyes.youtube.callback.VideoInfoTaskCallback;
+import com.keyes.youtube.ui.YouTubePlayerHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,8 +44,61 @@ import java.util.List;
  * NOTE: If you want to get a video player up and running with minimal effort, just instantiate this class and call
  * play();
  */
-public class SimpleVideoPlayer {
+public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 
+	private YouTubePlayerHelper playerHelper = new YouTubePlayerHelper();
+
+	protected void setupPlayerHelper(Context context) {
+		this.playerHelper.setVideoInfoTaskCallback(this);
+
+		// determine the messages to be displayed as the view loads the video
+		this.playerHelper.taskInfo = getExtractMessages();
+
+		Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
+
+		this.playerHelper.makeAndExecuteYoutubeTask(context, lVideoIdUri);
+	}
+
+	/**
+	 * Determine the messages to display during video load and initialization.
+	 */
+	protected YoutubeTaskInfo getExtractMessages() {
+		YoutubeTaskInfo _taskInfo = new YoutubeTaskInfo();
+
+		_taskInfo.lYouTubeFmtQuality = "18";// YoutubeQuality.getYoutubeFmtQuality(this);
+		_taskInfo.showControllerOnStartup = false;
+
+		return _taskInfo;
+	}
+
+	private String videoUrl;
+
+	@Override
+	public void startYoutubeTask(String videoUrl) {
+		this.videoUrl = videoUrl;
+		mHandler.postDelayed(playVideo, 3000);
+	}
+
+	@SuppressLint("HandlerLeak")
+	private Handler mHandler = new Handler() {
+
+		@Override
+		public void handleMessage(Message msg) {
+			super.handleMessage(msg);
+			switch (msg.what) {
+			default:
+				break;
+			}
+		}
+	};
+	private Runnable playVideo = new Runnable() {
+
+		@Override
+		public void run() {
+			videoSurfaceLayer.moveSurfaceToBackground();
+			playbackControlLayer.playVideo(videoUrl);
+		}
+	};
 	/**
 	 * The {@link android.app.Activity} that contains this video player.
 	 */
@@ -49,20 +110,20 @@ public class SimpleVideoPlayer {
 	private final LayerManager layerManager;
 
 	/**
+	 * Renders the video.
+	 */
+	private VideoSurfaceLayer videoSurfaceLayer;
+
+	/**
 	 * The customizable view for playback control. It handles pause/play, fullscreen, seeking, title, and action
 	 * buttons.
 	 */
-	private final PlaybackControlLayer playbackControlLayer;
+	private final YoutubeControlLayer playbackControlLayer;
 
 	/**
 	 * Displays subtitles at bottom center of video player.
 	 */
 	private final SubtitleLayer subtitleLayer;
-
-	/**
-	 * Renders the video.
-	 */
-	private final VideoSurfaceLayer videoSurfaceLayer;
 
 	/**
 	 * @param activity
@@ -94,14 +155,15 @@ public class SimpleVideoPlayer {
 			FullscreenCallback fullscreenCallback) {
 		this.activity = activity;
 
-		playbackControlLayer = new PlaybackControlLayer(videoTitle, fullscreenCallback);
+		playbackControlLayer = new YoutubeControlLayer(videoTitle, fullscreenCallback);
 		subtitleLayer = new SubtitleLayer();
 		videoSurfaceLayer = new VideoSurfaceLayer(autoplay);
 
 		List<Layer> layers = new ArrayList<Layer>();
-		layers.add(videoSurfaceLayer);
+
 		layers.add(playbackControlLayer);
 		layers.add(subtitleLayer);
+		layers.add(videoSurfaceLayer);
 
 		layerManager = new LayerManager(activity, container, layers);
 	}
@@ -119,28 +181,28 @@ public class SimpleVideoPlayer {
 	 *            The handler for when the action is triggered.
 	 */
 	public void addActionButton(Drawable icon, String contentDescription, View.OnClickListener onClickListener) {
-		playbackControlLayer.addActionButton(activity, icon, contentDescription, onClickListener);
+		// playbackControlLayer.addActionButton(activity, icon, contentDescription, onClickListener);
 	}
 
 	/**
 	 * Hides the seek bar thumb and prevents the user from seeking to different time points in the video.
 	 */
 	public void disableSeeking() {
-		playbackControlLayer.disableSeeking();
+		// playbackControlLayer.disableSeeking();
 	}
 
 	/**
 	 * Makes the seek bar thumb visible and allows the user to seek to different time points in the video.
 	 */
 	public void enableSeeking() {
-		playbackControlLayer.enableSeeking();
+		// playbackControlLayer.enableSeeking();
 	}
 
 	/**
 	 * Fades the playback control layer out and then removes it from the {@link LayerManager}'s container.
 	 */
 	public void hide() {
-		playbackControlLayer.hide();
+		// playbackControlLayer.hide();
 		subtitleLayer.setVisibility(View.GONE);
 	}
 
@@ -148,14 +210,15 @@ public class SimpleVideoPlayer {
 	 * Hides the top chrome (which displays the logo, title, and action buttons).
 	 */
 	public void hideTopChrome() {
-		playbackControlLayer.hideTopChrome();
+		this.playbackControlLayer.hideTopChrome();
 	}
 
 	/**
 	 * Returns whether the player is currently in fullscreen mode.
 	 */
 	public boolean isFullscreen() {
-		return playbackControlLayer.isFullscreen();
+		// return playbackControlLayer.isFullscreen();
+		return false;
 	}
 
 	/**
@@ -165,7 +228,7 @@ public class SimpleVideoPlayer {
 	 *            If true, the player is put into fullscreen mode. If false, the player leaves fullscreen mode.
 	 */
 	public void setFullscreen(boolean shouldBeFullscreen) {
-		playbackControlLayer.setFullscreen(shouldBeFullscreen);
+		// playbackControlLayer.setFullscreen(shouldBeFullscreen);
 	}
 
 	/**
@@ -192,9 +255,9 @@ public class SimpleVideoPlayer {
 	public void pause() {
 		// Set the autoplay for the video surface layer in case the surface hasn't been created yet.
 		// This way, when the surface is created, it won't start playing.
-		videoSurfaceLayer.setAutoplay(false);
+		// videoSurfaceLayer.setAutoplay(false);
 
-//		layerManager.getControl().pause();
+		// layerManager.getControl().pause();
 	}
 
 	/**
@@ -203,9 +266,8 @@ public class SimpleVideoPlayer {
 	public void play() {
 		// Set the autoplay for the video surface layer in case the surface hasn't been created yet.
 		// This way, when the surface is created, it will automatically start playing.
-		videoSurfaceLayer.setAutoplay(true);
-
-//		layerManager.getControl().start();
+		this.videoSurfaceLayer.moveSurfaceToForeground();
+		setupPlayerHelper(this.activity);
 	}
 
 	/**
@@ -215,7 +277,7 @@ public class SimpleVideoPlayer {
 	 *            a color derived from the @{link Color} class (ex. {@link android.graphics.Color#RED}).
 	 */
 	public void setChromeColor(int color) {
-		playbackControlLayer.setChromeColor(color);
+		// playbackControlLayer.setChromeColor(color);
 	}
 
 	/**
@@ -226,7 +288,7 @@ public class SimpleVideoPlayer {
 	 *            other views when the player leaves fullscreen mode.
 	 */
 	public void setFullscreenCallback(FullscreenCallback fullscreenCallback) {
-		playbackControlLayer.setFullscreenCallback(fullscreenCallback);
+		// playbackControlLayer.setFullscreenCallback(fullscreenCallback);
 	}
 
 	/**
@@ -236,7 +298,7 @@ public class SimpleVideoPlayer {
 	 *            The drawable which will be the logo.
 	 */
 	public void setLogoImage(Drawable logo) {
-		playbackControlLayer.setLogoImageView(logo);
+		// playbackControlLayer.setLogoImageView(logo);
 	}
 
 	/**
@@ -246,7 +308,7 @@ public class SimpleVideoPlayer {
 	 *            a color derived from the @{link Color} class (ex. {@link android.graphics.Color#RED}).
 	 */
 	public void setPlaybackControlColor(int color) {
-		playbackControlLayer.setControlColor(color);
+		// playbackControlLayer.setControlColor(color);
 	}
 
 	/**
@@ -256,7 +318,7 @@ public class SimpleVideoPlayer {
 	 *            a color derived from the @{link Color} class (ex. {@link android.graphics.Color#RED}).
 	 */
 	public void setSeekbarColor(int color) {
-		playbackControlLayer.setSeekbarColor(color);
+		// playbackControlLayer.setSeekbarColor(color);
 	}
 
 	/**
@@ -266,7 +328,7 @@ public class SimpleVideoPlayer {
 	 *            a color derived from the @{link Color} class (ex. {@link android.graphics.Color#RED}).
 	 */
 	public void setTextColor(int color) {
-		playbackControlLayer.setTextColor(color);
+		// playbackControlLayer.setTextColor(color);
 	}
 
 	/**
@@ -285,14 +347,15 @@ public class SimpleVideoPlayer {
 	 * pause accordingly.
 	 */
 	public boolean shouldBePlaying() {
-		return playbackControlLayer.shouldBePlaying();
+		// return playbackControlLayer.shouldBePlaying();
+		return false;
 	}
 
 	/**
 	 * Add the playback control layer back to the container. It will disappear when the user taps the screen.
 	 */
 	public void show() {
-		playbackControlLayer.show();
+		// playbackControlLayer.show();
 		subtitleLayer.setVisibility(View.VISIBLE);
 	}
 
@@ -300,14 +363,14 @@ public class SimpleVideoPlayer {
 	 * Shows the top chrome (which displays the logo, title, and action buttons).
 	 */
 	public void showTopChrome() {
-		playbackControlLayer.showTopChrome();
+		// playbackControlLayer.showTopChrome();
 	}
 
 	/**
 	 * When you are finished using this {@link SimpleVideoPlayer}, make sure to call this method.
 	 */
 	public void release() {
-		videoSurfaceLayer.release();
+		// videoSurfaceLayer.release();
 		layerManager.release();
 	}
 

@@ -21,6 +21,7 @@ include ':libraries:open:GreenDroid'
 include ':libraries:open:cwac-endless'
 //include ':libraries:open:picasso'
 include ':libraries:open:android-youtube-player'
+include ':libraries:open:android-youtube-query'
 
 // ---------------------------
 //       open project examples

@@ -24,9 +24,6 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.os.Handler;
-import android.os.Message;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,11 +33,7 @@ import com.google.android.libraries.mediaframework.R;
 import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
-import com.keyes.youtube.beans.YoutubeTaskInfo;
-import com.keyes.youtube.ui.YouTubePlayerHelper;
-import com.keyes.youtube.utils.YoutubeQuality;
 
-import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.List;
@@ -95,57 +88,56 @@ import java.util.Locale;
  */
 public class PlaybackControlLayer implements Layer {
 
-	private YouTubePlayerHelper playerHelper = new YouTubePlayerHelper();
 	private VideoView videoView;
 
 	/**
 	 * Message handler which allows us to send delayed messages to the {@link PlaybackControlLayer} This is useful for
 	 * fading out the view after a certain time.
 	 */
-	private static class MessageHandler extends Handler {
-		/**
-		 * A reference to the {@link PlaybackControlLayer} that we are handling messages for.
-		 */
-		private final WeakReference<PlaybackControlLayer> playbackControlLayer;
-
-		/**
-		 * @param playbackControlLayer
-		 *            The {@link PlaybackControlLayer} we should handle messages for.
-		 */
-		private MessageHandler(PlaybackControlLayer playbackControlLayer) {
-			this.playbackControlLayer = new WeakReference<PlaybackControlLayer>(playbackControlLayer);
-		}
-
-		/**
-		 * Receives either a {@link PlaybackControlLayer#FADE_OUT} message (which hides the playback control layer) or a
-		 * {@link PlaybackControlLayer#SHOW_PROGRESS} message (which updates the seek bar to reflect the progress in the
-		 * video).
-		 *
-		 * @param msg
-		 *            Either a {@link PlaybackControlLayer#FADE_OUT} or {@link PlaybackControlLayer#SHOW_PROGRESS}
-		 *            message.
-		 */
-		@Override
-		public void handleMessage(Message msg) {
-			PlaybackControlLayer layer = playbackControlLayer.get();
-			if (layer == null || layer.getLayerManager().getControl() == null) {
-				return;
-			}
-			int pos;
-			switch (msg.what) {
-			case FADE_OUT:
-				layer.hide();
-				break;
-			case SHOW_PROGRESS:
-				pos = layer.updateProgress();
-				if (!layer.isSeekbarDragging && layer.isVisible && layer.getLayerManager().getControl().isPlaying()) {
-					msg = obtainMessage(SHOW_PROGRESS);
-					sendMessageDelayed(msg, 1000 - (pos % 1000));
-				}
-				break;
-			}
-		}
-	}
+	// private static class MessageHandler extends Handler {
+	// /**
+	// * A reference to the {@link PlaybackControlLayer} that we are handling messages for.
+	// */
+	// private final WeakReference<PlaybackControlLayer> playbackControlLayer;
+	//
+	// /**
+	// * @param playbackControlLayer
+	// * The {@link PlaybackControlLayer} we should handle messages for.
+	// */
+	// private MessageHandler(PlaybackControlLayer playbackControlLayer) {
+	// this.playbackControlLayer = new WeakReference<PlaybackControlLayer>(playbackControlLayer);
+	// }
+	//
+	// /**
+	// * Receives either a {@link PlaybackControlLayer#FADE_OUT} message (which hides the playback control layer) or a
+	// * {@link PlaybackControlLayer#SHOW_PROGRESS} message (which updates the seek bar to reflect the progress in the
+	// * video).
+	// *
+	// * @param msg
+	// * Either a {@link PlaybackControlLayer#FADE_OUT} or {@link PlaybackControlLayer#SHOW_PROGRESS}
+	// * message.
+	// */
+	// @Override
+	// public void handleMessage(Message msg) {
+	// // PlaybackControlLayer layer = playbackControlLayer.get();
+	// // if (layer == null || layer.getLayerManager().getControl() == null) {
+	// // return;
+	// // }
+	// // int pos;
+	// // switch (msg.what) {
+	// // case FADE_OUT:
+	// // layer.hide();
+	// // break;
+	// // case SHOW_PROGRESS:
+	// // pos = layer.updateProgress();
+	// // if (!layer.isSeekbarDragging && layer.isVisible && layer.getLayerManager().getControl().isPlaying()) {
+	// // msg = obtainMessage(SHOW_PROGRESS);
+	// // sendMessageDelayed(msg, 1000 - (pos % 1000));
+	// // }
+	// // break;
+	// // }
+	// // }
+	// }
 
 	/**
 	 * The chrome (the top chrome, bottom chrome, and background) is by default a slightly transparent black.
@@ -173,12 +165,12 @@ public class PlaybackControlLayer implements Layer {
 	private static final int FADE_OUT_DURATION_MS = 400;
 
 	/**
-	 * Used by the {@link MessageHandler} to indicate that media controls should fade out.
+	 * Used by the to indicate that media controls should fade out.
 	 */
 	private static final int FADE_OUT = 1;
 
 	/**
-	 * Used by the {@link MessageHandler} to indicate that media controls should update progress bar.
+	 * Used by the to indicate that media controls should update progress bar.
 	 */
 	private static final int SHOW_PROGRESS = 2;
 
@@ -268,7 +260,7 @@ public class PlaybackControlLayer implements Layer {
 	 * The message handler which deals with displaying progress and fading out the media controls We use it so that we
 	 * can make the view fade out after a timeout (by sending a delayed message).
 	 */
-	private Handler handler = new MessageHandler(this);
+	// private Handler handler = new MessageHandler(this);
 
 	/**
 	 * Whether the player is currently in fullscreen mode.
@@ -429,7 +421,6 @@ public class PlaybackControlLayer implements Layer {
 
 		view = (FrameLayout) inflater.inflate(R.layout.playback_control_layer, null);
 		setupView();
-		// layerManager.setControl(this.videoView);
 
 		originalContainerLayoutParams = layerManager.getContainer().getLayoutParams();
 
@@ -455,30 +446,9 @@ public class PlaybackControlLayer implements Layer {
 			}
 		});
 
-		// Make the view hidden initially. It will be made visible again in the show(timeout) method.
-		playbackControlRootView.setVisibility(View.INVISIBLE);
-
-		this.playerHelper.setupView(this.videoView, null, null);
-
-		this.playerHelper.taskInfo = this.getExtractMessages(layerManager.getActivity());
-
-		this.playerHelper.initProgressBar();
-
-		Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
-		// Uri lVideoIdUri = Uri.parse("ytv://" + this.selectedVideo.getId());
-
-		this.playerHelper.makeAndExecuteYoutubeTask(layerManager.getActivity(), lVideoIdUri);
+		// initVideoView(layerManager);
 
 		return view;
-	}
-
-	protected YoutubeTaskInfo getExtractMessages(Activity activity) {
-		YoutubeTaskInfo _taskInfo = new YoutubeTaskInfo();
-
-		_taskInfo.lYouTubeFmtQuality = YoutubeQuality.getYoutubeFmtQuality(activity);
-		_taskInfo.showControllerOnStartup = false;
-
-		return _taskInfo;
 	}
 
 	/**
@@ -509,10 +479,10 @@ public class PlaybackControlLayer implements Layer {
 		if (fullscreenCallback == null) {
 			return;
 		}
-		VideoView playerControl = getLayerManager().getControl();
-		if (playerControl == null) {
-			return;
-		}
+		// VideoView playerControl = getLayerManager().getControl();
+		// if (playerControl == null) {
+		// return;
+		// }
 
 		Activity activity = getLayerManager().getActivity();
 		FrameLayout container = getLayerManager().getContainer();
@@ -610,7 +580,7 @@ public class PlaybackControlLayer implements Layer {
 								getLayerManager().getActivity().getWindow().getDecorView().setSystemUiVisibility(
 										View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN);
 							}
-							handler.removeMessages(SHOW_PROGRESS);
+							// handler.removeMessages(SHOW_PROGRESS);
 							isVisible = false;
 						}
 
@@ -650,13 +620,13 @@ public class PlaybackControlLayer implements Layer {
 		}
 		updatePlayPauseButton();
 
-		handler.sendEmptyMessage(SHOW_PROGRESS);
+		// handler.sendEmptyMessage(SHOW_PROGRESS);
 
-		Message msg = handler.obtainMessage(FADE_OUT);
-		if (timeout > 0) {
-			handler.removeMessages(FADE_OUT);
-			handler.sendMessageDelayed(msg, timeout);
-		}
+		// Message msg = handler.obtainMessage(FADE_OUT);
+		// if (timeout > 0) {
+		// handler.removeMessages(FADE_OUT);
+		// handler.sendMessageDelayed(msg, timeout);
+		// }
 	}
 
 	/**
@@ -854,7 +824,7 @@ public class PlaybackControlLayer implements Layer {
 		bottomChrome = (LinearLayout) view.findViewById(R.id.bottom_chrome);
 		actionButtonsContainer = (LinearLayout) view.findViewById(R.id.actions_container);
 
-		videoView = (VideoView) view.findViewById(R.id.video_view);
+		// videoView = (VideoView) view.findViewById(R.id.video_view);
 
 		// The play button should toggle play/pause when the play/pause button is clicked.
 		pausePlayButton.setOnClickListener(new View.OnClickListener() {
@@ -903,7 +873,7 @@ public class PlaybackControlLayer implements Layer {
 			public void onStartTrackingTouch(SeekBar seekBar) {
 				show(0);
 				isSeekbarDragging = true;
-				handler.removeMessages(SHOW_PROGRESS);
+				// handler.removeMessages(SHOW_PROGRESS);
 			}
 
 			@Override
@@ -913,7 +883,7 @@ public class PlaybackControlLayer implements Layer {
 				updatePlayPauseButton();
 				show(DEFAULT_TIMEOUT_MS);
 
-				handler.sendEmptyMessage(SHOW_PROGRESS);
+				// handler.sendEmptyMessage(SHOW_PROGRESS);
 			}
 		});
 
@@ -1043,47 +1013,47 @@ public class PlaybackControlLayer implements Layer {
 	 * Change the icon of the play/pause button to indicate play or pause based on the state of the video player.
 	 */
 	public void updatePlayPauseButton() {
-		VideoView playerControl = getLayerManager().getControl();
-		if (view == null || pausePlayButton == null || playerControl == null) {
-			return;
-		}
+		// VideoView playerControl = getLayerManager().getControl();
+		// if (view == null || pausePlayButton == null || playerControl == null) {
+		// return;
+		// }
 
-		if (playerControl.isPlaying()) {
-			pausePlayButton.setImageResource(R.drawable.ic_action_pause_large);
-		} else {
-			pausePlayButton.setImageResource(R.drawable.ic_action_play_large);
-		}
+		// if (playerControl.isPlaying()) {
+		// pausePlayButton.setImageResource(R.drawable.ic_action_pause_large);
+		// } else {
+		// pausePlayButton.setImageResource(R.drawable.ic_action_play_large);
+		// }
 	}
 
 	/**
 	 * Adjust the position of the action bar to reflect the progress of the video.
 	 */
 	public int updateProgress() {
-		VideoView playerControl = getLayerManager().getControl();
-		if (playerControl == null || isSeekbarDragging) {
-			return 0;
-		}
+		// VideoView playerControl = getLayerManager().getControl();
+		// if (playerControl == null || isSeekbarDragging) {
+		// return 0;
+		// }
 
-		int position = playerControl.getCurrentPosition();
-		int duration = playerControl.getDuration();
+		// int position = playerControl.getCurrentPosition();
+		// int duration = playerControl.getDuration();
+		//
+		// if (seekBar != null) {
+		// if (duration > 0) {
+		// long pos = 1000L * position / duration;
+		// seekBar.setProgress((int) pos);
+		// }
+		//
+		// int percent = playerControl.getBufferPercentage();
+		// seekBar.setSecondaryProgress(percent * 10);
+		// }
+		//
+		// if (endTime != null) {
+		// endTime.setText(stringForTime(duration));
+		// }
+		// if (currentTime != null) {
+		// currentTime.setText(stringForTime(position));
+		// }
 
-		if (seekBar != null) {
-			if (duration > 0) {
-				long pos = 1000L * position / duration;
-				seekBar.setProgress((int) pos);
-			}
-
-			int percent = playerControl.getBufferPercentage();
-			seekBar.setSecondaryProgress(percent * 10);
-		}
-
-		if (endTime != null) {
-			endTime.setText(stringForTime(duration));
-		}
-		if (currentTime != null) {
-			currentTime.setText(stringForTime(position));
-		}
-
-		return position;
+		return 0;
 	}
 }

@@ -19,7 +19,6 @@ package com.google.android.libraries.mediaframework.layeredvideo;
 import android.app.Activity;
 import android.graphics.Color;
 import android.widget.FrameLayout;
-import android.widget.VideoView;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.Layer;
 
 import java.util.List;
@@ -48,11 +47,6 @@ public class LayerManager {
 	 * will be overlaid on this container.
 	 */
 	private FrameLayout container;
-
-	/**
-	 * Allows controlling video playback, reading video state, and registering callbacks for state changes.
-	 */
-	private VideoView control;
 
 	/**
 	 * Given a container, create the video layers and add them to the container.
@@ -103,13 +97,13 @@ public class LayerManager {
 	/**
 	 * Returns the which can be used to control the video playback (ex. pause, play, seek).
 	 */
-	public VideoView getControl() {
-		return control;
-	}
-
-	public void setControl(VideoView videoView) {
-		this.control = videoView;
-	}
+	// public VideoView getControl() {
+	// return control;
+	// }
+	//
+	// public void setControl(VideoView videoView) {
+	// this.control = videoView;
+	// }
 
 	/**
 	 * When the video player is no longer needed, call this method.

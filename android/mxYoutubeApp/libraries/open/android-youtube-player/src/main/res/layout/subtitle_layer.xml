@@ -21,11 +21,12 @@ limitations under the License.
     <TextView android:id="@+id/subtitles"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:layout_gravity="center|bottom"
+              android:layout_gravity="center|top"
               android:paddingLeft="8dp"
               android:paddingRight="8dp"
               android:paddingBottom="32dp"
               android:gravity="center"
               android:textSize="20sp"
+              android:text="subtitle_layer"
               android:clickable="false"/>
 </FrameLayout>
