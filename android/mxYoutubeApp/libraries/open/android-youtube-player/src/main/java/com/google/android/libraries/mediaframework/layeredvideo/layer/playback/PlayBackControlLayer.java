@@ -102,10 +102,7 @@ public abstract class PlayBackControlLayer implements Layer {
 		return view;
 	}
 
-	@Override
-	public void onLayerDisplayed(LayerManager layerManager) {
 
-	}
 
 	protected abstract FrameLayout setupView(LayoutInflater inflater);
 

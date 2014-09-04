@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import com.google.android.libraries.mediaframework.R;
+import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 
 public class FullscreenPlayBackControlLayer extends PlayBackControlLayer {
@@ -43,5 +44,10 @@ public class FullscreenPlayBackControlLayer extends PlayBackControlLayer {
 
 		return view;
 	}
+
+    @Override
+    public void onLayerDisplayed(LayerManager layerManager) {
+
+    }
 
 }
