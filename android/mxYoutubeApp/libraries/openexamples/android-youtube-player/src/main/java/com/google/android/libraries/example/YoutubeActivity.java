@@ -59,7 +59,7 @@ public class YoutubeActivity extends Activity implements FullscreenCallback {
 			}
 		};
 
-		videoPlayer.setFullscreenCallback(fullscreenCallback);
+//		videoPlayer.setFullscreenCallback(fullscreenCallback);
 	}
 
 	@AfterViews

@@ -19,7 +19,6 @@ package com.google.android.libraries.mediaframework.layeredvideo;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
@@ -184,56 +183,10 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	}
 
 	/**
-	 * Creates a button to put in the top right of the video player.
-	 *
-	 * @param icon
-	 *            The image of the action (ex. trash can).
-	 * @param contentDescription
-	 *            The text description this action. This is used in case the action buttons do not fit in the video
-	 *            player. If so, an overflow button will appear and, when clicked, it will display a list of the content
-	 *            descriptions for each action.
-	 * @param onClickListener
-	 *            The handler for when the action is triggered.
-	 */
-	public void addActionButton(Drawable icon, String contentDescription, View.OnClickListener onClickListener) {
-		// playbackControlLayer.addActionButton(activity, icon, contentDescription, onClickListener);
-	}
-
-	/**
-	 * Hides the seek bar thumb and prevents the user from seeking to different time points in the video.
-	 */
-	public void disableSeeking() {
-		// playbackControlLayer.disableSeeking();
-	}
-
-	/**
-	 * Makes the seek bar thumb visible and allows the user to seek to different time points in the video.
-	 */
-	public void enableSeeking() {
-		// playbackControlLayer.enableSeeking();
-	}
-
-	/**
-	 * Fades the playback control layer out and then removes it from the {@link LayerManager}'s container.
-	 */
-	public void hide() {
-		// playbackControlLayer.hide();
-		subtitleLayer.setVisibility(View.GONE);
-	}
-
-	/**
-	 * Hides the top chrome (which displays the logo, title, and action buttons).
-	 */
-	public void hideTopChrome() {
-		this.playbackControlLayer.hideTopChrome();
-	}
-
-	/**
 	 * Returns whether the player is currently in fullscreen mode.
 	 */
 	public boolean isFullscreen() {
-		// return playbackControlLayer.isFullscreen();
-		return false;
+		return this.layerManager.isFullscreen();
 	}
 
 	/**
@@ -243,25 +196,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	 *            If true, the player is put into fullscreen mode. If false, the player leaves fullscreen mode.
 	 */
 	public void setFullscreen(boolean shouldBeFullscreen) {
-		// playbackControlLayer.setFullscreen(shouldBeFullscreen);
-	}
-
-	/**
-	 * When mutliple surface layers are used (ex. in the case of ad playback), one layer must be overlaid on top of
-	 * another. This method sends this player's surface layer to the background so that other surface layers can be
-	 * overlaid on top of it.
-	 */
-	public void moveSurfaceToBackground() {
-		loadingLayer.moveSurfaceToBackground();
-	}
-
-	/**
-	 * When mutliple surface layers are used (ex. in the case of ad playback), one layer must be overlaid on top of
-	 * another. This method sends this player's surface layer to the foreground so that it is overlaid on top of all
-	 * layers which are in the background.
-	 */
-	public void moveSurfaceToForeground() {
-		loadingLayer.moveSurfaceToForeground();
+		this.layerManager.setFullscreen(shouldBeFullscreen);
 	}
 
 	/**
@@ -285,67 +220,6 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	}
 
 	/**
-	 * Sets the color of the top chrome, bottom chrome, and background.
-	 * 
-	 * @param color
-	 *            a color derived from the @{link Color} class (ex. {@link android.graphics.Color#RED}).
-	 */
-	public void setChromeColor(int color) {
-		// playbackControlLayer.setChromeColor(color);
-	}
-
-	/**
-	 * Set the callback which will be called when the player enters and leaves fullscreen mode.
-	 * 
-	 * @param fullscreenCallback
-	 *            The callback should hide other views in the activity when the player enters fullscreen mode and show
-	 *            other views when the player leaves fullscreen mode.
-	 */
-	public void setFullscreenCallback(FullscreenCallback fullscreenCallback) {
-		// playbackControlLayer.setFullscreenCallback(fullscreenCallback);
-	}
-
-	/**
-	 * Set the logo with appears in the left of the top chrome.
-	 * 
-	 * @param logo
-	 *            The drawable which will be the logo.
-	 */
-	public void setLogoImage(Drawable logo) {
-		// playbackControlLayer.setLogoImageView(logo);
-	}
-
-	/**
-	 * Sets the color of the buttons and seek bar.
-	 * 
-	 * @param color
-	 *            a color derived from the @{link Color} class (ex. {@link android.graphics.Color#RED}).
-	 */
-	public void setPlaybackControlColor(int color) {
-		// playbackControlLayer.setControlColor(color);
-	}
-
-	/**
-	 * Sets the color of the seekbar.
-	 * 
-	 * @param color
-	 *            a color derived from the @{link Color} class (ex. {@link android.graphics.Color#RED}).
-	 */
-	public void setSeekbarColor(int color) {
-		// playbackControlLayer.setSeekbarColor(color);
-	}
-
-	/**
-	 * Sets the color of the text views
-	 * 
-	 * @param color
-	 *            a color derived from the @{link Color} class (ex. {@link android.graphics.Color#RED}).
-	 */
-	public void setTextColor(int color) {
-		// playbackControlLayer.setTextColor(color);
-	}
-
-	/**
 	 * Returns whether the player should be playing (based on whether the user has tapped pause or play). This can be
 	 * used by other classes to look at the playback control layer's play/pause state and force the player to play or
 	 * pause accordingly.
@@ -361,13 +235,6 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	public void show() {
 		// playbackControlLayer.show();
 		subtitleLayer.setVisibility(View.VISIBLE);
-	}
-
-	/**
-	 * Shows the top chrome (which displays the logo, title, and action buttons).
-	 */
-	public void showTopChrome() {
-		// playbackControlLayer.showTopChrome();
 	}
 
 	/**
