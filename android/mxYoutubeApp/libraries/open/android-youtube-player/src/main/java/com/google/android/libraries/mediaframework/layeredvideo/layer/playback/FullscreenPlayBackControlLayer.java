@@ -12,15 +12,11 @@ import com.google.android.libraries.mediaframework.layeredvideo.callback.Fullscr
 
 public class FullscreenPlayBackControlLayer extends PlayBackControlLayer {
 
-	public FullscreenPlayBackControlLayer(String videoTitle) {
-		super(videoTitle);
-	}
+    public FullscreenPlayBackControlLayer(FullscreenCallback fullscreenCallback) {
+        super(fullscreenCallback);
+    }
 
-	public FullscreenPlayBackControlLayer(String videoTitle, FullscreenCallback fullscreenCallback) {
-		super(videoTitle, fullscreenCallback);
-	}
-
-	@Override
+    @Override
 	protected FrameLayout setupView(LayoutInflater inflater) {
 		FrameLayout view = (FrameLayout) inflater.inflate(R.layout.normal_control_layer, null);
 

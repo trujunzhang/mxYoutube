@@ -147,8 +147,6 @@ public abstract class PlayBackControlLayer implements Layer {
 		}
 	}
 
-	private String videoTitle;
-
 	/**
 	 * The {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager} which is responsible for adding
 	 * this layer to the container and displaying it on top of the video player.
@@ -157,12 +155,7 @@ public abstract class PlayBackControlLayer implements Layer {
 
 	protected Context mContext;
 
-	public PlayBackControlLayer(String videoTitle) {
-		this.videoTitle = videoTitle;
-	}
-
-	public PlayBackControlLayer(String videoTitle, FullscreenCallback fullscreenCallback) {
-		this(videoTitle);
+	public PlayBackControlLayer(FullscreenCallback fullscreenCallback) {
 		this.fullscreenCallback = fullscreenCallback;
 	}
 
@@ -189,14 +182,6 @@ public abstract class PlayBackControlLayer implements Layer {
 	}
 
 	protected abstract FrameLayout setupView(LayoutInflater inflater);
-
-	public void setVideoTitle(String videoTitle) {
-		this.videoTitle = videoTitle;
-	}
-
-	public String getVideoTitle() {
-		return videoTitle;
-	}
 
 	public void hideChrome() {
 		mTopView.setVisibility(View.GONE);
@@ -245,23 +230,24 @@ public abstract class PlayBackControlLayer implements Layer {
 		}
 	};
 
-    public void preparedController() {
-        mHandler.removeCallbacks(hideRunnable);
-        mHandler.postDelayed(hideRunnable, HIDE_TIME);
-        mDurationTime.setText(formatTime(mVideo.getDuration()));
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                mHandler.sendEmptyMessage(1);
-            }
-        }, 0, 1000);
-    }
-    public void completionWithController() {
-        mPlay.setImageResource(R.drawable.video_btn_down);
-        mPlayTime.setText("00:00");
-        mSeekBar.setProgress(0);
-    }
+	public void preparedController() {
+		mHandler.removeCallbacks(hideRunnable);
+		mHandler.postDelayed(hideRunnable, HIDE_TIME);
+		mDurationTime.setText(formatTime(mVideo.getDuration()));
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
+			@Override
+			public void run() {
+				mHandler.sendEmptyMessage(1);
+			}
+		}, 0, 1000);
+	}
+
+	public void completionWithController() {
+		mPlay.setImageResource(R.drawable.video_btn_down);
+		mPlayTime.setText("00:00");
+		mSeekBar.setProgress(0);
+	}
 
 	public void backward(float delataX) {
 		int current = mVideo.getCurrentPosition();

@@ -28,8 +28,11 @@ import android.widget.FrameLayout;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.Layer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.LoadingLayer;
-import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.PlayBackControlLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.SubtitleLayer;
+import com.google.android.libraries.mediaframework.layeredvideo.layer.VideoSurfaceViewLayer;
+import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.FullscreenPlayBackControlLayer;
+import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.NormalPlayBackControlLayer;
+import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.PlayBackControlLayer;
 import com.keyes.youtube.beans.YoutubeTaskInfo;
 import com.keyes.youtube.callback.VideoInfoTaskCallback;
 import com.keyes.youtube.ui.YouTubePlayerHelper;
@@ -96,7 +99,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 		@Override
 		public void run() {
 			loadingLayer.moveSurfaceToBackground();
-//			playbackControlLayer.playVideo(videoUrl);
+			// playbackControlLayer.playVideo(videoUrl);
 		}
 	};
 	/**
@@ -110,20 +113,27 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	private final LayerManager layerManager;
 
 	/**
-	 * Renders the video.
+	 * Displays loading message at bottom center of video player.
 	 */
 	private LoadingLayer loadingLayer;
+
+	/**
+	 * Displays subtitles at bottom center of video player.
+	 */
+	private SubtitleLayer subtitleLayer;
+
+	/**
+	 * Renders the video.
+	 */
+	private VideoSurfaceViewLayer videoSurfaceViewLayer;
 
 	/**
 	 * The customizable view for playback control. It handles pause/play, fullscreen, seeking, title, and action
 	 * buttons.
 	 */
-	private final PlayBackControlLayer playbackControlLayer;
-
-	/**
-	 * Displays subtitles at bottom center of video player.
-	 */
-	private final SubtitleLayer subtitleLayer;
+	private PlayBackControlLayer playbackControlLayer;
+	private NormalPlayBackControlLayer normalPlayBackControlLayer;
+	private FullscreenPlayBackControlLayer fullscreenPlayBackControlLayer;
 
 	/**
 	 * @param activity
@@ -155,13 +165,18 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 			FullscreenCallback fullscreenCallback) {
 		this.activity = activity;
 
-//		playbackControlLayer = new PlayBackControlLayer(videoTitle, fullscreenCallback);
+		normalPlayBackControlLayer = new NormalPlayBackControlLayer(null);
+		fullscreenPlayBackControlLayer = new FullscreenPlayBackControlLayer(null);
+
 		subtitleLayer = new SubtitleLayer();
 		loadingLayer = new LoadingLayer(autoplay);
+		videoSurfaceViewLayer = new VideoSurfaceViewLayer();
 
 		List<Layer> layers = new ArrayList<Layer>();
 
-//		layers.add(playbackControlLayer);
+		layers.add(videoSurfaceViewLayer);
+		layers.add(fullscreenPlayBackControlLayer);
+		layers.add(normalPlayBackControlLayer);
 		layers.add(subtitleLayer);
 		layers.add(loadingLayer);
 
@@ -329,16 +344,6 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	 */
 	public void setTextColor(int color) {
 		// playbackControlLayer.setTextColor(color);
-	}
-
-	/**
-	 * Set the title of the video in the left of the top chrome (to the right of the logo).
-	 * 
-	 * @param title
-	 *            The video title. If it is too long, it will be ellipsized.
-	 */
-	public void setVideoTitle(String title) {
-		playbackControlLayer.setVideoTitle(title);
 	}
 
 	/**
