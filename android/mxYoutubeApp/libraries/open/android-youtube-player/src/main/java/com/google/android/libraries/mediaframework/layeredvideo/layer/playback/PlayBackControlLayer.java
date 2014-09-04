@@ -230,10 +230,10 @@ public abstract class PlayBackControlLayer implements Layer {
 		}
 	};
 
-	public void preparedController() {
+	public void preparedController(FullScreenVideoView video) {
 		mHandler.removeCallbacks(hideRunnable);
 		mHandler.postDelayed(hideRunnable, HIDE_TIME);
-		mDurationTime.setText(formatTime(mVideo.getDuration()));
+		mDurationTime.setText(formatTime(video.getDuration()));
 		Timer timer = new Timer();
 		timer.schedule(new TimerTask() {
 			@Override
@@ -249,21 +249,21 @@ public abstract class PlayBackControlLayer implements Layer {
 		mSeekBar.setProgress(0);
 	}
 
-	public void backward(float delataX) {
-		int current = mVideo.getCurrentPosition();
-		int backwardTime = (int) (delataX / width * mVideo.getDuration());
+	public void backward(FullScreenVideoView video, float delataX) {
+		int current = video.getCurrentPosition();
+		int backwardTime = (int) (delataX / width * video.getDuration());
 		int currentTime = current - backwardTime;
-		mVideo.seekTo(currentTime);
-		mSeekBar.setProgress(currentTime * 100 / mVideo.getDuration());
+		video.seekTo(currentTime);
+		mSeekBar.setProgress(currentTime * 100 / video.getDuration());
 		mPlayTime.setText(formatTime(currentTime));
 	}
 
-	public void forward(float delataX) {
-		int current = mVideo.getCurrentPosition();
-		int forwardTime = (int) (delataX / width * mVideo.getDuration());
+	public void forward(FullScreenVideoView video, float delataX) {
+		int current = video.getCurrentPosition();
+		int forwardTime = (int) (delataX / width * video.getDuration());
 		int currentTime = current + forwardTime;
-		mVideo.seekTo(currentTime);
-		mSeekBar.setProgress(currentTime * 100 / mVideo.getDuration());
+		video.seekTo(currentTime);
+		mSeekBar.setProgress(currentTime * 100 / video.getDuration());
 		mPlayTime.setText(formatTime(currentTime));
 	}
 

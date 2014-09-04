@@ -41,7 +41,7 @@ public class VideoSurfaceViewLayer implements Layer {
 				mVideo.seekTo(playTime);
 			}
 
-			layerManager.getControl().preparedController();
+			layerManager.getControl().preparedController(mVideo);
 		}
 	};
 
@@ -108,9 +108,9 @@ public class VideoSurfaceViewLayer implements Layer {
 				float absDeltaY = Math.abs(deltaY);
 
 				if (deltaX > 0) {
-					layerManager.getControl().forward(absDeltaX);
+					layerManager.getControl().forward(mVideo,absDeltaX);
 				} else if (deltaX < 0) {
-					layerManager.getControl().backward(absDeltaX);
+					layerManager.getControl().backward(mVideo,absDeltaX);
 				}
 				mLastMotionX = x;
 				mLastMotionY = y;

@@ -118,7 +118,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40b4ff95-6454-4327-83b2-70fa6b42ff96" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/PlayBackControlLayer.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/PlayBackControlLayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceViewLayer.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceViewLayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -188,11 +188,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SimpleVideoPlayer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SimpleVideoPlayer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4015444" vertical-offset="854" max-vertical-offset="6084">
-              <caret line="103" column="6" selection-start-line="103" selection-start-column="6" selection-end-line="103" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="854" max-vertical-offset="6084">
+              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding>
                 <element signature="e#6000#6007#0" expanded="true" />
               </folding>
@@ -203,8 +203,33 @@
       <file leaf-file-name="VideoSurfaceViewLayer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceViewLayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="890" max-vertical-offset="2232">
-              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1519" max-vertical-offset="2232">
+              <caret line="110" column="49" selection-start-line="110" selection-start-column="49" selection-end-line="110" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayBackControlLayer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/PlayBackControlLayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4417178" vertical-offset="450" max-vertical-offset="5706">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding>
+                <element signature="e#5726#6002#0" expanded="true" />
+                <element signature="e#5998#5999#0" expanded="true" />
+                <element signature="e#7847#8581#0" expanded="true" />
+                <element signature="e#8577#8578#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FullscreenPlayBackControlLayer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/FullscreenPlayBackControlLayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="259" max-vertical-offset="630">
+              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -9265,11 +9290,11 @@
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoLoadingLayer.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/LoadingLayer.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-query/src/main/java/com/keyes/youtube/beans/Youtube_URL.java" />
-        <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/PlayBackControlLayer.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/NormalPlayBackControlLayer.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/FullscreenPlayBackControlLayer.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceViewLayer.java" />
+        <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/PlayBackControlLayer.java" />
       </list>
     </option>
   </component>
@@ -10558,7 +10583,7 @@
       <workItem from="1409710919298" duration="669000" />
       <workItem from="1409719876430" duration="1576000" />
       <workItem from="1409799870808" duration="724000" />
-      <workItem from="1409807011891" duration="5385000" />
+      <workItem from="1409807011891" duration="6203000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1408861027733</created>
@@ -11208,11 +11233,15 @@
       <created>1409812834166</created>
       <updated>1409812834166</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="add [android-youtube-query] library.">
+      <created>1409812903286</created>
+      <updated>1409812903286</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112027000" />
+    <option name="totallyTimeSpent" value="112845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1366" height="689" extended-state="6" />
@@ -11751,28 +11780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/FullscreenPlayBackControlLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23728813" vertical-offset="0" max-vertical-offset="666">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="e#622#623#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/PlayBackControlLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4048964" vertical-offset="2053" max-vertical-offset="5616">
-          <caret line="159" column="5" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
-          <folding>
-            <element signature="e#4770#4771#0" expanded="true" />
-            <element signature="e#4821#4822#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/openexamples/android-youtube-player/src/main/java/com/google/android/libraries/example/YoutubeLayerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="918">
@@ -11781,20 +11788,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceViewLayer.java">
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="890" max-vertical-offset="2232">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="854" max-vertical-offset="6084">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding>
+            <element signature="e#6000#6007#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/FullscreenPlayBackControlLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="259" max-vertical-offset="630">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java">
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceViewLayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4015444" vertical-offset="854" max-vertical-offset="6084">
-          <caret line="103" column="6" selection-start-line="103" selection-start-column="6" selection-end-line="103" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1519" max-vertical-offset="2232">
+          <caret line="110" column="49" selection-start-line="110" selection-start-column="49" selection-end-line="110" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/PlayBackControlLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4417178" vertical-offset="450" max-vertical-offset="5706">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
-            <element signature="e#6000#6007#0" expanded="true" />
+            <element signature="e#5726#6002#0" expanded="true" />
+            <element signature="e#5998#5999#0" expanded="true" />
+            <element signature="e#7847#8581#0" expanded="true" />
+            <element signature="e#8577#8578#0" expanded="true" />
           </folding>
         </state>
       </provider>
