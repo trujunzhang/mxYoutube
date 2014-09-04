@@ -62,7 +62,7 @@ public class VideoSurfaceLayer implements Layer {
 		this.layerManager = layerManager;
 
 		LayoutInflater inflater = layerManager.getActivity().getLayoutInflater();
-		view = (FrameLayout) inflater.inflate(R.layout.video_surface_layer, null);
+		view = (FrameLayout) inflater.inflate(R.layout.video_loading_layer, null);
 
 		this.frameLayout = (LinearLayout) view.findViewById(R.id.bottom_layout);
 		this.progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
