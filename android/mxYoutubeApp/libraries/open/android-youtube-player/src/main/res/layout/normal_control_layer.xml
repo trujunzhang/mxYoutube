@@ -29,7 +29,10 @@
                 android:id="@+id/main_footbar_thumbs_cc"
                 style="@style/main_footbar_radio"
                 android:drawableTop="@drawable/widget_bar_cc"/>
-
+        <RadioButton
+                android:id="@+id/main_footbar_thumbs_settings"
+                style="@style/main_footbar_radio"
+                android:drawableTop="@drawable/widget_bar_settings"/>
     </LinearLayout>
 
     <RelativeLayout
