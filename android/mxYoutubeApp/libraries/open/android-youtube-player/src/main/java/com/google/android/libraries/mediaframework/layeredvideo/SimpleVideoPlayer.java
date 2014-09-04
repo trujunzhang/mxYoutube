@@ -33,6 +33,7 @@ import com.google.android.libraries.mediaframework.layeredvideo.layer.VideoSurfa
 import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.FullscreenPlayBackControlLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.NormalPlayBackControlLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.PlayBackControlLayer;
+import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.ResumePlayBackControlLayer;
 import com.keyes.youtube.beans.YoutubeTaskInfo;
 import com.keyes.youtube.callback.VideoInfoTaskCallback;
 import com.keyes.youtube.ui.YouTubePlayerHelper;
@@ -134,6 +135,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	private PlayBackControlLayer playbackControlLayer;
 	private NormalPlayBackControlLayer normalPlayBackControlLayer;
 	private FullscreenPlayBackControlLayer fullscreenPlayBackControlLayer;
+	private ResumePlayBackControlLayer resumePlayBackControlLayer;
 
 	/**
 	 * @param activity
@@ -167,6 +169,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 
 		normalPlayBackControlLayer = new NormalPlayBackControlLayer(null);
 		fullscreenPlayBackControlLayer = new FullscreenPlayBackControlLayer(null);
+		resumePlayBackControlLayer = new ResumePlayBackControlLayer(null);
 
 		subtitleLayer = new SubtitleLayer();
 		loadingLayer = new LoadingLayer(autoplay);
@@ -182,7 +185,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 
 		layerManager = new LayerManager(activity, container, layers);
 		layerManager.setControl(normalPlayBackControlLayer);
-        layerManager.setVideoSurfaceViewLayer(videoSurfaceViewLayer);
+		layerManager.setVideoSurfaceViewLayer(videoSurfaceViewLayer);
 	}
 
 	/**
