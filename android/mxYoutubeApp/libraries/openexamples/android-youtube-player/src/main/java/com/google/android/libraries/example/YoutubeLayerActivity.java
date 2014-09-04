@@ -1,7 +1,6 @@
 package com.google.android.libraries.example;
 
 import android.app.Activity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -9,33 +8,36 @@ import android.widget.LinearLayout;
 import com.google.android.libraries.mediaframework.layeredvideo.SimpleVideoPlayer;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 
+@EActivity(R.layout.activity_youtube_layer)
 public class YoutubeLayerActivity extends Activity implements FullscreenCallback {
 
-	private FrameLayout videoPlayerContainer;
-	private android.widget.Button button;
-	private LinearLayout info_linear_layout;
-	private LinearLayout right_linear_layout;
+	@ViewById(R.id.video_frame)
+	FrameLayout videoPlayerContainer;
+	@ViewById(R.id.button)
+	android.widget.Button button;
+	@ViewById(R.id.info_linear_layout)
+	LinearLayout info_linear_layout;
+	@ViewById(R.id.right_linear_layout)
+	LinearLayout right_linear_layout;
 
 	private ViewGroup.LayoutParams originalContainerLayoutParams;
 
 	private SimpleVideoPlayer videoPlayer;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-
-		setContentView(R.layout.activity_youtube_layer);
+	@AfterViews
+	protected void calledAfterViewInjection() {
 		setupView();
 
+		onGoToFullscreen();
 		this.videoPlayer = new SimpleVideoPlayer(this, this.videoPlayerContainer, "wanghao", false, this);
 		this.videoPlayer.play();
 	}
 
 	private void setupView() {
-		this.videoPlayerContainer = (FrameLayout) this.findViewById(R.id.video_frame);
-		this.info_linear_layout = (LinearLayout) this.findViewById(R.id.info_linear_layout);
-		this.right_linear_layout = (LinearLayout) this.findViewById(R.id.right_linear_layout);
 		this.originalContainerLayoutParams = this.right_linear_layout.getLayoutParams();
 	}
 
