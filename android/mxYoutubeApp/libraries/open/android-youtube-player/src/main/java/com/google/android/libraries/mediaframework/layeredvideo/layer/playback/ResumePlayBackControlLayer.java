@@ -39,7 +39,8 @@ public class ResumePlayBackControlLayer extends PlayBackControlLayer {
 
     @Override
     public void onLayerDisplayed(LayerManager layerManager) {
-
+        this.hideTopChrome();
+        this.hideBottomChrome();
     }
 
 }

@@ -42,9 +42,9 @@ public class NormalPlayBackControlLayer extends PlayBackControlLayer {
 		return view;
 	}
 
-    @Override
-    public void onLayerDisplayed(LayerManager layerManager) {
-
-    }
+	@Override
+	public void onLayerDisplayed(LayerManager layerManager) {
+		this.hideTopChrome();
+	}
 
 }

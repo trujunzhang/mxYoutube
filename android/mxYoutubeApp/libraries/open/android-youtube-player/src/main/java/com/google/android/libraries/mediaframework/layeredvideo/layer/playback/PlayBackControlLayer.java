@@ -1,14 +1,11 @@
 package com.google.android.libraries.mediaframework.layeredvideo.layer.playback;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
-import android.content.pm.ActivityInfo;
 import android.os.Handler;
 import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
@@ -22,7 +19,6 @@ import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.Layer;
 import com.google.android.libraries.mediaframework.layeredvideo.utils.DensityUtil;
-import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
 import com.google.android.libraries.mediaframework.layeredvideo.widgets.FullScreenVideoView;
 
 import java.text.DateFormat;
@@ -74,7 +70,6 @@ public abstract class PlayBackControlLayer implements Layer {
 		return layerManager;
 	}
 
-
 	/**
 	 * The {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager} which is responsible for adding
 	 * this layer to the container and displaying it on top of the video player.
@@ -102,8 +97,6 @@ public abstract class PlayBackControlLayer implements Layer {
 		return view;
 	}
 
-
-
 	protected abstract FrameLayout setupView(LayoutInflater inflater);
 
 	public void hideChrome() {
@@ -113,6 +106,10 @@ public abstract class PlayBackControlLayer implements Layer {
 
 	public void hideTopChrome() {
 		mTopView.setVisibility(View.GONE);
+	}
+
+	public void hideBottomChrome() {
+		mBottomView.setVisibility(View.GONE);
 	}
 
 	public void showTopChrome() {
