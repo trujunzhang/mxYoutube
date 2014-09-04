@@ -27,7 +27,7 @@ import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 /**
  * Creates a view which can render video.
  */
-public class VideoLoadingLayer implements Layer {
+public class LoadingLayer implements Layer {
 
 	/**
 	 * Whether the video starts playing as soon as the surface is created.
@@ -42,7 +42,7 @@ public class VideoLoadingLayer implements Layer {
 
 	/**
 	 * This is created by the
-	 * {@link VideoLoadingLayer#createView(com.google.android.libraries.mediaframework.layeredvideo.LayerManager)}
+	 * {@link LoadingLayer#createView(com.google.android.libraries.mediaframework.layeredvideo.LayerManager)}
 	 * function.
 	 */
 	private FrameLayout view;
@@ -53,7 +53,7 @@ public class VideoLoadingLayer implements Layer {
 	 * @param autoplay
 	 *            Whether the video should start playing as soon as the surface view is created.
 	 */
-	public VideoLoadingLayer(boolean autoplay) {
+	public LoadingLayer(boolean autoplay) {
 		this.autoplay = autoplay;
 	}
 
