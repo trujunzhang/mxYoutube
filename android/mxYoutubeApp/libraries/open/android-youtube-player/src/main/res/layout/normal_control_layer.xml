@@ -12,11 +12,17 @@
             android:orientation="horizontal"
             android:background="#60000000"
             android:layout_gravity="center|top">
+        <RadioButton
+                android:id="@+id/main_footbar_plus"
+                style="@style/main_footbar_radio"
+                android:drawableTop="@drawable/widget_bar_plus"/>
+
 
         <RadioButton
                 android:id="@+id/main_footbar_repeat"
                 style="@style/main_footbar_radio"
                 android:drawableTop="@drawable/widget_bar_repeat"/>
+
         <RadioButton
                 android:id="@+id/main_footbar_thumbs_up"
                 style="@style/main_footbar_radio"
