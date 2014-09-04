@@ -118,9 +118,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40b4ff95-6454-4327-83b2-70fa6b42ff96" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/NormalPlayBackControlLayer.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/NormalPlayBackControlLayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/PlayBackControlLayer.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/PlayBackControlLayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceViewLayer.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceViewLayer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceLayer.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoLoadingLayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mxYoutubeApp.iws" />
@@ -9187,7 +9186,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/libraries/collect/AndroidCommon/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/rest.txt" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/VideoSurfaceLayer.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/exoplayerextensions/DashVodRendererBuilder.java" />
@@ -9196,7 +9194,6 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/PlaybackControlLayer.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SubtitleLayer.java" />
-        <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceLayer.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/Util.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/utils/Util.java" />
         <option value="$PROJECT_DIR$/libraries/openexamples/android-youtube-player/src/main/res/layout/activity_youtube.xml" />
@@ -9211,7 +9208,6 @@
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/beans/Youtube_URL.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/utils/YouTubeUtility.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/keyes/youtube/ui/YouTubePlayerHelper.java" />
-        <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java" />
         <option value="$PROJECT_DIR$/libraries/openexamples/android-youtube-player/src/main/java/com/google/android/libraries/example/YoutubeActivity.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/build.gradle" />
         <option value="$PROJECT_DIR$/settings.gradle" />
@@ -9238,6 +9234,9 @@
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/NormalPlayBackControlLayer.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceViewLayer.java" />
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/playback/PlayBackControlLayer.java" />
+        <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceLayer.java" />
+        <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoLoadingLayer.java" />
+        <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java" />
       </list>
     </option>
   </component>
@@ -10374,7 +10373,7 @@
       <workItem from="1409710919298" duration="669000" />
       <workItem from="1409719876430" duration="1576000" />
       <workItem from="1409799870808" duration="724000" />
-      <workItem from="1409807011891" duration="3850000" />
+      <workItem from="1409807011891" duration="3994000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1408861027733</created>
@@ -11004,11 +11003,15 @@
       <created>1409810275318</created>
       <updated>1409810275318</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="add [android-youtube-query] library.">
+      <created>1409810957605</created>
+      <updated>1409810957606</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110492000" />
+    <option name="totallyTimeSpent" value="110636000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1366" height="689" extended-state="6" />
@@ -11025,7 +11028,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.05022831" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27929986" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32035398" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952815" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -11378,17 +11381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/res/layout/normal_control_layer.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="1818">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/callback/FullscreenCallback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16167665" vertical-offset="0" max-vertical-offset="468">
@@ -11448,17 +11440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/res/layout/video_loading_layer.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1008">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/res/layout/subtitle_layer.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -11477,14 +11458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5060241" vertical-offset="756" max-vertical-offset="2034">
           <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49227798" vertical-offset="15" max-vertical-offset="1782">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -11512,14 +11485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23163842" vertical-offset="165" max-vertical-offset="1026">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37258688" vertical-offset="1895" max-vertical-offset="6012">
-          <caret line="157" column="48" selection-start-line="157" selection-start-column="48" selection-end-line="157" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -11586,14 +11551,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoSurfaceViewLayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22033899" vertical-offset="1809" max-vertical-offset="2340">
+        <state vertical-scroll-proportion="3.5096526" vertical-offset="0" max-vertical-offset="2232">
           <caret line="120" column="17" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
-          <folding>
-            <element signature="e#1164#1507#0" expanded="true" />
-            <element signature="e#1503#1504#0" expanded="true" />
-            <element signature="e#1574#1735#0" expanded="true" />
-            <element signature="e#1731#1732#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/res/layout/normal_control_layer.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.044176705" vertical-offset="428" max-vertical-offset="1818">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/res/layout/video_loading_layer.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26104417" vertical-offset="230" max-vertical-offset="1008">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/layer/VideoLoadingLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2972973" vertical-offset="620" max-vertical-offset="1782">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49227798" vertical-offset="1959" max-vertical-offset="6012">
+          <caret line="164" column="34" selection-start-line="164" selection-start-column="34" selection-end-line="164" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>

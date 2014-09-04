@@ -27,9 +27,9 @@ import android.view.View;
 import android.widget.FrameLayout;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.Layer;
+import com.google.android.libraries.mediaframework.layeredvideo.layer.VideoLoadingLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.PlayBackControlLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.SubtitleLayer;
-import com.google.android.libraries.mediaframework.layeredvideo.layer.VideoSurfaceLayer;
 import com.keyes.youtube.beans.YoutubeTaskInfo;
 import com.keyes.youtube.callback.VideoInfoTaskCallback;
 import com.keyes.youtube.ui.YouTubePlayerHelper;
@@ -95,7 +95,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 
 		@Override
 		public void run() {
-			videoSurfaceLayer.moveSurfaceToBackground();
+			videoLoadingLayer.moveSurfaceToBackground();
 			playbackControlLayer.playVideo(videoUrl);
 		}
 	};
@@ -112,7 +112,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	/**
 	 * Renders the video.
 	 */
-	private VideoSurfaceLayer videoSurfaceLayer;
+	private VideoLoadingLayer videoLoadingLayer;
 
 	/**
 	 * The customizable view for playback control. It handles pause/play, fullscreen, seeking, title, and action
@@ -155,15 +155,15 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 			FullscreenCallback fullscreenCallback) {
 		this.activity = activity;
 
-		playbackControlLayer = new PlayBackControlLayer(videoTitle, fullscreenCallback);
+//		playbackControlLayer = new PlayBackControlLayer(videoTitle, fullscreenCallback);
 		subtitleLayer = new SubtitleLayer();
-		videoSurfaceLayer = new VideoSurfaceLayer(autoplay);
+		videoLoadingLayer = new VideoLoadingLayer(autoplay);
 
 		List<Layer> layers = new ArrayList<Layer>();
 
-		layers.add(playbackControlLayer);
+//		layers.add(playbackControlLayer);
 		layers.add(subtitleLayer);
-		layers.add(videoSurfaceLayer);
+		layers.add(videoLoadingLayer);
 
 		layerManager = new LayerManager(activity, container, layers);
 	}
@@ -237,7 +237,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	 * overlaid on top of it.
 	 */
 	public void moveSurfaceToBackground() {
-		videoSurfaceLayer.moveSurfaceToBackground();
+		videoLoadingLayer.moveSurfaceToBackground();
 	}
 
 	/**
@@ -246,7 +246,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	 * layers which are in the background.
 	 */
 	public void moveSurfaceToForeground() {
-		videoSurfaceLayer.moveSurfaceToForeground();
+		videoLoadingLayer.moveSurfaceToForeground();
 	}
 
 	/**
@@ -266,7 +266,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	public void play() {
 		// Set the autoplay for the video surface layer in case the surface hasn't been created yet.
 		// This way, when the surface is created, it will automatically start playing.
-		this.videoSurfaceLayer.moveSurfaceToForeground();
+		this.videoLoadingLayer.moveSurfaceToForeground();
 		setupPlayerHelper(this.activity);
 	}
 
