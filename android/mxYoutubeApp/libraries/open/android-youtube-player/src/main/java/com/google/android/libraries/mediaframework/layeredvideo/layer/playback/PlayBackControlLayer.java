@@ -62,9 +62,6 @@ public abstract class PlayBackControlLayer implements Layer {
 
 	private FullscreenCallback fullscreenCallback;
 
-	// 自定义VideoView
-	private FullScreenVideoView mVideo;
-
 	/**
 	 * The view created by this
 	 */
@@ -199,11 +196,11 @@ public abstract class PlayBackControlLayer implements Layer {
 	public View.OnClickListener playListener = new View.OnClickListener() {
 		@Override
 		public void onClick(View view) {
-			if (mVideo.isPlaying()) {
-				mVideo.pause();
+			if (getVideo().isPlaying()) {
+				getVideo().pause();
 				mPlay.setImageResource(R.drawable.video_btn_down);
 			} else {
-				mVideo.start();
+				getVideo().start();
 				mPlay.setImageResource(R.drawable.video_btn_on);
 			}
 		}
@@ -224,8 +221,8 @@ public abstract class PlayBackControlLayer implements Layer {
 		@Override
 		public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 			if (fromUser) {
-				int time = progress * mVideo.getDuration() / 100;
-				mVideo.seekTo(time);
+				int time = progress * getVideo().getDuration() / 100;
+				getVideo().seekTo(time);
 			}
 		}
 	};
@@ -275,15 +272,15 @@ public abstract class PlayBackControlLayer implements Layer {
 			super.handleMessage(msg);
 			switch (msg.what) {
 			case 1:
-				if (mVideo.getCurrentPosition() > 0) {
-					mPlayTime.setText(formatTime(mVideo.getCurrentPosition()));
-					int progress = mVideo.getCurrentPosition() * 100 / mVideo.getDuration();
+				if (getVideo().getCurrentPosition() > 0) {
+					mPlayTime.setText(formatTime(getVideo().getCurrentPosition()));
+					int progress = getVideo().getCurrentPosition() * 100 / getVideo().getDuration();
 					mSeekBar.setProgress(progress);
-					if (mVideo.getCurrentPosition() > mVideo.getDuration() - 100) {
+					if (getVideo().getCurrentPosition() > getVideo().getDuration() - 100) {
 						mPlayTime.setText("00:00");
 						mSeekBar.setProgress(0);
 					}
-					mSeekBar.setSecondaryProgress(mVideo.getBufferPercentage());
+					mSeekBar.setSecondaryProgress(getVideo().getBufferPercentage());
 				} else {
 					mPlayTime.setText("00:00");
 					mSeekBar.setProgress(0);
@@ -350,6 +347,10 @@ public abstract class PlayBackControlLayer implements Layer {
 			mHandler.removeCallbacks(hideRunnable);
 			mHandler.postDelayed(hideRunnable, HIDE_TIME);
 		}
+	}
+
+	public FullScreenVideoView getVideo() {
+		return this.getLayerManager().getVideoSurfaceViewLayer().getVideoView();
 	}
 
 	private class AnimationImp implements AnimationListener {

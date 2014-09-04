@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.widget.FrameLayout;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.Layer;
+import com.google.android.libraries.mediaframework.layeredvideo.layer.VideoSurfaceViewLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.PlayBackControlLayer;
 
 import java.util.List;
@@ -49,9 +50,11 @@ public class LayerManager {
 	 */
 	private FrameLayout container;
 
-    private PlayBackControlLayer control;
+	private PlayBackControlLayer control;
 
-    /**
+	private VideoSurfaceViewLayer videoSurfaceViewLayer;
+
+	/**
 	 * Given a container, create the video layers and add them to the container.
 	 * 
 	 * @param activity
@@ -108,10 +111,19 @@ public class LayerManager {
 		this.control = videoView;
 	}
 
+	public VideoSurfaceViewLayer getVideoSurfaceViewLayer() {
+		return videoSurfaceViewLayer;
+	}
+
+	public void setVideoSurfaceViewLayer(VideoSurfaceViewLayer videoSurfaceViewLayer) {
+		this.videoSurfaceViewLayer = videoSurfaceViewLayer;
+	}
+
 	/**
 	 * When the video player is no longer needed, call this method.
 	 */
 	public void release() {
 		container.removeAllViews();
 	}
+
 }

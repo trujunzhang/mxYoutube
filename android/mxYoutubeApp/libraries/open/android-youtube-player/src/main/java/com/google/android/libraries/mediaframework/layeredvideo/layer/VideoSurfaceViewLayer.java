@@ -108,9 +108,9 @@ public class VideoSurfaceViewLayer implements Layer {
 				float absDeltaY = Math.abs(deltaY);
 
 				if (deltaX > 0) {
-					layerManager.getControl().forward(mVideo,absDeltaX);
+					layerManager.getControl().forward(mVideo, absDeltaX);
 				} else if (deltaX < 0) {
-					layerManager.getControl().backward(mVideo,absDeltaX);
+					layerManager.getControl().backward(mVideo, absDeltaX);
 				}
 				mLastMotionX = x;
 				mLastMotionY = y;
@@ -136,4 +136,7 @@ public class VideoSurfaceViewLayer implements Layer {
 
 	};
 
+	public FullScreenVideoView getVideoView() {
+		return mVideo;
+	}
 }
