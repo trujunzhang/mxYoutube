@@ -5,7 +5,7 @@
 
 
     <RelativeLayout
-            android:id="@+id/bottom_layout"
+            android:id="@+id/top_layout"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_gravity="center|top"
@@ -78,7 +78,7 @@
 
 
     <RelativeLayout
-            android:id="@+id/top_layout"
+            android:id="@+id/bottom_layout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="#50000000"

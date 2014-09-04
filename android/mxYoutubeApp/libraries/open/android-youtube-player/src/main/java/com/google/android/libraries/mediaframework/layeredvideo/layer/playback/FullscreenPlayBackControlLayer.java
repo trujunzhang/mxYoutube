@@ -18,11 +18,11 @@ public class FullscreenPlayBackControlLayer extends PlayBackControlLayer {
 
     @Override
 	protected FrameLayout setupView(LayoutInflater inflater) {
-		FrameLayout view = (FrameLayout) inflater.inflate(R.layout.normal_control_layer, null);
+		FrameLayout view = (FrameLayout) inflater.inflate(R.layout.fullscreen_control_layer, null);
 
 		this.mPlayTime = (TextView) view.findViewById(R.id.play_time);
 		this.mDurationTime = (TextView) view.findViewById(R.id.total_time);
-		this.mPlay = (ImageView) view.findViewById(R.id.play_btn);
+//		this.mPlay = (ImageView) view.findViewById(R.id.play_btn);
 		this.fullscreenButton = (ImageView) view.findViewById(R.id.fullscreen);
 		this.mSeekBar = (SeekBar) view.findViewById(R.id.seekbar);
 		this.mTopView = view.findViewById(R.id.top_layout);

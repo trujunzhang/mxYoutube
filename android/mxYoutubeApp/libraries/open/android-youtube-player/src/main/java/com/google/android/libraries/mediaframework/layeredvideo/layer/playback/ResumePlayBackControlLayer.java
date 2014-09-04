@@ -30,12 +30,7 @@ public class ResumePlayBackControlLayer extends PlayBackControlLayer {
 
 		mPlay.setOnClickListener(playListener);
 		// Go into fullscreen when the fullscreen button is clicked.
-		fullscreenButton.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				doToggleFullscreen();
-			}
-		});
+
 		mSeekBar.setOnSeekBarChangeListener(mSeekBarChangeListener);
 
 		return view;

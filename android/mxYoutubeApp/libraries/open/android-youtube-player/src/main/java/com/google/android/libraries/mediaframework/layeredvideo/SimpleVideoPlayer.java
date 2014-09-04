@@ -135,7 +135,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	private PlayBackControlLayer playbackControlLayer;
 	private NormalPlayBackControlLayer normalPlayBackControlLayer;
 	private FullscreenPlayBackControlLayer fullscreenPlayBackControlLayer;
-	private ResumePlayBackControlLayer resumePlayBackControlLayer;
+//	private ResumePlayBackControlLayer resumePlayBackControlLayer;
 
 	/**
 	 * @param activity
@@ -169,7 +169,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 
 		normalPlayBackControlLayer = new NormalPlayBackControlLayer(null);
 		fullscreenPlayBackControlLayer = new FullscreenPlayBackControlLayer(null);
-		resumePlayBackControlLayer = new ResumePlayBackControlLayer(null);
+//		resumePlayBackControlLayer = new ResumePlayBackControlLayer(null);
 
 		subtitleLayer = new SubtitleLayer();
 		loadingLayer = new LoadingLayer(autoplay);
@@ -183,7 +183,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 		layers.add(subtitleLayer);
 		layers.add(loadingLayer);
 
-		layerManager = new LayerManager(activity, container, layers);
+		layerManager = new LayerManager(activity,fullscreenCallback, container, layers);
 		layerManager.setControl(normalPlayBackControlLayer);
 		layerManager.setVideoSurfaceViewLayer(videoSurfaceViewLayer);
 	}

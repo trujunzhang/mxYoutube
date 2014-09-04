@@ -12,11 +12,11 @@ import com.google.android.libraries.mediaframework.layeredvideo.callback.Fullscr
 
 public class NormalPlayBackControlLayer extends PlayBackControlLayer {
 
-    public NormalPlayBackControlLayer(FullscreenCallback fullscreenCallback) {
-        super(fullscreenCallback);
-    }
+	public NormalPlayBackControlLayer(FullscreenCallback fullscreenCallback) {
+		super(fullscreenCallback);
+	}
 
-    @Override
+	@Override
 	protected FrameLayout setupView(LayoutInflater inflater) {
 		FrameLayout view = (FrameLayout) inflater.inflate(R.layout.normal_control_layer, null);
 
@@ -33,7 +33,7 @@ public class NormalPlayBackControlLayer extends PlayBackControlLayer {
 		fullscreenButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				doToggleFullscreen();
+				getLayerManager().doToggleFullscreen();
 			}
 		});
 		mSeekBar.setOnSeekBarChangeListener(mSeekBarChangeListener);
