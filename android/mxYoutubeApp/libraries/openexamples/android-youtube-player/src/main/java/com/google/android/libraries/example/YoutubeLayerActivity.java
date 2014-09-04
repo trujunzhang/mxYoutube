@@ -34,7 +34,7 @@ public class YoutubeLayerActivity extends Activity implements FullscreenCallback
 
 		onGoToFullscreen();
 		this.videoPlayer = new SimpleVideoPlayer(this, this.videoPlayerContainer, this);
-		this.videoPlayer.play();
+		this.videoPlayer.play(lVideoIdUri);
 	}
 
 	private void setupView() {

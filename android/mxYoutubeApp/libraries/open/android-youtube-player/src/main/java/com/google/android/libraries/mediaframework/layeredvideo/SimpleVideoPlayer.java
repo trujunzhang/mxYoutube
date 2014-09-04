@@ -50,13 +50,11 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 
 	private YouTubePlayerHelper playerHelper = new YouTubePlayerHelper();
 
-	protected void setupPlayerHelper(Context context) {
+	protected void setupPlayerHelper(Context context, Uri lVideoIdUri) {
 		this.playerHelper.setVideoInfoTaskCallback(this);
 
 		// determine the messages to be displayed as the view loads the video
 		this.playerHelper.taskInfo = getExtractMessages();
-
-		Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
 
 		this.playerHelper.makeAndExecuteYoutubeTask(context, lVideoIdUri);
 	}
@@ -174,7 +172,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 		layers.add(videoSurfaceViewLayer);
 		layers.add(fullscreenPlayBackControlLayer);
 		layers.add(normalPlayBackControlLayer);
-//		layers.add(subtitleLayer);
+		// layers.add(subtitleLayer);
 		layers.add(loadingLayer);
 
 		layerManager = new LayerManager(activity, fullscreenCallback, container, layers);
@@ -212,11 +210,13 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 
 	/**
 	 * Resume video playback.
+	 * 
+	 * @param lVideoIdUri
 	 */
-	public void play() {
+	public void play(Uri lVideoIdUri) {
 		// Set the autoplay for the video surface layer in case the surface hasn't been created yet.
 		// This way, when the surface is created, it will automatically start playing.
-		setupPlayerHelper(this.activity);
+		setupPlayerHelper(this.activity, lVideoIdUri);
 	}
 
 	/**

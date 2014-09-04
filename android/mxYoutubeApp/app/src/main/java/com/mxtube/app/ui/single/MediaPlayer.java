@@ -1,8 +1,10 @@
 package com.mxtube.app.ui.single;
 
 import android.net.Uri;
+import android.view.ViewGroup;
+import com.google.android.libraries.mediaframework.layeredvideo.SimpleVideoPlayer;
+import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.keyes.youtube.beans.YoutubeTaskInfo;
-import com.keyes.youtube.ui.YouTubePlayerHelper;
 import com.keyes.youtube.utils.YoutubeQuality;
 import com.mxtube.app.R;
 import org.androidannotations.annotations.AfterInject;
@@ -11,41 +13,34 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 @EFragment(R.layout.single_media_player)
-public class MediaPlayer extends Single {
-	@ViewById(R.id.videoView)
-	android.widget.VideoView videoView;
-	@ViewById(R.id.progressBar_message)
-	android.widget.TextView progressBarMessage;
-	@ViewById(R.id.media_player_top_linear_line)
-	android.widget.LinearLayout mediaPlayerTopLinearLine;
-	@ViewById(R.id.progressBar)
-	android.widget.ProgressBar progressBar;
-	@ViewById(R.id.media_player_bottom_linear_line)
-	android.widget.LinearLayout mediaPlayerBottomLinearLine;
-	@ViewById(R.id.media_player_linear_layout)
-	android.widget.FrameLayout mediaPlayerLinearLayout;
+public class MediaPlayer extends Single implements FullscreenCallback {
+
+	@ViewById(R.id.video_frame)
+	android.widget.FrameLayout videoPlayerContainer;
 	@ViewById(R.id.user_header)
 	android.widget.ImageView userHeader;
 	@ViewById(R.id.user_name)
 	android.widget.TextView userName;
 
-	// ................ include [*media_player_fragment.xml*] .......................
+	private ViewGroup.LayoutParams originalContainerLayoutParams;
 
-	private YouTubePlayerHelper playerHelper = new YouTubePlayerHelper();
+	private SimpleVideoPlayer videoPlayer;
 
 	@AfterInject
 	void calledAfterInjection() {
+
 	}
 
 	@AfterViews
 	protected void calledAfterViewInjection() {
 		// determine the messages to be displayed as the view loads the video
-		this.playerHelper.taskInfo = getExtractMessages();
 
 		Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
 		// Uri lVideoIdUri = Uri.parse("ytv://" + this.selectedVideo.getId());
 
-		this.playerHelper.makeAndExecuteYoutubeTask(this.getSherlockActivity(), lVideoIdUri);
+		this.videoPlayer = new SimpleVideoPlayer(this.getSherlockActivity(), this.videoPlayerContainer, this);
+		this.videoPlayer.play(lVideoIdUri);
+
 	}
 
 	/**
@@ -64,4 +59,14 @@ public class MediaPlayer extends Single {
 	public void initSingle() {
 
 	}
+
+    @Override
+    public void onGoToFullscreen() {
+
+    }
+
+    @Override
+    public void onReturnFromFullscreen() {
+
+    }
 }

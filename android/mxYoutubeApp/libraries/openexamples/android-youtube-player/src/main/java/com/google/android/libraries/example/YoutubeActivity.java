@@ -69,7 +69,7 @@ public class YoutubeActivity extends Activity implements FullscreenCallback {
 
 		// Video video = new Video("https://www.youtube.com/v/izA_Xgbj7II", Video.VideoType.MP4);
 		videoPlayer = new SimpleVideoPlayer(this, videoPlayerContainer, "wanghao", false);
-		videoPlayer.play();
+		videoPlayer.play(lVideoIdUri);
 
 		this.originalContainerLayoutParams = videoPlayerContainer.getLayoutParams();
 
