@@ -63,7 +63,7 @@ public class LoadingLayer implements Layer {
 
 	@Override
 	public void onLayerDisplayed(LayerManager layerManager) {
-
+		this.moveSurfaceToForeground();
 	}
 
 	/**
@@ -72,8 +72,7 @@ public class LoadingLayer implements Layer {
 	 * overlaid on top of it.
 	 */
 	public void moveSurfaceToBackground() {
-		this.frameLayout.setVisibility(View.GONE);
-		// surfaceView.setZOrderMediaOverlay(false);
+		this.view.setVisibility(View.GONE);
 	}
 
 	/**
@@ -82,8 +81,7 @@ public class LoadingLayer implements Layer {
 	 * layers which are in the background.
 	 */
 	public void moveSurfaceToForeground() {
-		this.frameLayout.setVisibility(View.VISIBLE);
-		// surfaceView.setZOrderMediaOverlay(true);
+		this.view.setVisibility(View.VISIBLE);
 	}
 
 	/**
