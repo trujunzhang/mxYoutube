@@ -16,8 +16,10 @@
                 android:id="@+id/main_footbar_plus"
                 style="@style/main_footbar_radio"
                 android:drawableTop="@drawable/widget_bar_plus"/>
-
-
+        <RadioButton
+                android:id="@+id/main_footbar_share"
+                style="@style/main_footbar_radio"
+                android:drawableTop="@drawable/widget_bar_share"/>
         <RadioButton
                 android:id="@+id/main_footbar_repeat"
                 style="@style/main_footbar_radio"
