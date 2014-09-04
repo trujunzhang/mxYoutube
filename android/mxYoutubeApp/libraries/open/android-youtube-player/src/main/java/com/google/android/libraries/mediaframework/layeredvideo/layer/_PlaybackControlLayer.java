@@ -86,7 +86,7 @@ import java.util.Locale;
  * <p>
  * The view is defined in the layout file: res/layout/playback_control_layer.xml.
  */
-public class PlaybackControlLayer implements Layer {
+public class _PlaybackControlLayer implements Layer {
 
 	private VideoView videoView;
 
@@ -360,11 +360,11 @@ public class PlaybackControlLayer implements Layer {
 	 */
 	private FrameLayout view;
 
-	public PlaybackControlLayer(String videoTitle) {
+	public _PlaybackControlLayer(String videoTitle) {
 		this(videoTitle, null);
 	}
 
-	public PlaybackControlLayer(String videoTitle, FullscreenCallback fullscreenCallback) {
+	public _PlaybackControlLayer(String videoTitle, FullscreenCallback fullscreenCallback) {
 		this.videoTitle = videoTitle;
 		this.canSeek = true;
 		this.fullscreenCallback = fullscreenCallback;
@@ -419,7 +419,7 @@ public class PlaybackControlLayer implements Layer {
 
 		LayoutInflater inflater = layerManager.getActivity().getLayoutInflater();
 
-		view = (FrameLayout) inflater.inflate(R.layout.playback_control_layer, null);
+		view = (FrameLayout) inflater.inflate(R.layout._playback_control_layer, null);
 		setupView();
 
 		originalContainerLayoutParams = layerManager.getContainer().getLayoutParams();
