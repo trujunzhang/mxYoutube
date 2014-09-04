@@ -28,8 +28,8 @@ import com.google.android.libraries.mediaframework.R;
 import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
-import com.jit.video.DensityUtil;
-import com.jit.video.FullScreenVideoView;
+import com.google.android.libraries.mediaframework.layeredvideo.utils.DensityUtil;
+import com.google.android.libraries.mediaframework.layeredvideo.widgets.FullScreenVideoView;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

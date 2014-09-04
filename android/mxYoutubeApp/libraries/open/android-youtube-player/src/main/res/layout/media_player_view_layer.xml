@@ -6,7 +6,7 @@
         android:background="@android:color/black"
         android:id="@+id/media_player_view_frame_layout">
 
-    <com.jit.video.FullScreenVideoView
+    <com.google.android.libraries.mediaframework.layeredvideo.widgets.FullScreenVideoView
             android:id="@+id/videoview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

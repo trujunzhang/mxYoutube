@@ -1,4 +1,4 @@
-package com.jit.video;
+package com.google.android.libraries.mediaframework.layeredvideo.utils;
 
 import android.content.Context;
 
