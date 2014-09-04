@@ -30,11 +30,6 @@ import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 public class LoadingLayer implements Layer {
 
 	/**
-	 * Whether the video starts playing as soon as the surface is created.
-	 */
-	private boolean autoplay;
-
-	/**
 	 * The {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager} whcih is responsible for
 	 * creating this layer's view and adding it to the video player.
 	 */
@@ -42,19 +37,15 @@ public class LoadingLayer implements Layer {
 
 	/**
 	 * This is created by the
-	 * {@link LoadingLayer#createView(com.google.android.libraries.mediaframework.layeredvideo.LayerManager)}
-	 * function.
+	 * {@link LoadingLayer#createView(com.google.android.libraries.mediaframework.layeredvideo.LayerManager)} function.
 	 */
 	private FrameLayout view;
+
 	private LinearLayout frameLayout;
 	private ProgressBar progressBar;
 
-	/**
-	 * @param autoplay
-	 *            Whether the video should start playing as soon as the surface view is created.
-	 */
-	public LoadingLayer(boolean autoplay) {
-		this.autoplay = autoplay;
+	public LoadingLayer() {
+
 	}
 
 	@Override
@@ -96,21 +87,10 @@ public class LoadingLayer implements Layer {
 	}
 
 	/**
-	 * Sets whether the video should start playing as soon as the surface is created.
-	 * 
-	 * @param autoplay
-	 *            If true, the video starts playing as soon as the surface is created. If false, then the video must be
-	 *            started programmatically.
-	 */
-	public void setAutoplay(boolean autoplay) {
-		this.autoplay = autoplay;
-	}
-
-	/**
 	 * When you are finished using this object, call this method.
 	 */
 	public void release() {
-		// layerManager.getExoplayerWrapper().removeListener(playbackListener);
+
 	}
 
 	public ProgressBar getProgressBar() {

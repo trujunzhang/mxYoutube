@@ -33,7 +33,6 @@ import com.google.android.libraries.mediaframework.layeredvideo.layer.VideoSurfa
 import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.FullscreenPlayBackControlLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.NormalPlayBackControlLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.PlayBackControlLayer;
-import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.ResumePlayBackControlLayer;
 import com.keyes.youtube.beans.YoutubeTaskInfo;
 import com.keyes.youtube.callback.VideoInfoTaskCallback;
 import com.keyes.youtube.ui.YouTubePlayerHelper;
@@ -103,6 +102,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 			videoSurfaceViewLayer.playVideo(videoUrl);
 		}
 	};
+
 	/**
 	 * The {@link android.app.Activity} that contains this video player.
 	 */
@@ -135,7 +135,8 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	private PlayBackControlLayer playbackControlLayer;
 	private NormalPlayBackControlLayer normalPlayBackControlLayer;
 	private FullscreenPlayBackControlLayer fullscreenPlayBackControlLayer;
-//	private ResumePlayBackControlLayer resumePlayBackControlLayer;
+
+	// private ResumePlayBackControlLayer resumePlayBackControlLayer;
 
 	/**
 	 * @param activity
@@ -148,7 +149,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	 *            Whether the video should start playing immediately.
 	 */
 	public SimpleVideoPlayer(Activity activity, FrameLayout container, String videoTitle, boolean autoplay) {
-		this(activity, container, videoTitle, autoplay, null);
+		this(activity, container, null);
 	}
 
 	/**
@@ -156,23 +157,17 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	 *            The activity that will contain the video player.
 	 * @param container
 	 *            The {@link android.widget.FrameLayout} which will contain the video player.
-	 * @param videoTitle
-	 *            The title of the video (displayed on the left of the top chrome).
-	 * @param autoplay
-	 *            Whether the video should start playing immediately.
 	 * @param fullscreenCallback
-	 *            The callback which gets triggered when the player enters or leaves fullscreen mode.
 	 */
-	public SimpleVideoPlayer(Activity activity, FrameLayout container, String videoTitle, boolean autoplay,
-			FullscreenCallback fullscreenCallback) {
+	public SimpleVideoPlayer(Activity activity, FrameLayout container, FullscreenCallback fullscreenCallback) {
 		this.activity = activity;
 
 		normalPlayBackControlLayer = new NormalPlayBackControlLayer(null);
 		fullscreenPlayBackControlLayer = new FullscreenPlayBackControlLayer(null);
-//		resumePlayBackControlLayer = new ResumePlayBackControlLayer(null);
+		// resumePlayBackControlLayer = new ResumePlayBackControlLayer(null);
 
 		subtitleLayer = new SubtitleLayer();
-		loadingLayer = new LoadingLayer(autoplay);
+		loadingLayer = new LoadingLayer();
 		videoSurfaceViewLayer = new VideoSurfaceViewLayer();
 
 		List<Layer> layers = new ArrayList<Layer>();
@@ -183,7 +178,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 		layers.add(subtitleLayer);
 		layers.add(loadingLayer);
 
-		layerManager = new LayerManager(activity,fullscreenCallback, container, layers);
+		layerManager = new LayerManager(activity, fullscreenCallback, container, layers);
 		layerManager.setControl(normalPlayBackControlLayer);
 		layerManager.setVideoSurfaceViewLayer(videoSurfaceViewLayer);
 	}
@@ -286,7 +281,6 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	public void play() {
 		// Set the autoplay for the video surface layer in case the surface hasn't been created yet.
 		// This way, when the surface is created, it will automatically start playing.
-		this.loadingLayer.moveSurfaceToForeground();
 		setupPlayerHelper(this.activity);
 	}
 
