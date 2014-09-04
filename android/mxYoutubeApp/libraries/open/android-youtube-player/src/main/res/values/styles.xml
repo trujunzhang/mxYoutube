@@ -35,8 +35,6 @@ limitations under the License.
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:textSize">10.0dip</item>
-        <item name="android:textColor">#ffffff</item>
         <item name="android:singleLine">true</item>
         <item name="android:ellipsize">marquee</item>
         <item name="android:gravity">center</item>
@@ -47,6 +45,7 @@ limitations under the License.
 
     <style name="main_footbar_radio" parent="footbar">
         <item name="android:padding">0dip</item>
+        <item name="android:layout_marginTop">10.0dip</item>
     </style>
 
 </resources>
