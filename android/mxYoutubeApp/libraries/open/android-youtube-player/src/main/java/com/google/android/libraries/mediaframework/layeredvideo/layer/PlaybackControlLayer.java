@@ -56,7 +56,7 @@ import java.util.Locale;
  * 3) a translucent middle section which displays a pause/play button.
  *
  * <p>
- * The view appears when the container containing the {@link PlaybackControlLayer} is tapped. It automatically
+ * The view appears when the container containing the  is tapped. It automatically
  * disappears after a given time.
  *
  * <p>
@@ -91,18 +91,18 @@ public class PlaybackControlLayer implements Layer {
 	private VideoView videoView;
 
 	/**
-	 * Message handler which allows us to send delayed messages to the {@link PlaybackControlLayer} This is useful for
+	 * Message handler which allows us to send delayed messages to the  This is useful for
 	 * fading out the view after a certain time.
 	 */
 	// private static class MessageHandler extends Handler {
 	// /**
-	// * A reference to the {@link PlaybackControlLayer} that we are handling messages for.
+	// * A reference to the  that we are handling messages for.
 	// */
 	// private final WeakReference<PlaybackControlLayer> playbackControlLayer;
 	//
 	// /**
 	// * @param playbackControlLayer
-	// * The {@link PlaybackControlLayer} we should handle messages for.
+	// * The  we should handle messages for.
 	// */
 	// private MessageHandler(PlaybackControlLayer playbackControlLayer) {
 	// this.playbackControlLayer = new WeakReference<PlaybackControlLayer>(playbackControlLayer);
@@ -279,7 +279,7 @@ public class PlaybackControlLayer implements Layer {
 	private LayerManager layerManager;
 
 	/**
-	 * The drawable that will be displayed in the {@link PlaybackControlLayer#logoImageView}.
+	 * The drawable that will be displayed in the .
 	 */
 	private Drawable logoDrawable;
 
@@ -346,7 +346,7 @@ public class PlaybackControlLayer implements Layer {
 	private LinearLayout bottomChrome;
 
 	/**
-	 * The title displayed in the {@link PlaybackControlLayer#videoTitleView}.
+	 * The title displayed in the.
 	 */
 	private String videoTitle;
 
@@ -356,7 +356,7 @@ public class PlaybackControlLayer implements Layer {
 	private TextView videoTitleView;
 
 	/**
-	 * The view created by this {@link PlaybackControlLayer}
+	 * The view created by this 
 	 */
 	private FrameLayout view;
 

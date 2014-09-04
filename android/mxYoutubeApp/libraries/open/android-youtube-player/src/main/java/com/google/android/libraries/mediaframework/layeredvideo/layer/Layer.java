@@ -27,8 +27,7 @@ import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
  * {@link android.widget.FrameLayout}.
  *
  * <p>
- * See {@link com.google.android.libraries.mediaframework.layeredvideo.layer.SubtitleLayer}, and
- * {@link com.google.android.libraries.mediaframework.layeredvideo.layer.PlaybackControlLayer} for examples.
+ * See {@link com.google.android.libraries.mediaframework.layeredvideo.layer.SubtitleLayer}, and for examples.
  */
 public interface Layer {
 

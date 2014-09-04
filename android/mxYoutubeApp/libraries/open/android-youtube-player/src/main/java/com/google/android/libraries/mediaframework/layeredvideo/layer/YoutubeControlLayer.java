@@ -129,7 +129,7 @@ public class YoutubeControlLayer implements Layer {
 	private Context mContext;
 
 	/**
-	 * The view created by this {@link PlaybackControlLayer}
+	 * The view created by this
 	 */
 	private FrameLayout view;
 
