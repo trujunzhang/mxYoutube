@@ -99,7 +99,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 		@Override
 		public void run() {
 			loadingLayer.moveSurfaceToBackground();
-			// playbackControlLayer.playVideo(videoUrl);
+			videoSurfaceViewLayer.playVideo(videoUrl);
 		}
 	};
 	/**

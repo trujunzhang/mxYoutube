@@ -71,7 +71,7 @@ public class VideoSurfaceViewLayer implements Layer {
 
 	}
 
-	public void playVideo(String videoUrl, final int playTime) {
+	public void playVideo(String videoUrl) {
 		mVideo.setVideoURI(Uri.parse(videoUrl));
 		mVideo.requestFocus();
 
