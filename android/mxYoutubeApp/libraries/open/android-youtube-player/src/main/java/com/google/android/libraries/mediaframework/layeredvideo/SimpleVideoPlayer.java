@@ -27,7 +27,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.Layer;
-import com.google.android.libraries.mediaframework.layeredvideo.layer.PlayBackControlLayer;
+import com.google.android.libraries.mediaframework.layeredvideo.layer.playback.PlayBackControlLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.SubtitleLayer;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.VideoSurfaceLayer;
 import com.keyes.youtube.beans.YoutubeTaskInfo;

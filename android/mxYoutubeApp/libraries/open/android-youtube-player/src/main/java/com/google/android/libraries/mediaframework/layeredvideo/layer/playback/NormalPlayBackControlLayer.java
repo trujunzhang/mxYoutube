@@ -1,4 +1,4 @@
-package com.google.android.libraries.mediaframework.layeredvideo.layer;
+package com.google.android.libraries.mediaframework.layeredvideo.layer.playback;
 
 import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
@@ -48,7 +48,6 @@ public class NormalPlayBackControlLayer extends PlayBackControlLayer {
 	protected FrameLayout setupView(LayoutInflater inflater) {
 		FrameLayout view = (FrameLayout) inflater.inflate(R.layout.normal_control_layer, null);
 
-		mVideo = (FullScreenVideoView) view.findViewById(R.id.videoview);
 		mPlayTime = (TextView) view.findViewById(R.id.play_time);
 		mDurationTime = (TextView) view.findViewById(R.id.total_time);
 		mPlay = (ImageView) view.findViewById(R.id.play_btn);
@@ -64,18 +63,8 @@ public class NormalPlayBackControlLayer extends PlayBackControlLayer {
 		height = DensityUtil.getHeightInPx(mContext);
 		threshold = DensityUtil.dip2px(mContext, 18);
 
-		mPlay.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				if (mVideo.isPlaying()) {
-					mVideo.pause();
-					mPlay.setImageResource(R.drawable.video_btn_down);
-				} else {
-					mVideo.start();
-					mPlay.setImageResource(R.drawable.video_btn_on);
-				}
-			}
-		});
+
+        mPlay.setOnClickListener(playListener);
 		// Go into fullscreen when the fullscreen button is clicked.
 		fullscreenButton.setOnClickListener(new OnClickListener() {
 			@Override
@@ -88,12 +77,10 @@ public class NormalPlayBackControlLayer extends PlayBackControlLayer {
 		return view;
 	}
 
-	// 自定义VideoView
-	private FullScreenVideoView mVideo;
 
 	// 视频播放拖动条
 	private SeekBar mSeekBar;
-	private ImageView mPlay;
+
 	private TextView mPlayTime;
 	private TextView mDurationTime;
 	private ImageView fullscreenButton;
@@ -183,43 +170,6 @@ public class NormalPlayBackControlLayer extends PlayBackControlLayer {
 		}
 	};
 
-	public void playVideo(String videoUrl) {
-		mVideo.setVideoURI(Uri.parse(videoUrl));
-		mVideo.requestFocus();
-		mVideo.setOnPreparedListener(new OnPreparedListener() {
-			@Override
-			public void onPrepared(MediaPlayer mp) {
-				mVideo.setVideoWidth(mp.getVideoWidth());
-				mVideo.setVideoHeight(mp.getVideoHeight());
-
-				mVideo.start();
-				if (playTime != 0) {
-					mVideo.seekTo(playTime);
-				}
-
-				mHandler.removeCallbacks(hideRunnable);
-				mHandler.postDelayed(hideRunnable, HIDE_TIME);
-				mDurationTime.setText(formatTime(mVideo.getDuration()));
-				Timer timer = new Timer();
-				timer.schedule(new TimerTask() {
-
-					@Override
-					public void run() {
-						mHandler.sendEmptyMessage(1);
-					}
-				}, 0, 1000);
-			}
-		});
-		mVideo.setOnCompletionListener(new OnCompletionListener() {
-			@Override
-			public void onCompletion(MediaPlayer mp) {
-				mPlay.setImageResource(R.drawable.video_btn_down);
-				mPlayTime.setText("00:00");
-				mSeekBar.setProgress(0);
-			}
-		});
-		mVideo.setOnTouchListener(mTouchListener);
-	}
 
 	private Runnable hideRunnable = new Runnable() {
 
@@ -235,61 +185,6 @@ public class NormalPlayBackControlLayer extends PlayBackControlLayer {
 		return formatter.format(new Date(time));
 	}
 
-	private float mLastMotionX;
-	private float mLastMotionY;
-	private int startX;
-	private int startY;
-	private int threshold;
-	private boolean isClick = true;
-
-	private OnTouchListener mTouchListener = new OnTouchListener() {
-
-		@Override
-		public boolean onTouch(View v, MotionEvent event) {
-			final float x = event.getX();
-			final float y = event.getY();
-
-			switch (event.getAction()) {
-			case MotionEvent.ACTION_DOWN:
-				mLastMotionX = x;
-				mLastMotionY = y;
-				startX = (int) x;
-				startY = (int) y;
-				break;
-			case MotionEvent.ACTION_MOVE:
-				float deltaX = x - mLastMotionX;
-				float deltaY = y - mLastMotionY;
-				float absDeltaX = Math.abs(deltaX);
-				float absDeltaY = Math.abs(deltaY);
-
-				if (deltaX > 0) {
-					forward(absDeltaX);
-				} else if (deltaX < 0) {
-					backward(absDeltaX);
-				}
-				mLastMotionX = x;
-				mLastMotionY = y;
-				break;
-			case MotionEvent.ACTION_UP:
-				if (Math.abs(x - startX) > threshold || Math.abs(y - startY) > threshold) {
-					isClick = false;
-				}
-				mLastMotionX = 0;
-				mLastMotionY = 0;
-				startX = (int) 0;
-				if (isClick) {
-					showOrHide();
-				}
-				isClick = true;
-				break;
-
-			default:
-				break;
-			}
-			return true;
-		}
-
-	};
 
 	private void showOrHide() {
 		if (mTopView.getVisibility() == View.VISIBLE) {

@@ -1,4 +1,4 @@
-package com.google.android.libraries.mediaframework.layeredvideo.layer;
+package com.google.android.libraries.mediaframework.layeredvideo.layer.playback;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,7 +11,9 @@ import android.widget.ImageView;
 import com.google.android.libraries.mediaframework.R;
 import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
+import com.google.android.libraries.mediaframework.layeredvideo.layer.Layer;
 import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
+import com.google.android.libraries.mediaframework.layeredvideo.widgets.FullScreenVideoView;
 
 public abstract class PlayBackControlLayer implements Layer {
 	// 头部View
@@ -20,9 +22,14 @@ public abstract class PlayBackControlLayer implements Layer {
 	// 底部View
 	private View mBottomView;
 
+	public ImageView mPlay;
+
 	private ImageView fullscreenButton;
 
 	private FullscreenCallback fullscreenCallback;
+
+	// 自定义VideoView
+	private FullScreenVideoView mVideo;
 
 	/**
 	 * The view created by this
@@ -167,11 +174,24 @@ public abstract class PlayBackControlLayer implements Layer {
 		mTopView.setVisibility(View.VISIBLE);
 	}
 
-    public void setmTopView(View mTopView) {
-        this.mTopView = mTopView;
-    }
+	public void setmTopView(View mTopView) {
+		this.mTopView = mTopView;
+	}
 
-    public void setmBottomView(View mBottomView) {
-        this.mBottomView = mBottomView;
-    }
+	public void setmBottomView(View mBottomView) {
+		this.mBottomView = mBottomView;
+	}
+
+	public View.OnClickListener playListener = new View.OnClickListener() {
+		@Override
+		public void onClick(View view) {
+			if (mVideo.isPlaying()) {
+				mVideo.pause();
+				mPlay.setImageResource(R.drawable.video_btn_down);
+			} else {
+				mVideo.start();
+				mPlay.setImageResource(R.drawable.video_btn_on);
+			}
+		}
+	};
 }
