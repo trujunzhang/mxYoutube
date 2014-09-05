@@ -20,7 +20,7 @@
         <FrameLayout
             android:id="@+id/video_frame"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:background="@color/solid_red" />
 
         <!--02:media user panel-->
@@ -36,6 +36,10 @@
         android:orientation="vertical"
         android:layout_weight=".50">
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:text="wanghao"/>
 
     </LinearLayout>
 </LinearLayout>
