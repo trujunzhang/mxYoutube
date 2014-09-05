@@ -129,19 +129,23 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.mxtube.app" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40b4ff95-6454-4327-83b2-70fa6b42ff96" name="Default" comment="add [android-youtube-query] library.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/android-youtube-player/src/main/java/com/google/android/libraries/example/YoutubeLayerActivity.java" afterPath="$PROJECT_DIR$/libraries/openexamples/android-youtube-player/src/main/java/com/google/android/libraries/example/YoutubeLayerActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+    <list default="true" id="40b4ff95-6454-4327-83b2-70fa6b42ff96" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/collect/AndroidCommon/build.gradle" afterPath="$PROJECT_DIR$/libraries/collect/AndroidCommon/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/GreenDroid/build.gradle" afterPath="$PROJECT_DIR$/libraries/open/GreenDroid/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/open/android-youtube-player/build.gradle" afterPath="$PROJECT_DIR$/libraries/open/android-youtube-player/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/Android-ViewPagerIndicator/Android-ViewPagerIndicator/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/Android-ViewPagerIndicator/Android-ViewPagerIndicator/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/Android-ViewPagerIndicator/vpi-abs-demo/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/Android-ViewPagerIndicator/vpi-abs-demo/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/actionbarsherlock/demos/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/actionbarsherlock/demos/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/actionbarsherlock/fragments/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/actionbarsherlock/fragments/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/actionbarsherlock/known-bugs/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/actionbarsherlock/known-bugs/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/actionbarsherlock/roboguice/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/actionbarsherlock/roboguice/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/actionbarsherlock/styled/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/actionbarsherlock/styled/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/android-youtube-player/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/android-youtube-player/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/cwac-endless/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/cwac-endless/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/greendroid/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/greendroid/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/picasso/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/picasso/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/slidingmenu/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/slidingmenu/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/smoothie/bitmap-cache/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/smoothie/bitmap-cache/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/openexamples/smoothie/gallery/build.gradle" afterPath="$PROJECT_DIR$/libraries/openexamples/smoothie/gallery/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mxYoutubeApp.iws" />
@@ -213,18 +217,7 @@
     <favorites_list name="mxYoutubeApp" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="build.gradle" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21906693" vertical-offset="0" max-vertical-offset="1458">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -10801,7 +10794,11 @@
       <created>1409826021721</created>
       <updated>1409826021721</updated>
     </task>
-    <option name="localTasksCounter" value="190" />
+    <task id="LOCAL-00190" summary="add [android-youtube-query] library.">
+      <created>1409886920991</created>
+      <updated>1409886920992</updated>
+    </task>
+    <option name="localTasksCounter" value="191" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -10809,7 +10806,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1366" height="689" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32844037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -10832,7 +10829,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22222222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22222222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31858408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
