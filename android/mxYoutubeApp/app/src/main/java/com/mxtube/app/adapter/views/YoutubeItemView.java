@@ -14,8 +14,9 @@ import java.math.BigInteger;
 
 @EViewGroup(R.layout.youtube_item)
 public class YoutubeItemView extends LinearLayout {
+
 	@ViewById(R.id.thumbnails)
-	android.widget.ImageView thumbnails;
+	com.views.SquareImageView thumbnails;
 	@ViewById(R.id.duration)
 	android.widget.TextView duration;
 	@ViewById(R.id.title)
@@ -24,6 +25,10 @@ public class YoutubeItemView extends LinearLayout {
 	android.widget.TextView rating;
 	@ViewById(R.id.viewCount)
 	android.widget.TextView viewCount;
+	@ViewById(R.id.user_header)
+	android.widget.ImageView userHeader;
+	@ViewById(R.id.user_name)
+	android.widget.TextView userName;
 
 	public YoutubeItemView(Context context) {
 		super(context);
@@ -69,5 +74,11 @@ public class YoutubeItemView extends LinearLayout {
 		this.duration.setText(replace);
 		// this.rating.setText(String.valueOf(_rating));
 		this.viewCount.setText(String.valueOf(_viewCount));
+
+		this.userName.setText(singleVideo.getSnippet().getChannelTitle());
+
+		// https://yt3.ggpht.com/-wkw7zSXBEp4/AAAAAAAAAAI/AAAAAAAAAAA/ZjGoWeXvuuI/s88-c-k-no/photo.jpg
+
+		// https://yt3.ggpht.com/-2FkDg5rrNeY/AAAAAAAAAAI/AAAAAAAAAAA/Pd14NM0PEQ0/s88-c-k-no/photo.jpg
 	}
 }
