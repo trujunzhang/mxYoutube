@@ -60,13 +60,13 @@ public class MediaPlayer extends Single implements FullscreenCallback {
 
 	}
 
-    @Override
-    public void onGoToFullscreen() {
+	@Override
+	public void onGoToFullscreen() {
 
-    }
+	}
 
-    @Override
-    public void onReturnFromFullscreen() {
+	@Override
+	public void onReturnFromFullscreen() {
 
-    }
+	}
 }
