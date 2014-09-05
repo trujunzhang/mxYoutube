@@ -1,4 +1,4 @@
-package com.views;
+package com.youtube.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;

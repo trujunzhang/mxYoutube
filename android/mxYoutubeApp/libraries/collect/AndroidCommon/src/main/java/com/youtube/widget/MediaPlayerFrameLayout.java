@@ -1,10 +1,10 @@
-package com.views;
+package com.youtube.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
+
 import com.xinma.common.R;
 
 public class MediaPlayerFrameLayout extends FrameLayout {

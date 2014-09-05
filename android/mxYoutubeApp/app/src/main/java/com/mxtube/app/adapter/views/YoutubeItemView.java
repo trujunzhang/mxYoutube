@@ -16,7 +16,7 @@ import java.math.BigInteger;
 public class YoutubeItemView extends LinearLayout {
 
 	@ViewById(R.id.thumbnails)
-	com.views.SquareImageView thumbnails;
+	com.youtube.SquareImageView thumbnails;
 	@ViewById(R.id.duration)
 	android.widget.TextView duration;
 	@ViewById(R.id.title)

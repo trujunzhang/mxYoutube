@@ -12,7 +12,7 @@
             android:layout_height="wrap_content"
             >
 
-        <com.views.SquareImageView
+        <com.youtube.SquareImageView
                 android:id="@+id/thumbnails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

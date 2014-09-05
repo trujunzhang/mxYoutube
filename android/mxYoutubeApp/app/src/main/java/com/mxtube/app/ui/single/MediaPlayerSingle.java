@@ -43,17 +43,6 @@ public class MediaPlayerSingle extends Single implements FullscreenCallback {
 
 	}
 
-	/**
-	 * Determine the messages to display during video load and initialization.
-	 */
-	protected YoutubeTaskInfo getExtractMessages() {
-		YoutubeTaskInfo _taskInfo = new YoutubeTaskInfo();
-
-		_taskInfo.lYouTubeFmtQuality = YoutubeQuality.getYoutubeFmtQuality(this.getSherlockActivity());
-		_taskInfo.showControllerOnStartup = false;
-
-		return _taskInfo;
-	}
 
 	@Override
 	public void initSingle() {
