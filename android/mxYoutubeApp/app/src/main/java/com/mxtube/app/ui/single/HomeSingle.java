@@ -10,7 +10,7 @@ import org.androidannotations.annotations.*;
 import java.util.List;
 
 @EFragment(R.layout.single_home)
-public class Home extends Single {
+public class HomeSingle extends Single {
 
 	@ViewById(R.id.gridView)
 	android.widget.GridView gridView;
@@ -40,7 +40,10 @@ public class Home extends Single {
 	@Background
 	void getYoutubeInBackground() {
 		List<Video> videoList = searchInterface.search(getContext());
-		update(videoList);
+		// v1.0
+		// update(videoList);
+		// v2.0
+		youtubeListItemClicked(videoList.get(0));
 	}
 
 	@UiThread

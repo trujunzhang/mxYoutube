@@ -7,8 +7,8 @@ import android.widget.RadioButton;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.mxtube.app.Index;
 import com.mxtube.app.R;
-import com.mxtube.app.ui.single.Home_;
-import com.mxtube.app.ui.single.MediaPlayer_;
+import com.mxtube.app.ui.single.Home_Single_;
+import com.mxtube.app.ui.single.MediaPlayer_Single_;
 import com.mxtube.app.ui.single.Single;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
@@ -70,10 +70,10 @@ public class Footer extends SherlockFragment {
 		Single fragment = null;
 		switch (pos) {
 		case TYPE_FRAGMENT_HOME:// Home
-			fragment = new Home_();
+			fragment = new Home_Single_();
 			break;
 		case TYPE_FRAGMENT_MEDIA_PLAYER:// Media Player
-			fragment = new MediaPlayer_();
+			fragment = new MediaPlayer_Single_();
 			break;
 		case 2:// Recent
 				// fragment = new TweetMenuFragment_();

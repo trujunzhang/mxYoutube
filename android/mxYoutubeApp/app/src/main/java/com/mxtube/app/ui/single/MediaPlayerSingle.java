@@ -13,7 +13,7 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 @EFragment(R.layout.single_media_player)
-public class MediaPlayer extends Single implements FullscreenCallback {
+public class MediaPlayerSingle extends Single implements FullscreenCallback {
 
 	@ViewById(R.id.video_frame)
 	android.widget.FrameLayout videoPlayerContainer;
