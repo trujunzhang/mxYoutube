@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:weightSum="1.0">
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1.0">
 
     <!--left panel-->
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:background="@color/solid_blue"
-            android:orientation="vertical"
-            android:layout_marginLeft="20dp"
-            android:layout_weight=".50">
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/solid_blue"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_weight=".50">
 
         <!--01:media player panel-->
+        <!--<com.views.MediaPlayerFrameLayout-->
         <FrameLayout
-                android:id="@+id/video_frame"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="@android:color/background_light">
-        </FrameLayout>
+            android:id="@+id/video_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/solid_red" />
 
         <!--02:media user panel-->
-        <include android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 layout="@layout/media_user_fragment"/>
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/media_user_fragment" />
 
     </LinearLayout>
 
     <!--right panel-->
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:background="@color/solid_red"
-            android:orientation="vertical"
-            android:layout_weight=".50">
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/solid_blue"
+        android:orientation="vertical"
+        android:layout_weight=".50">
 
 
     </LinearLayout>

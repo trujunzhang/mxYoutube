@@ -3,10 +3,11 @@ package com.views;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import com.xinma.common.R;
 
-public class MediaPlayerLinearLayout extends LinearLayout {
+public class MediaPlayerFrameLayout extends FrameLayout {
 
 	public static final int DEF_WIDTH = 480;
 	public static final int DEF_HEIGHT = 320;
@@ -14,16 +15,16 @@ public class MediaPlayerLinearLayout extends LinearLayout {
 	private int defaultWidth = DEF_WIDTH;
 	private int defaultHeight = DEF_HEIGHT;
 
-	public MediaPlayerLinearLayout(Context context) {
+	public MediaPlayerFrameLayout(Context context) {
 		super(context);
 	}
 
-	public MediaPlayerLinearLayout(Context context, AttributeSet attrs) {
+	public MediaPlayerFrameLayout(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		loadStateFromAttrs(attrs);
 	}
 
-	public MediaPlayerLinearLayout(Context context, AttributeSet attrs, int defStyle) {
+	public MediaPlayerFrameLayout(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		loadStateFromAttrs(attrs);
 	}
