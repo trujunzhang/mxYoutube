@@ -40,7 +40,10 @@ public class MediaPlayerSingle extends Single implements FullscreenCallback {
 	protected void calledAfterViewInjection() {
 
 		int screenWidth = Tools.getScreenWidth(this.getSherlockActivity());
-		int videoViewHeight = YoutubeLayoutUtils.getVideoViewHeight(screenWidth / 2, 480, 280);
+
+//        width: 854px; height: 480px; left: 0px; top: 0px; transform: none;
+//		int videoViewHeight = YoutubeLayoutUtils.getVideoViewHeight(screenWidth / 2, 512, 288);
+        int videoViewHeight = YoutubeLayoutUtils.getVideoViewHeight(screenWidth / 2, 854, 480);
 		videoPlayerContainer.setLayoutParams(Util.getLayoutParamsBasedOnParent(videoPlayerContainer,
 				ViewGroup.LayoutParams.MATCH_PARENT, videoViewHeight));
 
