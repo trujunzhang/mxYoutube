@@ -179,6 +179,78 @@ public class YouTubeUtility {
 		return lUriStr;
 	}
 
+	public static YoutubeQuality getFinalUri(boolean pFallback, String lInfoStr) {
+		YoutubeQuality youtubeQuality = null;
+		String[] lArgs = lInfoStr.split("&");
+		Map<String, String> lArgMap = new HashMap<String, String>();
+		for (int i = 0; i < lArgs.length; i++) {
+			String[] lArgValStrArr = lArgs[i].split("=");
+			if (lArgValStrArr != null) {
+				if (lArgValStrArr.length >= 2) {
+					lArgMap.put(lArgValStrArr[0], URLDecoder.decode(lArgValStrArr[1]));
+				}
+			}
+		}
+
+		// Find out the URI string from the parameters
+
+		// Populate the list of formats for the video
+		String lFmtList = URLDecoder.decode(lArgMap.get("fmt_list"));
+		ArrayList<Format> lFormats = new ArrayList<Format>();
+		if (null != lFmtList) {
+			String lFormatStrs[] = lFmtList.split(",");
+
+			for (String lFormatStr : lFormatStrs) {
+				Format lFormat = new Format(lFormatStr);
+				lFormats.add(lFormat);
+			}
+		}
+
+		// Populate the list of streams for the video
+		String lStreamList = lArgMap.get("url_encoded_fmt_stream_map");
+		if (null != lStreamList) {
+			String lStreamStrs[] = lStreamList.split(",");
+			ArrayList<VideoStream> lStreams = new ArrayList<VideoStream>();
+			for (String lStreamStr : lStreamStrs) {
+				VideoStream lStream = new VideoStream(lStreamStr);
+				lStreams.add(lStream);
+			}
+
+			youtubeQuality = new YoutubeQuality();
+			youtubeQuality.setlFormats(lFormats);
+			youtubeQuality.setlStreams(lStreams);
+		}
+		return youtubeQuality;
+	}
+
+	public static String getUrlByQuality(YoutubeQuality youtubeQuality, boolean pFallback, String pYouTubeFmtQuality) {
+		ArrayList<Format> lFormats = youtubeQuality.getlFormats();
+		ArrayList<VideoStream> lStreams = youtubeQuality.getlStreams();
+		String lUriStr = null;
+		// Search for the given format in the list of video formats
+		// if it is there, select the corresponding stream
+		// otherwise if fallback is requested, check for next lower format
+		int lFormatId = Integer.parseInt(pYouTubeFmtQuality);
+
+		Format lSearchFormat = new Format(lFormatId);
+		while (!lFormats.contains(lSearchFormat) && pFallback) {
+			int lOldId = lSearchFormat.getId();
+			int lNewId = getSupportedFallbackId(lOldId);
+
+			if (lOldId == lNewId) {
+				break;
+			}
+			lSearchFormat = new Format(lNewId);
+		}
+
+		int lIndex = lFormats.indexOf(lSearchFormat);
+		if (lIndex >= 0) {
+			VideoStream lSearchStream = lStreams.get(lIndex);
+			lUriStr = lSearchStream.getUrl();
+		}
+		return lUriStr;
+	}
+
 	private static String getReponseByUrl(String uri) throws IOException {
 		HttpClient lClient = new DefaultHttpClient();
 		HttpGet lGetMethod = new HttpGet(uri);

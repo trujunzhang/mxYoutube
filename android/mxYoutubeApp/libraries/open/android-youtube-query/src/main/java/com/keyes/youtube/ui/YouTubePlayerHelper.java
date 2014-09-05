@@ -13,6 +13,7 @@ import com.androidquery.callback.AjaxStatus;
 import com.keyes.youtube.beans.*;
 import com.keyes.youtube.callback.VideoInfoTaskCallback;
 import com.keyes.youtube.utils.YouTubeUtility;
+import com.keyes.youtube.utils.YoutubeQuality;
 
 /**
  * <p>
@@ -103,6 +104,7 @@ public class YouTubePlayerHelper {
 	public YoutubeTaskInfo taskInfo;
 
 	public String mVideoId = null;
+	public YoutubeQuality youtubeQuality = null;
 
 	public void setVideoInfoTaskCallback(VideoInfoTaskCallback videoInfoTaskCallback) {
 		this.videoInfoTaskCallback = videoInfoTaskCallback;
@@ -163,14 +165,16 @@ public class YouTubePlayerHelper {
 			public void callback(String url, String json, AjaxStatus status) {
 				if (json != null) {
 					// successful ajax call, show status code and json content
-					String lUriStr = YouTubeUtility.getFinalUri(taskInfo.lYouTubeFmtQuality, true, json);
+					youtubeQuality = YouTubeUtility.getFinalUri(true, json);
+					String lUriStr = YouTubeUtility.getUrlByQuality(youtubeQuality, true, taskInfo.lYouTubeFmtQuality);
+					// String lUriStr = YouTubeUtility.getFinalUri(taskInfo.lYouTubeFmtQuality, true, json);
 					videoInfoTaskCallback.startYoutubeTask(lUriStr);
 				} else {
 					// ajax error, show error code
 					Toast.makeText(aq.getContext(), "Error:" + status.getCode(), Toast.LENGTH_LONG).show();
-    }
-            }
-        });
+				}
+			}
+		});
 	}
 
 	public void stopYoutubeTask(Context context) {
