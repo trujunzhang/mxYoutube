@@ -2,11 +2,16 @@ package com.mxtube.app.ui.single;
 
 import android.net.Uri;
 import android.view.ViewGroup;
+
+import com.common.utils.Tools;
 import com.google.android.libraries.mediaframework.layeredvideo.SimpleVideoPlayer;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
+import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
 import com.keyes.youtube.beans.YoutubeTaskInfo;
 import com.keyes.youtube.utils.YoutubeQuality;
 import com.mxtube.app.R;
+import com.youtube.widget.YoutubeLayoutUtils;
+
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
@@ -33,6 +38,12 @@ public class MediaPlayerSingle extends Single implements FullscreenCallback {
 
 	@AfterViews
 	protected void calledAfterViewInjection() {
+
+		int screenWidth = Tools.getScreenWidth(this.getSherlockActivity());
+		int videoViewHeight = YoutubeLayoutUtils.getVideoViewHeight(screenWidth / 2, 480, 280);
+		videoPlayerContainer.setLayoutParams(Util.getLayoutParamsBasedOnParent(videoPlayerContainer,
+				ViewGroup.LayoutParams.MATCH_PARENT, videoViewHeight));
+
 		// determine the messages to be displayed as the view loads the video
 
 		Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
@@ -42,7 +53,6 @@ public class MediaPlayerSingle extends Single implements FullscreenCallback {
 		this.videoPlayer.play(lVideoIdUri);
 
 	}
-
 
 	@Override
 	public void initSingle() {

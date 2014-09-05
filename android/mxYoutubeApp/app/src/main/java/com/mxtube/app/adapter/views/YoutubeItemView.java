@@ -6,6 +6,8 @@ import com.google.api.services.youtube.model.Thumbnail;
 import com.google.api.services.youtube.model.Video;
 import com.mxtube.app.R;
 import com.squareup.picasso.Picasso;
+import com.youtube.widget.SquareImageView;
+
 import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
@@ -16,7 +18,7 @@ import java.math.BigInteger;
 public class YoutubeItemView extends LinearLayout {
 
 	@ViewById(R.id.thumbnails)
-	com.youtube.SquareImageView thumbnails;
+    SquareImageView thumbnails;
 	@ViewById(R.id.duration)
 	android.widget.TextView duration;
 	@ViewById(R.id.title)
