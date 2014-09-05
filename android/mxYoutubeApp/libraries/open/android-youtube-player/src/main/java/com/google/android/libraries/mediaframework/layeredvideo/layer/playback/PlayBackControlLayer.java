@@ -14,12 +14,13 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+import android.widget.VideoView;
+
 import com.google.android.libraries.mediaframework.R;
 import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.layer.Layer;
 import com.google.android.libraries.mediaframework.layeredvideo.utils.DensityUtil;
-import com.google.android.libraries.mediaframework.layeredvideo.widgets.FullScreenVideoView;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -150,7 +151,7 @@ public abstract class PlayBackControlLayer implements Layer {
 		}
 	};
 
-	public void preparedController(FullScreenVideoView video) {
+	public void preparedController(VideoView video) {
 		mHandler.removeCallbacks(hideRunnable);
 		mHandler.postDelayed(hideRunnable, HIDE_TIME);
 		mDurationTime.setText(formatTime(video.getDuration()));
@@ -169,7 +170,7 @@ public abstract class PlayBackControlLayer implements Layer {
 		mSeekBar.setProgress(0);
 	}
 
-	public void backward(FullScreenVideoView video, float delataX) {
+	public void backward(VideoView video, float delataX) {
 		int current = video.getCurrentPosition();
 		int backwardTime = (int) (delataX / width * video.getDuration());
 		int currentTime = current - backwardTime;
@@ -178,7 +179,7 @@ public abstract class PlayBackControlLayer implements Layer {
 		mPlayTime.setText(formatTime(currentTime));
 	}
 
-	public void forward(FullScreenVideoView video, float delataX) {
+	public void forward(VideoView video, float delataX) {
 		int current = video.getCurrentPosition();
 		int forwardTime = (int) (delataX / width * video.getDuration());
 		int currentTime = current + forwardTime;
@@ -272,7 +273,7 @@ public abstract class PlayBackControlLayer implements Layer {
 		}
 	}
 
-	public FullScreenVideoView getVideo() {
+	public VideoView getVideo() {
 		return this.getLayerManager().getVideoSurfaceViewLayer().getVideoView();
 	}
 

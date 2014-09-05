@@ -85,6 +85,8 @@ public class LayerManager {
 			layer.onLayerDisplayed(this);
 		}
 
+//		container.setLayoutParams(Util.getLayoutParamsBasedOnParent(container, ViewGroup.LayoutParams.MATCH_PARENT, 400));
+
 		originalContainerLayoutParams = this.getContainer().getLayoutParams();
 	}
 

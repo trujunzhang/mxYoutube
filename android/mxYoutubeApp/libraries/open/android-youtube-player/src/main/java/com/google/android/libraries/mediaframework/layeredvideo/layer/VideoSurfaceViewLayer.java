@@ -7,15 +7,16 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.VideoView;
+
 import com.google.android.libraries.mediaframework.R;
 import com.google.android.libraries.mediaframework.layeredvideo.LayerManager;
 import com.google.android.libraries.mediaframework.layeredvideo.utils.DensityUtil;
-import com.google.android.libraries.mediaframework.layeredvideo.widgets.FullScreenVideoView;
 
 public class VideoSurfaceViewLayer implements Layer {
 
 	// 自定义VideoView
-	private FullScreenVideoView mVideo;
+	private VideoView mVideo;
 
 	/**
 	 * The {@link com.google.android.libraries.mediaframework.layeredvideo.LayerManager} which is responsible for adding
@@ -32,8 +33,8 @@ public class VideoSurfaceViewLayer implements Layer {
 	private MediaPlayer.OnPreparedListener mPreparedListener = new MediaPlayer.OnPreparedListener() {
 		@Override
 		public void onPrepared(MediaPlayer mp) {
-			mVideo.setVideoWidth(mp.getVideoWidth());
-			mVideo.setVideoHeight(mp.getVideoHeight());
+//			mVideo.setVideoWidth(mp.getVideoWidth());
+//			mVideo.setVideoHeight(mp.getVideoHeight());
 
 			mVideo.start();
 			int playTime = 0;
@@ -60,7 +61,7 @@ public class VideoSurfaceViewLayer implements Layer {
 		LayoutInflater inflater = layerManager.getActivity().getLayoutInflater();
 
 		view = (FrameLayout) inflater.inflate(R.layout.video_surface_view_layer, null);
-		mVideo = (FullScreenVideoView) view.findViewById(R.id.videoview);
+		mVideo = (VideoView) view.findViewById(R.id.videoview);
 		threshold = DensityUtil.dip2px(mContext, 18);
 
 		return view;
@@ -136,7 +137,7 @@ public class VideoSurfaceViewLayer implements Layer {
 
 	};
 
-	public FullScreenVideoView getVideoView() {
+	public VideoView getVideoView() {
 		return mVideo;
 	}
 }
