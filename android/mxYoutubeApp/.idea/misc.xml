@@ -13,12 +13,6 @@
     <option name="pathToConfigFileJava" value="$USER_HOME$/Library/Preferences/Jetbrains/EclipseFormatter/styles/common/format.xml" />
     <option name="selectedJavaProfile" value="kuk" />
   </component>
-  <component name="EntryPointsManager">
-    <entry_points version="2.0" />
-  </component>
-  <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$" />
-  </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -148,6 +142,9 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration useDefault="false">$USER_HOME$/.subversion</configuration>
   </component>
   <component name="masterDetails">
     <states>

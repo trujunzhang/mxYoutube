@@ -10,14 +10,9 @@
       <module fileurl="file://$PROJECT_DIR$/libraries/open/android-youtube-player/android-youtube-player.iml" filepath="$PROJECT_DIR$/libraries/open/android-youtube-player/android-youtube-player.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/android-youtube-query/android-youtube-query.iml" filepath="$PROJECT_DIR$/libraries/open/android-youtube-query/android-youtube-query.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/collect/collect.iml" filepath="$PROJECT_DIR$/libraries/collect/collect.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/cwac-endless/cwac-endless.iml" filepath="$PROJECT_DIR$/libraries/open/cwac-endless/cwac-endless.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/layers/google-api-services-youtube/google-api-services-youtube.iml" filepath="$PROJECT_DIR$/libraries/layers/google-api-services-youtube/google-api-services-youtube.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/layers/layers.iml" filepath="$PROJECT_DIR$/libraries/layers/layers.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
       <module fileurl="file://$PROJECT_DIR$/mxYoutubeApp.iml" filepath="$PROJECT_DIR$/mxYoutubeApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/open/open.iml" filepath="$PROJECT_DIR$/libraries/open/open.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/openexamples.iml" filepath="$PROJECT_DIR$/libraries/openexamples/openexamples.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/android-youtube-player/openexamples-android-youtube-player.iml" filepath="$PROJECT_DIR$/libraries/openexamples/android-youtube-player/openexamples-android-youtube-player.iml" />
     </modules>
   </component>

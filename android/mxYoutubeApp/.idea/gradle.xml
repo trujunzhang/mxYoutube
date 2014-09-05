@@ -30,6 +30,7 @@
       </GradleProjectSettings>
     </option>
     <option name="gradleVmOptions" value="-XX:MaxPermSize=2048m -Xmx4096m -XX:MaxHeapSize=4096m -XX:-UseGCOverheadLimit" />
+    <option name="offlineWork" value="true" />
   </component>
 </project>
 
