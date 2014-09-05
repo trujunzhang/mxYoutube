@@ -27,8 +27,8 @@ public class Footer extends SherlockFragment {
 	@AfterViews
 	protected void calledAfterViewInjection() {
 		this.mCurSel = -1;
-//		setButtonClickEvent(null, TYPE_FRAGMENT_HOME);
-		setButtonClickEvent(null, TYPE_FRAGMENT_MEDIA_PLAYER);
+		setButtonClickEvent(null, TYPE_FRAGMENT_HOME);
+//		setButtonClickEvent(null, TYPE_FRAGMENT_MEDIA_PLAYER);
 	}
 
 	public void setButtonClickEvent(View view, int pos) {
