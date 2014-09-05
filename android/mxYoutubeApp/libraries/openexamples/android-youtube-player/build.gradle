@@ -5,10 +5,7 @@ apply plugin: 'android-apt'
 def AAVersion = '3.0.1'
 def AQVersion = '0.24.3'
 
-repositories {
-    mavenCentral()
-    mavenLocal()
-}
+
 
 android {
     compileSdkVersion 19

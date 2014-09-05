@@ -4,11 +4,6 @@ apply plugin: 'android-apt'
 
 def AAVersion = '3.0.1'
 
-repositories {
-    mavenCentral()
-    mavenLocal()
-}
-
 
 dependencies {
 //    compile project(':libraries:layers:google-api-services-youtube');

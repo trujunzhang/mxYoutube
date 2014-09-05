@@ -1,8 +1,5 @@
 apply plugin: 'android'
 
-repositories {
-    mavenCentral()
-}
 
 dependencies {
     compile project(':libraries:open:smoothie')

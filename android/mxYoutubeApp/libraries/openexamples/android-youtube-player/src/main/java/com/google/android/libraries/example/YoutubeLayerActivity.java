@@ -1,6 +1,7 @@
 package com.google.android.libraries.example;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -34,6 +35,7 @@ public class YoutubeLayerActivity extends Activity implements FullscreenCallback
 
 		onGoToFullscreen();
 		this.videoPlayer = new SimpleVideoPlayer(this, this.videoPlayerContainer, this);
+        Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
 		this.videoPlayer.play(lVideoIdUri);
 	}
 

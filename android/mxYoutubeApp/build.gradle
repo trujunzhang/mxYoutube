@@ -2,22 +2,19 @@
 
 buildscript {
     repositories {
-        mavenCentral()
-        maven {
-            url "https://repo.commonsware.com.s3.amazonaws.com"
-        }
+        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.10.+'
+        classpath 'com.android.tools.build:gradle:0.12.2'
 
         // the latest version of the android-apt plugin
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.1'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.2+'
     }
 }
 
 allprojects {
     repositories {
-        mavenCentral()
+        jcenter()
     }
 }
 
