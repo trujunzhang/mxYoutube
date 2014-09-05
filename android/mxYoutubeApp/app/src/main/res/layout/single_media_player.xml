@@ -12,7 +12,6 @@
         android:layout_height="fill_parent"
         android:background="@color/solid_blue"
         android:orientation="vertical"
-        android:layout_marginLeft="20dp"
         android:layout_weight=".50">
 
         <!--01:media player panel-->
@@ -38,8 +37,8 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="310dp"
-            android:text="wanghao"/>
+            android:layout_height="320dp"
+            android:text="wanghao" />
 
     </LinearLayout>
 </LinearLayout>
