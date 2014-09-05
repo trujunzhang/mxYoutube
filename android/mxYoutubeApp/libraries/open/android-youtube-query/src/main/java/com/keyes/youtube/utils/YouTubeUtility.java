@@ -179,7 +179,7 @@ public class YouTubeUtility {
 		return lUriStr;
 	}
 
-	public static YoutubeQuality getFinalUri(boolean pFallback, String lInfoStr) {
+	public static YoutubeQuality getFinalUri(String lInfoStr) {
 		YoutubeQuality youtubeQuality = null;
 		String[] lArgs = lInfoStr.split("&");
 		Map<String, String> lArgMap = new HashMap<String, String>();

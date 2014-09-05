@@ -165,9 +165,8 @@ public class YouTubePlayerHelper {
 			public void callback(String url, String json, AjaxStatus status) {
 				if (json != null) {
 					// successful ajax call, show status code and json content
-					youtubeQuality = YouTubeUtility.getFinalUri(true, json);
+					youtubeQuality = YouTubeUtility.getFinalUri(json);
 					String lUriStr = YouTubeUtility.getUrlByQuality(youtubeQuality, true, taskInfo.lYouTubeFmtQuality);
-					// String lUriStr = YouTubeUtility.getFinalUri(taskInfo.lYouTubeFmtQuality, true, json);
 					videoInfoTaskCallback.startYoutubeTask(lUriStr);
 				} else {
 					// ajax error, show error code
