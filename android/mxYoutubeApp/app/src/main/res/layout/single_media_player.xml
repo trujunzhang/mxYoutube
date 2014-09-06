@@ -23,7 +23,7 @@
             android:background="@color/solid_red" />
 
         <!--02:media user panel-->
-        <include layout="@layout/media_user_fragment" />
+        <include layout="@layout/watch_player_subscribtion" />
 
     </LinearLayout>
 
