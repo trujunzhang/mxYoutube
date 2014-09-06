@@ -6,7 +6,11 @@
     android:paddingRight="@dimen/card_margin_right"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:layout_marginLeft="8.0dip"
+    android:layout_marginRight="8.0dip"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
+
 
     <TextView
         android:textSize="@dimen/medium_font_size"
@@ -18,7 +22,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:minHeight="48.0dip"
-        android:text=""
+        android:text="Sketch 3 Tutorials - #1 Series Introduction"
         android:maxLines="1" />
 
     <ImageView
@@ -26,9 +30,12 @@
         android:background="@drawable/card_frame_middle"
         android:paddingLeft="10.0dip"
         android:paddingRight="10.0dip"
+        android:layout_marginTop="10.0dip"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/card_separator_height"
         android:src="#ffe1e1e1" />
+
+    <include layout="@layout/like_dislike_panel" />
 
     <TextView
         android:textSize="@dimen/watch_card_content_font_size"
@@ -41,6 +48,8 @@
         android:paddingBottom="12.0dip"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:text="The 1st video in the Sketch 3 tutorial series. Here we give an introduction to Sketch 3 and what it's all about.\n\nSketch gives you the power, flexibility and speed you always wanted in a lightweight and easy-to-use package. Finally you can focus on what you do best: Design.\n\nhttp://bohemiancoding.com/sketch/\n\n\nSubscribe to Level Up Pro for extra features!\nhttp://leveluptuts.com/level-up-pro\n\nSubscribe to the Level Up Newsletter\nhttp://eepurl.com/AWjGz\n\nFor questions post in the comments or visit:\nhttp://leveluptuts.com/forum\n\nTo Support Level Up Tuts:\nhttp://leveluptuts.com/donations\n\nSimple cloud hosting, built for developers.:\nhttps://www.digitalocean.com/?refcode=67357174b09e"
         android:lineSpacingExtra="@dimen/watch_extra_line_spacing"
-        android:textIsSelectable="false" />
+        android:textIsSelectable="false"
+        android:autoLink="web" />
 </LinearLayout>
