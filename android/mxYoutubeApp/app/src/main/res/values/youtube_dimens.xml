@@ -14,6 +14,13 @@
     <dimen name="card_in_line_selector_margin_right">2.0dip</dimen>
     <dimen name="card_in_line_selector_margin_bottom">0.0dip</dimen>
 
+    <dimen name="extra_small_font_size">12.0sp</dimen>
+    <dimen name="small_font_size">14.0sp</dimen>
+    <dimen name="medium_font_size">16.0sp</dimen>
+    <dimen name="large_font_size">18.0sp</dimen>
+
+
+
     <dimen name="activity_horizontal_margin">16.0dip</dimen>
     <dimen name="activity_vertical_margin">16.0dip</dimen>
     <dimen name="abc_config_prefDialogWidth">320.0dip</dimen>
@@ -37,10 +44,7 @@
     <dimen name="dialog_fixed_width_minor">320.0dip</dimen>
     <item type="dimen" name="dialog_fixed_height_major">79.99999%</item>
     <item type="dimen" name="dialog_fixed_height_minor">100.0%</item>
-    <dimen name="extra_small_font_size">12.0sp</dimen>
-    <dimen name="small_font_size">14.0sp</dimen>
-    <dimen name="medium_font_size">16.0sp</dimen>
-    <dimen name="large_font_size">18.0sp</dimen>
+
     <dimen name="status_spinner_width">25.0dip</dimen>
     <dimen name="status_spinner_height">25.0dip</dimen>
     <dimen name="channel_delegation_avatar_size">36.0dip</dimen>
