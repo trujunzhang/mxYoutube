@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 
 dependencies {
     compile project(':libraries:open:smoothie')
-    compile 'com.android.support:support-v4:+'
 }
 
 

@@ -27,7 +27,6 @@ dependencies {
 
 //-------- v1.0
     compile fileTree(dir: 'libs', include: '*.jar')
-//    compile 'com.android.support:support-v4:+'
 
     compile project(':libraries:open:android-youtube-query');
 }

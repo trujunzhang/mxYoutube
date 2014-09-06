@@ -22,7 +22,6 @@ dependencies {
 
 //-------- v1.0
     compile project(':libraries:open:actionbarsherlock');
-    compile 'com.android.support:support-v4:+'
 
 //-------- v2.0
 

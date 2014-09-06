@@ -24,5 +24,6 @@ android {
 dependencies {
 //-------- v1.0
     compile project(':libraries:open:picasso');
-    compile 'com.android.support:support-v4:+'
+
+    compile 'com.android.support:support-v4:20.+'
 }
