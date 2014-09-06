@@ -137,9 +137,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.mxtube.app" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40b4ff95-6454-4327-83b2-70fa6b42ff96" name="Default" comment="add [android-youtube-query] library.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/media_player_fragment.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/media_user_fragment.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/watch_player_subscribtion.xml" />
+    <list default="true" id="40b4ff95-6454-4327-83b2-70fa6b42ff96" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/watch_player_subscribtion.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/watch_player_subscription.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_media_player.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_media_player.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -224,21 +223,21 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5301205" vertical-offset="150" max-vertical-offset="882">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7108434" vertical-offset="150" max-vertical-offset="882">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="watch_player_subscribtion.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/watch_player_subscribtion.xml">
+      <file leaf-file-name="watch_player_subscription.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/watch_player_subscription.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.181818" vertical-offset="306" max-vertical-offset="828">
-              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+            <state vertical-scroll-proportion="-8.181818" vertical-offset="378" max-vertical-offset="882">
+              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -8356,7 +8355,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/res/drawable/widget_bar_share.xml" />
         <option value="$PROJECT_DIR$/libraries/openexamples/android-youtube-player/src/main/res/layout/activity_youtube_layer.xml" />
         <option value="$PROJECT_DIR$/libraries/open/GreenDroid/build.gradle" />
         <option value="$PROJECT_DIR$/libraries/openexamples/android-youtube-player/src/main/java/com/google/android/libraries/example/YoutubeLayerActivity.java" />
@@ -8407,6 +8405,7 @@
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/build.gradle" />
         <option value="$PROJECT_DIR$/libraries/open/actionbarsherlock/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/single_media_player.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/watch_player_subscription.xml" />
       </list>
     </option>
   </component>
@@ -10928,7 +10927,11 @@
       <created>1409910939501</created>
       <updated>1409910939501</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <task id="LOCAL-00208" summary="add [android-youtube-query] library.">
+      <created>1409996473287</created>
+      <updated>1409996473288</updated>
+    </task>
+    <option name="localTasksCounter" value="209" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -11471,13 +11474,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/watch_player_subscribtion.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/watch_player_subscription.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.181818" vertical-offset="306" max-vertical-offset="828">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        <state vertical-scroll-proportion="-8.181818" vertical-offset="378" max-vertical-offset="882">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -11487,8 +11490,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5301205" vertical-offset="150" max-vertical-offset="882">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7108434" vertical-offset="150" max-vertical-offset="882">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>

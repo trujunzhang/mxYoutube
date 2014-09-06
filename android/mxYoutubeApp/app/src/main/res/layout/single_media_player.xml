@@ -22,8 +22,8 @@
             android:layout_height="wrap_content"
             android:background="@color/solid_red" />
 
-        <!--02:media user panel-->
-        <include layout="@layout/watch_player_subscribtion" />
+        <!--02:player's info and subscription panel-->
+        <include layout="@layout/watch_player_subscription" />
 
     </LinearLayout>
 
