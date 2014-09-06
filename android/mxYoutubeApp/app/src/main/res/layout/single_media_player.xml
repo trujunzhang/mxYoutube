@@ -23,10 +23,20 @@
             android:background="@color/solid_red" />
 
         <!--02:player's info and subscription panel-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <include layout="@layout/watch_player_subscription" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <include layout="@layout/watch_description_card" />
+                <include layout="@layout/watch_player_subscription" />
+
+                <include layout="@layout/watch_description_card" />
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 
