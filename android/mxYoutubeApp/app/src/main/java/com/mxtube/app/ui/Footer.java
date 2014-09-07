@@ -1,5 +1,6 @@
 package com.mxtube.app.ui;
 
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -77,32 +78,37 @@ public class Footer extends SherlockFragment {
 		}
 	}
 
-    // HACK: propagate back button press to child fragments.
-    // This might not work properly when you have multiple fragments adding multiple children to the backstack.
-    // (in our case, only one child fragments adds fragments to the backstack, so we're fine with this)
-    private boolean returnBackStackImmediate(FragmentManager fm) {
-//        List<SherlockFragment> fragments = fm.getFragments();
-//        if (fragments != null && fragments.size() > 0) {
-//            for (Fragment fragment : fragments) {
-//                if (fragment.getChildFragmentManager().getBackStackEntryCount() > 0) {
-//                    if (fragment.getChildFragmentManager().popBackStackImmediate()) {
-//                        return true;
-//                    } else {
-//                        return returnBackStackImmediate(fragment.getChildFragmentManager());
-//                    }
-//                }
-//            }
-//        }
-        return false;
-    }
+	// HACK: propagate back button press to child fragments.
+	// This might not work properly when you have multiple fragments adding multiple children to the backstack.
+	// (in our case, only one child fragments adds fragments to the backstack, so we're fine with this)
+	private boolean returnBackStackImmediate(FragmentManager fm) {
+		List<Fragment> fragments = fm.getFragments();
+		if (fragments != null && fragments.size() > 0) {
+			for (Fragment fragment : fragments) {
+				if (fragment.getChildFragmentManager().getBackStackEntryCount() > 0) {
+					if (fragment.getChildFragmentManager().popBackStackImmediate()) {
+						return true;
+					} else {
+						return returnBackStackImmediate(fragment.getChildFragmentManager());
+					}
+				}
+			}
+		}
+		return false;
+	}
 
 	public boolean pressBack() {
+		FragmentManager fm = getFragmentManager();
+		return this.returnBackStackImmediate(fm);
+	}
+
+	public boolean pressBack123() {
 		FragmentManager fm = getFragmentManager();
 
 		// here we believe a fragment was popped, so we need to remove the fragment from ourbackstack
 		int backStackEntryCount = fm.getBackStackEntryCount();
 		if (backStackEntryCount > 0) {
-//			currentFragment = (Single) fm.getBackStackEntryAt(backStackEntryCount - 1);
+			// currentFragment = (Single) fm.getBackStackEntryAt(backStackEntryCount - 1);
 			Log.d("custombackstack", "before back: " + backStackEntryCount + " current:" + currentFragment);
 			return true;
 		}
