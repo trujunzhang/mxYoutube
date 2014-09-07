@@ -61,8 +61,8 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 
 		// determine the messages to be displayed as the view loads the video
 
-		Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
-		// Uri lVideoIdUri = Uri.parse("ytv://" + this.selectedVideo.getId());
+		// Uri lVideoIdUri = Uri.parse("ytv://" + "AV2OkzIGykA");
+		Uri lVideoIdUri = Uri.parse("ytv://" + this.selectedVideo.getId());
 
 		this.videoPlayer = new SimpleVideoPlayer(this.getSherlockActivity(), this.videoFrame, this);
 		this.videoPlayer.play(lVideoIdUri);

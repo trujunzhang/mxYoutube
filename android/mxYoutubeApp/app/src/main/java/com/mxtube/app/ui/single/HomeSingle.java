@@ -41,9 +41,9 @@ public class HomeSingle extends Single {
 	void getYoutubeInBackground() {
 		List<Video> videoList = searchInterface.search(getContext());
 		// v1.0
-		// update(videoList);
+		update(videoList);
 		// v2.0
-		youtubeListItemClicked(videoList.get(0));
+//		youtubeListItemClicked(videoList.get(0));
 	}
 
 	@UiThread
