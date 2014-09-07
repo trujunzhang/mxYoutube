@@ -23,7 +23,7 @@
         android:textSize="16.0dip"
         android:textColor="#ff999999"
         android:gravity="center"
-        android:id="@+id/offline_label"
+        android:id="@+id/viewCount_label"
         android:layout_width="wrap_content"
         android:layout_height="36.0dip"
         android:layout_marginTop="8.0dip"
