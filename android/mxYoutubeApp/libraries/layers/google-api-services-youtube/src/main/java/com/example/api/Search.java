@@ -130,9 +130,11 @@ public class Search {
 				}
 			}
 		} catch (GoogleJsonResponseException e) {
+			e.printStackTrace();
 			System.err.println("There was a service error: " + e.getDetails().getCode() + " : "
 					+ e.getDetails().getMessage());
 		} catch (IOException e) {
+			e.printStackTrace();
 			System.err.println("There was an IO error: " + e.getCause() + " : " + e.getMessage());
 			// java.net.UnknownHostException: Unable to resolve host "www.googleapis.com": No address associated with
 			// hostname
