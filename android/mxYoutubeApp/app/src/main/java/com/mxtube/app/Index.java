@@ -1,6 +1,10 @@
 package com.mxtube.app;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.common.utils.UIHelper;
 import com.mxtube.app.ui.Footer;
 import org.androidannotations.annotations.*;
 
@@ -20,6 +24,20 @@ public class Index extends SherlockFragmentActivity {
 
 	@AfterViews
 	public void calledAfterViewInjection() {
+	}
+
+	public void onBackPressed() {
+		DialogInterface.OnClickListener sureListener = new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+				// 退出
+				// AppManager.getAppManager().AppExit(cont);
+				finish();
+				System.exit(0);
+			}
+		};
+		UIHelper.Exit(this, sureListener);
+
 	}
 
 }

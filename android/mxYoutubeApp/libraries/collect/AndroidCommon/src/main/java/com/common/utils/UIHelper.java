@@ -2,7 +2,9 @@ package com.common.utils;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -18,6 +20,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.common.widget.OnWebViewImageListener;
+import com.xinma.common.R;
 
 import java.util.regex.Pattern;
 
@@ -231,28 +234,30 @@ public class UIHelper {
 
 	/**
 	 * 退出程序
-	 * 
+	 *
 	 * @param cont
+	 * @param sureListener
 	 */
-	public static void Exit(final Context cont) {
-		// AlertDialog.Builder builder = new AlertDialog.Builder(cont);
-		// builder.setIcon(android.R.drawable.ic_dialog_info);
-		// builder.setTitle(R.string.app_menu_surelogout);
-		// builder.setPositiveButton(R.string.sure,
-		// new DialogInterface.OnClickListener() {
+	public static void Exit(final Context cont, DialogInterface.OnClickListener sureListener) {
+		// DialogInterface.OnClickListener sureListener = new DialogInterface.OnClickListener() {
 		// public void onClick(DialogInterface dialog, int which) {
 		// dialog.dismiss();
 		// // 退出
-		// AppManager.getAppManager().AppExit(cont);
+		// // AppManager.getAppManager().AppExit(cont);
 		// }
-		// });
-		// builder.setNegativeButton(R.string.cancle,
-		// new DialogInterface.OnClickListener() {
-		// public void onClick(DialogInterface dialog, int which) {
-		// dialog.dismiss();
-		// }
-		// });
-		// builder.show();
+		// };
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(cont);
+		builder.setIcon(android.R.drawable.ic_dialog_info);
+		builder.setTitle(R.string.app_menu_surelogout);
+
+		builder.setPositiveButton(R.string.sure, sureListener);
+		builder.setNegativeButton(R.string.cancle, new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+			}
+		});
+		builder.show();
 	}
 
 	/**
