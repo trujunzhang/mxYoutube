@@ -1,8 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="#ee000000"
+        android:layout_gravity="left|bottom">
+
+        <RadioButton
+            android:id="@+id/main_footbar_home"
+            style="@style/main_footbar_radio"
+            android:drawableTop="@drawable/widget_bar_home" />
+
+        <RadioButton
+            android:id="@+id/main_footbar_search"
+            style="@style/main_footbar_radio"
+            android:drawableTop="@drawable/widget_bar_search" />
+
+        <RadioButton
+            android:id="@+id/main_footbar_histrory"
+            style="@style/main_footbar_radio"
+            android:drawableTop="@drawable/widget_bar_history" />
+
+        <RadioButton
+            android:id="@+id/main_footbar_cache"
+            style="@style/main_footbar_radio"
+            android:drawableTop="@drawable/widget_bar_cache" />
+
+        <RadioButton
+            android:id="@+id/main_footbar_more"
+            style="@style/main_footbar_radio"
+            android:drawableTop="@drawable/widget_bar_more" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
