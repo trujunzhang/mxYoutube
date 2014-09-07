@@ -73,7 +73,7 @@ public class Footer extends SherlockFragment {
 		if (!fragmentPopped) { // fragment not in back stack, create it.
 			FragmentTransaction ft = manager.beginTransaction();
 			ft.replace(R.id.fragment_content, fragment);
-			ft.addToBackStack(backStateName);
+//			ft.addToBackStack(backStateName);
 			ft.commit();
 		}
 	}
