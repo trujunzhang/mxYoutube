@@ -2,6 +2,7 @@ package com.mxtube.app.ui;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import com.actionbarsherlock.app.SherlockFragment;
@@ -13,6 +14,8 @@ import com.mxtube.app.ui.single.Single;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
+
+import java.util.List;
 
 @EFragment(R.layout.main_footer)
 public class Footer extends SherlockFragment {
@@ -29,7 +32,7 @@ public class Footer extends SherlockFragment {
 	protected void calledAfterViewInjection() {
 		this.mCurSel = -1;
 		setButtonClickEvent(null, TYPE_FRAGMENT_HOME);
-//		setButtonClickEvent(null, TYPE_FRAGMENT_MEDIA_PLAYER);
+		// setButtonClickEvent(null, TYPE_FRAGMENT_MEDIA_PLAYER);
 	}
 
 	public void setButtonClickEvent(View view, int pos) {
@@ -56,16 +59,76 @@ public class Footer extends SherlockFragment {
 		this.currentFragment.initSingle();
 	}
 
-	private void setFragment(int pos, FragmentManager fm) {
-		// Perform the FragmentTransaction to load in the list tab content.
-		// Using FragmentTransaction#replace will destroy any Fragments
-		// currently inside R.id.fragment_content and add the new Fragment
-		// in its place.
-		FragmentTransaction ft = fm.beginTransaction();
+	private void setFragment(int pos, FragmentManager manager) {
 		currentFragment = getFragment(pos);
-		ft.replace(R.id.fragment_content, currentFragment);
-		ft.commit();
+		replaceFragment(manager, currentFragment);
 	}
+
+	private void replaceFragment(FragmentManager manager, SherlockFragment fragment) {
+		String backStateName = fragment.getClass().getName();
+
+		boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);
+
+		if (!fragmentPopped) { // fragment not in back stack, create it.
+			FragmentTransaction ft = manager.beginTransaction();
+			ft.replace(R.id.fragment_content, fragment);
+			ft.addToBackStack(backStateName);
+			ft.commit();
+		}
+	}
+
+    // HACK: propagate back button press to child fragments.
+    // This might not work properly when you have multiple fragments adding multiple children to the backstack.
+    // (in our case, only one child fragments adds fragments to the backstack, so we're fine with this)
+    private boolean returnBackStackImmediate(FragmentManager fm) {
+//        List<SherlockFragment> fragments = fm.getFragments();
+//        if (fragments != null && fragments.size() > 0) {
+//            for (Fragment fragment : fragments) {
+//                if (fragment.getChildFragmentManager().getBackStackEntryCount() > 0) {
+//                    if (fragment.getChildFragmentManager().popBackStackImmediate()) {
+//                        return true;
+//                    } else {
+//                        return returnBackStackImmediate(fragment.getChildFragmentManager());
+//                    }
+//                }
+//            }
+//        }
+        return false;
+    }
+
+	public boolean pressBack() {
+		FragmentManager fm = getFragmentManager();
+
+		// here we believe a fragment was popped, so we need to remove the fragment from ourbackstack
+		int backStackEntryCount = fm.getBackStackEntryCount();
+		if (backStackEntryCount > 0) {
+//			currentFragment = (Single) fm.getBackStackEntryAt(backStackEntryCount - 1);
+			Log.d("custombackstack", "before back: " + backStackEntryCount + " current:" + currentFragment);
+			return true;
+		}
+		// after popping is the size > 0, if so we set current fragment from the top of stack, otherwise we default to
+		// home fragment.
+		if (backStackEntryCount > 0) {
+			// Log.d("custombackstack", "after back: " + fm.getBackStackEntryAt(backStackEntryCount - 1));
+		} else {
+			// back stack empty
+			// currentFragment = HOME_FRAGMENT;
+		}
+		return false;
+	}
+
+	// private void setFragment123(int pos, FragmentManager manager) {
+	// // String backStateName = manager.getClass().getName();
+	// // Perform the FragmentTransaction to load in the list tab content.
+	// // Using FragmentTransaction#replace will destroy any Fragments
+	// // currently inside R.id.fragment_content and add the new Fragment
+	// // in its place.
+	// FragmentTransaction ft = manager.beginTransaction();
+	//
+	// currentFragment = getFragment(pos);
+	// ft.replace(R.id.fragment_content, currentFragment);
+	// ft.commit();
+	// }
 
 	private Single getFragment(int pos) {
 		Single fragment = null;

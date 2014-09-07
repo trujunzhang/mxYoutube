@@ -27,6 +27,12 @@ public class Index extends SherlockFragmentActivity {
 	}
 
 	public void onBackPressed() {
+		if (fragmentFooterTab.pressBack() == false) {
+			exit();
+		}
+	}
+
+	private void exit() {
 		DialogInterface.OnClickListener sureListener = new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				dialog.dismiss();
@@ -37,7 +43,6 @@ public class Index extends SherlockFragmentActivity {
 			}
 		};
 		UIHelper.Exit(this, sureListener);
-
 	}
 
 }
