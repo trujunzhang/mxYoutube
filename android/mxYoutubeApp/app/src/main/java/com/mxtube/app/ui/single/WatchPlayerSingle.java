@@ -7,8 +7,6 @@ import com.common.utils.Tools;
 import com.google.android.libraries.mediaframework.layeredvideo.SimpleVideoPlayer;
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
-import com.keyes.youtube.beans.YoutubeTaskInfo;
-import com.keyes.youtube.utils.YoutubeQuality;
 import com.mxtube.app.R;
 import com.youtube.widget.YoutubeLayoutUtils;
 
@@ -17,8 +15,8 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
-@EFragment(R.layout.single_media_player)
-public class MediaPlayerSingle extends Single implements FullscreenCallback {
+@EFragment(R.layout.single_watch_player)
+public class WatchPlayerSingle extends Single implements FullscreenCallback {
 
 	@ViewById(R.id.video_frame)
 	android.widget.FrameLayout videoPlayerContainer;

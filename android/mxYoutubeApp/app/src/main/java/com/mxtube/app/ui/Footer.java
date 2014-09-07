@@ -8,8 +8,9 @@ import com.actionbarsherlock.app.SherlockFragment;
 import com.mxtube.app.Index;
 import com.mxtube.app.R;
 import com.mxtube.app.ui.single.HomeSingle_;
-import com.mxtube.app.ui.single.MediaPlayerSingle_;
+import com.mxtube.app.ui.single.WatchPlayerSingle_;
 import com.mxtube.app.ui.single.Single;
+
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
 
@@ -73,7 +74,7 @@ public class Footer extends SherlockFragment {
 			fragment = new HomeSingle_();
 			break;
 		case TYPE_FRAGMENT_MEDIA_PLAYER:// Media Player
-			fragment = new MediaPlayerSingle_();
+			fragment = new WatchPlayerSingle_();
 			break;
 		case 2:// Recent
 				// fragment = new TweetMenuFragment_();
