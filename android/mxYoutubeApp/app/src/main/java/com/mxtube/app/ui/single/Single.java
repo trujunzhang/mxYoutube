@@ -15,7 +15,7 @@ public abstract class Single extends SherlockFragment {
 	}
 
 	public Context getContext() {
-		return this.getSherlockActivity().getApplicationContext();
+		return this.getSherlockActivity();
 	}
 
 	public abstract void initSingle();
