@@ -13,7 +13,7 @@
     <string name="socket_exception_error">网络异常，读取数据超时</string>
     <string name="app_run_code_error">应用程序运行时异常</string>
 
-    <string name="app_menu_surelogout">确定退出程序吗123？</string>
+    <string name="app_menu_surelogout">确定退出程序吗？</string>
     <string name="sure">确定</string>
     <string name="cancle">取消</string>
 
