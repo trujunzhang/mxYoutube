@@ -28,13 +28,14 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/watch_linear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <include layout="@layout/watch_player_subscription" />
+                <!--<include layout="@layout/watch_player_subscription" />-->
 
-                <include layout="@layout/watch_description_card" />
+                <!--<include layout="@layout/watch_description_card" />-->
             </LinearLayout>
         </ScrollView>
 

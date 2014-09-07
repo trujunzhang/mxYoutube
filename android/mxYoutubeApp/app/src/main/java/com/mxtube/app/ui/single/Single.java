@@ -1,5 +1,6 @@
 package com.mxtube.app.ui.single;
 
+import android.app.Activity;
 import android.content.Context;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.google.api.services.youtube.model.Video;
@@ -14,7 +15,7 @@ public abstract class Single extends SherlockFragment {
 	}
 
 	public Context getContext() {
-		return AppContext.instance.index.getApplicationContext();
+		return this.getSherlockActivity().getApplicationContext();
 	}
 
 	public abstract void initSingle();
