@@ -46,7 +46,6 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 		int screenWidth = Tools.getScreenWidth(this.getContext());
 
 		// width: 854px; height: 480px; left: 0px; top: 0px; transform: none;
-		// int videoViewHeight = YoutubeLayoutUtils.getVideoViewHeight(screenWidth / 2, 512, 288);
 		int videoViewHeight = YoutubeLayoutUtils.getVideoViewHeight(screenWidth / 2, 854, 480);
 		videoFrame.setLayoutParams(Util.getLayoutParamsBasedOnParent(videoFrame, ViewGroup.LayoutParams.MATCH_PARENT,
 				videoViewHeight));
@@ -67,7 +66,6 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 
 		this.videoPlayer = new SimpleVideoPlayer(this.getSherlockActivity(), this.videoFrame, this);
 		this.videoPlayer.play(lVideoIdUri);
-
 	}
 
 	@Override
