@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1.0">
+
+    <!--left panel-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight=".50">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/info_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="180.0dp"
+                    android:layout_gravity="center"
+                    android:background="#0000ff"
+                    android:textSize="30sp"
+                    android:textColor="#00ff00" />
+
+
+                <TextView
+                    android:textSize="14.0sp"
+                    android:textColor="#ff666666"
+                    android:ellipsize="end"
+                    android:id="@+id/description"
+                    android:paddingLeft="12.0dip"
+                    android:paddingTop="8.0dip"
+                    android:paddingRight="12.0dip"
+                    android:paddingBottom="12.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The 1st video in the Sketch 3 tutorial series. Here we give an introduction to Sketch 3 and what it's all about.\n\nSketch gives you the power, flexibility and speed you always wanted in a lightweight and easy-to-use package. Finally you can focus on what you do best: Design.\n\nhttp://bohemiancoding.com/sketch/\n\n\nSubscribe to Level Up Pro for extra features!\nhttp://leveluptuts.com/level-up-pro\n\nSubscribe to the Level Up Newsletter\nhttp://eepurl.com/AWjGz\n\nFor questions post in the comments or visit:\nhttp://leveluptuts.com/forum\n\nTo Support Level Up Tuts:\nhttp://leveluptuts.com/donations\n\nSimple cloud hosting, built for developers.:\nhttps://www.digitalocean.com/?refcode=67357174b09e"
+                    android:textIsSelectable="false" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!--right panel-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight=".50">
+
+        <ListView
+            android:id="@+id/list_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+    </LinearLayout>
+</LinearLayout>

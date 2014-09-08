@@ -17,10 +17,13 @@
             <option value="$PROJECT_DIR$/libraries/layers/Business-Logic-Layer" />
             <option value="$PROJECT_DIR$/libraries/layers/google-api-services-youtube" />
             <option value="$PROJECT_DIR$/libraries/open" />
+            <option value="$PROJECT_DIR$/libraries/open/TabBackStack" />
             <option value="$PROJECT_DIR$/libraries/open/actionbarsherlock" />
             <option value="$PROJECT_DIR$/libraries/open/android-youtube-player" />
             <option value="$PROJECT_DIR$/libraries/open/android-youtube-query" />
             <option value="$PROJECT_DIR$/libraries/openexamples" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/TabBackStack" />
+            <option value="$PROJECT_DIR$/libraries/openexamples/TabBackStack/TabFragments" />
             <option value="$PROJECT_DIR$/libraries/openexamples/android-youtube-player" />
           </set>
         </option>

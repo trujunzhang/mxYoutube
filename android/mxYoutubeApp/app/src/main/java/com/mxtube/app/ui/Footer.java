@@ -65,7 +65,7 @@ public class Footer extends SherlockFragment {
 		replaceFragment(manager, currentFragment);
 	}
 
-	private void replaceFragment(FragmentManager manager, SherlockFragment fragment) {
+	private void replaceFragment(FragmentManager manager, Fragment fragment) {
 		String backStateName = fragment.getClass().getName();
 
 		boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);
@@ -73,7 +73,7 @@ public class Footer extends SherlockFragment {
 		if (!fragmentPopped) { // fragment not in back stack, create it.
 			FragmentTransaction ft = manager.beginTransaction();
 			ft.replace(R.id.fragment_content, fragment);
-//			ft.addToBackStack(backStateName);
+			ft.addToBackStack(backStateName);
 			ft.commit();
 		}
 	}
@@ -83,16 +83,23 @@ public class Footer extends SherlockFragment {
 	// (in our case, only one child fragments adds fragments to the backstack, so we're fine with this)
 	private boolean returnBackStackImmediate(FragmentManager fm) {
 		List<Fragment> fragments = fm.getFragments();
-		if (fragments != null && fragments.size() > 0) {
-			for (Fragment fragment : fragments) {
-				if (fragment.getChildFragmentManager().getBackStackEntryCount() > 0) {
-					if (fragment.getChildFragmentManager().popBackStackImmediate()) {
-						return true;
-					} else {
-						return returnBackStackImmediate(fragment.getChildFragmentManager());
-					}
-				}
-			}
+		int size = fragments.size();
+		if (fragments != null && size > 0) {
+
+			Fragment fragment = fragments.get(size - 1);
+			replaceFragment(fm, fragment);
+
+			return true;
+
+			// for (Fragment fragment : fragments) {
+			// if (fragment.getChildFragmentManager().getBackStackEntryCount() > 0) {
+			// if (fragment.getChildFragmentManager().popBackStackImmediate()) {
+			// return true;
+			// } else {
+			// return returnBackStackImmediate(fragment.getChildFragmentManager());
+			// }
+			// }
+			// }
 		}
 		return false;
 	}

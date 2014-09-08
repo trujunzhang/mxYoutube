@@ -20,6 +20,7 @@ include ':libraries:open:actionbarsherlock'
 //include ':libraries:open:smoothie'
 //include ':libraries:open:cwac-endless'
 //include ':libraries:open:picasso'
+include ':libraries:open:TabBackStack'
 include ':libraries:open:android-youtube-player'
 include ':libraries:open:android-youtube-query'
 
@@ -46,6 +47,8 @@ include ':libraries:open:android-youtube-query'
 //include ':libraries:openexamples:cwac-endless'
 // ..........picasso
 //include ':libraries:openexamples:picasso'
+// ..........tab-back-stack
+include ':libraries:openexamples:TabBackStack:TabFragments'
 // ..........android-youtube-player
 include ':libraries:openexamples:android-youtube-player'
 
