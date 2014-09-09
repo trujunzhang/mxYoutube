@@ -27,11 +27,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.sample.fragments.FragmentLayoutSupport;
 import com.actionbarsherlock.sample.fragments.R;
 import com.actionbarsherlock.sample.fragments.SampleList;
+import com.actionbarsherlock.sample.fragments.test.fragments.DetailsFragment;
+import com.actionbarsherlock.sample.fragments.test.fragments.ListInfoFragment;
 
 public class FragmentStackSupport extends SherlockFragmentActivity {
-	int mStackLevel = 1;
+	public static int mStackLevel = 1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +70,7 @@ public class FragmentStackSupport extends SherlockFragmentActivity {
 		mStackLevel++;
 
 		// Instantiate a new fragment.
-		Fragment newFragment = CountingFragment.newInstance(mStackLevel);
+		Fragment newFragment = getFragmentObject();
 
 		// Add the fragment to the activity, pushing this transaction
 		// on to the back stack.
@@ -76,6 +79,16 @@ public class FragmentStackSupport extends SherlockFragmentActivity {
 		ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
 		ft.addToBackStack(null);
 		ft.commit();
+	}
+
+	private Fragment getFragmentObject() {
+		Fragment fragment = null;
+		if (mStackLevel % 2 == 0) {
+			fragment = new ListInfoFragment();
+		} else {
+			fragment = new DetailsFragment();
+		}
+		return fragment;
 	}
 
 	public static class CountingFragment extends SherlockFragment {
