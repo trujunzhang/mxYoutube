@@ -29,53 +29,49 @@ import com.actionbarsherlock.app.SherlockDialogFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
 public class FragmentDialogOrActivitySupport extends SherlockFragmentActivity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        setTheme(SampleList.THEME); //Used for theme switching in samples
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_dialog_or_activity);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		setTheme(SampleList.THEME); // Used for theme switching in samples
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.fragment_dialog_or_activity);
 
-        if (savedInstanceState == null) {
-            // First-time init; create fragment to embed in activity.
+		if (savedInstanceState == null) {
+			// First-time init; create fragment to embed in activity.
 
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            DialogFragment newFragment = MyDialogFragment.newInstance();
-            ft.add(R.id.embedded, newFragment);
-            ft.commit();
+			FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+			DialogFragment newFragment = MyDialogFragment.newInstance();
+			ft.add(R.id.embedded, newFragment);
+			ft.commit();
 
-        }
+		}
 
-        // Watch for button clicks.
-        Button button = (Button)findViewById(R.id.show_dialog);
-        button.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                showDialog();
-            }
-        });
-    }
+		// Watch for button clicks.
+		Button button = (Button) findViewById(R.id.show_dialog);
+		button.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				showDialog();
+			}
+		});
+	}
 
+	void showDialog() {
+		// Create the fragment and show it as a dialog.
+		DialogFragment newFragment = MyDialogFragment.newInstance();
+		newFragment.show(getSupportFragmentManager(), "dialog");
+	}
 
-    void showDialog() {
-        // Create the fragment and show it as a dialog.
-        DialogFragment newFragment = MyDialogFragment.newInstance();
-        newFragment.show(getSupportFragmentManager(), "dialog");
-    }
+	public static class MyDialogFragment extends SherlockDialogFragment {
+		static MyDialogFragment newInstance() {
+			return new MyDialogFragment();
+		}
 
-
-
-    public static class MyDialogFragment extends SherlockDialogFragment {
-        static MyDialogFragment newInstance() {
-            return new MyDialogFragment();
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
-            View v = inflater.inflate(R.layout.hello_world, container, false);
-            View tv = v.findViewById(R.id.text);
-            ((TextView)tv).setText("This is an instance of MyDialogFragment");
-            return v;
-        }
-    }
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+			View v = inflater.inflate(R.layout.hello_world, container, false);
+			View tv = v.findViewById(R.id.text);
+			((TextView) tv).setText("This is an instance of MyDialogFragment");
+			return v;
+		}
+	}
 
 }

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2010 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2010 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -27,7 +26,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/fragment_retain_instance_msg" />
 
-    <ProgressBar android:id="@+id/progress_horizontal"
+    <ProgressBar
+        android:id="@+id/progress_horizontal"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="200dip"
         android:layout_height="wrap_content"
@@ -35,12 +35,14 @@
         android:padding="6dp"
         android:max="500" />
 
-    <Button android:id="@+id/restart"
+    <Button
+        android:id="@+id/restart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/restart">
+
         <requestFocus />
     </Button>
-    
+
 </LinearLayout>

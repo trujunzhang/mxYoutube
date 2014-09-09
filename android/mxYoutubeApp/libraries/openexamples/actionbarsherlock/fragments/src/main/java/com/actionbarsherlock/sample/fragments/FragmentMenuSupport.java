@@ -33,100 +33,103 @@ import com.actionbarsherlock.view.MenuItem;
  * Demonstrates how fragments can participate in the options menu.
  */
 public class FragmentMenuSupport extends SherlockFragmentActivity {
-    Fragment mFragment1;
-    Fragment mFragment2;
-    CheckBox mCheckBox1;
-    CheckBox mCheckBox2;
+	Fragment mFragment1;
+	Fragment mFragment2;
+	CheckBox mCheckBox1;
+	CheckBox mCheckBox2;
 
-    // Update fragment visibility when check boxes are changed.
-    final OnClickListener mClickListener = new OnClickListener() {
-        public void onClick(View v) {
-            updateFragmentVisibility();
-        }
-    };
+	// Update fragment visibility when check boxes are changed.
+	final OnClickListener mClickListener = new OnClickListener() {
+		public void onClick(View v) {
+			updateFragmentVisibility();
+		}
+	};
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        setTheme(SampleList.THEME); //Used for theme switching in samples
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_menu);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		setTheme(SampleList.THEME); // Used for theme switching in samples
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.fragment_menu);
 
-        // Make sure the two menu fragments are created.
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        mFragment1 = fm.findFragmentByTag("f1");
-        if (mFragment1 == null) {
-            mFragment1 = new MenuFragment();
-            ft.add(mFragment1, "f1");
-        }
-        mFragment2 = fm.findFragmentByTag("f2");
-        if (mFragment2 == null) {
-            mFragment2 = new Menu2Fragment();
-            ft.add(mFragment2, "f2");
-        }
-        ft.commit();
+		// Make sure the two menu fragments are created.
+		FragmentManager fm = getSupportFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
+		mFragment1 = fm.findFragmentByTag("f1");
+		if (mFragment1 == null) {
+			mFragment1 = new MenuFragment();
+			ft.add(mFragment1, "f1");
+		}
+		mFragment2 = fm.findFragmentByTag("f2");
+		if (mFragment2 == null) {
+			mFragment2 = new Menu2Fragment();
+			ft.add(mFragment2, "f2");
+		}
+		ft.commit();
 
-        // Watch check box clicks.
-        mCheckBox1 = (CheckBox)findViewById(R.id.menu1);
-        mCheckBox1.setOnClickListener(mClickListener);
-        mCheckBox2 = (CheckBox)findViewById(R.id.menu2);
-        mCheckBox2.setOnClickListener(mClickListener);
+		// Watch check box clicks.
+		mCheckBox1 = (CheckBox) findViewById(R.id.menu1);
+		mCheckBox1.setOnClickListener(mClickListener);
+		mCheckBox2 = (CheckBox) findViewById(R.id.menu2);
+		mCheckBox2.setOnClickListener(mClickListener);
 
-        // Make sure fragments start out with correct visibility.
-        updateFragmentVisibility();
-    }
+		// Make sure fragments start out with correct visibility.
+		updateFragmentVisibility();
+	}
 
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        // Make sure fragments are updated after check box view state is restored.
-        updateFragmentVisibility();
-    }
+	@Override
+	protected void onRestoreInstanceState(Bundle savedInstanceState) {
+		super.onRestoreInstanceState(savedInstanceState);
+		// Make sure fragments are updated after check box view state is restored.
+		updateFragmentVisibility();
+	}
 
-    // Update fragment visibility based on current check box state.
-    void updateFragmentVisibility() {
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        if (mCheckBox1.isChecked()) ft.show(mFragment1);
-        else ft.hide(mFragment1);
-        if (mCheckBox2.isChecked()) ft.show(mFragment2);
-        else ft.hide(mFragment2);
-        ft.commit();
-    }
+	// Update fragment visibility based on current check box state.
+	void updateFragmentVisibility() {
+		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+		if (mCheckBox1.isChecked())
+			ft.show(mFragment1);
+		else
+			ft.hide(mFragment1);
+		if (mCheckBox2.isChecked())
+			ft.show(mFragment2);
+		else
+			ft.hide(mFragment2);
+		ft.commit();
+	}
 
-    /**
-     * A fragment that displays a menu.  This fragment happens to not
-     * have a UI (it does not implement onCreateView), but it could also
-     * have one if it wanted.
-     */
-    public static class MenuFragment extends SherlockFragment {
+	/**
+	 * A fragment that displays a menu. This fragment happens to not have a UI (it does not implement onCreateView), but
+	 * it could also have one if it wanted.
+	 */
+	public static class MenuFragment extends SherlockFragment {
 
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setHasOptionsMenu(true);
-        }
+		@Override
+		public void onCreate(Bundle savedInstanceState) {
+			super.onCreate(savedInstanceState);
+			setHasOptionsMenu(true);
+		}
 
-        @Override
-        public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-            menu.add("Menu 1a").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-            menu.add("Menu 1b").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-        }
-    }
+		@Override
+		public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+			menu.add("Menu 1a").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+			menu.add("Menu 1b").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+		}
+	}
 
-    /**
-     * Second fragment with a menu.
-     */
-    public static class Menu2Fragment extends SherlockFragment {
+	/**
+	 * Second fragment with a menu.
+	 */
+	public static class Menu2Fragment extends SherlockFragment {
 
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setHasOptionsMenu(true);
-        }
+		@Override
+		public void onCreate(Bundle savedInstanceState) {
+			super.onCreate(savedInstanceState);
+			setHasOptionsMenu(true);
+		}
 
-        @Override
-        public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-            menu.add("Menu 2").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-        }
-    }
+		@Override
+		public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+			menu.add("Menu 2").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+		}
+	}
 }

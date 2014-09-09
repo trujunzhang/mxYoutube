@@ -25,35 +25,34 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.app.SherlockListFragment;
 
 /**
- * Demonstration of using ListFragment to show a list of items
- * from a canned array.
+ * Demonstration of using ListFragment to show a list of items from a canned array.
  */
 public class FragmentListArraySupport extends SherlockFragmentActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        setTheme(SampleList.THEME); //Used for theme switching in samples
-        super.onCreate(savedInstanceState);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		setTheme(SampleList.THEME); // Used for theme switching in samples
+		super.onCreate(savedInstanceState);
 
-        // Create the list fragment and add it as our sole content.
-        if (getSupportFragmentManager().findFragmentById(android.R.id.content) == null) {
-            ArrayListFragment list = new ArrayListFragment();
-            getSupportFragmentManager().beginTransaction().add(android.R.id.content, list).commit();
-        }
-    }
+		// Create the list fragment and add it as our sole content.
+		if (getSupportFragmentManager().findFragmentById(android.R.id.content) == null) {
+			ArrayListFragment list = new ArrayListFragment();
+			getSupportFragmentManager().beginTransaction().add(android.R.id.content, list).commit();
+		}
+	}
 
-    public static class ArrayListFragment extends SherlockListFragment {
+	public static class ArrayListFragment extends SherlockListFragment {
 
-        @Override
-        public void onActivityCreated(Bundle savedInstanceState) {
-            super.onActivityCreated(savedInstanceState);
-            setListAdapter(new ArrayAdapter<String>(getActivity(),
-                    android.R.layout.simple_list_item_1, Shakespeare.TITLES));
-        }
+		@Override
+		public void onActivityCreated(Bundle savedInstanceState) {
+			super.onActivityCreated(savedInstanceState);
+			setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,
+					Shakespeare.TITLES));
+		}
 
-        @Override
-        public void onListItemClick(ListView l, View v, int position, long id) {
-            Log.i("FragmentList", "Item clicked: " + id);
-        }
-    }
+		@Override
+		public void onListItemClick(ListView l, View v, int position, long id) {
+			Log.i("FragmentList", "Item clicked: " + id);
+		}
+	}
 }
