@@ -1,7 +1,7 @@
 package com.mxtube.app.ui.single;
 
 import com.google.api.services.youtube.model.Video;
-import com.layer.business.impl.SearchImplementation;
+import com.layer.business.youtube.impl.SearchImplementation;
 import com.mxtube.app.R;
 import com.mxtube.app.adapter.YoutubeListAdapter;
 
