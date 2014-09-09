@@ -24,6 +24,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.TabHost;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.sample.fragments.test.FragmentStackSupport;
 
 /**
  * This demonstrates how you can implement switching between the tabs of a TabHost through fragments. It uses a trick

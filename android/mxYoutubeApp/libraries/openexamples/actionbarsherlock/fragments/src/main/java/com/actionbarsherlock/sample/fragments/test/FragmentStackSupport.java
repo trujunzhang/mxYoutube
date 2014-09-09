@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.actionbarsherlock.sample.fragments;
+package com.actionbarsherlock.sample.fragments.test;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -27,6 +27,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.sample.fragments.R;
+import com.actionbarsherlock.sample.fragments.SampleList;
 
 public class FragmentStackSupport extends SherlockFragmentActivity {
 	int mStackLevel = 1;

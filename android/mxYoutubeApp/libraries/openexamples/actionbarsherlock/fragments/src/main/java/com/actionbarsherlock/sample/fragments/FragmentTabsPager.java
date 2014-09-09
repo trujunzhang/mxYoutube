@@ -27,6 +27,7 @@ import android.view.ViewGroup;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.sample.fragments.test.FragmentStackSupport;
 
 /**
  * Demonstrates combining a TabHost with a ViewPager to implement a tab UI that switches between tabs and also allows
