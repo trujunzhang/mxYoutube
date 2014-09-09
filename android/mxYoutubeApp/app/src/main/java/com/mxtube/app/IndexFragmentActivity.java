@@ -31,8 +31,8 @@ public class IndexFragmentActivity extends SherlockFragmentActivity {
 		FragmentManager fm = getSupportFragmentManager();
 
 		if (fm != null) {
-			// setFragment(type);
-			// initFragment(type);
+			setFragment(type);
+			initFragment(type);
 		}
 	}
 
@@ -79,27 +79,6 @@ public class IndexFragmentActivity extends SherlockFragmentActivity {
 
 	public boolean pressBack() {
 		return this.returnBackStackImmediate(getSupportFragmentManager());
-	}
-
-	public boolean pressBack123() {
-		FragmentManager fm = getSupportFragmentManager();
-
-		// here we believe a fragment was popped, so we need to remove the fragment from ourbackstack
-		int backStackEntryCount = fm.getBackStackEntryCount();
-		if (backStackEntryCount > 0) {
-			// currentFragment = (Single) fm.getBackStackEntryAt(backStackEntryCount - 1);
-			Log.d("custombackstack", "before back: " + backStackEntryCount + " current:" + currentFragment);
-			return true;
-		}
-		// after popping is the size > 0, if so we set current fragment from the top of stack, otherwise we default to
-		// home fragment.
-		if (backStackEntryCount > 0) {
-			// Log.d("custombackstack", "after back: " + fm.getBackStackEntryAt(backStackEntryCount - 1));
-		} else {
-			// back stack empty
-			// currentFragment = HOME_FRAGMENT;
-		}
-		return false;
 	}
 
 	private Single getFragment(int type) {
