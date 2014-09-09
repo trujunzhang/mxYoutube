@@ -11,7 +11,7 @@ import com.mxtube.app.ui.views.FooterView_;
 import org.androidannotations.annotations.*;
 
 @EActivity(R.layout.activity_main)
-public class Index extends SherlockFragmentActivity {
+public class Index extends IndexFragmentActivity {
 
 	@App
 	public AppContext appContext;
@@ -29,7 +29,7 @@ public class Index extends SherlockFragmentActivity {
 	@AfterViews
 	public void calledAfterViewInjection() {
 		this.footerView = FooterView_.build(this);
-        this.footerView.bind(this);
+		this.footerView.bind(this);
 		this.fragmentFooterTab.addView(this.footerView);
 	}
 
