@@ -154,6 +154,7 @@ public class FragmentLayoutSupport extends SherlockFragmentActivity {
                     ft.replace(R.id.details, details);
                     ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                     ft.commit();
+
                 }
 
             } else {
