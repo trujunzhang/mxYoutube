@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.common.utils.UIHelper;
-import com.mxtube.app.ui.Footer;
 import com.mxtube.app.ui.views.FooterView;
 import com.mxtube.app.ui.views.FooterView_;
 

@@ -4,7 +4,7 @@ import com.google.api.services.youtube.model.Video;
 import com.layer.business.impl.SearchImplementation;
 import com.mxtube.app.R;
 import com.mxtube.app.adapter.YoutubeListAdapter;
-import com.mxtube.app.ui.Footer;
+
 import org.androidannotations.annotations.*;
 
 import java.util.List;
@@ -34,7 +34,7 @@ public class HomeSingle extends Single {
 	@ItemClick(R.id.gridView)
 	void youtubeListItemClicked(Video video) {
 		Single.selectedVideo = video;
-		this.getFooterFragement().setButtonClickEvent(null, Footer.TYPE_FRAGMENT_MEDIA_PLAYER);
+//		this.getFooterFragement().setButtonClickEvent(null, Footer.TYPE_FRAGMENT_MEDIA_PLAYER);
 	}
 
 	@Background
@@ -43,7 +43,7 @@ public class HomeSingle extends Single {
 		// v1.0
 		update(videoList);
 		// v2.0
-//		youtubeListItemClicked(videoList.get(0));
+		// youtubeListItemClicked(videoList.get(0));
 	}
 
 	@UiThread
