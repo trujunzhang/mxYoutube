@@ -6,6 +6,9 @@ import android.content.DialogInterface;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.common.utils.UIHelper;
 import com.mxtube.app.ui.Footer;
+import com.mxtube.app.ui.views.FooterView;
+import com.mxtube.app.ui.views.FooterView_;
+
 import org.androidannotations.annotations.*;
 
 @EActivity(R.layout.activity_main)
@@ -14,8 +17,10 @@ public class Index extends SherlockFragmentActivity {
 	@App
 	public AppContext appContext;
 
-	@FragmentById(R.id.fragment_footer_tab)
-	public Footer fragmentFooterTab;
+	@ViewById(R.id.fragment_footer_tab)
+	android.widget.LinearLayout fragmentFooterTab;
+
+	private FooterView footerView;
 
 	@AfterInject
 	public void calledAfterInjection() {
@@ -24,12 +29,15 @@ public class Index extends SherlockFragmentActivity {
 
 	@AfterViews
 	public void calledAfterViewInjection() {
+		this.footerView = FooterView_.build(this);
+        this.footerView.bind(this);
+		this.fragmentFooterTab.addView(this.footerView);
 	}
 
 	public void onBackPressed() {
-		if (fragmentFooterTab.pressBack() == false) {
-			exit();
-		}
+		// if (fragmentFooterTab.pressBack() == false) {
+		exit();
+		// }
 	}
 
 	private void exit() {

@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:orientation="vertical">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
     <FrameLayout
-            android:id="@+id/fragment_content"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
+        android:id="@+id/fragment_content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-    <fragment
-            android:id="@+id/fragment_footer_tab"
-            android:name="com.mxtube.app.ui.Footer_"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"/>
+    <LinearLayout
+        android:id="@+id/fragment_footer_tab"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0">
+
+    </LinearLayout>
 
 </LinearLayout>

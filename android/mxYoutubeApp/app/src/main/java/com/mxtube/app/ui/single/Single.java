@@ -11,7 +11,8 @@ public abstract class Single extends SherlockFragment {
 	public static Video selectedVideo;
 
 	public com.mxtube.app.ui.Footer getFooterFragement() {
-		return AppContext.instance.index.fragmentFooterTab;
+//		return AppContext.instance.index.fragmentFooterTab;
+        return null;
 	}
 
 	public Context getContext() {
