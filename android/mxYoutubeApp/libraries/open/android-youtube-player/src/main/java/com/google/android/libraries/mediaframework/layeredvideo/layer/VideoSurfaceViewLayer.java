@@ -33,8 +33,8 @@ public class VideoSurfaceViewLayer implements Layer {
 	private MediaPlayer.OnPreparedListener mPreparedListener = new MediaPlayer.OnPreparedListener() {
 		@Override
 		public void onPrepared(MediaPlayer mp) {
-//			mVideo.setVideoWidth(mp.getVideoWidth());
-//			mVideo.setVideoHeight(mp.getVideoHeight());
+			// mVideo.setVideoWidth(mp.getVideoWidth());
+			// mVideo.setVideoHeight(mp.getVideoHeight());
 
 			mVideo.start();
 			int playTime = 0;
@@ -139,5 +139,9 @@ public class VideoSurfaceViewLayer implements Layer {
 
 	public VideoView getVideoView() {
 		return mVideo;
+	}
+
+	public void release() {
+		mVideo.stopPlayback();
 	}
 }

@@ -241,7 +241,7 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 	 * When you are finished using this {@link SimpleVideoPlayer}, make sure to call this method.
 	 */
 	public void release() {
-		// videoSurfaceLayer.release();
+        videoSurfaceViewLayer.release();
 		layerManager.release();
 	}
 

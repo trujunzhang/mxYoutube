@@ -82,4 +82,11 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 	public void onReturnFromFullscreen() {
 
 	}
+
+	@Override
+	public void onStop() {
+		super.onStop();
+
+		this.videoPlayer.release();
+	}
 }
