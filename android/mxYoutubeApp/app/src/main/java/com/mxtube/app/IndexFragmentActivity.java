@@ -22,7 +22,10 @@ import org.androidannotations.annotations.ViewById;
 
 import java.util.List;
 
+import de.appetites.tabbackstack.TabBackStackHelper;
+
 public class IndexFragmentActivity extends SherlockFragmentActivity {
+    private TabBackStackHelper tabBackStackHelper;
 
 	private Single currentFragment;
 

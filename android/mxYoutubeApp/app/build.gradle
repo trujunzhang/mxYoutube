@@ -16,7 +16,10 @@ dependencies {
 // ---------------------------
 //       open projects
 // ---------------------------
-    compile project(':libraries:open:actionbarsherlock');
+//    compile project(':libraries:open:actionbarsherlock');
+    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+
+    compile project(':libraries:open:TabBackStack')
 //    compile project(':libraries:open:SlidingMenu');
 //    compile project(':libraries:open:GreenDroid');
 //    compile project(':libraries:open:cwac-endless');
