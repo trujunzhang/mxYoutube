@@ -34,6 +34,7 @@ public class Index extends IndexFragmentActivity {
 		this.footerView.bind(this);
 		this.fragmentFooterTab.addView(this.footerView);
 
+		// Init first screen,and show home fragment
 		this.onTabSelected(AppConstant.MAIN_FOOTBAR_HOME);
 	}
 

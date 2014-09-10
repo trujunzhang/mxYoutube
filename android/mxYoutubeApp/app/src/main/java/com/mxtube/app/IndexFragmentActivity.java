@@ -56,10 +56,6 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 			fragment = new WatchPlayerSingle_();
 			break;
 		}
-		if (lastFragement != null) {
-			lastFragement.saveInstanceState();
-		}
-		lastFragement = fragment;
 
 		fragment.initSingle();
 
@@ -69,8 +65,7 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// windowManager should not be null
-		this.tabBackStackHelper.onCreate(this, savedInstanceState, 1);
+		this.tabBackStackHelper.onCreate(this, savedInstanceState, 5);
 	}
 
 	@Override
@@ -83,7 +78,11 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 	 * Pops the current fragment of the current tab if back is pressed
 	 */
 	public boolean hasSubItemBack() {
-		return (this.tabBackStackHelper.pop(this.getSupportFragmentManager(), this.mTabIndex));
+		boolean pop = this.tabBackStackHelper.pop(this.getSupportFragmentManager(), this.mTabIndex);
+		if (this.tabBackStackHelper.hasBackEmpty(this.mTabIndex)) {
+			this.lastFragement = (Single) this.tabBackStackHelper.getCurrent(this.mTabIndex);
+		}
+		return pop;
 	}
 
 	protected void onTabSelected(int type) {

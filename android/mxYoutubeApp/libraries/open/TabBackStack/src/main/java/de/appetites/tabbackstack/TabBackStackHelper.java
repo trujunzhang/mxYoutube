@@ -79,6 +79,19 @@ public class TabBackStackHelper {
 		}
 	}
 
+	public boolean hasBackEmpty(int position) {
+		FragmentBackStack fragmentBackStack = mTabBackStacks.get(position);
+
+		return fragmentBackStack.size() == 1;
+	}
+
+	public Fragment getCurrent(int position) {
+		// get current tab position and retrieve the backstack
+		FragmentBackStack fragmentBackStack = mTabBackStacks.get(position);
+
+		return fragmentBackStack.getCurrent();
+	}
+
 	/**
 	 * Returns the FragmentBackStack for the given tab position
 	 * 
@@ -122,4 +135,5 @@ public class TabBackStackHelper {
 					this.tabBackStackInterface.getContainerId());
 		}
 	}
+
 }
