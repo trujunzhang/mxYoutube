@@ -1,4 +1,4 @@
-package com.mxtube.app.ui.single.views.watch;
+package com.mxtube.app.ui.single.watch.views;
 
 import android.content.Context;
 import android.widget.LinearLayout;

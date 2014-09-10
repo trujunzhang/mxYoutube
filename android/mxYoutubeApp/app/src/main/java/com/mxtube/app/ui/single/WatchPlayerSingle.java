@@ -73,8 +73,7 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 		this.setTitle(this.selectedVideo.getSnippet().getTitle());
 	}
 
-
-    @Override
+	@Override
 	public void onGoToFullscreen() {
 
 	}
@@ -91,24 +90,23 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 		this.videoPlayer.release();
 	}
 
+	@Override
+	public void saveInstanceState() {
 
-    @Override
-    public void saveInstanceState() {
+	}
 
-    }
+	@Override
+	public void abstract001() {
 
-    @Override
-    public void abstract001() {
+	}
 
-    }
+	@Override
+	public void abstract002() {
 
-    @Override
-    public void abstract002() {
+	}
 
-    }
+	@Override
+	public void abstract003() {
 
-    @Override
-    public void abstract003() {
-
-    }
+	}
 }
