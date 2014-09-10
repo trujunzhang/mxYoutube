@@ -32,6 +32,8 @@ public class Index extends IndexFragmentActivity {
 		this.footerView = FooterView_.build(this);
 		this.footerView.bind(this);
 		this.fragmentFooterTab.addView(this.footerView);
+
+
 	}
 
 	public void onBackPressed() {
