@@ -12,7 +12,6 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/layers/google-api-services-youtube/google-api-services-youtube.iml" filepath="$PROJECT_DIR$/libraries/layers/google-api-services-youtube/google-api-services-youtube.iml" />
       <module fileurl="file://$PROJECT_DIR$/mxYoutubeApp.iml" filepath="$PROJECT_DIR$/mxYoutubeApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/openexamples/android-youtube-player/openexamples-android-youtube-player.iml" filepath="$PROJECT_DIR$/libraries/openexamples/android-youtube-player/openexamples-android-youtube-player.iml" />
     </modules>
   </component>
 </project>

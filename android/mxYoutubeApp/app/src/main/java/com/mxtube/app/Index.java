@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.common.utils.UIHelper;
+import com.layer.business.utils.AppConstant;
 import com.mxtube.app.ui.views.FooterView;
 import com.mxtube.app.ui.views.FooterView_;
 
@@ -33,7 +34,7 @@ public class Index extends IndexFragmentActivity {
 		this.footerView.bind(this);
 		this.fragmentFooterTab.addView(this.footerView);
 
-
+		this.onTabSelected(AppConstant.MAIN_FOOTBAR_HOME);
 	}
 
 	public void onBackPressed() {

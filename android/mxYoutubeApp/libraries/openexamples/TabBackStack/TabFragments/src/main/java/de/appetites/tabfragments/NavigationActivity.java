@@ -54,6 +54,7 @@ public class NavigationActivity extends SherlockFragmentActivity implements TabB
 		this.tabBackStackHelper.onSaveInstanceState(outState);
 	}
 
+
 	/**
 	 * Pops the current fragment of the current tab if back is pressed
 	 */

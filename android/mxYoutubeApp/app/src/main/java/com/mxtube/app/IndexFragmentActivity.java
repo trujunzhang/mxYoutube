@@ -3,7 +3,9 @@ package com.mxtube.app;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
+import android.view.View;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
@@ -29,44 +31,12 @@ import de.appetites.tabbackstack.TabBackStackInterface;
 public class IndexFragmentActivity extends SherlockFragmentActivity implements TabBackStackInterface {
 	private TabBackStackHelper tabBackStackHelper;
 
+	private int mTabIndex;
+	private Single currentFragment;
+
 	protected void initTabBackStackHelper() {
 		this.tabBackStackHelper = new TabBackStackHelper(this);
 	}
-
-	private Single currentFragment;
-
-	public void addTabFragment(int type) {
-
-		FragmentManager fm = getSupportFragmentManager();
-
-		if (fm != null) {
-			setFragment(type);
-			initFragment(type);
-		}
-	}
-
-	private void initFragment(int type) {
-		this.currentFragment.initSingle();
-	}
-
-	private void setFragment(int type) {
-		currentFragment = getFragment(type);
-		replaceFragment(currentFragment);
-	}
-
-	private void replaceFragment(SherlockFragment fragment) {
-		String backStateName = fragment.getClass().getName();
-
-		boolean fragmentPopped = getSupportFragmentManager().popBackStackImmediate(backStateName, 0);
-
-		if (!fragmentPopped) { // fragment not in back stack, create it.
-			android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-			ft.replace(R.id.fragment_content, fragment);
-			// ft.addToBackStack(backStateName);
-			ft.commit();
-		}
-	}
-
 
 	private Single getFragment(int type) {
 		Single fragment = null;
@@ -113,13 +83,33 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 		}
 	}
 
+	void tab_Item_OnClick(int type) {
+		Fragment fragment = getFragment(type);
+		this.tabBackStackHelper.push(this.getSupportFragmentManager(), fragment, mTabIndex);
+	}
+
+	protected void onTabSelected(int type) {
+		this.mTabIndex = type;
+
+		FragmentTransaction fragmentTransaction = this.getSupportFragmentManager().beginTransaction();
+		this.tabBackStackHelper.onTabSelected(fragmentTransaction, type);
+		fragmentTransaction.commit();
+	}
+
+	protected void onTabReselected(int type) {
+		FragmentTransaction fragmentTransaction = this.getSupportFragmentManager().beginTransaction();
+		this.tabBackStackHelper.onTabReselected(fragmentTransaction, type);
+		fragmentTransaction.commit();
+	}
+
 	@Override
 	public int getContainerId() {
-		return 0;
+		return R.id.fragment_content;
 	}
 
 	@Override
 	public Fragment initTab(int position) {
-		return null;
+		this.currentFragment = this.getFragment(position);
+		return this.currentFragment;
 	}
 }
