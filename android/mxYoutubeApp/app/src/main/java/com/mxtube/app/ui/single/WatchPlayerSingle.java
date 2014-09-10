@@ -38,7 +38,7 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 
 	@AfterInject
 	void calledAfterInjection() {
-		this.setTitle(this.selectedVideo.getSnippet().getTitle());
+
 	}
 
 	@AfterViews
@@ -70,7 +70,7 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 
 	@Override
 	public void initSingle() {
-
+		this.setTitle(this.selectedVideo.getSnippet().getTitle());
 	}
 
 	@Override

@@ -57,6 +57,8 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 			break;
 		}
 
+		fragment.initSingle();
+
 		return fragment;
 	}
 
