@@ -1,7 +1,7 @@
 package de.appetites.tabbackstack.util;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;

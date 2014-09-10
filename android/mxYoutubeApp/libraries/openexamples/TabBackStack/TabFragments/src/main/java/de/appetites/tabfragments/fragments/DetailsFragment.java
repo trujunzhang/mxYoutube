@@ -1,6 +1,6 @@
 package de.appetites.tabfragments.fragments;
 
-import android.app.Fragment;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,9 +9,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.actionbarsherlock.app.SherlockFragment;
+
 import de.appetites.tabfragments.R;
 
-public class DetailsFragment extends Fragment {
+public class DetailsFragment extends SherlockFragment {
 
 	protected TextView mLabelNested;
 

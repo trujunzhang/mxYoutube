@@ -1,25 +1,26 @@
 package de.appetites.tabbackstack;
 
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseArray;
 
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+
 import de.appetites.tabbackstack.util.FragmentBackStack;
 
-public abstract class TabBackStackActivity extends Activity implements ActionBar.TabListener {
-    /**
-     * Returns the id of the container used for replacing the tab bars fragments. NEEDS TO BE IMPLEMENTED AND RETURN A
-     * VALID CONTAINER ID
-     *
-     * @return id of the container
-     */
-    public abstract int getContainerId();
+public abstract class TabBackStackActivity extends SherlockFragmentActivity implements ActionBar.TabListener {
+	/**
+	 * Returns the id of the container used for replacing the tab bars fragments. NEEDS TO BE IMPLEMENTED AND RETURN A
+	 * VALID CONTAINER ID
+	 *
+	 * @return id of the container
+	 */
+	public abstract int getContainerId();
 
-    protected abstract Fragment initTab(int position);
+	protected abstract Fragment initTab(int position);
 
 	private static final String TAG = "TabBackStackActivity";
 	protected ActionBar mActionBar;
@@ -28,7 +29,7 @@ public abstract class TabBackStackActivity extends Activity implements ActionBar
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		mActionBar = getActionBar();
+		mActionBar = getSupportActionBar();
 
 		if (savedInstanceState != null) {
 			mTabBackStacks = savedInstanceState.getSparseParcelableArray("TAB_STACKS");
@@ -62,12 +63,11 @@ public abstract class TabBackStackActivity extends Activity implements ActionBar
 		if (selectedTab != null) {
 			int position = selectedTab.getPosition();
 			FragmentBackStack fragmentBackStack = mTabBackStacks.get(position);
-			FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+			FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 			fragmentBackStack.push(fragment, fragmentTransaction, getContainerId());
 			fragmentTransaction.commit();
 		}
 	}
-
 
 	/**
 	 * Pops the top most fragment from the current tab, removes it from the backstack and displays the last fragment in
@@ -86,7 +86,7 @@ public abstract class TabBackStackActivity extends Activity implements ActionBar
 				fragmentBackStack.pop();
 
 				// Replace current fragment with the last fragment in the stack
-				FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+				FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 				fragmentTransaction.replace(getContainerId(), fragmentBackStack.getCurrent());
 				fragmentTransaction.commit();
 

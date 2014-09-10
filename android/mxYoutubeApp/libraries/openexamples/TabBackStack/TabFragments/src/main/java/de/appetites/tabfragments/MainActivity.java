@@ -1,7 +1,6 @@
 package de.appetites.tabfragments;
 
-import android.app.ActionBar;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.util.SparseArray;
 import android.view.Gravity;
@@ -11,6 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.actionbarsherlock.app.ActionBar;
+
 import de.appetites.tabbackstack.util.FragmentBackStack;
 import de.appetites.tabbackstack.TabBackStackActivity;
 import de.appetites.tabfragments.fragments.DetailsFragment;
@@ -30,9 +32,9 @@ public class MainActivity extends TabBackStackActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		mActionBar = getActionBar();
+		mActionBar = getSupportActionBar();
 		// create tabs
-		mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		// mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		mActionBar.addTab(mActionBar.newTab().setText("Tab 1").setTabListener(this));
 		mActionBar.addTab(mActionBar.newTab().setText("Tab 2").setTabListener(this));
 		mActionBar.addTab(mActionBar.newTab().setText("Tab 3").setTabListener(this));

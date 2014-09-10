@@ -1,10 +1,12 @@
 package de.appetites.tabfragments;
 
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
+
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
@@ -18,13 +20,13 @@ import de.appetites.tabfragments.fragments.DetailsFragment;
 import de.appetites.tabfragments.fragments.ListInfoFragment;
 
 @EActivity(R.layout.activity_navigation)
-public class NavigationActivity extends Activity implements TabBackStackInterface {
+public class NavigationActivity extends SherlockFragmentActivity implements TabBackStackInterface {
 	private TabBackStackHelper tabBackStackHelper;
 
 	@Click(R.id.add_button)
 	void frame_buttonOnClick(View view) {
 		Fragment fragment = new DetailsFragment();
-		this.tabBackStackHelper.push(this.getFragmentManager(), fragment, 0);
+		this.tabBackStackHelper.push(this.getSupportFragmentManager(), fragment, 0);
 	}
 
 	@AfterInject
@@ -34,7 +36,7 @@ public class NavigationActivity extends Activity implements TabBackStackInterfac
 
 	@AfterViews
 	protected void calledAfterViewInjection() {
-		FragmentTransaction fragmentTransaction = this.getFragmentManager().beginTransaction();
+		FragmentTransaction fragmentTransaction = this.getSupportFragmentManager().beginTransaction();
 		this.tabBackStackHelper.onTabSelected(fragmentTransaction, 0);
 		fragmentTransaction.commit();
 	}
@@ -51,7 +53,7 @@ public class NavigationActivity extends Activity implements TabBackStackInterfac
 	 */
 	@Override
 	public void onBackPressed() {
-		if (!this.tabBackStackHelper.pop(this.getFragmentManager(), 0)) {
+		if (!this.tabBackStackHelper.pop(this.getSupportFragmentManager(), 0)) {
 			// super.onBackPressed();
 		}
 	}
