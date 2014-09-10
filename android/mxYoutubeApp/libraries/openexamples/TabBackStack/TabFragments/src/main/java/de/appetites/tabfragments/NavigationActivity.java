@@ -48,6 +48,12 @@ public class NavigationActivity extends SherlockFragmentActivity implements TabB
 		this.tabBackStackHelper.onCreate(this, savedInstanceState, 1);
 	}
 
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		this.tabBackStackHelper.onSaveInstanceState(outState);
+	}
+
 	/**
 	 * Pops the current fragment of the current tab if back is pressed
 	 */
@@ -56,12 +62,6 @@ public class NavigationActivity extends SherlockFragmentActivity implements TabB
 		if (!this.tabBackStackHelper.pop(this.getSupportFragmentManager(), 0)) {
 			// super.onBackPressed();
 		}
-	}
-
-	@Override
-	protected void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-		this.tabBackStackHelper.onSaveInstanceState(outState);
 	}
 
 	@Override

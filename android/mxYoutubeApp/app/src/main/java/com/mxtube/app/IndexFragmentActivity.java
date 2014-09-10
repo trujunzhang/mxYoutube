@@ -1,5 +1,6 @@
 package com.mxtube.app;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
@@ -23,9 +24,10 @@ import org.androidannotations.annotations.ViewById;
 import java.util.List;
 
 import de.appetites.tabbackstack.TabBackStackHelper;
+import de.appetites.tabbackstack.TabBackStackInterface;
 
-public class IndexFragmentActivity extends SherlockFragmentActivity {
-    private TabBackStackHelper tabBackStackHelper;
+public class IndexFragmentActivity extends SherlockFragmentActivity implements TabBackStackInterface {
+	private TabBackStackHelper tabBackStackHelper;
 
 	private Single currentFragment;
 
@@ -41,6 +43,7 @@ public class IndexFragmentActivity extends SherlockFragmentActivity {
 
 	private void initFragment(int type) {
 		this.currentFragment.initSingle();
+		this.tabBackStackHelper = new TabBackStackHelper(this);
 	}
 
 	private void setFragment(int type) {
@@ -80,10 +83,6 @@ public class IndexFragmentActivity extends SherlockFragmentActivity {
 		return false;
 	}
 
-	public boolean pressBack() {
-		return this.returnBackStackImmediate(getSupportFragmentManager());
-	}
-
 	private Single getFragment(int type) {
 		Single fragment = null;
 		switch (type) {
@@ -106,4 +105,36 @@ public class IndexFragmentActivity extends SherlockFragmentActivity {
 		return fragment;
 	}
 
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		// windowManager should not be null
+		this.tabBackStackHelper.onCreate(this, savedInstanceState, 1);
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		this.tabBackStackHelper.onSaveInstanceState(outState);
+	}
+
+	/**
+	 * Pops the current fragment of the current tab if back is pressed
+	 */
+	@Override
+	public void onBackPressed() {
+		if (!this.tabBackStackHelper.pop(this.getSupportFragmentManager(), 0)) {
+			// super.onBackPressed();
+		}
+	}
+
+	@Override
+	public int getContainerId() {
+		return 0;
+	}
+
+	@Override
+	public Fragment initTab(int position) {
+		return null;
+	}
 }
