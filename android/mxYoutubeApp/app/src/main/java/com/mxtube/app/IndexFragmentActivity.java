@@ -32,7 +32,7 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 	private TabBackStackHelper tabBackStackHelper;
 
 	private int mTabIndex;
-	private Single currentFragment;
+	private Single currentFragment, lastFragement;
 
 	protected void initTabBackStackHelper() {
 		this.tabBackStackHelper = new TabBackStackHelper(this);
@@ -56,6 +56,10 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 			fragment = new WatchPlayerSingle_();
 			break;
 		}
+		if (lastFragement != null) {
+			fragment.saveInstanceState();
+		}
+		lastFragement = fragment;
 
 		fragment.initSingle();
 

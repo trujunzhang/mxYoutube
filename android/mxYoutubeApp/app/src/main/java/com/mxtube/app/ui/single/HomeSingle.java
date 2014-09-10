@@ -81,17 +81,27 @@ public class HomeSingle extends Single {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-		if (savedInstanceState != null) {
-			mListInstanceState = savedInstanceState.getParcelable(LIST_INSTANCE_STATE);
-		}
-		this.setRetainInstance(true);
 		return super.onCreateView(inflater, container, savedInstanceState);
 	}
 
 	@Override
-	public void onSaveInstanceState(Bundle outState) {
-		outState.putParcelable(LIST_INSTANCE_STATE, this.gridView.onSaveInstanceState());
-		super.onSaveInstanceState(outState);
+	public void saveInstanceState() {
+		mListInstanceState = this.gridView.onSaveInstanceState();
 	}
+
+    @Override
+    public void abstract001() {
+
+    }
+
+    @Override
+    public void abstract002() {
+
+    }
+
+    @Override
+    public void abstract003() {
+
+    }
 
 }

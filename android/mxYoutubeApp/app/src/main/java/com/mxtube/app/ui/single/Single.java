@@ -24,4 +24,13 @@ public abstract class Single extends SherlockFragment {
 	public void setTitle(String title) {
 		AppContext.instance.index.setTitle(title);
 	}
+
+	public abstract void saveInstanceState();
+
+	public abstract void abstract001();
+
+	public abstract void abstract002();
+
+	public abstract void abstract003();
+
 }
