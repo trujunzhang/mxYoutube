@@ -57,7 +57,7 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 			break;
 		}
 		if (lastFragement != null) {
-			fragment.saveInstanceState();
+			lastFragement.saveInstanceState();
 		}
 		lastFragement = fragment;
 
