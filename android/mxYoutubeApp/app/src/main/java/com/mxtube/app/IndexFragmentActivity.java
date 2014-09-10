@@ -102,6 +102,11 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 		fragmentTransaction.commit();
 	}
 
+	public void push(int subType) {
+		Single fragment = this.getFragment(subType);
+		this.tabBackStackHelper.push(this.getSupportFragmentManager(), fragment, this.mTabIndex);
+	}
+
 	@Override
 	public int getContainerId() {
 		return R.id.fragment_content;
@@ -112,4 +117,5 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 		this.currentFragment = this.getFragment(position);
 		return this.currentFragment;
 	}
+
 }

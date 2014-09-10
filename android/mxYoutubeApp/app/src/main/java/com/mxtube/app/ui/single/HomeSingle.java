@@ -1,6 +1,7 @@
 package com.mxtube.app.ui.single;
 
 import com.google.api.services.youtube.model.Video;
+import com.layer.business.utils.AppConstant;
 import com.layer.business.youtube.impl.SearchImplementation;
 import com.mxtube.app.R;
 import com.mxtube.app.adapter.YoutubeListAdapter;
@@ -34,7 +35,8 @@ public class HomeSingle extends Single {
 	@ItemClick(R.id.gridView)
 	void youtubeListItemClicked(Video video) {
 		Single.selectedVideo = video;
-//		this.getFooterFragement().setButtonClickEvent(null, Footer.TYPE_FRAGMENT_MEDIA_PLAYER);
+		this.getIndex().push(AppConstant.TYPE_FRAGMENT_MEDIA_PLAYER);
+		// this.getFooterFragement().setButtonClickEvent(null, Footer.TYPE_FRAGMENT_MEDIA_PLAYER);
 	}
 
 	@Background
