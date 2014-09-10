@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0">
+
+        <Button
+            android:id="@+id/button_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Comments" />
+
+        <Button
+            android:id="@+id/button_more_from"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="More From" />
+
+        <Button
+            android:id="@+id/button_suggestions"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Suggestions" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_tab_content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
