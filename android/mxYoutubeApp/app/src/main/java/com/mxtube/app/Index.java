@@ -38,10 +38,9 @@ public class Index extends IndexFragmentActivity {
 	}
 
 	public void onBackPressed() {
-		super.onBackPressed();
-		// if (fragmentFooterTab.pressBack() == false) {
-		exit();
-		// }
+		if (this.hasSubItemBack() == false) {
+			exit();
+		}
 	}
 
 	private void exit() {

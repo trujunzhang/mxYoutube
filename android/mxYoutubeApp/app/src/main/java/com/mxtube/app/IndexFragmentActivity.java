@@ -76,16 +76,8 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 	/**
 	 * Pops the current fragment of the current tab if back is pressed
 	 */
-	@Override
-	public void onBackPressed() {
-		if (!this.tabBackStackHelper.pop(this.getSupportFragmentManager(), 0)) {
-			// super.onBackPressed();
-		}
-	}
-
-	void tab_Item_OnClick(int type) {
-		Fragment fragment = getFragment(type);
-		this.tabBackStackHelper.push(this.getSupportFragmentManager(), fragment, mTabIndex);
+	public boolean hasSubItemBack() {
+		return (this.tabBackStackHelper.pop(this.getSupportFragmentManager(), this.mTabIndex));
 	}
 
 	protected void onTabSelected(int type) {
