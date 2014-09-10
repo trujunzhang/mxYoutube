@@ -23,19 +23,11 @@ import java.util.List;
 @EFragment(R.layout.single_home)
 public class HomeSingle extends Single {
 
-	private static final String LIST_INSTANCE_STATE = "101";
-
 	@ViewById(R.id.gridView)
 	android.widget.GridView gridView;
 
-	public static YoutubeListAdapter adapter;
-
-	public YoutubeListAdapter getAdapter() {
-		if (adapter == null) {
-			adapter = YoutubeListAdapter_.getInstance_(this.getSherlockActivity());
-		}
-		return adapter;
-	}
+	@Bean
+	YoutubeListAdapter adapter;
 
 	SearchImplementation searchInterface = new SearchImplementation();
 
@@ -68,8 +60,8 @@ public class HomeSingle extends Single {
 
 	@UiThread
 	void update(List<Video> videoList) {
-		getAdapter().updateVideoList(videoList);
-		gridView.setAdapter(getAdapter());
+		adapter.updateVideoList(videoList);
+		gridView.setAdapter(adapter);
 		if (mListInstanceState != null)
 			gridView.onRestoreInstanceState(mListInstanceState);
 	}
@@ -89,19 +81,19 @@ public class HomeSingle extends Single {
 		mListInstanceState = this.gridView.onSaveInstanceState();
 	}
 
-    @Override
-    public void abstract001() {
+	@Override
+	public void abstract001() {
 
-    }
+	}
 
-    @Override
-    public void abstract002() {
+	@Override
+	public void abstract002() {
 
-    }
+	}
 
-    @Override
-    public void abstract003() {
+	@Override
+	public void abstract003() {
 
-    }
+	}
 
 }

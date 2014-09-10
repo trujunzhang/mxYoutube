@@ -10,10 +10,10 @@ import com.google.android.libraries.mediaframework.layeredvideo.SimpleVideoPlaye
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
 import com.mxtube.app.R;
-import com.mxtube.app.ui.single.views.watch.WatchDescriptionCard;
-import com.mxtube.app.ui.single.views.watch.WatchDescriptionCard_;
-import com.mxtube.app.ui.single.views.watch.WatchPlayerSubscription;
-import com.mxtube.app.ui.single.views.watch.WatchPlayerSubscription_;
+import com.mxtube.app.ui.single.watch.views.WatchDescriptionCard;
+import com.mxtube.app.ui.single.watch.views.WatchDescriptionCard_;
+import com.mxtube.app.ui.single.watch.views.WatchPlayerSubscription;
+import com.mxtube.app.ui.single.watch.views.WatchPlayerSubscription_;
 import com.youtube.widget.YoutubeLayoutUtils;
 
 import org.androidannotations.annotations.AfterInject;
