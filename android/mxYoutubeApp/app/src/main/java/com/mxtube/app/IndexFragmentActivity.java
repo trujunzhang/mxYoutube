@@ -56,6 +56,10 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 			fragment = new WatchPlayerSingle_();
 			break;
 		}
+		if (lastFragement != null) {
+			lastFragement.saveInstanceState();
+		}
+		lastFragement = fragment;
 
 		fragment.initSingle();
 
