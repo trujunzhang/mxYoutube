@@ -24,6 +24,7 @@ public class Index extends IndexFragmentActivity {
 	@AfterInject
 	public void calledAfterInjection() {
 		appContext.index = this;
+		this.initTabBackStackHelper();
 	}
 
 	@AfterViews
@@ -34,6 +35,7 @@ public class Index extends IndexFragmentActivity {
 	}
 
 	public void onBackPressed() {
+		super.onBackPressed();
 		// if (fragmentFooterTab.pressBack() == false) {
 		exit();
 		// }

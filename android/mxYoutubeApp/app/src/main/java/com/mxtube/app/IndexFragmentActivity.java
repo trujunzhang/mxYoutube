@@ -29,6 +29,10 @@ import de.appetites.tabbackstack.TabBackStackInterface;
 public class IndexFragmentActivity extends SherlockFragmentActivity implements TabBackStackInterface {
 	private TabBackStackHelper tabBackStackHelper;
 
+	protected void initTabBackStackHelper() {
+		this.tabBackStackHelper = new TabBackStackHelper(this);
+	}
+
 	private Single currentFragment;
 
 	public void addTabFragment(int type) {
@@ -43,7 +47,6 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 
 	private void initFragment(int type) {
 		this.currentFragment.initSingle();
-		this.tabBackStackHelper = new TabBackStackHelper(this);
 	}
 
 	private void setFragment(int type) {
