@@ -25,9 +25,9 @@ import org.androidannotations.annotations.ViewById;
 public class WatchPlayerSingle extends Single implements FullscreenCallback {
 
 	@ViewById(R.id.video_frame)
-	android.widget.FrameLayout videoFrame;
+    public	android.widget.FrameLayout videoFrame;
 	@ViewById(R.id.watch_linear)
-	android.widget.LinearLayout watchLinear;
+    public	android.widget.LinearLayout watchLinear;
 
 	private ViewGroup.LayoutParams originalContainerLayoutParams;
 
@@ -37,12 +37,12 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 	private WatchDescriptionCard watchDescriptionCard;
 
 	@AfterInject
-	void calledAfterInjection() {
+    public	void calledAfterInjection() {
 
 	}
 
 	@AfterViews
-	protected void calledAfterViewInjection() {
+    public void calledAfterViewInjection() {
 		int screenWidth = Tools.getScreenWidth(this.getContext());
 
 		// width: 854px; height: 480px; left: 0px; top: 0px; transform: none;
