@@ -2,29 +2,14 @@ package com.mxtube.app;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
-import android.view.View;
 
-import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.common.utils.UIHelper;
 import com.layer.business.utils.AppConstant;
 import com.mxtube.app.ui.single.HomeSingle;
 import com.mxtube.app.ui.single.Single;
 import com.mxtube.app.ui.single.WatchPlayerSingle_;
-import com.mxtube.app.ui.single.watch.views.widget.WatchGridViewSingle;
-import com.mxtube.app.ui.views.FooterView;
-import com.mxtube.app.ui.views.FooterView_;
-
-import org.androidannotations.annotations.AfterInject;
-import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.App;
-import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.ViewById;
-
-import java.util.List;
+import com.mxtube.app.ui.single.watch.right.tabs.widget.WatchGridViewSingle;
 
 import de.appetites.tabbackstack.TabBackStackHelper;
 import de.appetites.tabbackstack.TabBackStackInterface;

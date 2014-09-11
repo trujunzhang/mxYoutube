@@ -1,11 +1,11 @@
-package com.mxtube.app.ui.single.watch.views.widget;
+package com.mxtube.app.ui.single.watch.right.tabs.widget;
 
 import android.os.Handler;
 import android.os.Looper;
 
 import com.google.api.services.youtube.model.Video;
 import com.layer.business.youtube.impl.SearchImplementation;
-import com.mxtube.app.ui.single.widget.GridViewSingle;
+import com.mxtube.app.ui.widget.GridViewSingle;
 
 import org.androidannotations.api.BackgroundExecutor;
 

@@ -1,13 +1,11 @@
 package com.mxtube.app;
 
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.common.utils.UIHelper;
 import com.layer.business.utils.AppConstant;
-import com.mxtube.app.ui.views.FooterView;
-import com.mxtube.app.ui.views.FooterView_;
+import com.mxtube.app.ui.layers.FooterView;
+import com.mxtube.app.ui.layers.FooterView_;
 
 import org.androidannotations.annotations.*;
 

@@ -1,22 +1,12 @@
 package com.mxtube.app.ui.single;
 
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.Parcelable;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.google.api.services.youtube.model.Video;
-import com.layer.business.utils.AppConstant;
 import com.layer.business.youtube.impl.SearchImplementation;
-import com.mxtube.app.R;
-import com.mxtube.app.adapter.YoutubeListAdapter;
-import com.mxtube.app.ui.single.widget.GridViewSingle;
+import com.mxtube.app.ui.widget.GridViewSingle;
 
-import org.androidannotations.annotations.*;
 import org.androidannotations.api.BackgroundExecutor;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.mxtube.app.ui;
+package com.mxtube.app.ui.layers;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.mxtube.app.R;

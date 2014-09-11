@@ -1,8 +1,7 @@
-package com.mxtube.app.ui.single.widget;
+package com.mxtube.app.ui.widget;
 
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,22 +10,10 @@ import android.widget.GridView;
 
 import com.google.api.services.youtube.model.Video;
 import com.layer.business.utils.AppConstant;
-import com.layer.business.youtube.impl.SearchImplementation;
 import com.mxtube.app.R;
 import com.mxtube.app.adapter.YoutubeListAdapter;
 import com.mxtube.app.adapter.YoutubeListAdapter_;
 import com.mxtube.app.ui.single.Single;
-
-import org.androidannotations.annotations.AfterInject;
-import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.Background;
-import org.androidannotations.annotations.Bean;
-import org.androidannotations.annotations.EFragment;
-import org.androidannotations.annotations.ItemClick;
-import org.androidannotations.annotations.UiThread;
-import org.androidannotations.annotations.ViewById;
-
-import java.util.List;
 
 public abstract class GridViewSingle extends Single {
 	protected abstract void calledAfterInjection();

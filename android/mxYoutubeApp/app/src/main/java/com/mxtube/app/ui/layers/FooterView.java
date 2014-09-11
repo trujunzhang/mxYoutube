@@ -1,18 +1,15 @@
-package com.mxtube.app.ui.views;
+package com.mxtube.app.ui.layers;
 
 import android.content.Context;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 
-import com.google.api.services.youtube.model.Video;
 import com.mxtube.app.R;
 
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
-
-import java.math.BigInteger;
 
 @EViewGroup(R.layout.footer_view)
 public class FooterView extends LinearLayout {

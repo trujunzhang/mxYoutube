@@ -1,4 +1,4 @@
-package com.mxtube.app.ui.single.watch.views;
+package com.mxtube.app.ui.single.watch.right.tabs;
 
 import android.content.Context;
 import android.widget.LinearLayout;
@@ -31,45 +31,45 @@ import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
 @EViewGroup(R.layout.watch_right_tabs)
-public class WatchRightTabs extends LinearLayout {
+public class WatchRightTabsPanel extends LinearLayout {
 
 	@ViewById(R.id.button_comments)
-	android.widget.Button buttonComments;
+	public android.widget.Button buttonComments;
 	@ViewById(R.id.button_more_from)
-	android.widget.Button buttonMoreFrom;
+	public android.widget.Button buttonMoreFrom;
 	@ViewById(R.id.button_suggestions)
-	android.widget.Button buttonSuggestions;
+	public android.widget.Button buttonSuggestions;
 
 	@Click(R.id.button_comments)
-	void button_commentsOnClick(View view) {
+	public void button_commentsOnClick(View view) {
 
 	}
 
 	@Click(R.id.button_more_from)
-	void button_more_fromOnClick(View view) {
+	public void button_more_fromOnClick(View view) {
 
 	}
 
 	@Click(R.id.button_suggestions)
-	void button_suggestionsOnClick(View view) {
+	public void button_suggestionsOnClick(View view) {
 
 	}
 
-	public WatchRightTabs(Context context) {
+	public WatchRightTabsPanel(Context context) {
 		super(context);
 	}
 
 	@AfterInject
-	void calledAfterInjection() {
+	public void calledAfterInjection() {
 	}
 
 	@AfterViews
-	protected void calledAfterViewInjection() {
+	public void calledAfterViewInjection() {
 
 	}
 
 	@Background
-	void getYoutubeInBackground() {
+	public void getYoutubeInBackground() {
 		// List<Video> videoList = searchInterface.search(getContext());
 		// v1.0
 		// update(videoList);
@@ -78,7 +78,7 @@ public class WatchRightTabs extends LinearLayout {
 	}
 
 	@UiThread
-	void update(List<Video> videoList) {
+	public void update(List<Video> videoList) {
 		// getAdapter().updateVideoList(videoList);
 		// gridView.setAdapter(getAdapter());
 		// if (mListInstanceState != null)
