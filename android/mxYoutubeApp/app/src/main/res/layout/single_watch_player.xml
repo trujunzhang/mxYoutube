@@ -46,7 +46,6 @@
         android:id="@+id/watch_right_linear"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:background="@color/solid_blue"
         android:orientation="vertical"
         android:layout_weight=".50">
 
