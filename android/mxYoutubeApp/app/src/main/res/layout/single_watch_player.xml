@@ -28,7 +28,7 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:id="@+id/watch_linear"
+                android:id="@+id/watch_left_details_linear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -43,6 +43,7 @@
 
     <!--right panel-->
     <LinearLayout
+        android:id="@+id/watch_right_linear"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:background="@color/solid_blue"

@@ -10,6 +10,7 @@ import com.google.android.libraries.mediaframework.layeredvideo.SimpleVideoPlaye
 import com.google.android.libraries.mediaframework.layeredvideo.callback.FullscreenCallback;
 import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
 import com.mxtube.app.R;
+import com.mxtube.app.ui.single.watch.right.tabs.WatchRightTabsPanel;
 import com.mxtube.app.ui.single.watch.views.WatchDescriptionCard;
 import com.mxtube.app.ui.single.watch.views.WatchDescriptionCard_;
 import com.mxtube.app.ui.single.watch.views.WatchPlayerSubscription;
@@ -25,9 +26,11 @@ import org.androidannotations.annotations.ViewById;
 public class WatchPlayerSingle extends Single implements FullscreenCallback {
 
 	@ViewById(R.id.video_frame)
-    public	android.widget.FrameLayout videoFrame;
-	@ViewById(R.id.watch_linear)
-    public	android.widget.LinearLayout watchLinear;
+	public android.widget.FrameLayout videoFrame;
+	@ViewById(R.id.watch_left_details_linear)
+	public android.widget.LinearLayout watchLeftDetailsLinear;
+	@ViewById(R.id.watch_right_linear)
+	android.widget.LinearLayout watchRightLinear;
 
 	private ViewGroup.LayoutParams originalContainerLayoutParams;
 
@@ -36,13 +39,21 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 	private WatchPlayerSubscription watchPlayerSubscription;
 	private WatchDescriptionCard watchDescriptionCard;
 
+	private WatchRightTabsPanel watchRightTabsPanel;
+
 	@AfterInject
-    public	void calledAfterInjection() {
+	public void calledAfterInjection() {
 
 	}
 
 	@AfterViews
-    public void calledAfterViewInjection() {
+	public void calledAfterViewInjection() {
+		setLeftPanel();
+
+		setRightPanel();
+	}
+
+	private void setLeftPanel() {
 		int screenWidth = Tools.getScreenWidth(this.getContext());
 
 		// width: 854px; height: 480px; left: 0px; top: 0px; transform: none;
@@ -56,8 +67,8 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 		this.watchDescriptionCard = WatchDescriptionCard_.build(this.getContext());
 		this.watchDescriptionCard.bind(this.getContext(), this.selectedVideo);
 
-		watchLinear.addView(this.watchPlayerSubscription);
-		watchLinear.addView(this.watchDescriptionCard);
+		watchLeftDetailsLinear.addView(this.watchPlayerSubscription);
+		watchLeftDetailsLinear.addView(this.watchDescriptionCard);
 
 		// determine the messages to be displayed as the view loads the video
 
@@ -66,6 +77,11 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 
 		this.videoPlayer = new SimpleVideoPlayer(this.getSherlockActivity(), this.videoFrame, this);
 		this.videoPlayer.play(lVideoIdUri);
+	}
+
+	private void setRightPanel() {
+		this.watchRightTabsPanel = new WatchRightTabsPanel(this.getContext());
+		watchRightLinear.addView(this.watchRightTabsPanel);
 	}
 
 	@Override
