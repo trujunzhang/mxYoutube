@@ -33,11 +33,13 @@ public abstract class GridViewSingle extends Single {
 
 	protected abstract void calledAfterViewInjection();
 
+	protected abstract int getGridViewColumns();
+
 	public android.widget.GridView gridView;
 
 	public YoutubeListAdapter adapter;
 
-	private static Parcelable mListInstanceState;
+	private Parcelable mListInstanceState;
 
 	void youtubeListItemClicked(Video video) {
 		Single.selectedVideo = video;
@@ -50,15 +52,15 @@ public abstract class GridViewSingle extends Single {
 		View contentView_ = super.onCreateView(inflater, container, savedInstanceState);
 		if (contentView_ == null) {
 			contentView_ = inflater.inflate(R.layout.widget_gridview, container, false);
-			calledAfterViewInjection();
-			this.gridView = (android.widget.GridView) contentView_.findViewById(R.id.gridView);
 			onViewChanged(contentView_);
-			this.adapter = YoutubeListAdapter_.getInstance_(this.getContext());
+			calledAfterViewInjection();
 		}
 		return contentView_;
 	}
 
 	public void onViewChanged(View hasViews) {
+		this.gridView = (android.widget.GridView) hasViews.findViewById(R.id.gridView);
+		this.gridView.setNumColumns(this.getGridViewColumns());
 		gridView = ((GridView) hasViews.findViewById(R.id.gridView));
 		{
 			AdapterView<?> view = ((AdapterView<?>) hasViews.findViewById(com.mxtube.app.R.id.gridView));
@@ -73,6 +75,7 @@ public abstract class GridViewSingle extends Single {
 				});
 			}
 		}
+		this.adapter = YoutubeListAdapter_.getInstance_(this.getContext());
 	}
 
 	@Override

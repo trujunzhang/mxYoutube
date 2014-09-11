@@ -1,46 +1,36 @@
-package com.mxtube.app.ui.single;
+package com.mxtube.app.ui.single.watch.views.widget;
 
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.Parcelable;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.google.api.services.youtube.model.Video;
-import com.layer.business.utils.AppConstant;
 import com.layer.business.youtube.impl.SearchImplementation;
-import com.mxtube.app.R;
-import com.mxtube.app.adapter.YoutubeListAdapter;
 import com.mxtube.app.ui.single.widget.GridViewSingle;
 
-import org.androidannotations.annotations.*;
 import org.androidannotations.api.BackgroundExecutor;
 
 import java.util.List;
 
-public class HomeSingle extends GridViewSingle {
+public class WatchGridViewSingle extends GridViewSingle {
 
 	SearchImplementation searchInterface = new SearchImplementation();
 
 	@Override
 	protected void calledAfterInjection() {
-		this.doGetYoutubeInBackground();
+		// this.doGetYoutubeInBackground();
 	}
 
 	@Override
 	protected void calledAfterViewInjection() {
-
+		this.getYoutubeInBackground();
 	}
 
-    @Override
-    protected int getGridViewColumns() {
-        return 4;
-    }
+	@Override
+	protected int getGridViewColumns() {
+		return 2;
+	}
 
-    private Handler handler_ = new Handler(Looper.getMainLooper());
+	private Handler handler_ = new Handler(Looper.getMainLooper());
 
 	public void runUpdate(final List<Video> videoList) {
 		handler_.post(new Runnable() {
@@ -56,24 +46,26 @@ public class HomeSingle extends GridViewSingle {
 	public void doGetYoutubeInBackground() {
 		BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
 
-            @Override
-            public void execute() {
-                try {
-                    getYoutubeInBackground();
-                } catch (Throwable e) {
-                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
-                }
-            }
+			@Override
+			public void execute() {
+				try {
+					getYoutubeInBackground();
+				} catch (Throwable e) {
+					Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+				}
+			}
 
-        });
+		});
 	}
 
 	void getYoutubeInBackground() {
 		List<Video> videoList = searchInterface.search(getContext());
 		// v1.0
-		runUpdate(videoList);
+		// runUpdate(videoList);
 		// v2.0
 		// youtubeListItemClicked(videoList.get(0));
+		// v3.0
+		update(videoList);
 	}
 
 	void update(List<Video> videoList) {

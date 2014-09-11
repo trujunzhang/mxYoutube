@@ -40,6 +40,21 @@ public class WatchRightTabs extends LinearLayout {
 	@ViewById(R.id.button_suggestions)
 	android.widget.Button buttonSuggestions;
 
+	@Click(R.id.button_comments)
+	void button_commentsOnClick(View view) {
+
+	}
+
+	@Click(R.id.button_more_from)
+	void button_more_fromOnClick(View view) {
+
+	}
+
+	@Click(R.id.button_suggestions)
+	void button_suggestionsOnClick(View view) {
+
+	}
+
 	public WatchRightTabs(Context context) {
 		super(context);
 	}
