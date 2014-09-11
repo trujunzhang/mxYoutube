@@ -1,6 +1,8 @@
 package com.mxtube.app.ui.single;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -12,70 +14,72 @@ import com.layer.business.utils.AppConstant;
 import com.layer.business.youtube.impl.SearchImplementation;
 import com.mxtube.app.R;
 import com.mxtube.app.adapter.YoutubeListAdapter;
+import com.mxtube.app.ui.single.widget.GridViewSingle;
 
 import org.androidannotations.annotations.*;
+import org.androidannotations.api.BackgroundExecutor;
 
 import java.util.List;
 
-@EFragment(R.layout.widget_gridview)
-public class HomeSingle extends Single {
-
-	@ViewById(R.id.gridView)
-	android.widget.GridView gridView;
-
-	@Bean
-	YoutubeListAdapter adapter;
+public class HomeSingle extends GridViewSingle {
 
 	SearchImplementation searchInterface = new SearchImplementation();
 
-	private static Parcelable mListInstanceState;
-
-	@AfterInject
-	void calledAfterInjection() {
-		this.getYoutubeInBackground();
+	@Override
+	protected void calledAfterInjection() {
+		this.doGetYoutubeInBackground();
 	}
 
-	@AfterViews
+	@Override
 	protected void calledAfterViewInjection() {
 
 	}
 
-	@ItemClick(R.id.gridView)
-	void youtubeListItemClicked(Video video) {
-		Single.selectedVideo = video;
-		this.getIndex().push(AppConstant.TYPE_FRAGMENT_MEDIA_PLAYER);
+	private Handler handler_ = new Handler(Looper.getMainLooper());
+
+	public void runUpdate(final List<Video> videoList) {
+		handler_.post(new Runnable() {
+
+			@Override
+			public void run() {
+				update(videoList);
+			}
+
+		});
 	}
 
-	@Background
+	public void doGetYoutubeInBackground() {
+		BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
+
+			@Override
+			public void execute() {
+				try {
+					getYoutubeInBackground();
+				} catch (Throwable e) {
+					Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+				}
+			}
+
+		});
+	}
+
 	void getYoutubeInBackground() {
 		List<Video> videoList = searchInterface.search(getContext());
 		// v1.0
-		update(videoList);
+		runUpdate(videoList);
 		// v2.0
 		// youtubeListItemClicked(videoList.get(0));
 	}
 
-	@UiThread
 	void update(List<Video> videoList) {
 		adapter.updateVideoList(videoList);
 		gridView.setAdapter(adapter);
-		if (mListInstanceState != null)
-			gridView.onRestoreInstanceState(mListInstanceState);
+		this.restoreInstanceState();
 	}
 
 	@Override
 	public void initSingle() {
 		this.setTitle("Subscriptions");
-	}
-
-	@Override
-	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-		return super.onCreateView(inflater, container, savedInstanceState);
-	}
-
-	@Override
-	public void saveInstanceState() {
-		mListInstanceState = this.gridView.onSaveInstanceState();
 	}
 
 	@Override

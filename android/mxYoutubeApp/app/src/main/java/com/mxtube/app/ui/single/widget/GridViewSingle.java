@@ -6,12 +6,15 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.GridView;
 
 import com.google.api.services.youtube.model.Video;
 import com.layer.business.utils.AppConstant;
 import com.layer.business.youtube.impl.SearchImplementation;
 import com.mxtube.app.R;
 import com.mxtube.app.adapter.YoutubeListAdapter;
+import com.mxtube.app.adapter.YoutubeListAdapter_;
 import com.mxtube.app.ui.single.Single;
 
 import org.androidannotations.annotations.AfterInject;
@@ -25,65 +28,61 @@ import org.androidannotations.annotations.ViewById;
 
 import java.util.List;
 
-@EFragment(R.layout.widget_gridview)
-public class GridViewSingle extends Single {
+public abstract class GridViewSingle extends Single {
+	protected abstract void calledAfterInjection();
 
-	@ViewById(R.id.gridView)
-	android.widget.GridView gridView;
+	protected abstract void calledAfterViewInjection();
 
-	@Bean
-	YoutubeListAdapter adapter;
+	public android.widget.GridView gridView;
 
-	SearchImplementation searchInterface = new SearchImplementation();
+	public YoutubeListAdapter adapter;
 
 	private static Parcelable mListInstanceState;
 
-	@AfterInject
-	void calledAfterInjection() {
-		this.getYoutubeInBackground();
-	}
-
-	@AfterViews
-	protected void calledAfterViewInjection() {
-
-	}
-
-	@ItemClick(R.id.gridView)
 	void youtubeListItemClicked(Video video) {
 		Single.selectedVideo = video;
 		this.getIndex().push(AppConstant.TYPE_FRAGMENT_MEDIA_PLAYER);
 	}
 
-	@Background
-	void getYoutubeInBackground() {
-		List<Video> videoList = searchInterface.search(getContext());
-		// v1.0
-		update(videoList);
-		// v2.0
-		// youtubeListItemClicked(videoList.get(0));
-	}
-
-	@UiThread
-	void update(List<Video> videoList) {
-		adapter.updateVideoList(videoList);
-		gridView.setAdapter(adapter);
-		if (mListInstanceState != null)
-			gridView.onRestoreInstanceState(mListInstanceState);
-	}
-
 	@Override
-	public void initSingle() {
-		this.setTitle("Subscriptions");
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		calledAfterInjection();
+		View contentView_ = super.onCreateView(inflater, container, savedInstanceState);
+		if (contentView_ == null) {
+			contentView_ = inflater.inflate(R.layout.widget_gridview, container, false);
+			calledAfterViewInjection();
+			this.gridView = (android.widget.GridView) contentView_.findViewById(R.id.gridView);
+			onViewChanged(contentView_);
+			this.adapter = YoutubeListAdapter_.getInstance_(this.getContext());
+		}
+		return contentView_;
 	}
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-		return super.onCreateView(inflater, container, savedInstanceState);
+	public void onViewChanged(View hasViews) {
+		gridView = ((GridView) hasViews.findViewById(R.id.gridView));
+		{
+			AdapterView<?> view = ((AdapterView<?>) hasViews.findViewById(com.mxtube.app.R.id.gridView));
+			if (view != null) {
+				view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+					@Override
+					public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+						youtubeListItemClicked(((Video) parent.getAdapter().getItem(position)));
+					}
+
+				});
+			}
+		}
 	}
 
 	@Override
 	public void saveInstanceState() {
 		mListInstanceState = this.gridView.onSaveInstanceState();
+	}
+
+	public void restoreInstanceState() {
+		if (mListInstanceState != null)
+			gridView.onRestoreInstanceState(mListInstanceState);
 	}
 
 	@Override

@@ -11,7 +11,7 @@ import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.common.utils.UIHelper;
 import com.layer.business.utils.AppConstant;
-import com.mxtube.app.ui.single.HomeSingle_;
+import com.mxtube.app.ui.single.HomeSingle;
 import com.mxtube.app.ui.single.Single;
 import com.mxtube.app.ui.single.WatchPlayerSingle_;
 import com.mxtube.app.ui.views.FooterView;
@@ -42,7 +42,7 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 		Single fragment = null;
 		switch (type) {
 		case AppConstant.MAIN_FOOTBAR_HOME:// Home
-			fragment = new HomeSingle_();
+			fragment = new HomeSingle();
 			break;
 		case AppConstant.MAIN_FOOTBAR_SEARCH:// Search
 			break;
