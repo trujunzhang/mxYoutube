@@ -11,23 +11,31 @@
         android:orientation="horizontal"
         android:layout_weight="0">
 
-        <Button
+
+        <RadioButton
             android:id="@+id/button_comments"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            style="@style/watch_footbar_radio"
             android:text="Comments" />
 
-        <Button
+
+        <ImageView
+            style="@style/watch_footbar_cutline"
+            android:src="@drawable/widget_bar_cut_off" />
+
+        <RadioButton
             android:id="@+id/button_more_from"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            style="@style/watch_footbar_radio"
             android:text="More From" />
 
-        <Button
+        <ImageView
+            style="@style/watch_footbar_cutline"
+            android:src="@drawable/widget_bar_cut_off" />
+
+        <RadioButton
             android:id="@+id/button_suggestions"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            style="@style/watch_footbar_radio"
             android:text="Suggestions" />
+
     </LinearLayout>
 
     <FrameLayout

@@ -5,4 +5,24 @@
         <item name="android:layout_height">2.0dip</item>
         <item name="android:background">@drawable/line_bluegray</item>
     </style>
+
+    <style name="watch_footbar_cutline">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="watch_footbar_radio">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ff0000</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingTop">1.0dip</item>
+        <item name="android:paddingBottom">3.0dip</item>
+    </style>
+
 </resources>
