@@ -14,6 +14,7 @@ import com.layer.business.utils.AppConstant;
 import com.mxtube.app.ui.single.HomeSingle;
 import com.mxtube.app.ui.single.Single;
 import com.mxtube.app.ui.single.WatchPlayerSingle_;
+import com.mxtube.app.ui.single.watch.views.widget.WatchGridViewSingle;
 import com.mxtube.app.ui.views.FooterView;
 import com.mxtube.app.ui.views.FooterView_;
 
@@ -54,6 +55,15 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 			break;
 		case AppConstant.TYPE_FRAGMENT_MEDIA_PLAYER:// Media Player
 			fragment = new WatchPlayerSingle_();
+			break;
+		case AppConstant.WATCH_RIGHT_TAB_COMMENTS:// right_tab(comments)
+
+			break;
+		case AppConstant.WATCH_RIGHT_TAB_MORE_FROM:// right_tab(more from)
+
+			break;
+		case AppConstant.WATCH_RIGHT_TAB_SUGGESTIONS:// right_tab(suggestions)
+			fragment = new WatchGridViewSingle();
 			break;
 		}
 		if (lastFragement != null) {
