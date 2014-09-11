@@ -11,6 +11,7 @@ import com.google.android.libraries.mediaframework.layeredvideo.callback.Fullscr
 import com.google.android.libraries.mediaframework.layeredvideo.utils.Util;
 import com.mxtube.app.R;
 import com.mxtube.app.ui.single.watch.right.tabs.WatchRightTabsPanel;
+import com.mxtube.app.ui.single.watch.right.tabs.WatchRightTabsPanel_;
 import com.mxtube.app.ui.single.watch.views.WatchDescriptionCard;
 import com.mxtube.app.ui.single.watch.views.WatchDescriptionCard_;
 import com.mxtube.app.ui.single.watch.views.WatchPlayerSubscription;
@@ -80,7 +81,7 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 	}
 
 	private void setRightPanel() {
-		this.watchRightTabsPanel = new WatchRightTabsPanel(this.getContext());
+		this.watchRightTabsPanel = WatchRightTabsPanel_.build(this.getContext());
 		watchRightLinear.addView(this.watchRightTabsPanel);
 	}
 
