@@ -76,7 +76,6 @@ public class WatchGridViewSingle extends GridViewSingle {
 
 	@Override
 	public void initSingle() {
-		this.setTitle("Subscriptions");
 	}
 
 	@Override

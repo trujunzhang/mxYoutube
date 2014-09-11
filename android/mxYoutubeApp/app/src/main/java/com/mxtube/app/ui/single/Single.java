@@ -2,10 +2,14 @@ package com.mxtube.app.ui.single;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+
 import com.actionbarsherlock.app.SherlockFragment;
 import com.google.api.services.youtube.model.Video;
 import com.mxtube.app.AppContext;
 import com.mxtube.app.Index;
+import com.mxtube.app.R;
 
 public abstract class Single extends SherlockFragment {
 
@@ -33,4 +37,12 @@ public abstract class Single extends SherlockFragment {
 
 	public abstract void abstract003();
 
+	public void addFragmentToWatchPanel(Fragment newFragment) {
+		// Add the fragment to the activity, pushing this transaction
+		// on to the back stack.
+		FragmentTransaction ft = getIndex().getSupportFragmentManager().beginTransaction();
+		ft.replace(R.id.fragment_tab_content, newFragment);
+		// ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+		ft.commit();
+	}
 }

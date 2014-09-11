@@ -12,7 +12,7 @@ import com.layer.business.youtube.SearchInterface;
 
 public class SearchImplementation implements SearchInterface {
 
-	private List<Video> videoList;
+	private static List<Video> videoList;
 
 	@Override
 	public List<Video> search(Context context) {

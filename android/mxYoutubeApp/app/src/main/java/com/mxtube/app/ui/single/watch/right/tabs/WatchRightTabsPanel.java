@@ -23,6 +23,8 @@ import org.androidannotations.annotations.*;
 import java.util.List;
 
 import com.mxtube.app.R;
+import com.mxtube.app.ui.single.Single;
+import com.mxtube.app.ui.single.watch.right.tabs.widget.WatchGridViewSingle;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
@@ -32,6 +34,10 @@ import org.androidannotations.annotations.ViewById;
 
 @EViewGroup(R.layout.watch_right_tabs)
 public class WatchRightTabsPanel extends LinearLayout {
+	private Context mContext;
+	private Single single;
+
+	private WatchGridViewSingle watchGridViewSingle;
 
 	@ViewById(R.id.button_comments)
 	public android.widget.Button buttonComments;
@@ -61,6 +67,7 @@ public class WatchRightTabsPanel extends LinearLayout {
 
 	@AfterInject
 	public void calledAfterInjection() {
+
 	}
 
 	@AfterViews
@@ -83,6 +90,14 @@ public class WatchRightTabsPanel extends LinearLayout {
 		// gridView.setAdapter(getAdapter());
 		// if (mListInstanceState != null)
 		// gridView.onRestoreInstanceState(mListInstanceState);
+	}
+
+	public void bind(Single single, Context context) {
+		this.single = single;
+		this.mContext = context;
+
+		watchGridViewSingle = new WatchGridViewSingle();
+		this.single.addFragmentToWatchPanel(watchGridViewSingle);
 	}
 
 }

@@ -82,6 +82,7 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 
 	private void setRightPanel() {
 		this.watchRightTabsPanel = WatchRightTabsPanel_.build(this.getContext());
+		this.watchRightTabsPanel.bind(this, this.getContext());
 		watchRightLinear.addView(this.watchRightTabsPanel);
 	}
 
