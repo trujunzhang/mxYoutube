@@ -11,7 +11,7 @@ import org.androidannotations.api.BackgroundExecutor;
 
 import java.util.List;
 
-public class WatchGridViewSingle extends GridViewSingle {
+public class WatchSuggestionsSingle extends GridViewSingle {
 
 	SearchImplementation searchInterface = new SearchImplementation();
 

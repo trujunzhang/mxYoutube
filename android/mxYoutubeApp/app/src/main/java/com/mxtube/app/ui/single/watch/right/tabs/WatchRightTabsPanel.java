@@ -2,29 +2,17 @@ package com.mxtube.app.ui.single.watch.right.tabs;
 
 import android.content.Context;
 import android.widget.LinearLayout;
-import android.annotation.TargetApi;
-import android.os.Build;
-import android.os.Bundle;
-import android.os.Parcelable;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.google.api.services.youtube.model.Video;
-import com.layer.business.utils.AppConstant;
-import com.layer.business.youtube.impl.SearchImplementation;
 import com.mxtube.app.R;
-import com.mxtube.app.adapter.YoutubeListAdapter;
-import com.mxtube.app.adapter.YoutubeListAdapter_;
 
 import org.androidannotations.annotations.*;
 
 import java.util.List;
 
-import com.mxtube.app.R;
 import com.mxtube.app.ui.single.Single;
-import com.mxtube.app.ui.single.watch.right.tabs.widget.WatchGridViewSingle;
+import com.mxtube.app.ui.single.watch.right.tabs.widget.WatchSuggestionsSingle;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
@@ -37,7 +25,7 @@ public class WatchRightTabsPanel extends LinearLayout {
 	private Context mContext;
 	private Single single;
 
-	private WatchGridViewSingle watchGridViewSingle;
+	private WatchSuggestionsSingle watchGridViewSingle;
 
 	@ViewById(R.id.button_comments)
 	public android.widget.Button buttonComments;
@@ -96,7 +84,7 @@ public class WatchRightTabsPanel extends LinearLayout {
 		this.single = single;
 		this.mContext = context;
 
-		watchGridViewSingle = new WatchGridViewSingle();
+		watchGridViewSingle = new WatchSuggestionsSingle();
 		this.single.addFragmentToWatchPanel(watchGridViewSingle);
 	}
 

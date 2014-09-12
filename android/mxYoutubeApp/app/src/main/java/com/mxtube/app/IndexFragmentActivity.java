@@ -9,7 +9,7 @@ import com.layer.business.utils.AppConstant;
 import com.mxtube.app.ui.single.HomeSingle;
 import com.mxtube.app.ui.single.Single;
 import com.mxtube.app.ui.single.WatchPlayerSingle_;
-import com.mxtube.app.ui.single.watch.right.tabs.widget.WatchGridViewSingle;
+import com.mxtube.app.ui.single.watch.right.tabs.widget.WatchSuggestionsSingle;
 
 import de.appetites.tabbackstack.TabBackStackHelper;
 import de.appetites.tabbackstack.TabBackStackInterface;
@@ -48,7 +48,7 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 
 			break;
 		case AppConstant.WATCH_RIGHT_TAB_SUGGESTIONS:// right_tab(suggestions)
-			fragment = new WatchGridViewSingle();
+			fragment = new WatchSuggestionsSingle();
 			break;
 		}
 		if (lastFragement != null) {
