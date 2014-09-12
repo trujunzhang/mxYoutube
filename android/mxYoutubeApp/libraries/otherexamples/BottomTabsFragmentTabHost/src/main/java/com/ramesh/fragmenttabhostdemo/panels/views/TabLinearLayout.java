@@ -47,7 +47,7 @@ public class TabLinearLayout extends LinearLayout {
 
 	public void bind(android.content.Context context, android.support.v4.app.FragmentManager manager) {
 		// mTabHost = new FragmentTabHost(getSherlockActivity());
-		mTabHost.setup(context, manager, R.id.menu_settings);
+		mTabHost.setup(context, manager, R.id.realtabcontent);
 
 		Bundle b = new Bundle();
 		b.putString("key", "Simple");

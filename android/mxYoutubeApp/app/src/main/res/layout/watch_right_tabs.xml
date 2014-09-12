@@ -1,46 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="0">
+        android:layout_height="wrap_content">
 
-        <RadioButton
-            android:id="@+id/button_comments"
-            style="@style/watch_footbar_radio"
-            android:text="Comments" />
-
-
-        <ImageView
-            style="@style/watch_footbar_cutline"
-            android:src="@drawable/widget_bar_cut_off" />
-
-        <RadioButton
-            android:id="@+id/button_more_from"
-            style="@style/watch_footbar_radio"
-            android:text="More From" />
-
-        <ImageView
-            style="@style/watch_footbar_cutline"
-            android:src="@drawable/widget_bar_cut_off" />
-
-        <RadioButton
-            android:id="@+id/button_suggestions"
-            style="@style/watch_footbar_radio"
-            android:text="Suggestions" />
-
-    </LinearLayout>
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" />
+    </android.support.v4.app.FragmentTabHost>
 
     <FrameLayout
-        android:id="@+id/fragment_tab_content"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
+        android:id="@+id/realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
         android:layout_weight="1" />
-
 </LinearLayout>
