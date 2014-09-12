@@ -18,7 +18,6 @@
             android:src="@drawable/hqdefault"
             app:default_width="480"
             app:default_height="360"
-            android:scaleType="fitXY"
             android:layout_gravity="center" />
 
         <TextView
