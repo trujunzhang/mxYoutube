@@ -63,8 +63,9 @@ public class WatchRightTabsPanel extends LinearLayout implements android.widget.
 		mTabHost.setup(context, manager, R.id.realtabcontent);
 		mTabHost.setOnTabChangedListener(this);
 
-		mTabHost.addTab(mTabHost.newTabSpec("comments").setIndicator("comments"), WatchCommentsSingle.class, null);
-		mTabHost.addTab(mTabHost.newTabSpec("morefrom").setIndicator("morefrom"), WatchMoreFromSingle.class, null);
+		mTabHost.addTab(mTabHost.newTabSpec("comments").setIndicator("Comments"), WatchCommentsSingle.class, null);
+		mTabHost.addTab(mTabHost.newTabSpec("morefrom").setIndicator("More From"), WatchMoreFromSingle.class, null);
+		mTabHost.addTab(mTabHost.newTabSpec("suggestions").setIndicator("Suggestions"), WatchMoreFromSingle.class, null);
 	}
 
 	@Override
