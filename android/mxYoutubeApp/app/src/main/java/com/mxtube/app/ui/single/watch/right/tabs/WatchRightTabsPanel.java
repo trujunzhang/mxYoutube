@@ -38,7 +38,7 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 @EViewGroup(R.layout.watch_right_tabs)
-public class WatchRightTabsPanel extends LinearLayout {
+public class WatchRightTabsPanel extends LinearLayout implements android.widget.TabHost.OnTabChangeListener {
 	private Context mContext;
 	private WatchPlayerSingle watchPlayerSingle;
 
@@ -61,14 +61,15 @@ public class WatchRightTabsPanel extends LinearLayout {
 	public void bind(android.content.Context context, android.support.v4.app.FragmentManager manager) {
 		// mTabHost = new FragmentTabHost(getSherlockActivity());
 		mTabHost.setup(context, manager, R.id.realtabcontent);
+		mTabHost.setOnTabChangedListener(this);
 
-		Bundle b = new Bundle();
-		b.putString("key", "Comments");
-		mTabHost.addTab(mTabHost.newTabSpec("comments").setIndicator("comments"), WatchCommentsSingle.class, b);
-
-		b = new Bundle();
-		b.putString("key", "More From");
-		mTabHost.addTab(mTabHost.newTabSpec("morefrom").setIndicator("morefrom"), WatchMoreFromSingle.class, b);
+		mTabHost.addTab(mTabHost.newTabSpec("comments").setIndicator("comments"), WatchCommentsSingle.class, null);
+		mTabHost.addTab(mTabHost.newTabSpec("morefrom").setIndicator("morefrom"), WatchMoreFromSingle.class, null);
 	}
 
+	@Override
+	public void onTabChanged(String s) {
+		View currentTabView = mTabHost.getCurrentTabView();
+		int x = 0;// debug
+	}
 }
