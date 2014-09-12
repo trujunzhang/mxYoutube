@@ -20,30 +20,13 @@ import com.mxtube.app.ui.single.WatchPlayerSingle;
 import com.mxtube.app.ui.single.watch.right.tabs.widget.WatchCommentsSingle;
 import com.mxtube.app.ui.single.watch.right.tabs.widget.WatchMoreFromSingle;
 import com.mxtube.app.ui.single.watch.right.tabs.widget.WatchSuggestionsSingle;
-
-import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
-
-import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.actionbarsherlock.app.SherlockFragment;
-
-import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.EFragment;
-import org.androidannotations.annotations.ViewById;
 
 @EViewGroup(R.layout.watch_right_tabs)
 public class WatchRightTabsPanel extends LinearLayout implements android.widget.TabHost.OnTabChangeListener {
-	private Context mContext;
-	private WatchPlayerSingle watchPlayerSingle;
-
 	@ViewById(android.R.id.tabhost)
 	public FragmentTabHost mTabHost;
 	private FragmentManager manager;
@@ -90,9 +73,5 @@ public class WatchRightTabsPanel extends LinearLayout implements android.widget.
 		if (this.manager.getFragments() == null)
 			return;
 		lastSingle.saveInstanceState();
-
-		int size = this.manager.getFragments().size();
-		int x = 0;// debug
-
 	}
 }
