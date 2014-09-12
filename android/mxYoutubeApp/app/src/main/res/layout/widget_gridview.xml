@@ -15,7 +15,6 @@
         android:gravity="center"
         android:numColumns="4"
         android:columnWidth="180dp"
-        android:listSelector="@drawable/gridview_item_selector"
         android:drawSelectorOnTop="true"
         android:stretchMode="columnWidth" />
 </LinearLayout>
