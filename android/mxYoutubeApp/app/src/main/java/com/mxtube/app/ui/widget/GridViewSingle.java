@@ -28,7 +28,7 @@ public abstract class GridViewSingle extends Single {
 
 	private Parcelable mListInstanceState;
 
-	void youtubeListItemClicked(Video video) {
+	public void youtubeListItemClicked(Video video) {
 		Single.selectedVideo = video;
 		this.getIndex().push(AppConstant.TYPE_FRAGMENT_MEDIA_PLAYER);
 	}

@@ -5,6 +5,7 @@ import android.widget.LinearLayout;
 import android.view.View;
 
 import com.google.api.services.youtube.model.Video;
+import com.layer.business.utils.AppConstant;
 import com.mxtube.app.R;
 
 import org.androidannotations.annotations.*;
@@ -12,6 +13,9 @@ import org.androidannotations.annotations.*;
 import java.util.List;
 
 import com.mxtube.app.ui.single.Single;
+import com.mxtube.app.ui.single.WatchPlayerSingle;
+import com.mxtube.app.ui.single.watch.right.tabs.widget.WatchCommentsSingle;
+import com.mxtube.app.ui.single.watch.right.tabs.widget.WatchMoreFromSingle;
 import com.mxtube.app.ui.single.watch.right.tabs.widget.WatchSuggestionsSingle;
 
 import org.androidannotations.annotations.AfterInject;
@@ -23,9 +27,9 @@ import org.androidannotations.annotations.ViewById;
 @EViewGroup(R.layout.watch_right_tabs)
 public class WatchRightTabsPanel extends LinearLayout {
 	private Context mContext;
-	private Single single;
+	private WatchPlayerSingle watchPlayerSingle;
 
-	private WatchSuggestionsSingle watchGridViewSingle;
+	private Single selectedSingle, lastSingle;
 
 	@ViewById(R.id.button_comments)
 	public android.widget.Button buttonComments;
@@ -80,12 +84,41 @@ public class WatchRightTabsPanel extends LinearLayout {
 		// gridView.onRestoreInstanceState(mListInstanceState);
 	}
 
-	public void bind(Single single, Context context) {
-		this.single = single;
+	public void bind(WatchPlayerSingle watchPlayerSingle, Context context) {
+		this.watchPlayerSingle = watchPlayerSingle;
 		this.mContext = context;
 
-		watchGridViewSingle = new WatchSuggestionsSingle();
-		this.single.addFragmentToWatchPanel(watchGridViewSingle);
+		toggleTab(AppConstant.WATCH_RIGHT_TAB_SUGGESTIONS);
+	}
+
+	private void toggleTab(int type) {
+		// Toggle fragment.
+		selectedSingle = getFragment(type);
+		this.watchPlayerSingle.addFragmentToWatchPanel(selectedSingle);
+		// Set the selected navigation item in list or tabbed navigation modes.
+		this.setSelectedNavigationItem(type);
+	}
+
+	public void setSelectedNavigationItem(int position) {
+
+	}
+
+	private Single getFragment(int type) {
+		Single fragment = null;
+		switch (type) {
+		case AppConstant.WATCH_RIGHT_TAB_COMMENTS:// right_tab(comments)
+			fragment = new WatchCommentsSingle();
+			break;
+		case AppConstant.WATCH_RIGHT_TAB_MORE_FROM:// right_tab(more from)
+			fragment = new WatchMoreFromSingle();
+			break;
+		case AppConstant.WATCH_RIGHT_TAB_SUGGESTIONS:// right_tab(suggestions)
+			fragment = new WatchSuggestionsSingle();
+			break;
+		}
+		fragment.initSingle();
+
+		return fragment;
 	}
 
 }
