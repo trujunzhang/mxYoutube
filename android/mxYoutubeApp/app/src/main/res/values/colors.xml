@@ -4,4 +4,16 @@
     <color name="youtube_cell_title">#1e1e1e</color>
     <color name="youtube_cell_user">#de4f28</color>
     <color name="youtube_cell_rating_count">#666</color>
+
+
+    <color name="listitem_transparent">#00000000</color>
+    <color name="listitem_black">#ff000000</color>
+    <color name="listitem_white">#ffffffff</color>
+    <color name="listitem_blue">#0e5986</color>
+    <color name="listitem_gray">#ff9da19e</color>
+    <color name="listitem_green">#ffe3ffc6</color>
+    <color name="listitem_greenyellow">#ff87b869</color>
+    <color name="listitem_yellow">#fffaffbf</color>
+    <color name="fff1f2f3">#fff1f2f3</color>
+    <color name="ff40ab54">#ff40ab54</color>
 </resources>
