@@ -17,7 +17,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/hqdefault"
             app:default_width="480"
-            app:default_height="360"
+            app:default_height="380"
+            android:scaleType="centerInside"
             android:layout_gravity="center" />
 
         <TextView
