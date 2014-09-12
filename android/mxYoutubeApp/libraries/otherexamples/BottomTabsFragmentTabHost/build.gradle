@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.ramesh.fragmenttabhostdemo"
+        minSdkVersion 8
+        targetSdkVersion 17
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+def AAVersion = '3.0.1'
+def AQVersion = '0.24.3'
+
+
+dependencies {
+    apt "org.androidannotations:androidannotations:$AAVersion"
+    compile "org.androidannotations:androidannotations-api:$AAVersion"
+    //compile "com.googlecode.android-query:android-query:$AQVersion"
+
+    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+
+//-------- v1.0
+    //compile 'com.android.support:support-v4:+'
+
+    compile 'com.android.support:support-v4:20.+'
+
+    compile fileTree(dir: 'libs', include: '*.jar')
+}
+
+apt {
+    arguments {
+        androidManifestFile variant.processResources.manifestFile
+        resourcePackageName 'com.ramesh.fragmenttabhostdemo'
+
+        // If you're using Android NBS flavors you should use the following line instead of hard-coded packageName
+        // resourcePackageName android.defaultConfig.packageName
+
+        // You can set optional annotation processing options here, like these commented options:
+        // logLevel 'INFO'
+        // logFile '/var/log/aa.log'
+    }
+}
+

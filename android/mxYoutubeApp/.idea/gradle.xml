@@ -21,13 +21,13 @@
             <option value="$PROJECT_DIR$/libraries/open/actionbarsherlock" />
             <option value="$PROJECT_DIR$/libraries/open/android-youtube-player" />
             <option value="$PROJECT_DIR$/libraries/open/android-youtube-query" />
-            <option value="$PROJECT_DIR$/libraries/openexamples" />
-            <option value="$PROJECT_DIR$/libraries/openexamples/TabBackStack" />
-            <option value="$PROJECT_DIR$/libraries/openexamples/TabBackStack/TabFragments" />
+            <option value="$PROJECT_DIR$/libraries/otherexamples" />
+            <option value="$PROJECT_DIR$/libraries/otherexamples/BottomTabsFragmentTabHost" />
           </set>
         </option>
       </GradleProjectSettings>
     </option>
+    <option name="offlineWork" value="true" />
   </component>
 </project>
 

@@ -48,9 +48,14 @@ include ':libraries:open:android-youtube-query'
 // ..........picasso
 //include ':libraries:openexamples:picasso'
 // ..........tab-back-stack
-include ':libraries:openexamples:TabBackStack:TabFragments'
+//include ':libraries:openexamples:TabBackStack:TabFragments'
 // ..........android-youtube-player
 //include ':libraries:openexamples:android-youtube-player'
+
+// ---------------------------
+//       other project examples
+// ---------------------------
+include ':libraries:otherexamples:BottomTabsFragmentTabHost'
 
 // ---------------------------
 //       google projects
