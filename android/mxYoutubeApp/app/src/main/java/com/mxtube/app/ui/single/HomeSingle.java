@@ -61,15 +61,18 @@ public class HomeSingle extends GridViewSingle {
 	void getYoutubeInBackground() {
 		List<Video> videoList = searchInterface.search(getContext());
 		// v1.0
-//		runUpdate(videoList);
+		runUpdate(videoList);
 		// v2.0
-		youtubeListItemClicked(videoList.get(0));
+//		youtubeListItemClicked(videoList.get(0));
 	}
 
 	void update(List<Video> videoList) {
 		adapter.updateVideoList(videoList);
 		gridView.setAdapter(adapter);
 		this.restoreInstanceState();
+
+        // v2.0
+//        youtubeListItemClicked(videoList.get(0));
 	}
 
 	@Override
