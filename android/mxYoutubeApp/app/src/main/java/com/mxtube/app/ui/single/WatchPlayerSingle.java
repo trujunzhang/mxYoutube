@@ -113,7 +113,12 @@ public class WatchPlayerSingle extends Single implements FullscreenCallback {
 
 	}
 
-	@Override
+    @Override
+    public void restoreInstanceState() {
+
+    }
+
+    @Override
 	public void abstract001() {
 
 	}

@@ -70,6 +70,7 @@ public abstract class GridViewSingle extends Single {
 		mListInstanceState = this.gridView.onSaveInstanceState();
 	}
 
+    @Override
 	public void restoreInstanceState() {
 		if (mListInstanceState != null)
 			gridView.onRestoreInstanceState(mListInstanceState);

@@ -31,18 +31,12 @@ public abstract class Single extends SherlockFragment {
 
 	public abstract void saveInstanceState();
 
+	public abstract void restoreInstanceState();
+
 	public abstract void abstract001();
 
 	public abstract void abstract002();
 
 	public abstract void abstract003();
 
-	// public void addFragmentToWatchPanel(Fragment newFragment) {
-	// // Add the fragment to the activity, pushing this transaction
-	// // on to the back stack.
-	// // FragmentTransaction ft = getIndex().getSupportFragmentManager().beginTransaction();
-	// // ft.replace(R.id.fragment_tab_content, newFragment);
-	// // ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-	// // ft.commit();
-	// }
 }
