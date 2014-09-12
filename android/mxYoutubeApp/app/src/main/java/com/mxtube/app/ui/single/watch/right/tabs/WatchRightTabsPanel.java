@@ -1,6 +1,8 @@
 package com.mxtube.app.ui.single.watch.right.tabs;
 
 import android.content.Context;
+import android.nfc.Tag;
+import android.support.v4.app.FragmentManager;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 import android.view.View;
@@ -44,6 +46,9 @@ public class WatchRightTabsPanel extends LinearLayout implements android.widget.
 
 	@ViewById(android.R.id.tabhost)
 	public FragmentTabHost mTabHost;
+	private FragmentManager manager;
+
+	private String lastTag;
 
 	public WatchRightTabsPanel(Context context) {
 		super(context);
@@ -59,18 +64,35 @@ public class WatchRightTabsPanel extends LinearLayout implements android.widget.
 	}
 
 	public void bind(android.content.Context context, android.support.v4.app.FragmentManager manager) {
-		// mTabHost = new FragmentTabHost(getSherlockActivity());
+		this.manager = manager;
 		mTabHost.setup(context, manager, R.id.realtabcontent);
 		mTabHost.setOnTabChangedListener(this);
 
 		mTabHost.addTab(mTabHost.newTabSpec("comments").setIndicator("Comments"), WatchCommentsSingle.class, null);
 		mTabHost.addTab(mTabHost.newTabSpec("morefrom").setIndicator("More From"), WatchMoreFromSingle.class, null);
-		mTabHost.addTab(mTabHost.newTabSpec("suggestions").setIndicator("Suggestions"), WatchMoreFromSingle.class, null);
+		mTabHost.addTab(mTabHost.newTabSpec("suggestions").setIndicator("Suggestions"), WatchSuggestionsSingle.class,
+				null);
 	}
 
 	@Override
-	public void onTabChanged(String s) {
-		View currentTabView = mTabHost.getCurrentTabView();
+	public void onTabChanged(String tag) {
+		toggleTabByTag(this.lastTag);
+		this.lastTag = tag;
+	}
+
+	private void toggleTabByTag(String tag) {
+		if (tag == null)
+			return;
+
+		Single lastSingle = (Single) this.manager.findFragmentByTag(tag);
+		if (this.manager == null)
+			return;
+		if (this.manager.getFragments() == null)
+			return;
+		lastSingle.saveInstanceState();
+
+		int size = this.manager.getFragments().size();
 		int x = 0;// debug
+
 	}
 }
