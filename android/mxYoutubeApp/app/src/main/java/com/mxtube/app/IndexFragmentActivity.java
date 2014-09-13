@@ -99,8 +99,9 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 	}
 
 	public void push(int subType) {
-		Single fragment = this.getFragment(subType);
-		this.tabBackStackHelper.push(this.getSupportFragmentManager(), fragment, this.mTabIndex);
+		FragmentTransaction fragmentTransaction = this.getSupportFragmentManager().beginTransaction();
+
+		this.tabBackStackHelper.push(fragmentTransaction, this.getFragment(subType), this.mTabIndex);
 	}
 
 	@Override

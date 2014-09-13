@@ -48,8 +48,7 @@ public class TabBackStackHelper {
 	 * @param fragment
 	 *            Fragment to push and display
 	 */
-	public void push(FragmentManager fm, Fragment fragment, int position) {
-		FragmentTransaction fragmentTransaction = fm.beginTransaction();
+	public void push(FragmentTransaction fragmentTransaction, Fragment fragment, int position) {
 
 		mTabBackStacks.get(position).push(fragment, fragmentTransaction, this.tabBackStackInterface.getContainerId());
 
