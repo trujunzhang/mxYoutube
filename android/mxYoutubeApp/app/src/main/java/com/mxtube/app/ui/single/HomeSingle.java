@@ -22,15 +22,15 @@ public class HomeSingle extends GridViewSingle {
 
 	@Override
 	protected void calledAfterViewInjection() {
-
+		this.setTitle("Subscriptions");
 	}
 
-    @Override
-    protected int getGridViewColumns() {
-        return 4;
-    }
+	@Override
+	protected int getGridViewColumns() {
+		return 4;
+	}
 
-    private Handler handler_ = new Handler(Looper.getMainLooper());
+	private Handler handler_ = new Handler(Looper.getMainLooper());
 
 	public void runUpdate(final List<Video> videoList) {
 		handler_.post(new Runnable() {
@@ -46,16 +46,16 @@ public class HomeSingle extends GridViewSingle {
 	public void doGetYoutubeInBackground() {
 		BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
 
-            @Override
-            public void execute() {
-                try {
-                    getYoutubeInBackground();
-                } catch (Throwable e) {
-                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
-                }
-            }
+			@Override
+			public void execute() {
+				try {
+					getYoutubeInBackground();
+				} catch (Throwable e) {
+					Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+				}
+			}
 
-        });
+		});
 	}
 
 	void getYoutubeInBackground() {
@@ -63,7 +63,7 @@ public class HomeSingle extends GridViewSingle {
 		// v1.0
 		runUpdate(videoList);
 		// v2.0
-//		youtubeListItemClicked(videoList.get(0));
+		// youtubeListItemClicked(videoList.get(0));
 	}
 
 	void update(List<Video> videoList) {
@@ -71,13 +71,13 @@ public class HomeSingle extends GridViewSingle {
 		gridView.setAdapter(adapter);
 		this.restoreInstanceState();
 
-        // v2.0
-//        youtubeListItemClicked(videoList.get(0));
+		// v2.0
+		// youtubeListItemClicked(videoList.get(0));
 	}
 
 	@Override
 	public void initSingle() {
-		this.setTitle("Subscriptions");
+
 	}
 
 	@Override
