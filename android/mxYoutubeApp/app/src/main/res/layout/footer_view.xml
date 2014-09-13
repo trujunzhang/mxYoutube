@@ -4,35 +4,47 @@
     android:id="@+id/bottom_layout"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical"
     android:orientation="horizontal"
     android:background="#ee000000"
     android:layout_gravity="left|bottom">
 
-    <RadioButton
-        android:id="@+id/main_footbar_home"
-        style="@style/main_footbar_radio"
-        android:drawableTop="@drawable/widget_bar_home" />
 
-    <RadioButton
-        android:id="@+id/main_footbar_search"
-        style="@style/main_footbar_radio"
-        android:drawableTop="@drawable/widget_bar_search" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
 
-    <RadioButton
-        android:id="@+id/main_footbar_histrory"
-        style="@style/main_footbar_radio"
-        android:drawableTop="@drawable/widget_bar_history" />
+        <RadioButton
+            android:id="@+id/main_footbar_home"
+            style="@style/main_footbar_radio"
+            android:drawableTop="@drawable/widget_bar_home" />
 
-    <RadioButton
-        android:id="@+id/main_footbar_cache"
-        style="@style/main_footbar_radio"
-        android:drawableTop="@drawable/widget_bar_cache" />
+        <RadioButton
+            android:id="@+id/main_footbar_search"
+            style="@style/main_footbar_radio"
+            android:drawableTop="@drawable/widget_bar_search" />
 
-    <RadioButton
-        android:id="@+id/main_footbar_more"
-        style="@style/main_footbar_radio"
-        android:drawableTop="@drawable/widget_bar_more" />
+        <RadioButton
+            android:id="@+id/main_footbar_histrory"
+            style="@style/main_footbar_radio"
+            android:drawableTop="@drawable/widget_bar_history" />
+
+        <RadioButton
+            android:id="@+id/main_footbar_cache"
+            style="@style/main_footbar_radio"
+            android:drawableTop="@drawable/widget_bar_cache" />
+
+        <RadioButton
+            android:id="@+id/main_footbar_more"
+            style="@style/main_footbar_radio"
+            android:drawableTop="@drawable/widget_bar_more" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="0" />
 
 </LinearLayout>
 
