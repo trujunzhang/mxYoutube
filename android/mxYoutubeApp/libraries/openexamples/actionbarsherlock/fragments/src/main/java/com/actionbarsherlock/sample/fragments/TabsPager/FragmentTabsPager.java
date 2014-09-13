@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.actionbarsherlock.sample.fragments;
+package com.actionbarsherlock.sample.fragments.TabsPager;
 
 import java.util.ArrayList;
 import android.content.Context;
@@ -27,6 +27,11 @@ import android.view.ViewGroup;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.sample.fragments.LoaderCursorSupport;
+import com.actionbarsherlock.sample.fragments.LoaderCustomSupport;
+import com.actionbarsherlock.sample.fragments.LoaderThrottleSupport;
+import com.actionbarsherlock.sample.fragments.R;
+import com.actionbarsherlock.sample.fragments.SampleList;
 import com.actionbarsherlock.sample.fragments.test.FragmentStackSupport;
 
 /**
@@ -36,7 +41,7 @@ import com.actionbarsherlock.sample.fragments.test.FragmentStackSupport;
 public class FragmentTabsPager extends SherlockFragmentActivity {
 	TabHost mTabHost;
 	ViewPager mViewPager;
-	TabsAdapter mTabsAdapter;
+	TabsPagerAdapter mTabsPagerAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,15 +54,15 @@ public class FragmentTabsPager extends SherlockFragmentActivity {
 
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 
-		mTabsAdapter = new TabsAdapter(this, mTabHost, mViewPager);
+		mTabsPagerAdapter = new TabsPagerAdapter(this, mTabHost, mViewPager);
 
-		mTabsAdapter.addTab(mTabHost.newTabSpec("simple").setIndicator("Simple"),
+		mTabsPagerAdapter.addTab(mTabHost.newTabSpec("simple").setIndicator("Simple"),
 				FragmentStackSupport.CountingFragment.class, null);
-		mTabsAdapter.addTab(mTabHost.newTabSpec("contacts").setIndicator("Contacts"),
+		mTabsPagerAdapter.addTab(mTabHost.newTabSpec("contacts").setIndicator("Contacts"),
 				LoaderCursorSupport.CursorLoaderListFragment.class, null);
-		mTabsAdapter.addTab(mTabHost.newTabSpec("custom").setIndicator("Custom"),
+		mTabsPagerAdapter.addTab(mTabHost.newTabSpec("custom").setIndicator("Custom"),
 				LoaderCustomSupport.AppListFragment.class, null);
-		mTabsAdapter.addTab(mTabHost.newTabSpec("throttle").setIndicator("Throttle"),
+		mTabsPagerAdapter.addTab(mTabHost.newTabSpec("throttle").setIndicator("Throttle"),
 				LoaderThrottleSupport.ThrottledLoaderListFragment.class, null);
 
 		if (savedInstanceState != null) {
@@ -79,7 +84,7 @@ public class FragmentTabsPager extends SherlockFragmentActivity {
 	 * content. It listens to changes in tabs, and takes care of switch to the correct paged in the ViewPager whenever
 	 * the selected tab changes.
 	 */
-	public static class TabsAdapter extends FragmentPagerAdapter implements TabHost.OnTabChangeListener,
+	public static class TabsPagerAdapter extends FragmentPagerAdapter implements TabHost.OnTabChangeListener,
 			ViewPager.OnPageChangeListener {
 		private final Context mContext;
 		private final TabHost mTabHost;
@@ -114,7 +119,7 @@ public class FragmentTabsPager extends SherlockFragmentActivity {
 			}
 		}
 
-		public TabsAdapter(FragmentActivity activity, TabHost tabHost, ViewPager pager) {
+		public TabsPagerAdapter(FragmentActivity activity, TabHost tabHost, ViewPager pager) {
 			super(activity.getSupportFragmentManager());
 			mContext = activity;
 			mTabHost = tabHost;

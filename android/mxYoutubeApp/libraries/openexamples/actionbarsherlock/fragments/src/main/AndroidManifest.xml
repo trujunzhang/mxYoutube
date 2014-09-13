@@ -40,7 +40,12 @@
             android:label="@string/activity_sample_code"
             android:name=".SampleList"
             android:theme="@style/Theme.Sherlock">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity android:name=".SendResult" />
@@ -163,10 +168,9 @@
             android:name=".test.FragmentStackSupport">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="com.actionbarsherlock.sample.fragments.EXAMPLE" />
             </intent-filter>
+
         </activity>
 
         <activity
@@ -180,7 +184,7 @@
 
         <activity
             android:label="@string/fragment_tabs_pager"
-            android:name=".FragmentTabsPager">
+            android:name=".TabsPager.FragmentTabsPager">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.actionbarsherlock.sample.fragments.EXAMPLE" />
