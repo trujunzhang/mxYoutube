@@ -114,11 +114,16 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 	}
 
 	@Override
-	public FragmentTransaction getFragmentTransaction() {
+	public FragmentTransaction getFragmentTransaction(boolean hasPush) {
 		FragmentTransaction ft = this.getSupportFragmentManager().beginTransaction();
 
-		ft.setCustomAnimations(R.anim.fragment_slide_left_enter, R.anim.fragment_slide_left_exit,
-				R.anim.fragment_slide_right_enter, R.anim.fragment_slide_right_exit);
+		if (hasPush) {
+			ft.setCustomAnimations(R.anim.fragment_slide_left_enter, R.anim.fragment_slide_left_exit,
+					R.anim.fragment_slide_right_enter, R.anim.fragment_slide_right_exit);
+		} else {
+			ft.setCustomAnimations(R.anim.fragment_slide_right_enter, R.anim.fragment_slide_right_exit,
+					R.anim.fragment_slide_left_enter, R.anim.fragment_slide_left_exit);
+		}
 		return ft;
 	}
 

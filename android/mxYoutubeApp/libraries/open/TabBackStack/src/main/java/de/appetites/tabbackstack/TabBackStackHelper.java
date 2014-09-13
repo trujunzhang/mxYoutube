@@ -49,7 +49,7 @@ public class TabBackStackHelper {
 	 *            Fragment to push and display
 	 */
 	public void push(Fragment fragment, int position) {
-		FragmentTransaction fragmentTransaction = this.tabBackStackInterface.getFragmentTransaction();
+		FragmentTransaction fragmentTransaction = this.tabBackStackInterface.getFragmentTransaction(true);
 		mTabBackStacks.get(position).push(fragment, fragmentTransaction, this.tabBackStackInterface.getContainerId());
 		fragmentTransaction.commit();
 	}
@@ -68,7 +68,8 @@ public class TabBackStackHelper {
 			fragmentBackStack.pop();
 
 			// Replace current fragment with the last fragment in the stack
-			FragmentTransaction fragmentTransaction = fm.beginTransaction();
+			// FragmentTransaction fragmentTransaction = fm.beginTransaction();
+			FragmentTransaction fragmentTransaction = this.tabBackStackInterface.getFragmentTransaction(false);
 			fragmentTransaction.replace(this.tabBackStackInterface.getContainerId(), fragmentBackStack.getCurrent());
 			fragmentTransaction.commit();
 

@@ -14,6 +14,6 @@ public interface TabBackStackInterface {
 
 	public Fragment initTab(int position);
 
-    public FragmentTransaction getFragmentTransaction();
+    public FragmentTransaction getFragmentTransaction(boolean hasPush);
 
 }
