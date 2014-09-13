@@ -170,10 +170,11 @@ public class SimpleVideoPlayer implements VideoInfoTaskCallback {
 		List<Layer> layers = new ArrayList<Layer>();
 
 		layers.add(videoSurfaceViewLayer);
+        layers.add(loadingLayer);
 		layers.add(fullscreenPlayBackControlLayer);
 		layers.add(normalPlayBackControlLayer);
 		// layers.add(subtitleLayer);
-		layers.add(loadingLayer);
+
 
 		layerManager = new LayerManager(activity, fullscreenCallback, container, layers);
 		layerManager.setControl(normalPlayBackControlLayer);
