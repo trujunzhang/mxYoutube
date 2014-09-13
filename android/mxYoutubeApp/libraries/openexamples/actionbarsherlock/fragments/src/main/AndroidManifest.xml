@@ -72,7 +72,7 @@
 
         <activity
             android:label="@string/fragment_custom_animation_support"
-            android:name=".FragmentCustomAnimationSupport">
+            android:name=".AnimationSupport.FragmentCustomAnimationSupport">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.actionbarsherlock.sample.fragments.EXAMPLE" />
