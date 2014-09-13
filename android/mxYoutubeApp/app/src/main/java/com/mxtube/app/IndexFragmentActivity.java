@@ -99,12 +99,7 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 	}
 
 	public void push(int subType) {
-		FragmentTransaction ft = this.getSupportFragmentManager().beginTransaction();
-
-		ft.setCustomAnimations(R.anim.fragment_slide_left_enter, R.anim.fragment_slide_left_exit,
-				R.anim.fragment_slide_right_enter, R.anim.fragment_slide_right_exit);
-
-		this.tabBackStackHelper.push(ft, this.getFragment(subType), this.mTabIndex);
+		this.tabBackStackHelper.push(this.getFragment(subType), this.mTabIndex);
 	}
 
 	@Override
@@ -116,6 +111,15 @@ public class IndexFragmentActivity extends SherlockFragmentActivity implements T
 	public Fragment initTab(int position) {
 		this.currentFragment = this.getFragment(position);
 		return this.currentFragment;
+	}
+
+	@Override
+	public FragmentTransaction getFragmentTransaction() {
+		FragmentTransaction ft = this.getSupportFragmentManager().beginTransaction();
+
+		ft.setCustomAnimations(R.anim.fragment_slide_left_enter, R.anim.fragment_slide_left_exit,
+				R.anim.fragment_slide_right_enter, R.anim.fragment_slide_right_exit);
+		return ft;
 	}
 
 }

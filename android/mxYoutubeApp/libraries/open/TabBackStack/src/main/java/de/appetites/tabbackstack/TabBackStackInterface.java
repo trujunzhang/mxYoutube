@@ -1,6 +1,7 @@
 package de.appetites.tabbackstack;
 
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 
 public interface TabBackStackInterface {
 	/**
@@ -12,5 +13,7 @@ public interface TabBackStackInterface {
 	public int getContainerId();
 
 	public Fragment initTab(int position);
+
+    public FragmentTransaction getFragmentTransaction();
 
 }
