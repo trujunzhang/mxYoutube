@@ -15,37 +15,37 @@
 
         <RadioButton
             android:id="@+id/main_footbar_plus"
-            style="@style/main_footbar_radio"
+            style="@style/main_navigation_radio"
             android:drawableTop="@drawable/widget_bar_plus" />
 
         <RadioButton
             android:id="@+id/main_footbar_share"
-            style="@style/main_footbar_radio"
+            style="@style/main_navigation_radio"
             android:drawableTop="@drawable/widget_bar_share" />
 
         <RadioButton
             android:id="@+id/main_footbar_repeat"
-            style="@style/main_footbar_radio"
+            style="@style/main_navigation_radio"
             android:drawableTop="@drawable/widget_bar_repeat" />
 
         <RadioButton
             android:id="@+id/main_footbar_thumbs_up"
-            style="@style/main_footbar_radio"
+            style="@style/main_navigation_radio"
             android:drawableTop="@drawable/widget_bar_thumbs_up" />
 
         <RadioButton
             android:id="@+id/main_footbar_thumbs_down"
-            style="@style/main_footbar_radio"
+            style="@style/main_navigation_radio"
             android:drawableTop="@drawable/widget_bar_thumbs_down" />
 
         <RadioButton
             android:id="@+id/main_footbar_thumbs_cc"
-            style="@style/main_footbar_radio"
+            style="@style/main_navigation_radio"
             android:drawableTop="@drawable/widget_bar_cc" />
 
         <RadioButton
             android:id="@+id/main_footbar_thumbs_settings"
-            style="@style/main_footbar_radio"
+            style="@style/main_navigation_radio"
             android:drawableTop="@drawable/widget_bar_settings" />
     </LinearLayout>
 

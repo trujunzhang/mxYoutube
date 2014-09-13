@@ -34,7 +34,7 @@ limitations under the License.
         <item name="android:paddingBottom">3.0dip</item>
     </style>
 
-    <style name="main_footbar_radio" parent="footbar">
+    <style name="main_navigation_radio" parent="footbar">
         <item name="android:padding">0dip</item>
         <item name="android:layout_marginTop">10.0dip</item>
     </style>
