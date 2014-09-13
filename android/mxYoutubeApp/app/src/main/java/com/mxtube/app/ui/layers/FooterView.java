@@ -16,41 +16,41 @@ public class FooterView extends LinearLayout {
 
 	private Context mContext;
 
-	@ViewById(R.id.main_footbar_home)
-	RadioButton mainFootbarHome;
-	@ViewById(R.id.main_footbar_search)
-	RadioButton mainFootbarSearch;
-	@ViewById(R.id.main_footbar_histrory)
-	RadioButton mainFootbarHistrory;
-	@ViewById(R.id.main_footbar_cache)
-	RadioButton mainFootbarCache;
-	@ViewById(R.id.main_footbar_more)
-	RadioButton mainFootbarMore;
-
-	@Click(R.id.main_footbar_home)
-	void mainFootbarHomeOnClick(View view) {
-
-	}
-
-	@Click(R.id.main_footbar_search)
-	void mainFootbarSearchOnClick(View view) {
-
-	}
-
-	@Click(R.id.main_footbar_histrory)
-	void mainFootbarHistroryOnClick(View view) {
-
-	}
-
-	@Click(R.id.main_footbar_cache)
-	void mainFootbarCacheOnClick(View view) {
-
-	}
-
-	@Click(R.id.main_footbar_more)
-	void mainFootbarMoreOnClick(View view) {
-
-	}
+//	@ViewById(R.id.main_footbar_home)
+//	RadioButton mainFootbarHome;
+//	@ViewById(R.id.main_footbar_search)
+//	RadioButton mainFootbarSearch;
+//	@ViewById(R.id.main_footbar_histrory)
+//	RadioButton mainFootbarHistrory;
+//	@ViewById(R.id.main_footbar_cache)
+//	RadioButton mainFootbarCache;
+//	@ViewById(R.id.main_footbar_more)
+//	RadioButton mainFootbarMore;
+//
+//	@Click(R.id.main_footbar_home)
+//	void mainFootbarHomeOnClick(View view) {
+//
+//	}
+//
+//	@Click(R.id.main_footbar_search)
+//	void mainFootbarSearchOnClick(View view) {
+//
+//	}
+//
+//	@Click(R.id.main_footbar_histrory)
+//	void mainFootbarHistroryOnClick(View view) {
+//
+//	}
+//
+//	@Click(R.id.main_footbar_cache)
+//	void mainFootbarCacheOnClick(View view) {
+//
+//	}
+//
+//	@Click(R.id.main_footbar_more)
+//	void mainFootbarMoreOnClick(View view) {
+//
+//	}
 
 	public FooterView(Context context) {
 		super(context);

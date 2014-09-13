@@ -18,27 +18,27 @@
         <RadioButton
             android:id="@+id/main_footbar_home"
             style="@style/main_footbar_radio"
-            android:drawableTop="@drawable/widget_bar_home" />
+            android:drawableRight="@drawable/widget_bar_home" />
 
         <RadioButton
             android:id="@+id/main_footbar_search"
             style="@style/main_footbar_radio"
-            android:drawableTop="@drawable/widget_bar_search" />
+            android:drawableRight="@drawable/widget_bar_search" />
 
         <RadioButton
             android:id="@+id/main_footbar_histrory"
             style="@style/main_footbar_radio"
-            android:drawableTop="@drawable/widget_bar_history" />
+            android:drawableRight="@drawable/widget_bar_history" />
 
         <RadioButton
             android:id="@+id/main_footbar_cache"
             style="@style/main_footbar_radio"
-            android:drawableTop="@drawable/widget_bar_cache" />
+            android:drawableRight="@drawable/widget_bar_cache" />
 
         <RadioButton
             android:id="@+id/main_footbar_more"
             style="@style/main_footbar_radio"
-            android:drawableTop="@drawable/widget_bar_more" />
+            android:drawableRight="@drawable/widget_bar_more" />
     </LinearLayout>
 
     <LinearLayout
