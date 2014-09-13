@@ -61,6 +61,9 @@ public class FragmentBackStack implements Parcelable {
 	public void push(Fragment fragment, FragmentTransaction fragmentTransaction, int containerId) {
 		fragmentTransaction.replace(containerId, fragment);
 		if (mFragments.size() == 0 || mFragments.size() > 0 && fragment != mFragments.peek()) {
+			if (mFragments.size() > 1) {// only one child fragment.
+				mFragments.pop();
+			}
 			mFragments.push(fragment);
 		}
 	}
