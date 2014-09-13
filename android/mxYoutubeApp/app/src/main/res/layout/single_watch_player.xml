@@ -20,7 +20,7 @@
             android:id="@+id/video_frame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/solid_red" />
+            android:background="@color/solid_black" />
 
         <!--02:player's info and subscription panel-->
         <ScrollView
