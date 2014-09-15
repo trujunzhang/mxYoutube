@@ -43,7 +43,20 @@
                                                          [[ThirdViewController alloc] init],
      nil];
 
+   NSArray * viewTabBars = [NSArray arrayWithObjects:
+    [NSArray arrayWithObjects:@"Subscriptions", @"tab_home", @"tab_home", nil],
+    [NSArray arrayWithObjects:@"", @"tab_search", @"tab_search", nil],
+    [NSArray arrayWithObjects:@"History", @"tab_history", @"tab_history", nil],
+     nil];
+
+
+   int i = 0;
    for (ViewController * controller in viewControllers) {
+      NSArray * tabBarInfo = viewTabBars[i++];
+      controller.title = tabBarInfo[0];
+      controller.tabBarItem.image = [UIImage imageNamed:tabBarInfo[1]];
+      controller.tabBarItem.selectedImage = [[UIImage imageNamed:tabBarInfo[2]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+
       UINavigationController * object = [[UINavigationController alloc] initWithRootViewController:controller];
       [[object navigationBar] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
       [controllers addObject:object];
