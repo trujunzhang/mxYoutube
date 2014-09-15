@@ -39,4 +39,13 @@ limitations under the License.
         <item name="android:layout_marginTop">10.0dip</item>
     </style>
 
+    <style name="PlayerButton">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@null</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
 </resources>
