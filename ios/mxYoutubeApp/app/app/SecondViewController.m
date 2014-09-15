@@ -8,16 +8,18 @@
 
 #import "SecondViewController.h"
 
+
 @implementation SecondViewController
 
 - (id)init {
-    self = [super init];
-    if (self) {
-        self.title = @"Elephant";
-        self.tabBarItem.image = [UIImage imageNamed:@"cloud-unselected"];
-        self.tabBarItem.selectedImage = [UIImage imageNamed:@"cloud-selected"];
-    }
-    return self;
+   self = [super init];
+   if (self) {
+      self.title = @"Search";
+      self.tabBarItem.image = [UIImage imageNamed:@"tab_search"];
+//      self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab_search"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+      self.tabBarItem.selectedImage = [UIImage imageNamed:@"tab_search"];
+   }
+   return self;
 }
 
 

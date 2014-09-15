@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  HomeViewController.h
 //  JBTabBarControllerExample
 //
 //  Created by Jin Budelmann on 3/02/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface HomeViewController : UIViewController
 
 @end
