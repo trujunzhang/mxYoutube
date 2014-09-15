@@ -8,8 +8,8 @@
 
 #import "ViewController.h"
 #import "HomeViewController.h"
-#import "SecondViewController.h"
-#import "ThirdViewController.h"
+#import "SearchViewController.h"
+#import "HistoryViewController.h"
 
 
 @interface ViewController ()
@@ -39,8 +39,8 @@
    NSMutableArray * controllers = [[NSMutableArray alloc] init];
 
    NSArray * viewControllers = [NSArray arrayWithObjects:[[HomeViewController alloc] init],
-                                                         [[SecondViewController alloc] init],
-                                                         [[ThirdViewController alloc] init],
+                                                         [[SearchViewController alloc] init],
+                                                         [[HistoryViewController alloc] init],
      nil];
 
    NSArray * viewTabBars = [NSArray arrayWithObjects:

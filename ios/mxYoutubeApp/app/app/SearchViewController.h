@@ -1,5 +1,5 @@
 //
-//  ThirdViewController.h
+//  SearchViewController.h
 //  JBTabBarControllerExample
 //
 //  Created by Jin Budelmann on 3/02/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdViewController : UITableViewController
+@interface SearchViewController : UIViewController
 
 @end

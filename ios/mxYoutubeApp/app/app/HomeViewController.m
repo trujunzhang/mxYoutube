@@ -17,9 +17,6 @@
 - (id)init {
    self = [super init];
    if (self) {
-      self.title = @"Subscriptions";
-      self.tabBarItem.image = [UIImage imageNamed:@"tab_home"];
-      self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab_home"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 
       [self addTextView];
    }

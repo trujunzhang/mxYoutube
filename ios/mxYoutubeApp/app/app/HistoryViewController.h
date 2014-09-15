@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  HistoryViewController.h
 //  JBTabBarControllerExample
 //
 //  Created by Jin Budelmann on 3/02/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface HistoryViewController : UITableViewController
 
 @end
