@@ -10,6 +10,7 @@
 #import "JBTabBarController.h"
 
 #import "AppDelegate.h"
+#import "SearchViewController.h"
 
 
 @implementation HomeViewController
@@ -31,8 +32,19 @@
 
    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(50, 160, 100, 40)];
    button.backgroundColor = [UIColor redColor];
+   [button setTitle:@"Play" forState:UIControlStateNormal];
+   [button addTarget:self action:@selector(BtnClick:) forControlEvents:UIControlEventTouchUpInside];
+
    [[self view] addSubview:button];
 
+}
+
+
+- (IBAction)BtnClick:(id)sender {
+   SearchViewController * firstController = [[SearchViewController alloc] init];
+   [[self navigationController] pushViewController:firstController animated:NO];
+
+   NSLog(@"BtnClick");
 }
 
 
