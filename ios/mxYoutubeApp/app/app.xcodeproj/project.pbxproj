@@ -41,7 +41,9 @@
 		65B8CD9AA4E07D901583CF2F /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8C224D1C20725EF7BED12 /* ThirdViewController.m */; };
 		65B8CDCDBA585EBE3D41A2B0 /* tab_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8CBBD4B75CD9E4F885787 /* tab_more@2x.png */; };
 		65B8CDF158BADE9A457E33CF /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C2C82421A998E86F996A /* Default-Portrait~ipad.png */; };
+		65B8CED63133E9D79A0EA12D /* tab_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C10AC1B27E95C12B8844 /* tab_search@2x.png */; };
 		65B8CEFF0453E85597B6D4CF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C942E38B6D2B64E68569 /* Default@2x.png */; };
+		65B8CF9645A0147D477CF54A /* tab_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C921D1A98537B9392363 /* tab_search.png */; };
 		D67E236FC33A4CBDA867579F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F6691D477B4FDF86387DC9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,7 @@
 		5E2D94FD19A1C7F200C9EB16 /* appTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "appTests-Info.plist"; sourceTree = "<group>"; };
 		5E2D94FF19A1C7F200C9EB16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5E2D950119A1C7F200C9EB16 /* appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appTests.m; sourceTree = "<group>"; };
+		65B8C10AC1B27E95C12B8844 /* tab_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_search@2x.png"; sourceTree = "<group>"; };
 		65B8C224D1C20725EF7BED12 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		65B8C28183203DA4FE1DE2EF /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		65B8C2C82421A998E86F996A /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 		65B8C70B0DB1B202D96A09B0 /* tab_history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_history.png; sourceTree = "<group>"; };
 		65B8C733861CB0D2723E72FD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		65B8C7FA8AA1123E3AC1C1C2 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		65B8C921D1A98537B9392363 /* tab_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_search.png; sourceTree = "<group>"; };
 		65B8C942E38B6D2B64E68569 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		65B8C9AA934501F269739281 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		65B8C9FB76BC98F05B938174 /* tab_cache@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_cache@2x.png"; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 				65B8CBBD4B75CD9E4F885787 /* tab_more@2x.png */,
 				65B8C9FB76BC98F05B938174 /* tab_cache@2x.png */,
 				65B8C616C5444A3B1CF18401 /* tab_history@2x.png */,
+				65B8C921D1A98537B9392363 /* tab_search.png */,
+				65B8C10AC1B27E95C12B8844 /* tab_search@2x.png */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -348,6 +354,8 @@
 				65B8CDCDBA585EBE3D41A2B0 /* tab_more@2x.png in Resources */,
 				65B8CB90B08F3A8F2126A8B6 /* tab_cache@2x.png in Resources */,
 				65B8C519C986899AA7276F3F /* tab_history@2x.png in Resources */,
+				65B8CF9645A0147D477CF54A /* tab_search.png in Resources */,
+				65B8CED63133E9D79A0EA12D /* tab_search@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
