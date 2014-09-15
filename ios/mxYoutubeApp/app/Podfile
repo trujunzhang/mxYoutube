@@ -1,0 +1,6 @@
+
+  pod "JBTabBarController", :path => "../lib/JBTabBarController"
+
+
+
+

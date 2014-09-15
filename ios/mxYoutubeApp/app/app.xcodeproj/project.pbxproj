@@ -22,6 +22,27 @@
 		5E2D94F819A1C7F200C9EB16 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2D94DC19A1C7F200C9EB16 /* CoreData.framework */; };
 		5E2D950019A1C7F200C9EB16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E2D94FE19A1C7F200C9EB16 /* InfoPlist.strings */; };
 		5E2D950219A1C7F200C9EB16 /* appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2D950119A1C7F200C9EB16 /* appTests.m */; };
+		65B8C00559DE91DB46A39122 /* tab_more.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C4D78EDF6437184F5404 /* tab_more.png */; };
+		65B8C0E49C5596D74565FEBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8C733861CB0D2723E72FD /* ViewController.m */; };
+		65B8C190C1609AA1D6BD479A /* tab_cache.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8CB42B69C69AE5D94BED1 /* tab_cache.png */; };
+		65B8C241C9DC5B47C4FAEE5C /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C3A3591B33B9EFA7C3D7 /* Default-Landscape~ipad.png */; };
+		65B8C3E97512AC3361B02D6A /* tab_history.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C70B0DB1B202D96A09B0 /* tab_history.png */; };
+		65B8C46F1E00C0509FF1D082 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B8CF27507B833BB83809DD /* Main_iPhone.storyboard */; };
+		65B8C4A90756A16C79A27B89 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C69DD46ECBC9FC90413E /* Main_iPad.storyboard */; };
+		65B8C519C986899AA7276F3F /* tab_history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C616C5444A3B1CF18401 /* tab_history@2x.png */; };
+		65B8C5B3D89CE039C4580E1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C9AA934501F269739281 /* Default-568h@2x.png */; };
+		65B8C6450ABFF8908139C17D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8C28183203DA4FE1DE2EF /* FirstViewController.m */; };
+		65B8C66EA04CEE90531EAF5F /* tab_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C420210AB461673E2742 /* tab_home@2x.png */; };
+		65B8C8A45CF379E9F0F16E1B /* tab_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8CDCCAB411D6C23622DA3 /* tab_home.png */; };
+		65B8CA7CCA08CCDD017A6DED /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8C5005BD82BDEC02C152C /* SecondViewController.m */; };
+		65B8CABBBD744FBD914173E4 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8CCE9441D65C454FECAB3 /* Default-Portrait@2x~ipad.png */; };
+		65B8CB90B08F3A8F2126A8B6 /* tab_cache@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C9FB76BC98F05B938174 /* tab_cache@2x.png */; };
+		65B8CC60D1230ED8EB9E74AB /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8CEA4FF92E25020A557F3 /* Default-Landscape@2x~ipad.png */; };
+		65B8CD9AA4E07D901583CF2F /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8C224D1C20725EF7BED12 /* ThirdViewController.m */; };
+		65B8CDCDBA585EBE3D41A2B0 /* tab_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8CBBD4B75CD9E4F885787 /* tab_more@2x.png */; };
+		65B8CDF158BADE9A457E33CF /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C2C82421A998E86F996A /* Default-Portrait~ipad.png */; };
+		65B8CEFF0453E85597B6D4CF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C942E38B6D2B64E68569 /* Default@2x.png */; };
+		D67E236FC33A4CBDA867579F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F6691D477B4FDF86387DC9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A7D13C7070E469396BA6550 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		54F6691D477B4FDF86387DC9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2D94D319A1C7F200C9EB16 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2D94D619A1C7F200C9EB16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5E2D94D819A1C7F200C9EB16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +76,30 @@
 		5E2D94FD19A1C7F200C9EB16 /* appTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "appTests-Info.plist"; sourceTree = "<group>"; };
 		5E2D94FF19A1C7F200C9EB16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5E2D950119A1C7F200C9EB16 /* appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appTests.m; sourceTree = "<group>"; };
+		65B8C224D1C20725EF7BED12 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		65B8C28183203DA4FE1DE2EF /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		65B8C2C82421A998E86F996A /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		65B8C3A3591B33B9EFA7C3D7 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		65B8C420210AB461673E2742 /* tab_home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_home@2x.png"; sourceTree = "<group>"; };
+		65B8C44C379858D9D77E7D7D /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		65B8C4D78EDF6437184F5404 /* tab_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_more.png; sourceTree = "<group>"; };
+		65B8C5005BD82BDEC02C152C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		65B8C616C5444A3B1CF18401 /* tab_history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_history@2x.png"; sourceTree = "<group>"; };
+		65B8C70B0DB1B202D96A09B0 /* tab_history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_history.png; sourceTree = "<group>"; };
+		65B8C733861CB0D2723E72FD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		65B8C7FA8AA1123E3AC1C1C2 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		65B8C942E38B6D2B64E68569 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		65B8C9AA934501F269739281 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		65B8C9FB76BC98F05B938174 /* tab_cache@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_cache@2x.png"; sourceTree = "<group>"; };
+		65B8CB2418B910E8C9318F11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		65B8CB42B69C69AE5D94BED1 /* tab_cache.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_cache.png; sourceTree = "<group>"; };
+		65B8CBBD4B75CD9E4F885787 /* tab_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_more@2x.png"; sourceTree = "<group>"; };
+		65B8CCE9441D65C454FECAB3 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		65B8CD04FE957C4CE7838109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		65B8CDCCAB411D6C23622DA3 /* tab_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_home.png; sourceTree = "<group>"; };
+		65B8CE1168DE84DE1F99CB45 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		65B8CE3F1B0DC56D59F9AF38 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		65B8CEA4FF92E25020A557F3 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +111,7 @@
 				5E2D94DD19A1C7F200C9EB16 /* CoreData.framework in Frameworks */,
 				5E2D94DB19A1C7F200C9EB16 /* UIKit.framework in Frameworks */,
 				5E2D94D719A1C7F200C9EB16 /* Foundation.framework in Frameworks */,
+				D67E236FC33A4CBDA867579F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +136,7 @@
 				5E2D94FB19A1C7F200C9EB16 /* appTests */,
 				5E2D94D519A1C7F200C9EB16 /* Frameworks */,
 				5E2D94D419A1C7F200C9EB16 /* Products */,
+				1A7D13C7070E469396BA6550 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +157,7 @@
 				5E2D94DA19A1C7F200C9EB16 /* UIKit.framework */,
 				5E2D94DC19A1C7F200C9EB16 /* CoreData.framework */,
 				5E2D94F419A1C7F200C9EB16 /* XCTest.framework */,
+				54F6691D477B4FDF86387DC9 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,6 +170,17 @@
 				5E2D94ED19A1C7F200C9EB16 /* Images.xcassets */,
 				5E2D94EA19A1C7F200C9EB16 /* app.xcdatamodeld */,
 				5E2D94DF19A1C7F200C9EB16 /* Supporting Files */,
+				65B8CB0736F7CD93977D8DFD /* Resources */,
+				65B8C7FA8AA1123E3AC1C1C2 /* SecondViewController.h */,
+				65B8C5005BD82BDEC02C152C /* SecondViewController.m */,
+				65B8CE1168DE84DE1F99CB45 /* ThirdViewController.h */,
+				65B8C224D1C20725EF7BED12 /* ThirdViewController.m */,
+				65B8CE3F1B0DC56D59F9AF38 /* ViewController.h */,
+				65B8C733861CB0D2723E72FD /* ViewController.m */,
+				65B8C44C379858D9D77E7D7D /* FirstViewController.h */,
+				65B8C28183203DA4FE1DE2EF /* FirstViewController.m */,
+				65B8C69DD46ECBC9FC90413E /* Main_iPad.storyboard */,
+				65B8CF27507B833BB83809DD /* Main_iPhone.storyboard */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -153,6 +214,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		65B8C438B748B20C1EA8FEBE /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				65B8CDCCAB411D6C23622DA3 /* tab_home.png */,
+				65B8C4D78EDF6437184F5404 /* tab_more.png */,
+				65B8CB42B69C69AE5D94BED1 /* tab_cache.png */,
+				65B8C70B0DB1B202D96A09B0 /* tab_history.png */,
+				65B8C420210AB461673E2742 /* tab_home@2x.png */,
+				65B8CBBD4B75CD9E4F885787 /* tab_more@2x.png */,
+				65B8C9FB76BC98F05B938174 /* tab_cache@2x.png */,
+				65B8C616C5444A3B1CF18401 /* tab_history@2x.png */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		65B8CA455CB998D5BBB11C93 /* bg */ = {
+			isa = PBXGroup;
+			children = (
+				65B8C942E38B6D2B64E68569 /* Default@2x.png */,
+				65B8C9AA934501F269739281 /* Default-568h@2x.png */,
+				65B8C2C82421A998E86F996A /* Default-Portrait~ipad.png */,
+				65B8C3A3591B33B9EFA7C3D7 /* Default-Landscape~ipad.png */,
+				65B8CCE9441D65C454FECAB3 /* Default-Portrait@2x~ipad.png */,
+				65B8CEA4FF92E25020A557F3 /* Default-Landscape@2x~ipad.png */,
+			);
+			path = bg;
+			sourceTree = "<group>";
+		};
+		65B8CB0736F7CD93977D8DFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				65B8CA455CB998D5BBB11C93 /* bg */,
+				65B8C438B748B20C1EA8FEBE /* Tabs */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,9 +258,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E2D950519A1C7F200C9EB16 /* Build configuration list for PBXNativeTarget "app" */;
 			buildPhases = (
+				294F64D63E0742919DF3A341 /* Check Pods Manifest.lock */,
 				5E2D94CF19A1C7F200C9EB16 /* Sources */,
 				5E2D94D019A1C7F200C9EB16 /* Frameworks */,
 				5E2D94D119A1C7F200C9EB16 /* Resources */,
+				A0E048CBE5C046F5A5B3FD0A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,6 +315,8 @@
 			mainGroup = 5E2D94CA19A1C7F200C9EB16;
 			productRefGroup = 5E2D94D419A1C7F200C9EB16 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				5E2D94D219A1C7F200C9EB16 /* app */,
@@ -230,6 +332,22 @@
 			files = (
 				5E2D94E319A1C7F200C9EB16 /* InfoPlist.strings in Resources */,
 				5E2D94EE19A1C7F200C9EB16 /* Images.xcassets in Resources */,
+				65B8C4A90756A16C79A27B89 /* Main_iPad.storyboard in Resources */,
+				65B8C46F1E00C0509FF1D082 /* Main_iPhone.storyboard in Resources */,
+				65B8CEFF0453E85597B6D4CF /* Default@2x.png in Resources */,
+				65B8C5B3D89CE039C4580E1D /* Default-568h@2x.png in Resources */,
+				65B8CDF158BADE9A457E33CF /* Default-Portrait~ipad.png in Resources */,
+				65B8C241C9DC5B47C4FAEE5C /* Default-Landscape~ipad.png in Resources */,
+				65B8CABBBD744FBD914173E4 /* Default-Portrait@2x~ipad.png in Resources */,
+				65B8CC60D1230ED8EB9E74AB /* Default-Landscape@2x~ipad.png in Resources */,
+				65B8C8A45CF379E9F0F16E1B /* tab_home.png in Resources */,
+				65B8C00559DE91DB46A39122 /* tab_more.png in Resources */,
+				65B8C190C1609AA1D6BD479A /* tab_cache.png in Resources */,
+				65B8C3E97512AC3361B02D6A /* tab_history.png in Resources */,
+				65B8C66EA04CEE90531EAF5F /* tab_home@2x.png in Resources */,
+				65B8CDCDBA585EBE3D41A2B0 /* tab_more@2x.png in Resources */,
+				65B8CB90B08F3A8F2126A8B6 /* tab_cache@2x.png in Resources */,
+				65B8C519C986899AA7276F3F /* tab_history@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +361,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		294F64D63E0742919DF3A341 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A0E048CBE5C046F5A5B3FD0A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5E2D94CF19A1C7F200C9EB16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -251,6 +402,10 @@
 				5E2D94E919A1C7F200C9EB16 /* AppDelegate.m in Sources */,
 				5E2D94E519A1C7F200C9EB16 /* main.m in Sources */,
 				5E2D94EC19A1C7F200C9EB16 /* app.xcdatamodeld in Sources */,
+				65B8CA7CCA08CCDD017A6DED /* SecondViewController.m in Sources */,
+				65B8CD9AA4E07D901583CF2F /* ThirdViewController.m in Sources */,
+				65B8C0E49C5596D74565FEBF /* ViewController.m in Sources */,
+				65B8C6450ABFF8908139C17D /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +442,22 @@
 				5E2D94FF19A1C7F200C9EB16 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		65B8C69DD46ECBC9FC90413E /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65B8CB2418B910E8C9318F11 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		65B8CF27507B833BB83809DD /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65B8CD04FE957C4CE7838109 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -366,6 +537,7 @@
 		};
 		5E2D950619A1C7F200C9EB16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A7D13C7070E469396BA6550 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -379,6 +551,7 @@
 		};
 		5E2D950719A1C7F200C9EB16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A7D13C7070E469396BA6550 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -449,6 +622,7 @@
 				5E2D950719A1C7F200C9EB16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E2D950819A1C7F200C9EB16 /* Build configuration list for PBXNativeTarget "appTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +631,7 @@
 				5E2D950A19A1C7F200C9EB16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

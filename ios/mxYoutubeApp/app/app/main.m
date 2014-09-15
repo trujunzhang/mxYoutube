@@ -2,8 +2,8 @@
 //  main.m
 //  app
 //
-//  Created by djzhang on 8/18/14.
-//  Copyright (c) 2014 xinma. All rights reserved.
+//  Created by djzhang on 9/15/14.
+//  Copyright (c) 2014 djzhang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
