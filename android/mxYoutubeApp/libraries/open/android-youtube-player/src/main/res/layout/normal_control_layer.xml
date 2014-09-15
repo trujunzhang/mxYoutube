@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/top_layout"
         android:layout_width="fill_parent"
-        android:layout_height="44.0dp"
+        android:layout_height="@dimen/top_control_height"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:background="#ee000000"
