@@ -24,6 +24,7 @@
 		5E2D950219A1C7F200C9EB16 /* appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2D950119A1C7F200C9EB16 /* appTests.m */; };
 		5ECEE79D19C8488F002E71F7 /* IpadGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEE79C19C8488F002E71F7 /* IpadGridViewCell.m */; };
 		5ECEE79F19C848A0002E71F7 /* IpadGridViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE79E19C848A0002E71F7 /* IpadGridViewCell.xib */; };
+		5ECEE7A419C84B27002E71F7 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE7A319C84B27002E71F7 /* cover.png */; };
 		65B8C00559DE91DB46A39122 /* tab_more.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C4D78EDF6437184F5404 /* tab_more.png */; };
 		65B8C0E49C5596D74565FEBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8C733861CB0D2723E72FD /* ViewController.m */; };
 		65B8C190C1609AA1D6BD479A /* tab_cache.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8CB42B69C69AE5D94BED1 /* tab_cache.png */; };
@@ -83,6 +84,7 @@
 		5ECEE79B19C8488F002E71F7 /* IpadGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpadGridViewCell.h; sourceTree = "<group>"; };
 		5ECEE79C19C8488F002E71F7 /* IpadGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpadGridViewCell.m; sourceTree = "<group>"; };
 		5ECEE79E19C848A0002E71F7 /* IpadGridViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IpadGridViewCell.xib; sourceTree = "<group>"; };
+		5ECEE7A319C84B27002E71F7 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cover.png; path = test/cover.png; sourceTree = "<group>"; };
 		65B8C10AC1B27E95C12B8844 /* tab_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_search@2x.png"; sourceTree = "<group>"; };
 		65B8C224D1C20725EF7BED12 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		65B8C28183203DA4FE1DE2EF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -234,6 +236,14 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		5ECEE7A219C84B1E002E71F7 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				5ECEE7A319C84B27002E71F7 /* cover.png */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
 		65B8C438B748B20C1EA8FEBE /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +277,7 @@
 		65B8CB0736F7CD93977D8DFD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5ECEE7A219C84B1E002E71F7 /* test */,
 				65B8CA455CB998D5BBB11C93 /* bg */,
 				65B8C438B748B20C1EA8FEBE /* Tabs */,
 			);
@@ -355,6 +366,7 @@
 				65B8C4A90756A16C79A27B89 /* Main_iPad.storyboard in Resources */,
 				65B8C46F1E00C0509FF1D082 /* Main_iPhone.storyboard in Resources */,
 				65B8CEFF0453E85597B6D4CF /* Default@2x.png in Resources */,
+				5ECEE7A419C84B27002E71F7 /* cover.png in Resources */,
 				5ECEE79F19C848A0002E71F7 /* IpadGridViewCell.xib in Resources */,
 				65B8C5B3D89CE039C4580E1D /* Default-568h@2x.png in Resources */,
 				65B8CDF158BADE9A457E33CF /* Default-Portrait~ipad.png in Resources */,
