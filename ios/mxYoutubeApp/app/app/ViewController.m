@@ -38,9 +38,10 @@
 - (void)buildTabBarControllerWithLayoutStrategy:(JBTabBarLayoutStrategy)layoutStrategy numberOfTabs:(NSUInteger)numberOfTabs {
    NSMutableArray * controllers = [[NSMutableArray alloc] init];
 
-   NSArray * viewControllers = [NSArray arrayWithObjects:[[HomeViewController alloc] init],
-                                                         [[SearchViewController alloc] init],
-                                                         [[HistoryViewController alloc] init],
+   NSArray * viewControllers = [NSArray arrayWithObjects:
+    [[HistoryViewController alloc] init],
+    [[HomeViewController alloc] init],
+    [[SearchViewController alloc] init],
      nil];
 
    NSArray * viewTabBars = [NSArray arrayWithObjects:
