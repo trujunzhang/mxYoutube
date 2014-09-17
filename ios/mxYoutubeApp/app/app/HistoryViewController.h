@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 
-@interface HistoryViewController : UICollectionViewController
+static NSString * const identifier = @"CELL";
+
+
+@interface HistoryViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property(nonatomic, strong) UICollectionView * collectionView;
 
 @end
