@@ -12,7 +12,7 @@
 static NSString * const identifier = @"CELL";
 
 
-@interface HistoryViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface HistoryViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 //@property(weak, nonatomic) IBOutlet UICollectionView * collectionView;
 @property(nonatomic, strong) UICollectionView * collectionView;

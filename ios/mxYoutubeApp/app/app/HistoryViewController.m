@@ -26,7 +26,7 @@
    [super viewDidLoad];
    // Do any additional setup after loading the view, typically from a nib.
    UICollectionViewFlowLayout * flowLayout = [[UICollectionViewFlowLayout alloc] init];
-   self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds
+   self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame
                                             collectionViewLayout:flowLayout];
 
    [self.collectionView setAutoresizesSubviews:YES];
@@ -39,6 +39,7 @@
 
    self.collectionView.dataSource = self;
    self.collectionView.delegate = self;
+   self.collectionView.backgroundColor = [UIColor clearColor];
 
    [self.view addSubview:self.collectionView];
 
@@ -51,7 +52,7 @@
 
 //定义展示的UICollectionViewCell的个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-   return 30;
+   return 3;
 }
 
 
@@ -74,7 +75,7 @@
 
 //定义每个UICollectionView 的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-   return CGSizeMake(96, 100);
+   return CGSizeMake(250, 246);
 }
 
 
