@@ -25,4 +25,5 @@
 @interface AppResolutionHelper
 
 
++ (UIColor *)resolutionByType:(NSUInteger)type;
 @end

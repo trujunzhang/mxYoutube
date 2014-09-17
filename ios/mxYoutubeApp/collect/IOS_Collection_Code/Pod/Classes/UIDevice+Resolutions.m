@@ -28,7 +28,7 @@
 @implementation UIDevice (Resolutions)
 
 
-- (UIDeviceResolution)resolution {
++ (UIDeviceResolution)resolution {
    UIDeviceResolution resolution = UIDeviceResolution_Unknown;
    UIScreen * mainScreen = [UIScreen mainScreen];
    CGFloat scale = ([mainScreen respondsToSelector:@selector(scale)] ? mainScreen.scale : 1.0f);

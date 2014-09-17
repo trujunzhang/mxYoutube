@@ -28,5 +28,14 @@
 @implementation AppResolutionHelper
 
 
++ (UIColor *)resolutionByType:(NSUInteger)type {
+   NSArray * array = [AppResolutionHelper getResolutionImageNameArray];
+   return nil;
+}
+
++ (NSArray *)getResolutionImageNameArray {
+   return nil;
+}
+
 
 @end

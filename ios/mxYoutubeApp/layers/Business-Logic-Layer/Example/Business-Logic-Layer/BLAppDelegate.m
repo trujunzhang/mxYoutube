@@ -7,6 +7,8 @@
 //
 
 #import "BLAppDelegate.h"
+#import "UIDevice+Resolutions.h"
+#import "AppResolutionHelper.h"
 
 
 @implementation BLAppDelegate
@@ -18,7 +20,7 @@
 
 //    self.window.backgroundColor=[UIColor orangeColor];
 
-   self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]];
+   self.window.backgroundColor = [self getColorByResolution];
 
    [[NSNotificationCenter defaultCenter] addObserver:self
                                             selector:@selector(handleDidChangeStatusBarOrientationNotification:)
@@ -26,6 +28,14 @@
                                               object:nil];
 
    return YES;
+}
+
+
+- (UIColor *)getColorByResolution {
+   UIDeviceResolution resolution = [UIDevice resolution];
+   NSUInteger type = resolution;
+   UIColor* background=[AppResolutionHelper resolutionByType:type];
+   return [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]];
 }
 
 
