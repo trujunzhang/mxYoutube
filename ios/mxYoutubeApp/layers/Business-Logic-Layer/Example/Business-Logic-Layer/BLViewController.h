@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewController+Rotation.h"
 
 @interface BLViewController : UIViewController
 
