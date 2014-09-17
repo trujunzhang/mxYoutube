@@ -33,8 +33,17 @@
    return nil;
 }
 
+
 + (NSArray *)getResolutionImageNameArray {
-   return nil;
+   return [NSArray arrayWithObjects:
+    @"Default@2x", // 640 x 960
+    @"Default-568h@2x", //640 x 1,136
+    @"Default-Landscape@2x~ipad",//1,024 x 768
+    @"Default-Landscape~ipad",//  2,048 x 1,536
+    @"Default-Portrait@2x~ipad",// 1,024 x 768
+    @"Default-Portrait~ipad",// 2,048 x 1,536
+     nil];
+
 }
 
 
