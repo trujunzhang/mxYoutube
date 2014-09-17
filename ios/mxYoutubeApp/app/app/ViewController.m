@@ -85,4 +85,31 @@
 }
 
 
+#pragma mark -
+#pragma mark Rotation stuff
+
+
+- (BOOL)shouldAutorotate {
+   return YES;
+}
+
+
+- (NSUInteger)supportedInterfaceOrientations {
+   return UIInterfaceOrientationMaskAll;
+}
+
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+   return UIInterfaceOrientationLandscapeLeft;
+}
+
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation {
+   if ((orientation == UIInterfaceOrientationLandscapeRight) || (orientation == UIInterfaceOrientationLandscapeLeft)) {
+      return YES;
+   }
+
+   return NO;
+}
+
 @end
