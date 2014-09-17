@@ -1,5 +1,6 @@
+pod "JBTabBarController", :path => "../lib/JBTabBarController"
 
-  pod "JBTabBarController", :path => "../lib/JBTabBarController"
+pod "IOS_Collection_Code", :path => "../collect/IOS_Collection_Code"
 
 
 
