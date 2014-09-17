@@ -12,6 +12,7 @@
 #import "HistoryViewController.h"
 #import "UIDevice+Resolutions.h"
 
+
 @interface ViewController ()
 
 @end
@@ -27,10 +28,6 @@
    // Do any additional setup after loading the view, typically from a nib.
    [self buildTabBarControllerWithLayoutStrategy:JBTabBarLayoutStrategyBlockBased numberOfTabs:3];
 
-   UIDevice * device= [[UIDevice alloc] init];
-   UIDeviceResolution i = [device resolution];
-
-   NSString * debug = @"debug";
 }
 
 

@@ -29,6 +29,7 @@
 
 
 + (UIColor *)resolutionByType:(NSUInteger)type {
+//   type = 3;
    NSArray * array = [AppResolutionHelper getResolutionImageNameArray];
    return [UIColor colorWithPatternImage:[UIImage imageNamed:array[type]]];
 }
@@ -48,8 +49,8 @@
    return [NSArray arrayWithObjects:
     @"",// {UIDeviceResolution_Unknown}
     @"",// {iPhone 1,3,3GS Standard Display  (320x480px)}
-    @"Default@2x", // 640 x 960
-    @"Default-568h@2x", //640 x 1,136
+    @"Default", // 640 x 960
+    @"Default-568h", //640 x 1,136
     @"Default-Landscape~ipad",//  1,024 x 768
     @"Default-Landscape@2x~ipad",//2,048 x 1,536
     @"Default-Portrait~ipad",// 768 x 1,024
