@@ -34,8 +34,9 @@
 - (UIColor *)getColorByResolution {
    UIDeviceResolution resolution = [UIDevice resolution];
    NSUInteger type = resolution;
-   UIColor* background=[AppResolutionHelper resolutionByType:type];
-   return [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]];
+   UIColor * background = [AppResolutionHelper resolutionByType:type];
+//   return [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]];
+   return background;
 }
 
 

@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		008B2C1B895493B93BBCBEC8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		008B2C1B895493B93BBCBEC8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		123C1384DE9C4230B3E83AA7 /* Pods-Business-Logic-Layer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Business-Logic-Layer.xcconfig"; path = "Pods/Pods-Business-Logic-Layer.xcconfig"; sourceTree = "<group>"; };
 		1CBFD4F225C54D93856DA3DA /* libPods-Business-Logic-Layer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Business-Logic-Layer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* Business-Logic-Layer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Business-Logic-Layer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,8 +62,8 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		8E5B3DADB42041EA9954AE9C /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = "<group>"; };
-		983BAECDD54BA3E4B1DAFAB5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		E417DC3D3E9F4EF094B81EC7 /* Business-Logic-Layer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "Business-Logic-Layer.podspec"; path = "../Business-Logic-Layer.podspec"; sourceTree = "<group>"; };
+		983BAECDD54BA3E4B1DAFAB5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E417DC3D3E9F4EF094B81EC7 /* Business-Logic-Layer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "Business-Logic-Layer.podspec"; path = "../Business-Logic-Layer.podspec"; sourceTree = "<group>"; };
 		E979A640683C4E6E9196DF77 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -251,8 +251,6 @@
 			mainGroup = 6003F581195388D10070C39A;
 			productRefGroup = 6003F58B195388D20070C39A /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				6003F589195388D20070C39A /* Business-Logic-Layer */,

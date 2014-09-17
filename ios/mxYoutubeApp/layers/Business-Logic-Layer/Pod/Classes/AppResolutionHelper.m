@@ -30,7 +30,7 @@
 
 + (UIColor *)resolutionByType:(NSUInteger)type {
    NSArray * array = [AppResolutionHelper getResolutionImageNameArray];
-   return nil;
+   return [UIColor colorWithPatternImage:[UIImage imageNamed:array[type]]];
 }
 
 
