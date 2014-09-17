@@ -33,17 +33,22 @@
 
 
 - (UIColor *)getColorByResolution {
+
    UIDeviceResolution resolution = [UIDevice resolution];
-   NSUInteger type = resolution;
-   UIColor * background = [AppResolutionHelper resolutionByType:type];
-//   return [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]];
+      UIColor * background = [AppResolutionHelper resolutionByType:resolution];
    return background;
 }
 
 
 - (void)handleDidChangeStatusBarOrientationNotification:(NSNotification *)notification; {
+   UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+
    // Do something interesting
-   NSLog(@"The orientation is %@", [notification.userInfo objectForKey:UIApplicationStatusBarOrientationUserInfoKey]);
+   NSObject * orientationType = [notification.userInfo objectForKey:UIApplicationStatusBarOrientationUserInfoKey];
+   NSString * typeStr = [NSString stringWithFormat:@"%@", orientationType];
+   BOOL isPortrait = [typeStr isEqualToString:@"1"] || [typeStr isEqualToString:@"2"];
+
+   NSLog(@"The orientation is %@", orientationType);
 }
 
 
