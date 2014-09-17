@@ -29,6 +29,11 @@
    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds
                                             collectionViewLayout:flowLayout];
 
+   [self.collectionView setAutoresizesSubviews:YES];
+   [self.collectionView setAutoresizingMask:
+    UIViewAutoresizingFlexibleWidth |
+     UIViewAutoresizingFlexibleHeight];
+
    [self.collectionView registerNib:[UINib nibWithNibName:@"IpadGridViewCell" bundle:nil]
          forCellWithReuseIdentifier:identifier];
 
