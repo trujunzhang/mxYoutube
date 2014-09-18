@@ -33,22 +33,17 @@
 
 
 - (UIColor *)getColorByResolution {
+   UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+   BOOL isPortrait = (orientation == UIInterfaceOrientationPortrait) ||( orientation == UIInterfaceOrientationPortraitUpsideDown);
 
-   UIDeviceResolution resolution = [UIDevice resolution];
-      UIColor * background = [AppResolutionHelper resolutionByType:resolution];
-   return background;
+   return [AppResolutionHelper resolutionByType:[UIDevice resolution] isPortrait:isPortrait];
 }
 
 
 - (void)handleDidChangeStatusBarOrientationNotification:(NSNotification *)notification; {
-   UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-
    // Do something interesting
-   NSObject * orientationType = [notification.userInfo objectForKey:UIApplicationStatusBarOrientationUserInfoKey];
-   NSString * typeStr = [NSString stringWithFormat:@"%@", orientationType];
-   BOOL isPortrait = [typeStr isEqualToString:@"1"] || [typeStr isEqualToString:@"2"];
-
-   NSLog(@"The orientation is %@", orientationType);
+   self.window.backgroundColor = [self getColorByResolution];
+   NSLog(@"The orientation is %@", [notification.userInfo objectForKey:UIApplicationStatusBarOrientationUserInfoKey]);
 }
 
 

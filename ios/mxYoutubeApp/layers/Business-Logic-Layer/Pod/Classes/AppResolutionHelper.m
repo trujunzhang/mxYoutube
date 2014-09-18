@@ -28,9 +28,16 @@
 @implementation AppResolutionHelper
 
 
-+ (UIColor *)resolutionByType:(NSUInteger)type {
++ (UIColor *)resolutionByType:(NSUInteger)type isPortrait:(BOOL)portrait {
+   if (portrait == NO) {
+      type += 2;
+   }
+//   type = 6;
    NSArray * array = [AppResolutionHelper getResolutionImageNameArray];
    return [UIColor colorWithPatternImage:[UIImage imageNamed:array[type]]];
+//   return [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default-Landscape~ipad"]];
+//   return [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default-Portrait~ipad"]];
+
 }
 
 
@@ -49,6 +56,7 @@
     @"",// {UIDeviceResolution_Unknown}
     @"",// {iPhone 1,3,3GS Standard Display  (320x480px)}
     @"Default", // 640 x 960
+    //[3]
     @"Default-568h", //640 x 1,136
     @"Default-Portrait~ipad",// 768 x 1,024
     @"Default-Portrait~ipad",// 1,536 x 2,048
