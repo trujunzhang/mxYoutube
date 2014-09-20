@@ -10,16 +10,31 @@
 #import "AppDelegate.h"
 #import "UIColor+HexString.h"
 #import "AppResolutionHelper.h"
+#import "ViewController.h"
 
 
 @implementation AppDelegate
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    // Override point for customization after application launch.
    [self ShareDeviceResolution];
 
+   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
    self.window.tintColor = [UIColor colorWithHexString:@"#d23241"];
-   self.window.backgroundColor = [self getColorByResolution];
+//   self.window.backgroundColor = [self getColorByResolution];
+//   self.window.backgroundColor = [UIColor blueColor];
+
+   self.controller = [[ViewController alloc] init];
+
+//   [self.window addSubview:self.controller.view];
+   self.window.rootViewController = self.controller;
+
+   [self.window makeKeyAndVisible];
+
+   self.controller.view.backgroundColor =[self getColorByResolution];
+
 
    [[NSNotificationCenter defaultCenter] addObserver:self
                                             selector:@selector(handleDidChangeStatusBarOrientationNotification:)
@@ -27,6 +42,15 @@
                                               object:nil];
 
    return YES;
+}
+
+- (void)handleDidChangeStatusBarOrientationNotification:(NSNotification *)notification; {
+   // Do something interesting
+   self.controller.view.backgroundColor =[self getColorByResolution];
+//   self.controller.view.backgroundColor = [UIColor redColor];
+//   self.window.backgroundColor = [UIColor redColor];
+//   self.window.backgroundColor = [self getColorByResolution];
+//   NSLog(@"The orientation is %@", [notification.userInfo objectForKey:UIApplicationStatusBarOrientationUserInfoKey]);
 }
 
 
@@ -46,11 +70,6 @@
 }
 
 
-- (void)handleDidChangeStatusBarOrientationNotification:(NSNotification *)notification; {
-   // Do something interesting
-   self.window.backgroundColor = [self getColorByResolution];
-//   NSLog(@"The orientation is %@", [notification.userInfo objectForKey:UIApplicationStatusBarOrientationUserInfoKey]);
-}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
