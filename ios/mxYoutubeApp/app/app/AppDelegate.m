@@ -46,11 +46,16 @@
 
 - (void)handleDidChangeStatusBarOrientationNotification:(NSNotification *)notification; {
    // Do something interesting
-   self.controller.view.backgroundColor =[self getColorByResolution];
+//   self.controller.view.backgroundColor =[self getColorByResolution];
 //   self.controller.view.backgroundColor = [UIColor redColor];
 //   self.window.backgroundColor = [UIColor redColor];
 //   self.window.backgroundColor = [self getColorByResolution];
 //   NSLog(@"The orientation is %@", [notification.userInfo objectForKey:UIApplicationStatusBarOrientationUserInfoKey]);
+}
+
+
+- (void)application:(UIApplication *)application didChangeStatusBarOrientation:(UIInterfaceOrientation)oldStatusBarOrientation {
+   self.controller.view.backgroundColor =[self getColorByResolution];
 }
 
 
