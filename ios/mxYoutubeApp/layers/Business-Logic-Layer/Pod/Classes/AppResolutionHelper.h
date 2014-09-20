@@ -25,5 +25,6 @@
 @interface AppResolutionHelper
 
 
++ (NSString *)resolutionNameByType:(NSUInteger)type isPortrait:(BOOL)portrait;
 + (UIColor *)resolutionByType:(NSUInteger)type isPortrait:(BOOL)portrait;
 @end

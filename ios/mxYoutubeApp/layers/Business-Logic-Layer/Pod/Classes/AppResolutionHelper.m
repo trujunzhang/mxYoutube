@@ -22,11 +22,21 @@
 
 
 
+#import <array>
+#import <tuple>
 #import "AppResolutionHelper.h"
 
 
 @implementation AppResolutionHelper
 
+
++ (NSString *)resolutionNameByType:(NSUInteger)type isPortrait:(BOOL)portrait {
+   if (portrait == NO) {
+      type += 2;
+   }
+   NSArray * array = [AppResolutionHelper getResolutionImageNameArray];
+   return array[type];
+}
 
 + (UIColor *)resolutionByType:(NSUInteger)type isPortrait:(BOOL)portrait {
    if (portrait == NO) {
