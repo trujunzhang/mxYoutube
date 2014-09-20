@@ -18,7 +18,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    // Override point for customization after application launch.
-   [self ShareDeviceResolution];
 
    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
@@ -59,13 +58,9 @@
 }
 
 
-- (void)ShareDeviceResolution {
-   _deviceResolution = [UIDevice resolution:[self isPortrait]];
-}
-
 
 - (UIColor *)getColorByResolution {
-   return [AppResolutionHelper resolutionByType:_deviceResolution isPortrait:[self isPortrait]];
+   return [AppResolutionHelper resolutionByType:[UIDevice resolution] isPortrait:[self isPortrait]];
 }
 
 

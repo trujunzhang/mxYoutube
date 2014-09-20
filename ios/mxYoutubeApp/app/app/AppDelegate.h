@@ -12,7 +12,6 @@
 
 
 @interface AppDelegate : UIResponder<UIApplicationDelegate> {
-   UIDeviceResolution _deviceResolution;
 }
 
 @property(strong, nonatomic) UIWindow * window;

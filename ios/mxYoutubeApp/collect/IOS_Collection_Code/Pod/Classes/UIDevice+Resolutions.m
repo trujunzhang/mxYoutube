@@ -27,16 +27,8 @@
 
 @implementation UIDevice (Resolutions)
 
-+ (UIDeviceResolution)resolution:(BOOL)portrait {
-   if (portrait) {
-      return [UIDevice resolutionByPortrait];
-   } else {
-      return [UIDevice resolutionByLeftOrRight];
-   }
-}
 
-
-+ (UIDeviceResolution)resolutionByLeftOrRight {
++ (UIDeviceResolution)resolution {
    UIDeviceResolution resolution = UIDeviceResolution_Unknown;
    UIScreen * mainScreen = [UIScreen mainScreen];
    CGFloat scale = ([mainScreen respondsToSelector:@selector(scale)] ? mainScreen.scale : 1.0f);
@@ -45,19 +37,28 @@
 
    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
       if (scale == 2.0f) {
-         if (pixelWidth == 640.0f && pixelHeight == 960.0f) // 640 x 960
+         if ([self checkScreenWithWidth:pixelWidth withHeight:pixelHeight value1:640.0f value2:960.0f]) // 640 x 960
             resolution = UIDeviceResolution_iPhoneRetina35;
-         else if (pixelWidth == 640.0f &&pixelHeight == 1136.0f) //640 x 1,136
+         else if ([self checkScreenWithWidth:pixelWidth
+                                  withHeight:pixelHeight
+                                      value1:640.0f
+                                      value2:1136.0f]) //640 x 1,136
             resolution = UIDeviceResolution_iPhoneRetina4;
 
       } else if (scale == 1.0f && pixelWidth == 480.0f)
          resolution = UIDeviceResolution_iPhoneStandard;
 
    } else {
-      if (scale == 2.0f && pixelWidth == 2048.0f &&pixelHeight == 1536.0f) { //1,536 x 2,048
+      if (scale == 2.0f && [self checkScreenWithWidth:pixelWidth
+                                           withHeight:pixelHeight
+                                               value1:1536.0f
+                                               value2:2048.0f]) { //1,536 x 2,048
          resolution = UIDeviceResolution_iPadRetina;
 
-      } else if (scale == 1.0f && pixelWidth == 1024.0f &&pixelHeight == 768.0f) { //768 x 1,024
+      } else if (scale == 1.0f && [self checkScreenWithWidth:pixelWidth
+                                                  withHeight:pixelHeight
+                                                      value1:768.0f
+                                                      value2:1024.0f]) { //768 x 1,024
          resolution = UIDeviceResolution_iPadStandard;
       }
    }
@@ -66,33 +67,16 @@
 }
 
 
-+ (UIDeviceResolution)resolutionByPortrait {
-   UIDeviceResolution resolution = UIDeviceResolution_Unknown;
-   UIScreen * mainScreen = [UIScreen mainScreen];
-   CGFloat scale = ([mainScreen respondsToSelector:@selector(scale)] ? mainScreen.scale : 1.0f);
-   CGFloat pixelHeight = (CGRectGetHeight(mainScreen.bounds) * scale);
-
-   if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-      if (scale == 2.0f) {
-         if (pixelHeight == 960.0f) // 640 x 960
-            resolution = UIDeviceResolution_iPhoneRetina35;
-         else if (pixelHeight == 1136.0f)
-            resolution = UIDeviceResolution_iPhoneRetina4;
-
-      } else if (scale == 1.0f && pixelHeight == 480.0f)
-         resolution = UIDeviceResolution_iPhoneStandard;
-
-   } else {
-      if (scale == 2.0f && pixelHeight == 2048.0f) {
-         resolution = UIDeviceResolution_iPadRetina;
-
-      } else if (scale == 1.0f && pixelHeight == 1024.0f) {
-         resolution = UIDeviceResolution_iPadStandard;
-      }
++ (BOOL)checkScreenWithWidth:(CGFloat)pixelWidth withHeight:(CGFloat)pixelHeight value1:(float)value1 value2:(double)value2 {
+   if (pixelWidth == value1 && pixelHeight == value2) {
+      return YES;
    }
-
-   return resolution;
+   else if (pixelWidth == value2 && pixelHeight == value1) {
+      return YES;
+   }
+   return NO;
 }
+
 
 //@"Default", // 640 x 960
 ////[3]

@@ -32,7 +32,6 @@
    if (portrait == NO) {
       type += 2;
    }
-//   type = 6;
    NSArray * array = [AppResolutionHelper getResolutionImageNameArray];
    return [UIColor colorWithPatternImage:[UIImage imageNamed:array[type]]];
 //   return [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default-Landscape~ipad"]];
