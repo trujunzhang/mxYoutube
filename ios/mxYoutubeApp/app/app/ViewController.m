@@ -11,6 +11,7 @@
 #import "SearchViewController.h"
 #import "HistoryViewController.h"
 #import "UIDevice+Resolutions.h"
+#import "AppResolutionHelper.h"
 
 
 @interface ViewController ()
@@ -113,6 +114,26 @@
    }
 
    return NO;
+}
+
+
+- (void)setBackground {
+   self.background = [[UIImageView alloc] init];
+   self.background.frame = CGRectMake(0, 0, 1024, 768);
+
+   [self.view addSubview:self.background];
+}
+
+
+- (void)changeBackground:(BOOL)portrait {
+   NSString * name = [AppResolutionHelper resolutionNameByType:[UIDevice resolution] isPortrait:portrait];
+   if (portrait) {
+      self.background.frame = CGRectMake(0, 0, 768, 1024);
+   } else {
+      self.background.frame = CGRectMake(0, 0, 1024, 768);
+   }
+//   self.background.image = [UIImage imageNamed:@"Default-568h@2x.png"];
+   self.background.image = [UIImage imageNamed:name];
 }
 
 @end

@@ -17,5 +17,5 @@
 @property(strong, nonatomic) UIWindow * window;
 
 @property(nonatomic, strong) ViewController * controller;
-@property(nonatomic, strong) UIImageView * background;
+
 @end
