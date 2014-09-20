@@ -37,7 +37,7 @@
 
 
    // Do any additional setup after loading the view, typically from a nib.
-   [self buildTabBarControllerWithLayoutStrategy:JBTabBarLayoutStrategyBlockBased numberOfTabs:3];
+   [self buildTabBarControllerWithLayoutStrategy:JBTabBarLayoutStrategyLeftJustified numberOfTabs:3];
 
 }
 
