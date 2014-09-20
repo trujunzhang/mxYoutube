@@ -37,6 +37,7 @@
 
    //   [self.controller.view bringSubviewToFront:self.background];
 
+   [self.controller changeBackground:[self isPortrait]];
 
 
    [[NSNotificationCenter defaultCenter] addObserver:self

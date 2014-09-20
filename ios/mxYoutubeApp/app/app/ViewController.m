@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
    [super viewDidLoad];
 
-   self.view.backgroundColor = [UIColor clearColor]; // = transparent
+   [self setBackground];
 
    // Do any additional setup after loading the view, typically from a nib.
    [self buildTabBarControllerWithLayoutStrategy:JBTabBarLayoutStrategyBlockBased numberOfTabs:3];
