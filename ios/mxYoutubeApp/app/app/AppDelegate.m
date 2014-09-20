@@ -23,9 +23,12 @@
 
    self.window.tintColor = [UIColor colorWithHexString:@"#d23241"];
 //   self.window.backgroundColor = [self getColorByResolution];
-//   self.window.backgroundColor = [UIColor blueColor];
+   self.window.backgroundColor = [UIColor blueColor];
 
    self.controller = [[ViewController alloc] init];
+//   self.controller.view.frame =
+//    [[UIScreen mainScreen] bounds];
+//    CGRectMake(0, 0, 1024, 768);
 
 //   [self.window addSubview:self.controller.view];
    self.window.rootViewController = self.controller;
@@ -33,8 +36,19 @@
    [self.window makeKeyAndVisible];
 
 //   self.controller.view.backgroundColor = [UIColor clearColor];
-   self.controller.view.backgroundColor = [self getColorByResolution];
+//   self.controller.view.backgroundColor = [self getColorByResolution];
 
+   self.background = [[UIImageView alloc] init];
+   self.background.frame =
+//    [[UIScreen mainScreen] bounds];
+    CGRectMake(0, 0, 1024, 768);
+//    self.controller.view.frame;
+
+   [self.controller.view addSubview:self.background];
+
+//   [self.controller.view bringSubviewToFront:self.background];
+
+   [self changeBackground];
 
    [[NSNotificationCenter defaultCenter] addObserver:self
                                             selector:@selector(handleDidChangeStatusBarOrientationNotification:)
@@ -42,6 +56,19 @@
                                               object:nil];
 
    return YES;
+}
+
+
+- (void)changeBackground {
+   BOOL portrait = [self isPortrait];
+   NSString * name = [AppResolutionHelper resolutionNameByType:[UIDevice resolution] isPortrait:portrait];
+   if (portrait) {
+      self.background.frame = CGRectMake(0, 0, 768, 1024);
+   } else {
+      self.background.frame = CGRectMake(0, 0, 1024, 768);
+   }
+//   self.background.image = [UIImage imageNamed:@"Default-568h@2x.png"];
+   self.background.image = [UIImage imageNamed:name];
 }
 
 
@@ -56,8 +83,9 @@
 
 
 - (void)application:(UIApplication *)application didChangeStatusBarOrientation:(UIInterfaceOrientation)oldStatusBarOrientation {
-   self.controller.view.backgroundColor =[self getColorByResolution];
+//   self.controller.view.backgroundColor = [self getColorByResolution];
 //   self.window.backgroundColor = [self getColorByResolution];
+   [self changeBackground];
 }
 
 
