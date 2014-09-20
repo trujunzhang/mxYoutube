@@ -9,7 +9,6 @@
 
 #import "AppDelegate.h"
 #import "UIColor+HexString.h"
-#import "AppResolutionHelper.h"
 #import "ViewController.h"
 
 
@@ -22,8 +21,6 @@
    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
    self.window.tintColor = [UIColor colorWithHexString:@"#d23241"];
-//   self.window.backgroundColor = [self getColorByResolution];
-   self.window.backgroundColor = [UIColor blueColor];
 
    self.controller = [[ViewController alloc] init];
 
@@ -31,11 +28,6 @@
    self.window.rootViewController = self.controller;
 
    [self.window makeKeyAndVisible];
-
-//   self.controller.view.backgroundColor = [UIColor clearColor];
-//   self.controller.view.backgroundColor = [self getColorByResolution];
-
-   //   [self.controller.view bringSubviewToFront:self.background];
 
    [self.controller changeBackground:[self isPortrait]];
 
@@ -49,29 +41,18 @@
 }
 
 
-
-
 - (void)handleDidChangeStatusBarOrientationNotification:(NSNotification *)notification; {
    // Do something interesting
-//   self.controller.view.backgroundColor =[self getColorByResolution];
-//   self.controller.view.backgroundColor = [UIColor redColor];
-   self.window.backgroundColor = [UIColor redColor];
-//   self.window.backgroundColor = [self getColorByResolution];
+//   self.window.backgroundColor = [UIColor redColor];
 //   NSLog(@"The orientation is %@", [notification.userInfo objectForKey:UIApplicationStatusBarOrientationUserInfoKey]);
 }
 
 
 - (void)application:(UIApplication *)application didChangeStatusBarOrientation:(UIInterfaceOrientation)oldStatusBarOrientation {
-//   self.controller.view.backgroundColor = [self getColorByResolution];
-//   self.window.backgroundColor = [self getColorByResolution];
-//   [self changeBackground];
    [self.controller changeBackground:[self isPortrait]];
 }
 
 
-- (UIColor *)getColorByResolution {
-   return [AppResolutionHelper resolutionByType:[UIDevice resolution] isPortrait:[self isPortrait]];
-}
 
 
 - (BOOL)isPortrait {
