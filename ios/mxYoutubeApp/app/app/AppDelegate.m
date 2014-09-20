@@ -32,7 +32,8 @@
 
    [self.window makeKeyAndVisible];
 
-   self.controller.view.backgroundColor =[self getColorByResolution];
+//   self.controller.view.backgroundColor = [UIColor clearColor];
+   self.controller.view.backgroundColor = [self getColorByResolution];
 
 
    [[NSNotificationCenter defaultCenter] addObserver:self
@@ -42,6 +43,7 @@
 
    return YES;
 }
+
 
 - (void)handleDidChangeStatusBarOrientationNotification:(NSNotification *)notification; {
    // Do something interesting
@@ -55,8 +57,8 @@
 
 - (void)application:(UIApplication *)application didChangeStatusBarOrientation:(UIInterfaceOrientation)oldStatusBarOrientation {
    self.controller.view.backgroundColor =[self getColorByResolution];
+//   self.window.backgroundColor = [self getColorByResolution];
 }
-
 
 
 - (UIColor *)getColorByResolution {
@@ -68,8 +70,6 @@
    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
    return (orientation == UIInterfaceOrientationPortrait) || (orientation == UIInterfaceOrientationPortraitUpsideDown);
 }
-
-
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
