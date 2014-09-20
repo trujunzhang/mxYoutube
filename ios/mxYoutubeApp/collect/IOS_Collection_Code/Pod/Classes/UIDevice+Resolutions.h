@@ -37,7 +37,7 @@ typedef NSUInteger UIDeviceResolution;
 @interface UIDevice (Resolutions)
 
 
-+ (UIDeviceResolution)resolution;
++ (UIDeviceResolution)resolution:(BOOL)portrait;
 
 NSString * NSStringFromResolution(UIDeviceResolution resolution);
 

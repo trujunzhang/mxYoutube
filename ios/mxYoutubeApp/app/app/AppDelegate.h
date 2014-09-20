@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <IOS_Collection_Code/UIDevice+Resolutions.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@interface AppDelegate : UIResponder<UIApplicationDelegate> {
+   UIDeviceResolution _deviceResolution;
+}
+
+@property(strong, nonatomic) UIWindow * window;
 
 @end

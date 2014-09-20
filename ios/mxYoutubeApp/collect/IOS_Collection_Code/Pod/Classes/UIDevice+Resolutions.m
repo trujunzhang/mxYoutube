@@ -27,8 +27,16 @@
 
 @implementation UIDevice (Resolutions)
 
++ (UIDeviceResolution)resolution:(BOOL)portrait {
+   if (portrait) {
+      return [UIDevice resolutionByPortrait];
+   } else {
+      return [UIDevice resolutionByLeftOrRight];
+   }
+}
 
-+ (UIDeviceResolution)resolution {
+
++ (UIDeviceResolution)resolutionByLeftOrRight {
    UIDeviceResolution resolution = UIDeviceResolution_Unknown;
    UIScreen * mainScreen = [UIScreen mainScreen];
    CGFloat scale = ([mainScreen respondsToSelector:@selector(scale)] ? mainScreen.scale : 1.0f);
@@ -36,7 +44,7 @@
 
    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
       if (scale == 2.0f) {
-         if (pixelHeight == 960.0f)
+         if (pixelHeight == 960.0f) // 640 x 960
             resolution = UIDeviceResolution_iPhoneRetina35;
          else if (pixelHeight == 1136.0f)
             resolution = UIDeviceResolution_iPhoneRetina4;
@@ -55,6 +63,43 @@
 
    return resolution;
 }
+
+
++ (UIDeviceResolution)resolutionByPortrait {
+   UIDeviceResolution resolution = UIDeviceResolution_Unknown;
+   UIScreen * mainScreen = [UIScreen mainScreen];
+   CGFloat scale = ([mainScreen respondsToSelector:@selector(scale)] ? mainScreen.scale : 1.0f);
+   CGFloat pixelHeight = (CGRectGetHeight(mainScreen.bounds) * scale);
+
+   if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+      if (scale == 2.0f) {
+         if (pixelHeight == 960.0f) // 640 x 960
+            resolution = UIDeviceResolution_iPhoneRetina35;
+         else if (pixelHeight == 1136.0f)
+            resolution = UIDeviceResolution_iPhoneRetina4;
+
+      } else if (scale == 1.0f && pixelHeight == 480.0f)
+         resolution = UIDeviceResolution_iPhoneStandard;
+
+   } else {
+      if (scale == 2.0f && pixelHeight == 2048.0f) {
+         resolution = UIDeviceResolution_iPadRetina;
+
+      } else if (scale == 1.0f && pixelHeight == 1024.0f) {
+         resolution = UIDeviceResolution_iPadStandard;
+      }
+   }
+
+   return resolution;
+}
+
+//@"Default", // 640 x 960
+////[3]
+//@"Default-568h", //640 x 1,136
+//@"Default-Portrait~ipad",// 768 x 1,024
+//@"Default-Portrait~ipad",// 1,536 x 2,048
+////    @"Default-Landscape~ipad",//  1,024 x 768
+////    @"Default-Landscape~ipad",//2,048 x 1,536
 
 
 @end

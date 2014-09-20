@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 wanghaogithub720. All rights reserved.
 //
 
-#import <IOS_Collection_Code/UIDevice+Resolutions.h>
+
 #import "AppDelegate.h"
 #import "UIColor+HexString.h"
 #import "AppResolutionHelper.h"
@@ -16,6 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    // Override point for customization after application launch.
+   [self ShareDeviceResolution];
 
    self.window.tintColor = [UIColor colorWithHexString:@"#d23241"];
 
@@ -32,11 +33,20 @@
 }
 
 
-- (UIColor *)getColorByResolution {
-   UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-   BOOL isPortrait = (orientation == UIInterfaceOrientationPortrait) ||( orientation == UIInterfaceOrientationPortraitUpsideDown);
+- (void)ShareDeviceResolution {
+   _deviceResolution = [UIDevice resolution:[self isPortrait]];
+}
 
-   return [AppResolutionHelper resolutionByType:[UIDevice resolution] isPortrait:isPortrait];
+
+- (UIColor *)getColorByResolution {
+   return [AppResolutionHelper resolutionByType:_deviceResolution isPortrait:[self isPortrait]];
+}
+
+
+- (BOOL)isPortrait {
+   UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+   BOOL isPortrait = (orientation == UIInterfaceOrientationPortrait) || (orientation == UIInterfaceOrientationPortraitUpsideDown);
+   return isPortrait;
 }
 
 
