@@ -19,9 +19,6 @@
    [self ShareDeviceResolution];
 
    self.window.tintColor = [UIColor colorWithHexString:@"#d23241"];
-
-//    self.window.backgroundColor=[UIColor orangeColor];
-
    self.window.backgroundColor = [self getColorByResolution];
 
    [[NSNotificationCenter defaultCenter] addObserver:self
@@ -45,15 +42,14 @@
 
 - (BOOL)isPortrait {
    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-   BOOL isPortrait = (orientation == UIInterfaceOrientationPortrait) || (orientation == UIInterfaceOrientationPortraitUpsideDown);
-   return isPortrait;
+   return (orientation == UIInterfaceOrientationPortrait) || (orientation == UIInterfaceOrientationPortraitUpsideDown);
 }
 
 
 - (void)handleDidChangeStatusBarOrientationNotification:(NSNotification *)notification; {
    // Do something interesting
    self.window.backgroundColor = [self getColorByResolution];
-   NSLog(@"The orientation is %@", [notification.userInfo objectForKey:UIApplicationStatusBarOrientationUserInfoKey]);
+//   NSLog(@"The orientation is %@", [notification.userInfo objectForKey:UIApplicationStatusBarOrientationUserInfoKey]);
 }
 
 
