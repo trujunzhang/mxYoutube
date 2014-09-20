@@ -11,6 +11,6 @@
 
 
 @interface ViewController : JBTabBarController
-@property(nonatomic, strong) UIImageView * background;
+//@property(nonatomic, strong) UIImageView * background;
 - (void)changeBackground:(BOOL)portrait;
 @end

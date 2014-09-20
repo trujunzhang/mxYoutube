@@ -21,10 +21,20 @@
 
 @implementation ViewController
 
+- (instancetype)init {
+   self = [super init];
+   if (self) {
+      [self setBackground];
+   }
+
+   return self;
+}
+
+
 - (void)viewDidLoad {
    [super viewDidLoad];
 
-   [self setBackground];
+
 
    // Do any additional setup after loading the view, typically from a nib.
    [self buildTabBarControllerWithLayoutStrategy:JBTabBarLayoutStrategyBlockBased numberOfTabs:3];
@@ -121,7 +131,7 @@
    self.background = [[UIImageView alloc] init];
    self.background.frame = CGRectMake(0, 0, 1024, 768);
 
-   [self.view addSubview:self.background];
+//   [self.view addSubview:self.background];
 }
 
 

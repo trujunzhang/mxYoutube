@@ -41,6 +41,7 @@
 }
 
 @property (nonatomic, readonly, strong) JBTabBar* tabBar;
+@property (nonatomic, strong) UIImageView* background;
 @property (nonatomic, strong) NSArray* viewControllers;
 
 @property (nonatomic, unsafe_unretained) UIViewController* selectedViewController;
