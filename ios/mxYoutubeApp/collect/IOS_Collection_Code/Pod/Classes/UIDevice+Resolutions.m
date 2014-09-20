@@ -40,23 +40,24 @@
    UIDeviceResolution resolution = UIDeviceResolution_Unknown;
    UIScreen * mainScreen = [UIScreen mainScreen];
    CGFloat scale = ([mainScreen respondsToSelector:@selector(scale)] ? mainScreen.scale : 1.0f);
+   CGFloat pixelWidth = (CGRectGetWidth(mainScreen.bounds) * scale);
    CGFloat pixelHeight = (CGRectGetHeight(mainScreen.bounds) * scale);
 
    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
       if (scale == 2.0f) {
-         if (pixelHeight == 960.0f) // 640 x 960
+         if (pixelWidth == 640.0f && pixelHeight == 960.0f) // 640 x 960
             resolution = UIDeviceResolution_iPhoneRetina35;
-         else if (pixelHeight == 1136.0f)
+         else if (pixelWidth == 640.0f &&pixelHeight == 1136.0f) //640 x 1,136
             resolution = UIDeviceResolution_iPhoneRetina4;
 
-      } else if (scale == 1.0f && pixelHeight == 480.0f)
+      } else if (scale == 1.0f && pixelWidth == 480.0f)
          resolution = UIDeviceResolution_iPhoneStandard;
 
    } else {
-      if (scale == 2.0f && pixelHeight == 2048.0f) {
+      if (scale == 2.0f && pixelWidth == 2048.0f &&pixelHeight == 1536.0f) { //1,536 x 2,048
          resolution = UIDeviceResolution_iPadRetina;
 
-      } else if (scale == 1.0f && pixelHeight == 1024.0f) {
+      } else if (scale == 1.0f && pixelWidth == 1024.0f &&pixelHeight == 768.0f) { //768 x 1,024
          resolution = UIDeviceResolution_iPadStandard;
       }
    }
