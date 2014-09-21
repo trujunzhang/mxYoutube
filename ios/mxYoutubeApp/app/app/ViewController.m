@@ -25,19 +25,17 @@
    self = [super init];
    if (self) {
       [self setBackground];
+
    }
 
    return self;
 }
 
 
+
 - (void)viewDidLoad {
    [super viewDidLoad];
 
-
-
-   // Do any additional setup after loading the view, typically from a nib.
-   [self buildTabBarControllerWithLayoutStrategy:JBTabBarLayoutStrategyLeftJustified numberOfTabs:3];
 
 }
 
@@ -48,7 +46,8 @@
 }
 
 
-- (void)buildTabBarControllerWithLayoutStrategy:(JBTabBarLayoutStrategy)layoutStrategy numberOfTabs:(NSUInteger)numberOfTabs {
+- (void)buildTabBarController {
+   JBTabBarLayoutStrategy layoutStrategy = JBTabBarLayoutStrategyLeftJustified;
    NSMutableArray * controllers = [[NSMutableArray alloc] init];
 
    NSArray * viewControllers = [NSArray arrayWithObjects:
@@ -65,6 +64,7 @@
 
 
    int i = 0;
+//   NSString * name = [AppResolutionHelper resolutionNameByType:[UIDevice resolution] isPortrait:portrait];
    for (ViewController * controller in viewControllers) {
       NSArray * tabBarInfo = viewTabBars[i++];
       controller.title = tabBarInfo[0];
@@ -72,7 +72,9 @@
       controller.tabBarItem.selectedImage = [[UIImage imageNamed:tabBarInfo[2]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 
       UINavigationController * object = [[UINavigationController alloc] initWithRootViewController:controller];
-      [[object navigationBar] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//      [[object navigationBar] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsCompact];
+      [[object navigationBar] setBackgroundImage:[UIImage imageNamed:@"Default-Portrait~ipad"]
+                                   forBarMetrics:UIBarMetricsDefault];
       [controllers addObject:object];
    }
 
@@ -81,18 +83,6 @@
 
    self.tabBar.maximumTabWidth = 64.0f;
    self.tabBar.layoutStrategy = layoutStrategy;
-   if (layoutStrategy == JBTabBarLayoutStrategyBlockBased) {
-      self.tabBar.layoutBlock = ^(JBTab * tab, NSUInteger index, NSUInteger numberOfTabs) {
-          if (self.tabBar.bounds.size.width / numberOfTabs < self.tabBar.bounds.size.height) {
-             CGFloat tabWidth = self.tabBar.bounds.size.width / numberOfTabs;
-             tab.frame = CGRectMake(tabWidth * index, (self.tabBar.bounds.size.height - tabWidth) / 2, tabWidth, tabWidth);
-          } else {
-             CGFloat tabHeight = self.tabBar.bounds.size.height;
-             CGFloat horizontalOffset = (self.tabBar.bounds.size.width - numberOfTabs * tabHeight) / 2;
-             tab.frame = CGRectMake(horizontalOffset + tabHeight * index, 0.0, tabHeight, tabHeight);
-          }
-      };
-   }
 }
 
 
