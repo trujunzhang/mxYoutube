@@ -118,9 +118,6 @@
 
 - (void)setBackground {
    self.background = [[UIImageView alloc] init];
-   self.background.frame = CGRectMake(0, 0, 1024, 768);
-
-//   [self.view addSubview:self.background];
 }
 
 
