@@ -23,7 +23,7 @@
    self.window.tintColor = [UIColor colorWithHexString:@"#d23241"];
 
    self.controller = [[ViewController alloc] init];
-   [self.controller buildTabBarController];
+   [self.controller buildTabBarController:[self isPortrait]];
 
 //   [self.window addSubview:self.controller.view];
    self.window.rootViewController = self.controller;

@@ -32,7 +32,6 @@
 }
 
 
-
 - (void)viewDidLoad {
    [super viewDidLoad];
 
@@ -46,7 +45,7 @@
 }
 
 
-- (void)buildTabBarController {
+- (void)buildTabBarController:(BOOL)portrait {
    JBTabBarLayoutStrategy layoutStrategy = JBTabBarLayoutStrategyLeftJustified;
    NSMutableArray * controllers = [[NSMutableArray alloc] init];
 
@@ -64,7 +63,7 @@
 
 
    int i = 0;
-//   NSString * name = [AppResolutionHelper resolutionNameByType:[UIDevice resolution] isPortrait:portrait];
+   NSString * name = [AppResolutionHelper resolutionNameByType:[UIDevice resolution] isPortrait:portrait];
    for (ViewController * controller in viewControllers) {
       NSArray * tabBarInfo = viewTabBars[i++];
       controller.title = tabBarInfo[0];
@@ -73,8 +72,8 @@
 
       UINavigationController * object = [[UINavigationController alloc] initWithRootViewController:controller];
 //      [[object navigationBar] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsCompact];
-      [[object navigationBar] setBackgroundImage:[UIImage imageNamed:@"Default-Portrait~ipad"]
-                                   forBarMetrics:UIBarMetricsDefault];
+//      [[object navigationBar] setBackgroundImage:[UIImage imageNamed:name]
+//                                   forBarMetrics:UIBarMetricsDefault];
       [controllers addObject:object];
    }
 
@@ -119,7 +118,7 @@
 
 - (void)setBackground {
    self.background = [[UIImageView alloc] init];
-   self.background.frame = CGRectMake(0, 0, 1024, 768);
+//   self.background.frame = CGRectMake(0, 0, 1024, 768);
 
 //   [self.view addSubview:self.background];
 }
