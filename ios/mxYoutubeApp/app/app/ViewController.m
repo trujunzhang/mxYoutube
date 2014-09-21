@@ -72,8 +72,8 @@
 
       UINavigationController * object = [[UINavigationController alloc] initWithRootViewController:controller];
 //      [[object navigationBar] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsCompact];
-//      [[object navigationBar] setBackgroundImage:[UIImage imageNamed:name]
-//                                   forBarMetrics:UIBarMetricsDefault];
+      [[object navigationBar] setBackgroundImage:[UIImage imageNamed:name]
+                                   forBarMetrics:UIBarMetricsDefault];
       [controllers addObject:object];
    }
 
@@ -118,23 +118,18 @@
 
 - (void)setBackground {
    self.background = [[UIImageView alloc] init];
-//   self.background.frame = CGRectMake(0, 0, 1024, 768);
+   self.background.frame = CGRectMake(0, 0, 1024, 768);
 
 //   [self.view addSubview:self.background];
 }
 
 
 - (void)changeBackground:(BOOL)portrait {
-   UIScreen * mainScreen = [UIScreen mainScreen];
-   CGFloat scale = ([mainScreen respondsToSelector:@selector(scale)] ? mainScreen.scale : 1.0f);
-   CGFloat pixelWidth = (CGRectGetWidth(mainScreen.bounds) * scale);
-   CGFloat pixelHeight = (CGRectGetHeight(mainScreen.bounds) * scale);
-
    NSString * name = [AppResolutionHelper resolutionNameByType:[UIDevice resolution] isPortrait:portrait];
    if (portrait) {
-      self.background.frame = CGRectMake(0, 0, pixelWidth, pixelHeight);
+      self.background.frame = CGRectMake(0, 0, 768, 1024);
    } else {
-      self.background.frame = CGRectMake(0, 0, pixelHeight, pixelWidth);
+      self.background.frame = CGRectMake(0, 0, 1024, 768);
    }
 //   self.background.image = [UIImage imageNamed:@"Default-568h@2x.png"];
    self.background.image = [UIImage imageNamed:name];
