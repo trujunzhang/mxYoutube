@@ -130,11 +130,12 @@
 
    NSString * name = [AppResolutionHelper resolutionNameByType:[UIDevice resolution] isPortrait:portrait];
 //   if (portrait) {
-//      self.background.frame = CGRectMake(0, 0, 768, 1024);
+//      self.background.frame = CGRectMake(0, 0, 640, 1136/2);
 //   } else {
 //      self.background.frame = CGRectMake(0, 0, 1024, 768);
 //   }
-   self.background.frame = CGRectMake(0, 0, pixelWidth, pixelHeight);
+//   self.background.frame = CGRectMake(0, 0, pixelWidth, pixelHeight);
+   self.background.frame = CGRectMake(0, 0, pixelWidth, pixelHeight / scale);
 //   self.background.image = [UIImage imageNamed:@"Default-568h@2x.png"];
    self.background.image = [UIImage imageNamed:name];
 }
