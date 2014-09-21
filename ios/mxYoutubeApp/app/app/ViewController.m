@@ -134,7 +134,6 @@
 //   } else {
 //      self.background.frame = CGRectMake(0, 0, 1024, 768);
 //   }
-//   self.background.frame = CGRectMake(0, 0, pixelWidth, pixelHeight);
    self.background.frame = CGRectMake(0, 0, pixelWidth, pixelHeight / scale);
 //   self.background.image = [UIImage imageNamed:@"Default-568h@2x.png"];
    self.background.image = [UIImage imageNamed:name];
