@@ -8,6 +8,8 @@
 
 #import "HistoryViewController.h"
 #import "IpadGridViewCell.h"
+#import "GYSearch.h"
+#import "SearchImplementation.h"#import "GTLYouTubeVideo.h"
 
 
 @implementation HistoryViewController
@@ -16,7 +18,18 @@
 - (id)init {
    self = [super init];
    if (self) {
-
+      self.videoList = [[NSArray alloc] init];
+      YoutubeResponseBlock completion = ^(NSArray * array) {
+//          NSString * debug = @"debug";
+          self.videoList = array;
+          [[self collectionView] reloadData];
+      };
+      ErrorResponseBlock error = ^(NSError * error) {
+          NSString * debug = @"debug";
+      };
+      [[SearchImplementation getInstance] searchByQueryWithQueryTerm:@"sketch3"
+                                                   completionHandler:completion
+                                                        errorHandler:error];
    }
    return self;
 }
@@ -52,7 +65,7 @@
 
 //定义展示的UICollectionViewCell的个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-   return 30;
+   return self.videoList.count;
 }
 
 
@@ -66,6 +79,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
    IpadGridViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
 //   cell.cellLabel.text = [NSString stringWithFormat:@"w %i", x];
+   GTLYouTubeVideo * video = [self.videoList objectAtIndex:0];
+   [cell bind:video];
    return cell;
 }
 

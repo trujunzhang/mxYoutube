@@ -4,6 +4,7 @@ pod "IOS_Collection_Code", :path => "../collect/IOS_Collection_Code"
 
 pod "Business-Logic-Layer", :path => "../layers/Business-Logic-Layer"
 
-#pod 'Google-API-Client', '~> 0.1.1'
+pod "google-api-services-youtube", :path => "../layers/google-api-services-youtube"
+
 
 

@@ -17,4 +17,5 @@ static NSString * const identifier = @"CELL";
 //@property(weak, nonatomic) IBOutlet UICollectionView * collectionView;
 @property(nonatomic, strong) UICollectionView * collectionView;
 
+@property(nonatomic, strong) NSArray * videoList;
 @end

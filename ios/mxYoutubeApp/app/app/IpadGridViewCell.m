@@ -7,6 +7,8 @@
 //
 
 #import "IpadGridViewCell.h"
+#import "GTLYouTubeVideo.h"
+#import "GTLYouTubeVideoSnippet.h"
 
 
 @implementation IpadGridViewCell
@@ -32,4 +34,9 @@
    return self;
 }
 
+
+- (void)bind:(GTLYouTubeVideo *)video {
+   self.title = video.snippet.title;
+
+}
 @end

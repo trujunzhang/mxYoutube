@@ -20,6 +20,8 @@
    if (self) {
 
       [self addTextView];
+
+
    }
    return self;
 }
