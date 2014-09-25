@@ -20,7 +20,6 @@
 
 //    self.window.backgroundColor=[UIColor orangeColor];
 
-   self.window.backgroundColor = [self getColorByResolution];
 
    [[NSNotificationCenter defaultCenter] addObserver:self
                                             selector:@selector(handleDidChangeStatusBarOrientationNotification:)
@@ -30,14 +29,6 @@
    return YES;
 }
 
-
-- (UIColor *)getColorByResolution {
-   UIDeviceResolution resolution = [UIDevice resolution];
-   NSUInteger type = resolution;
-   UIColor * background = [AppResolutionHelper resolutionByType:type];
-//   return [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]];
-   return background;
-}
 
 
 - (void)handleDidChangeStatusBarOrientationNotification:(NSNotification *)notification; {
