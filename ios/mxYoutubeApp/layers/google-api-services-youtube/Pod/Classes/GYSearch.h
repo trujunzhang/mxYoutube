@@ -22,7 +22,7 @@
 @class GTLYouTubePlaylistItemListResponse;
 
 typedef void (^YoutubeResponseBlock)(NSArray *  array);
-typedef void (^ErrorResponseBlock)(NSString *  info);
+typedef void (^ErrorResponseBlock)(NSError *  error);
 
 @interface GYSearch : NSObject {
    GTLYouTubeChannelContentDetailsRelatedPlaylists * _myPlaylists;
