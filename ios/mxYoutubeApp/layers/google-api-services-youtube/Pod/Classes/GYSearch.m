@@ -7,7 +7,6 @@
 //
 
 #import "GYSearch.h"
-#import "GTLYouTubePlaylistItemListResponse.h"
 
 
 @implementation GYSearch
@@ -29,7 +28,7 @@
 
 - (void)fetchSearchListWithQueryTerm:(NSString *)queryTerm
                    completionHandler:(YoutubeResponseBlock)completion
-                        errorHandler:(ErrorResponseBlock)error {
+                        errorHandler:(ErrorResponseBlock)errorBlock {
    GTLServiceYouTube * service = [[GTLServiceYouTube alloc] init];
 
    service.APIKey = youtube_apikey;
@@ -42,7 +41,7 @@
    // specified shouldFetchNextPages=YES, all results should be fetched,
    // though specifying a larger maxResults will reduce the number of fetches
    // needed to retrieve all pages.
-   query.maxResults = 15;
+   query.maxResults = search_maxResults; // NUMBER_OF_VIDEOS_RETURNED
 
    // We can specify the fields we want here to reduce the network
    // bandwidth and memory needed for the fetched collection.
@@ -64,6 +63,7 @@
                                 if ([[resultList items] count] > 0) {
                                    completion([resultList items]);
                                 }
+                                errorBlock(error);
                                 _searchListTicket = nil;
                             }];
 }
