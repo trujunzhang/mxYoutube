@@ -9,6 +9,9 @@
 #import "IpadGridViewCell.h"
 #import "GTLYouTubeVideo.h"
 #import "GTLYouTubeVideoSnippet.h"
+#import "GTLYouTubeThumbnailDetails.h"
+#import "GTLYouTubeVideoContentDetails.h"
+#import "GTLYouTubeVideoStatistics.h"
 
 
 @implementation IpadGridViewCell
@@ -36,7 +39,23 @@
 
 
 - (void)bind:(GTLYouTubeVideo *)video {
-   self.title = video.snippet.title;
+   // Confirm that the result represents a video. Otherwise, the
+   // item will not contain a video ID.
+   GTLYouTubeThumbnail * thumbnail = video.snippet.thumbnails.high;
+   NSString * _titleValue = video.snippet.title;
+   NSString * _durationValue = video.contentDetails.duration;
+   NSNumber * _viewCountValue = video.statistics.viewCount;
+   NSNumber * _likeCountValue = video.statistics.likeCount;
+   NSNumber * _dislikeCountValue = video.statistics.dislikeCount;
 
+   NSString * _userNameValue = video.snippet.channelTitle;
+
+
+
+   [self.title setText:_titleValue];
+   [self.rating setText:[NSString stringWithFormat:@"%@",_likeCountValue]];
+   [self.viewCount setText:[NSString stringWithFormat:@"%@",_viewCountValue]];
+
+   [self.userName setText:_userNameValue];
 }
 @end
