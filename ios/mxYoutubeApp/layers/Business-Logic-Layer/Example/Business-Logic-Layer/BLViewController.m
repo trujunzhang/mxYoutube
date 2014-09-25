@@ -7,6 +7,9 @@
 //
 
 #import "BLViewController.h"
+#import "GYSearch.h"
+#import "SearchImplementation.h"
+
 
 @interface BLViewController ()
 
@@ -21,7 +24,16 @@
 
    self.view.backgroundColor = [UIColor clearColor]; // = transparent
 
+
+   YoutubeResponseBlock completion = ^(NSArray * array) {
+       NSString * debug = @"debug";
+   };
+   ErrorResponseBlock error = ^(NSError * error) {
+       NSString * debug = @"debug";
+   };
+   [[SearchImplementation getInstance] searchByQueryWithQueryTerm:@"sketch3" completionHandler:completion  errorHandler:error];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
