@@ -39,41 +39,34 @@ static GYSearch * instance = nil;
 }
 
 
-- (NSArray *)searchByQueryWithQueryTerm:(NSString *)queryTerm {
+- (NSArray *)searchByQueryWithQueryTerm:(NSString *)queryTerm completionHandler:(YoutubeResponseBlock)responseHandler errorHandler:(ErrorResponseBlock)errorHandler {
    YoutubeResponseBlock completion = ^(NSArray * array) {
-       [self searchVideoByVideoIds:array];
+       // 02 Search Videos by videoIds
+       [self searchVideoByVideoIds:array completionHandler:(YoutubeResponseBlock) responseHandler];
    };
    ErrorResponseBlock error = ^(NSError * error) {
-       NSString * debug = @"debug";
+       if(error){
+          errorHandler(error);
+       }
    };
+   // 01: Search videoIds by queryTerm
    [self fetchSearchListWithQueryTerm:queryTerm completionHandler:completion errorHandler:error];
 
    return nil;
 }
 
 
-- (void)searchVideoByVideoIds:(NSArray *)searchResultList {
+- (void)searchVideoByVideoIds:(NSArray *)searchResultList completionHandler:(YoutubeResponseBlock)responseHandler errorHandler:(ErrorResponseBlock)errorHandler {
    NSMutableArray * videoIds = [[NSMutableArray alloc] init];
 
    if (searchResultList) {
       // Merge video IDs
       for (GTLYouTubeSearchResult * searchResult in searchResultList) {
-         NSString * videoId = searchResult.identifier.videoId;
-         [videoIds addObject:videoId];
+         [videoIds addObject:searchResult.identifier.videoId];
       }
-
-      NSString * videoId = [videoIds componentsJoinedByString:@","];
-
-      YoutubeResponseBlock completion = ^(NSArray * array) {
-          for (GTLYouTubeVideo * video in array) {
-             GTLYouTubeVideoSnippet * snippet = video.snippet;
-             GTLYouTubeVideoStatistics * statistics = video.statistics;
-          }
-      };
-      ErrorResponseBlock error = ^(NSError * error) {
-          NSString * debug = @"debug";
-      };
-      [self fetchVideoListWithVideoId:videoId completionHandler:completion errorHandler:error];
+      [self fetchVideoListWithVideoId:[videoIds componentsJoinedByString:@","]
+                    completionHandler:responseHandler
+                         errorHandler:errorHandler];
    }
 }
 

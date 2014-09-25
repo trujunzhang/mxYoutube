@@ -21,7 +21,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-   [[GYSearch getInstance] searchByQueryWithQueryTerm:@"sketch3"];
+   YoutubeResponseBlock completion = ^(NSArray * array) {
+       NSString * debug = @"debug";
+   };
+   ErrorResponseBlock error = ^(NSError * error) {
+       NSString * debug = @"debug";
+   };
+   [[GYSearch getInstance] searchByQueryWithQueryTerm:@"sketch3" completionHandler:completion  errorHandler:error];
 }
 
 - (void)didReceiveMemoryWarning

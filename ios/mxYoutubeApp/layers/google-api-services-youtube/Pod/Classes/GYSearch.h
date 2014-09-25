@@ -43,7 +43,7 @@ typedef void (^ErrorResponseBlock)(NSError *  error);
 
 +(GYSearch *) getInstance;
 
-- (NSArray *)searchByQueryWithQueryTerm:(NSString *)queryTerm;
+- (NSArray *)searchByQueryWithQueryTerm:(NSString *)queryTerm completionHandler:(YoutubeResponseBlock)responseHandler errorHandler:(ErrorResponseBlock)errorHandler;
 
-- (void)searchVideoByVideoIds:(NSArray *)array;
+- (void)searchVideoByVideoIds:(NSArray *)array completionHandler:(YoutubeResponseBlock)handler;
 @end
