@@ -21,10 +21,12 @@
 @class GTLServiceYouTube;
 @class GTLYouTubePlaylistItemListResponse;
 
+typedef void (^YoutubeResponseBlock)(NSArray *  array);
+typedef void (^ErrorResponseBlock)(NSString *  info);
 
-@interface Search : NSObject {
+@interface GYSearch : NSObject {
    GTLYouTubeChannelContentDetailsRelatedPlaylists * _myPlaylists;
-   GTLServiceTicket * _channelListTicket;
+   GTLServiceTicket * _searchListTicket;
    NSError * _channelListFetchError;
 
    GTLYouTubePlaylistItemListResponse * _playlistItemList;

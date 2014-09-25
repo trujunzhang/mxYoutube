@@ -6,35 +6,37 @@
 //  Copyright (c) 2014 djzhang. All rights reserved.
 //
 
-#import "Search.h"
+#import "GYSearch.h"
 #import "GTLYouTubePlaylistItemListResponse.h"
 
 
-@implementation Search
+@implementation GYSearch
 
 + (NSArray *)searchByQueryWithQueryTerm:(NSString *)queryTerm {
-   Search * search= [[Search alloc] init];
-   [search fetchSearchListWithQueryTerm:queryTerm];
+   GYSearch * search = [[GYSearch alloc] init];
+
+   YoutubeResponseBlock completion = ^(NSArray * array) {
+       NSString * debug = @"debug";
+   };
+   ErrorResponseBlock error = ^(NSError * error) {
+       NSString * debug = @"debug";
+   };
+   [search fetchSearchListWithQueryTerm:queryTerm completionHandler:completion errorHandler:error];
 
    return nil;
 }
 
 
-- (void)fetchSearchListWithQueryTerm:(NSString *)queryTerm {
-   _myPlaylists = nil;
-   _channelListFetchError = nil;
-
-   GTLServiceYouTube * service = self.youTubeService;
+- (void)fetchSearchListWithQueryTerm:(NSString *)queryTerm
+                   completionHandler:(YoutubeResponseBlock)completion
+                        errorHandler:(ErrorResponseBlock)error {
+   GTLServiceYouTube * service = [[GTLServiceYouTube alloc] init];
 
    service.APIKey = youtube_apikey;
 
-//   GTLQueryYouTube * query = [GTLQueryYouTube queryForChannelsListWithPart:@"contentDetails"];
    GTLQueryYouTube * query = [GTLQueryYouTube queryForSearchListWithPart:@"id,snippet"];
    query.q = queryTerm;
    query.type = @"video";
-   query.fields = @"items(id/videoId)";
-
-//   query.mine = YES;
 
    // maxResults specifies the number of results per page.  Since we earlier
    // specified shouldFetchNextPages=YES, all results should be fetched,
@@ -49,22 +51,20 @@
    // When ready to test and optimize your app, specify just the fields needed.
    // For example, this sample app might use
    //
-   // query.fields = @"kind,etag,items(id,etag,kind,contentDetails)";
+   query.fields = @"items(id/videoId)";
 
-   _channelListTicket = [service executeQuery:query
+   _searchListTicket = [service executeQuery:query
                             completionHandler:^(GTLServiceTicket * ticket,
-                             GTLYouTubeSearchListResponse * channelList,
+                             GTLYouTubeSearchListResponse * resultList,
                              NSError * error) {
                                 // Callback
 
                                 // The contentDetails of the response has the playlists available for
                                 // "my channel".
-                                if ([[channelList items] count] > 0) {
-                                   GTLYouTubeChannel * channel = channelList[0];
-                                   _myPlaylists = channel.contentDetails.relatedPlaylists;
+                                if ([[resultList items] count] > 0) {
+                                   completion([resultList items]);
                                 }
-                                _channelListFetchError = error;
-                                _channelListTicket = nil;
+                                _searchListTicket = nil;
                             }];
 }
 
