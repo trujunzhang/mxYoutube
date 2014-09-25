@@ -38,10 +38,12 @@ typedef void (^ErrorResponseBlock)(NSError *  error);
 
 }
 // Accessor for the app's single instance of the service object.
-@property(nonatomic, readonly) GTLServiceYouTube * youTubeService;
+@property(nonatomic, strong) GTLServiceYouTube * youTubeService;
 
 
-+ (NSArray *)searchByQueryWithQueryTerm:(NSString *)queryTerm;
++(GYSearch *) getInstance;
+
+- (NSArray *)searchByQueryWithQueryTerm:(NSString *)queryTerm;
 
 - (void)searchVideoByVideoIds:(NSArray *)array;
 @end

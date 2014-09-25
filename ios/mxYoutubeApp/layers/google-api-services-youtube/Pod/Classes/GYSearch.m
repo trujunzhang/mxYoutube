@@ -11,19 +11,42 @@
 #import "GTLYouTubeResourceId.h"
 #import "GTLYouTubeVideo.h"
 
+static GYSearch * instance = nil;
+
 
 @implementation GYSearch
 
-+ (NSArray *)searchByQueryWithQueryTerm:(NSString *)queryTerm {
-   GYSearch * search = [[GYSearch alloc] init];
++ (GYSearch *)getInstance {
+   @synchronized (self) {
+      if (instance == nil) {
+         NSLog(@"initializing");
+         instance = [[self alloc] init];
+      }
+      NSLog(@"Address: %p", instance);
+   }
+   return (instance);
+}
 
+
+- (instancetype)init {
+   self = [super init];
+   if (self) {
+      self.youTubeService = [[GTLServiceYouTube alloc] init];
+      self.youTubeService.APIKey = youtube_apikey;
+   }
+
+   return self;
+}
+
+
+- (NSArray *)searchByQueryWithQueryTerm:(NSString *)queryTerm {
    YoutubeResponseBlock completion = ^(NSArray * array) {
-       [search searchVideoByVideoIds:array];
+       [self searchVideoByVideoIds:array];
    };
    ErrorResponseBlock error = ^(NSError * error) {
        NSString * debug = @"debug";
    };
-   [search fetchSearchListWithQueryTerm:queryTerm completionHandler:completion errorHandler:error];
+   [self fetchSearchListWithQueryTerm:queryTerm completionHandler:completion errorHandler:error];
 
    return nil;
 }
@@ -42,7 +65,6 @@
       NSString * videoId = [videoIds componentsJoinedByString:@","];
 
       YoutubeResponseBlock completion = ^(NSArray * array) {
-
           for (GTLYouTubeVideo * video in array) {
              GTLYouTubeVideoSnippet * snippet = video.snippet;
              GTLYouTubeVideoStatistics * statistics = video.statistics;
@@ -60,9 +82,7 @@
 - (void)fetchSearchListWithQueryTerm:(NSString *)queryTerm
                    completionHandler:(YoutubeResponseBlock)completion
                         errorHandler:(ErrorResponseBlock)errorBlock {
-   GTLServiceYouTube * service = [[GTLServiceYouTube alloc] init];
-
-   service.APIKey = youtube_apikey;
+   GTLServiceYouTube * service = self.youTubeService;
 
    GTLQueryYouTube * query = [GTLQueryYouTube queryForSearchListWithPart:@"id,snippet"];
    query.q = queryTerm;
@@ -100,9 +120,7 @@
 - (void)fetchVideoListWithVideoId:(NSString *)videoId
                 completionHandler:(YoutubeResponseBlock)completion
                      errorHandler:(ErrorResponseBlock)errorBlock {
-   GTLServiceYouTube * service = [[GTLServiceYouTube alloc] init];
-
-   service.APIKey = youtube_apikey;
+   GTLServiceYouTube * service = self.youTubeService;
 
    GTLQueryYouTube * query = [GTLQueryYouTube queryForVideosListWithPart:@"snippet,contentDetails, statistics"];
    query.identifier = videoId;
