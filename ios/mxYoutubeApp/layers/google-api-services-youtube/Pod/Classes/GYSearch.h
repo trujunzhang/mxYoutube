@@ -45,5 +45,4 @@ typedef void (^ErrorResponseBlock)(NSError *  error);
 
 - (NSArray *)searchByQueryWithQueryTerm:(NSString *)queryTerm completionHandler:(YoutubeResponseBlock)responseHandler errorHandler:(ErrorResponseBlock)errorHandler;
 
-- (void)searchVideoByVideoIds:(NSArray *)array completionHandler:(YoutubeResponseBlock)handler;
 @end

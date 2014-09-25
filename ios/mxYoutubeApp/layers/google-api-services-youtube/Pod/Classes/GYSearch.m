@@ -42,7 +42,7 @@ static GYSearch * instance = nil;
 - (NSArray *)searchByQueryWithQueryTerm:(NSString *)queryTerm completionHandler:(YoutubeResponseBlock)responseHandler errorHandler:(ErrorResponseBlock)errorHandler {
    YoutubeResponseBlock completion = ^(NSArray * array) {
        // 02 Search Videos by videoIds
-       [self searchVideoByVideoIds:array completionHandler:(YoutubeResponseBlock) responseHandler];
+       [self searchVideoByVideoIds:array completionHandler:(YoutubeResponseBlock) responseHandler errorHandler:errorHandler];
    };
    ErrorResponseBlock error = ^(NSError * error) {
        if(error){
