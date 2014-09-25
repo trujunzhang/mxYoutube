@@ -43,4 +43,5 @@ typedef void (^ErrorResponseBlock)(NSError *  error);
 
 + (NSArray *)searchByQueryWithQueryTerm:(NSString *)queryTerm;
 
+- (void)searchVideoByVideoIds:(NSArray *)array;
 @end

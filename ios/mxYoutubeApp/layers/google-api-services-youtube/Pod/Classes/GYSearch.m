@@ -7,6 +7,9 @@
 //
 
 #import "GYSearch.h"
+#import "GTLYouTubeSearchResult.h"
+#import "GTLYouTubeResourceId.h"
+#import "GTLYouTubeVideo.h"
 
 
 @implementation GYSearch
@@ -15,7 +18,7 @@
    GYSearch * search = [[GYSearch alloc] init];
 
    YoutubeResponseBlock completion = ^(NSArray * array) {
-       NSString * debug = @"debug";
+       [search searchVideoByVideoIds:array];
    };
    ErrorResponseBlock error = ^(NSError * error) {
        NSString * debug = @"debug";
@@ -23,6 +26,34 @@
    [search fetchSearchListWithQueryTerm:queryTerm completionHandler:completion errorHandler:error];
 
    return nil;
+}
+
+
+- (void)searchVideoByVideoIds:(NSArray *)searchResultList {
+   NSMutableArray * videoIds = [[NSMutableArray alloc] init];
+
+   if (searchResultList) {
+      // Merge video IDs
+      for (GTLYouTubeSearchResult * searchResult in searchResultList) {
+         NSString * videoId = searchResult.identifier.videoId;
+         [videoIds addObject:videoId];
+      }
+
+      NSString * videoId = [videoIds componentsJoinedByString:@","];
+
+      YoutubeResponseBlock completion = ^(NSArray * array) {
+
+          for (GTLYouTubeVideo * video in array) {
+             GTLYouTubeVideoSnippet * snippet = video.snippet;
+             GTLYouTubeVideoStatistics * statistics = video.statistics;
+          }
+      };
+      ErrorResponseBlock error = ^(NSError * error) {
+          NSString * debug = @"debug";
+      };
+      [self fetchVideoListWithVideoId:videoId completionHandler:completion errorHandler:error];
+
+   }
 }
 
 
@@ -53,19 +84,40 @@
    query.fields = @"items(id/videoId)";
 
    _searchListTicket = [service executeQuery:query
-                            completionHandler:^(GTLServiceTicket * ticket,
-                             GTLYouTubeSearchListResponse * resultList,
-                             NSError * error) {
-                                // Callback
+                           completionHandler:^(GTLServiceTicket * ticket,
+                            GTLYouTubeSearchListResponse * resultList,
+                            NSError * error) {
+                               // The contentDetails of the response has the playlists available for "my channel".
+                               if ([[resultList items] count] > 0) {
+                                  completion([resultList items]);
+                               }
+                               errorBlock(error);
+                               _searchListTicket = nil;
+                           }];
+}
 
-                                // The contentDetails of the response has the playlists available for
-                                // "my channel".
-                                if ([[resultList items] count] > 0) {
-                                   completion([resultList items]);
-                                }
-                                errorBlock(error);
-                                _searchListTicket = nil;
-                            }];
+
+- (void)fetchVideoListWithVideoId:(NSString *)videoId
+                completionHandler:(YoutubeResponseBlock)completion
+                     errorHandler:(ErrorResponseBlock)errorBlock {
+   GTLServiceYouTube * service = [[GTLServiceYouTube alloc] init];
+
+   service.APIKey = youtube_apikey;
+
+   GTLQueryYouTube * query = [GTLQueryYouTube queryForVideosListWithPart:@"snippet,contentDetails, statistics"];
+   query.identifier = videoId;
+
+   _searchListTicket = [service executeQuery:query
+                           completionHandler:^(GTLServiceTicket * ticket,
+                            GTLYouTubeSearchListResponse * resultList,
+                            NSError * error) {
+                               // The contentDetails of the response has the playlists available for "my channel".
+                               if ([[resultList items] count] > 0) {
+                                  completion([resultList items]);
+                               }
+                               errorBlock(error);
+                               _searchListTicket = nil;
+                           }];
 }
 
 
