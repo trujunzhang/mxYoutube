@@ -74,7 +74,6 @@ static GYSearch * instance = nil;
           NSString * debug = @"debug";
       };
       [self fetchVideoListWithVideoId:videoId completionHandler:completion errorHandler:error];
-
    }
 }
 

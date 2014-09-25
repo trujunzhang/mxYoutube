@@ -21,7 +21,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-   [GYSearch searchByQueryWithQueryTerm:@"sketch3"];
+   [[GYSearch getInstance] searchByQueryWithQueryTerm:@"sketch3"];
 }
 
 - (void)didReceiveMemoryWarning
