@@ -1,0 +1,10 @@
+target 'google-api-services-youtube', :exclusive => true do
+  pod "google-api-services-youtube", :path => "../"
+
+  # post_install do | installer |
+  #   require 'fileutils'
+  #   FileUtils.cp_r('Pods/Pods-Acknowledgements.plist', 'Resources/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+  # end
+
+end
+
