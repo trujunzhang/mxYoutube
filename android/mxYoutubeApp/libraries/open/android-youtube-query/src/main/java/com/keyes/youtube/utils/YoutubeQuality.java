@@ -1,10 +1,5 @@
 package com.keyes.youtube.utils;
 
-import android.app.Activity;
-import android.content.Context;
-import android.net.wifi.WifiManager;
-import android.telephony.TelephonyManager;
-
 import com.keyes.youtube.beans.Format;
 import com.keyes.youtube.beans.VideoStream;
 

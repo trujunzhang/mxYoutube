@@ -1,0 +1,5 @@
+
+@interface YQYouTubeUtility : NSObject {
+}
+
+@end

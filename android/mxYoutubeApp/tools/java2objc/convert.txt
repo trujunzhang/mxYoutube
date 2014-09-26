@@ -11,12 +11,28 @@
 
 
 // ...ios project fold...
+
+//.............
+/Volumes/Home/Developing/SketchProjects/mxYoutube/android/mxYoutubeApp/libraries/open/android-youtube-query/src/main/java/com/keyes/youtube
+--outputdir=/Volumes/Home/Developing/SketchProjects/mxYoutube/ios/mxYoutubeApp/lib/android-youtube-query/Pod/Classes
+--prefix=YQ
+//.............
+
+
 /Volumes/Home/Developing/SketchProjects/mxYoutube/android/mxYoutubeApp/libraries/open/android-youtube-query/src/main/java/com/keyes/youtube/beans
 --outputdir=/Volumes/Home/Developing/SketchProjects/mxYoutube/ios/mxYoutubeApp/lib/android-youtube-query/Pod/Classes/beans
 --prefix=YQ
 
 /Volumes/Home/Developing/SketchProjects/mxYoutube/android/mxYoutubeApp/libraries/open/android-youtube-query/src/main/java/com/keyes/youtube/callback
 --outputdir=/Volumes/Home/Developing/SketchProjects/mxYoutube/ios/mxYoutubeApp/lib/android-youtube-query/Pod/Classes/callback
+--prefix=YQ
+
+/Volumes/Home/Developing/SketchProjects/mxYoutube/android/mxYoutubeApp/libraries/open/android-youtube-query/src/main/java/com/keyes/youtube/ui
+--outputdir=/Volumes/Home/Developing/SketchProjects/mxYoutube/ios/mxYoutubeApp/lib/android-youtube-query/Pod/Classes/ui
+--prefix=YQ
+
+/Volumes/Home/Developing/SketchProjects/mxYoutube/android/mxYoutubeApp/libraries/open/android-youtube-query/src/main/java/com/keyes/youtube/utils
+--outputdir=/Volumes/Home/Developing/SketchProjects/mxYoutube/ios/mxYoutubeApp/lib/android-youtube-query/Pod/Classes/utils
 --prefix=YQ
 
 
