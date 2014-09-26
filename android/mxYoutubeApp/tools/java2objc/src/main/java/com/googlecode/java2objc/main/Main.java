@@ -25,6 +25,7 @@ import java.io.FileNotFoundException;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
@@ -42,113 +43,115 @@ import com.googlecode.java2objc.util.Preconditions;
  */
 public final class Main {
 
-  private static void printUsageAndExit() {
-    System.err.printf(
-        "Usage: java -jar %s java2objc.jar /path/to/MyClass1.java /path/to/second/MyClass2.java\n",
-        Config.availableOptions());
-    System.exit(-1);
-  }
+	private static void printUsageAndExit() {
+		System.err.printf("Usage: java -jar %s java2objc.jar /path/to/MyClass1.java /path/to/second/MyClass2.java\n",
+				Config.availableOptions());
+		System.exit(-1);
+	}
 
-  private final Config config;
-  private final Collection<String> javaFiles;
-  
-  public Main(Config config, Collection<String> javaFiles) {
-    this.config = config;
-    this.javaFiles = javaFiles;
-  }
+	private final Config config;
+	private final Collection<String> javaFiles;
 
-  public static void main(String[] args) throws Exception {
-    if (args.length == 0) {
-      printUsageAndExit();
-    }
-    Config config = new Config();
-    List<String> javaFiles = Lists.newArrayList();
-    for (String arg : args) {
-      if (arg.startsWith("--")) {
-        // A configuration setting
-        config.update(arg);
-      } else { // Probably a Java file
-        javaFiles.add(arg);
-      }
-    }
-    Main main = new Main(config, javaFiles);
-    main.execute();
-  }
-  
-  public void execute() throws IOException, ParseException {
-    List<List<ObjcType>> objcTypes = convertFilesToObjcTypes();
-    ObjcFileGenerator generator = new ObjcFileGenerator(config.getOutputDir(), config.getIndent());
-    generator.writeSourceCodeForFiles(objcTypes);
-  }
+	public Main(Config config, Collection<String> javaFiles) {
+		this.config = config;
+		this.javaFiles = javaFiles;
+	}
 
-  public List<List<ObjcType>> convertFilesToObjcTypes() throws IOException, ParseException {
-    // load the default mappings
-    Properties mappings = new OrderedProperties();
-    InputStream in = getClass().getClassLoader().getResourceAsStream("mappings.properties");
-    if (in != null) {
-      mappings.load(in);
-    }
+	public static void main(String[] args) throws Exception {
+		if (args.length == 0) {
+			printUsageAndExit();
+		}
+		Config config = new Config();
+		List<String> javaFiles = Lists.newArrayList();
+		for (String arg : args) {
+			if (arg.startsWith("--")) {
+				// A configuration setting
+				config.update(arg);
+			} else { // Probably a Java file
+				javaFiles.add(arg);
+			}
+		}
+		Main main = new Main(config, javaFiles);
+		main.execute();
+	}
 
-    List<List<ObjcType>> objcTypes = Lists.newArrayList();
-    processFiles(null, javaFiles.toArray(new String[0]), mappings, objcTypes);
-    return objcTypes;
-  }
+	public void execute() throws IOException, ParseException {
+		List<List<ObjcType>> objcTypes = convertFilesToObjcTypes();
+		ObjcFileGenerator generator = new ObjcFileGenerator(config.getOutputDir(), config.getIndent());
+		generator.writeSourceCodeForFiles(objcTypes);
+	}
 
-  private void processFiles(File dir, String[] fileNames, Properties mappings,
-      List<List<ObjcType>> objcTypes)
-      throws ParseException, IOException {
-    for (String fileName : fileNames) {
-      fileName = fileName.trim();
-      File file = (dir != null) ? new File(dir, fileName) : new File(fileName);
-      mappings = loadLocalMappings(file, mappings);
-      // If a directory, recurse through its subdirectories and .java files
-      if (file.isDirectory()) {
-        String[] files = file.list(new FilenameFilter() {
+	public List<List<ObjcType>> convertFilesToObjcTypes() throws IOException, ParseException {
+		// load the default mappings
+		Properties mappings = new OrderedProperties();
+        //src/main/resources/
+//		InputStream in = getClass().getClassLoader().getResourceAsStream("/src/main/resources/mappings.properties");
+        InputStream in = new
+                FileInputStream("/Volumes/Home/Developing/SketchProjects/mxYoutube/android/mxYoutubeApp/tools/java2objc/src/main/resources/mappings.properties");
 
-          @Override
-          public boolean accept(File dir, String name) {
-            File file = new File(dir, name);
-            return !file.isHidden() && (name.endsWith(".java") || file.isDirectory());
-          }
-        });
+		if (in != null) {
+			mappings.load(in);
+		}
 
-        // update the working directory and process children
-        File workingDir = config.getWorkingDir();
-        if (dir != null) {
-          config.setWorkingDir(new File(config.getWorkingDir(), file.getName()));
-        }
-        processFiles(file, files, mappings, objcTypes);
-        config.setWorkingDir(workingDir);
-      } else {
-        objcTypes.add(convertJavaFileToObjcTypes(mappings, fileName, file));
-      }
-    }
-  }
+		List<List<ObjcType>> objcTypes = Lists.newArrayList();
+		processFiles(null, javaFiles.toArray(new String[0]), mappings, objcTypes);
+		return objcTypes;
+	}
 
-  private List<ObjcType> convertJavaFileToObjcTypes(Properties mappings, String fileName, File file)
-      throws FileNotFoundException, ParseException {
-    Preconditions.assertTrue(fileName.endsWith(".java"), fileName + " isn't a Java file.");
-    FileInputStream in = new FileInputStream(file);
-    CompilationUnit cu = JavaParser.parse(in);
-    CompilationUnitConverter conv = new CompilationUnitConverter(config, cu, file, mappings);
-    return conv.getObjcTypes();
-  }
+	private void processFiles(File dir, String[] fileNames, Properties mappings, List<List<ObjcType>> objcTypes)
+			throws ParseException, IOException {
+		for (String fileName : fileNames) {
+			fileName = fileName.trim();
+			File file = (dir != null) ? new File(dir, fileName) : new File(fileName);
+			mappings = loadLocalMappings(file, mappings);
+			// If a directory, recurse through its subdirectories and .java files
+			if (file.isDirectory()) {
+				String[] files = file.list(new FilenameFilter() {
 
-  private Properties loadLocalMappings(File forFile, Properties mappings) {
-    File file;
-    if (forFile.isDirectory()) {
-      file = new File(forFile, "mappings.properties");
-    } else {
-      file = new File(forFile.getParent(), "mappings.properties");
-    }
-    if (file.exists()) {
-      mappings = (Properties)mappings.clone();
-      try {
-        mappings.load(new FileInputStream(file));
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
-    }
-    return mappings;
-  }
+					@Override
+					public boolean accept(File dir, String name) {
+						File file = new File(dir, name);
+						return !file.isHidden() && (name.endsWith(".java") || file.isDirectory());
+					}
+				});
+
+				// update the working directory and process children
+				File workingDir = config.getWorkingDir();
+				if (dir != null) {
+					config.setWorkingDir(new File(config.getWorkingDir(), file.getName()));
+				}
+				processFiles(file, files, mappings, objcTypes);
+				config.setWorkingDir(workingDir);
+			} else {
+				objcTypes.add(convertJavaFileToObjcTypes(mappings, fileName, file));
+			}
+		}
+	}
+
+	private List<ObjcType> convertJavaFileToObjcTypes(Properties mappings, String fileName, File file)
+			throws FileNotFoundException, ParseException {
+		Preconditions.assertTrue(fileName.endsWith(".java"), fileName + " isn't a Java file.");
+		FileInputStream in = new FileInputStream(file);
+		CompilationUnit cu = JavaParser.parse(in);
+		CompilationUnitConverter conv = new CompilationUnitConverter(config, cu, file, mappings);
+		return conv.getObjcTypes();
+	}
+
+	private Properties loadLocalMappings(File forFile, Properties mappings) {
+		File file;
+		if (forFile.isDirectory()) {
+			file = new File(forFile, "mappings.properties");
+		} else {
+			file = new File(forFile.getParent(), "mappings.properties");
+		}
+		if (file.exists()) {
+			mappings = (Properties) mappings.clone();
+			try {
+				mappings.load(new FileInputStream(file));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		return mappings;
+	}
 }

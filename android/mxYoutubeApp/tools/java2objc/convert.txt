@@ -1,2 +1,23 @@
+--prefix=YQ
+
 /Volumes/macshare/TDDOWNLOAD/FileId.java
 /Volumes/macshare/TDDOWNLOAD/out
+
+/Volumes/macshare/TDDOWNLOAD/beans
+--outputdir=/Volumes/macshare/TDDOWNLOAD/out
+
+/Volumes/Home/Developing/SketchProjects/mxYoutube/android/mxYoutubeApp/libraries/open/android-youtube-query/src/main/java/com/keyes/youtube/beans
+--outputdir=/Volumes/Home/Developing/SketchProjects/mxYoutube/android/mxYoutubeApp/out/android-youtube-query/beans
+
+
+// ...ios project fold...
+/Volumes/Home/Developing/SketchProjects/mxYoutube/android/mxYoutubeApp/libraries/open/android-youtube-query/src/main/java/com/keyes/youtube/beans
+--outputdir=/Volumes/Home/Developing/SketchProjects/mxYoutube/ios/mxYoutubeApp/lib/android-youtube-query/Pod/Classes/beans
+--prefix=YQ
+
+/Volumes/Home/Developing/SketchProjects/mxYoutube/android/mxYoutubeApp/libraries/open/android-youtube-query/src/main/java/com/keyes/youtube/callback
+--outputdir=/Volumes/Home/Developing/SketchProjects/mxYoutube/ios/mxYoutubeApp/lib/android-youtube-query/Pod/Classes/callback
+--prefix=YQ
+
+
+
