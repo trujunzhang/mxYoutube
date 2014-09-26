@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/libraries/collect/AndroidCommon/AndroidCommon.iml" filepath="$PROJECT_DIR$/libraries/collect/AndroidCommon/AndroidCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/AppDaoGenerator/AppDaoGenerator.iml" filepath="$PROJECT_DIR$/tools/AppDaoGenerator/AppDaoGenerator.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/otherexamples/BottomTabsFragmentTabHost/BottomTabsFragmentTabHost.iml" filepath="$PROJECT_DIR$/libraries/otherexamples/BottomTabsFragmentTabHost/BottomTabsFragmentTabHost.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/layers/Business-Logic-Layer/Business-Logic-Layer.iml" filepath="$PROJECT_DIR$/libraries/layers/Business-Logic-Layer/Business-Logic-Layer.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/open/TabBackStack/TabBackStack.iml" filepath="$PROJECT_DIR$/libraries/open/TabBackStack/TabBackStack.iml" />
@@ -11,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/libraries/open/android-youtube-query/android-youtube-query.iml" filepath="$PROJECT_DIR$/libraries/open/android-youtube-query/android-youtube-query.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/layers/google-api-services-youtube/google-api-services-youtube.iml" filepath="$PROJECT_DIR$/libraries/layers/google-api-services-youtube/google-api-services-youtube.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/java2objc/java2objc.iml" filepath="$PROJECT_DIR$/tools/java2objc/java2objc.iml" />
       <module fileurl="file://$PROJECT_DIR$/mxYoutubeApp.iml" filepath="$PROJECT_DIR$/mxYoutubeApp.iml" />
     </modules>
   </component>

@@ -23,11 +23,13 @@
             <option value="$PROJECT_DIR$/libraries/open/android-youtube-query" />
             <option value="$PROJECT_DIR$/libraries/otherexamples" />
             <option value="$PROJECT_DIR$/libraries/otherexamples/BottomTabsFragmentTabHost" />
+            <option value="$PROJECT_DIR$/tools" />
+            <option value="$PROJECT_DIR$/tools/AppDaoGenerator" />
+            <option value="$PROJECT_DIR$/tools/java2objc" />
           </set>
         </option>
       </GradleProjectSettings>
     </option>
-    <option name="offlineWork" value="true" />
   </component>
 </project>
 

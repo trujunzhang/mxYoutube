@@ -73,5 +73,11 @@ include ':libraries:otherexamples:BottomTabsFragmentTabHost'
 //0301. dependencies:[n0102]
 include ':libraries:layers:google-api-services-youtube'
 
+// ---------------------------
+//       Tools projects
+// ---------------------------
+include ':tools:AppDaoGenerator'
+include ':tools:java2objc'
+
 
 
