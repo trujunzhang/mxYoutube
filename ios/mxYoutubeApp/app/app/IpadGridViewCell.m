@@ -50,11 +50,9 @@
 
    NSString * _userNameValue = video.snippet.channelTitle;
 
-
-
    [self.title setText:_titleValue];
-   [self.rating setText:[NSString stringWithFormat:@"%@",_likeCountValue]];
-   [self.viewCount setText:[NSString stringWithFormat:@"%@",_viewCountValue]];
+   [self.rating setText:[NSString stringWithFormat:@"%@", _likeCountValue]];
+   [self.viewCount setText:[NSString stringWithFormat:@"%@", _viewCountValue]];
 
    [self.userName setText:_userNameValue];
 }

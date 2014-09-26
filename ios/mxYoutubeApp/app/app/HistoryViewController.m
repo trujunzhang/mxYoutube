@@ -78,9 +78,9 @@
 //每个UICollectionView展示的内容
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
    IpadGridViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-//   cell.cellLabel.text = [NSString stringWithFormat:@"w %i", x];
-   GTLYouTubeVideo * video = [self.videoList objectAtIndex:0];
-   [cell bind:video];
+
+   [cell bind:[self.videoList objectAtIndex:indexPath.row]];
+
    return cell;
 }
 
