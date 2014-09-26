@@ -145,91 +145,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.mxtube.app" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40b4ff95-6454-4327-83b2-70fa6b42ff96" name="Default" comment="developing app.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/AppDaoGenerator/.classpath" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/.classpath" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/AppDaoGenerator/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/AppDaoGenerator/.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/AppDaoGenerator/src/main/java/de/greenrobot/daogenerator/gentest/AppDaoGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/objc/CompilationContext.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/converters/CompilationUnitConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/main/Config.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/AppDaoGenerator/src/main/java/de/greenrobot/daogenerator/gentest/bean/DBBuddyInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/AppDaoGenerator/src/main/java/de/greenrobot/daogenerator/gentest/bean/DBChatMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/AppDaoGenerator/src/main/java/de/greenrobot/daogenerator/gentest/bean/DBClubBasedData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/AppDaoGenerator/src/main/java/de/greenrobot/daogenerator/gentest/bean/DBCollectInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/AppDaoGenerator/src/main/java/de/greenrobot/daogenerator/gentest/bean/DBConversationUser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/AppDaoGenerator/src/main/java/de/greenrobot/daogenerator/gentest/bean/DBLoginInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/converters/ExpressionConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/main/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/resources/java/lang/Math.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/converters/MethodConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcCatchClause.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/objc/ObjcEnumType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpression.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionArrayAccess.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionArrayInit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionAssign.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionBinary.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionBooleanLiteral.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionCast.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionConditional.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionEnclosed.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionFieldAccess.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionIsKindOf.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionMethodCall.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionObjectCreation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionSimple.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionStringLiteral.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionUnary.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcExpressionVariableDeclaration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/objc/ObjcField.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/main/ObjcFileGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcMethod.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcMethodDealloc.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcMethodInit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/objc/ObjcMethodParam.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/objc/ObjcNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/objc/ObjcOperator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementAssert.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementBlock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementDoWhile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementExpression.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementFor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementForEach.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementIf.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementLabeled.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementReturn.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementSimple.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementSwitch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementSwitchEntry.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementSynchronized.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementThrow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementTry.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcStatementWhile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/code/ObjcType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/objc/ObjcTypeRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/objc/ObjcUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/objc/ObjcVariable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/objc/ObjcVariableDeclarator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/util/OrderedProperties.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/util/Preconditions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/objc/SourceCodeWriter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/converters/StatementConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/google/code/java2objc/converters/TypeConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/objc/UserDefinedObjcTypeBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/AppDaoGenerator/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/resources/mappings.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="40b4ff95-6454-4327-83b2-70fa6b42ff96" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/java2objc/convert.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mxYoutubeApp.iws" />
@@ -9803,7 +9720,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/views/watch/WatchPlayerSubscription.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mxtube/app/ui/single/GridViewSingle.java" />
         <option value="$PROJECT_DIR$/app/build/source/apt/debug/com/mxtube/app/adapter/YoutubeListAdapter_.java" />
@@ -9854,6 +9770,7 @@
         <option value="$PROJECT_DIR$/tools/AppDaoGenerator/build.gradle" />
         <option value="$PROJECT_DIR$/tools/AppDaoGenerator/src/main/java/de/greenrobot/daogenerator/gentest/AppDaoGenerator.java" />
         <option value="$PROJECT_DIR$/tools/java2objc/build.gradle" />
+        <option value="$PROJECT_DIR$/tools/java2objc/convert.txt" />
       </list>
     </option>
   </component>
@@ -9966,6 +9883,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mxYoutubeApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mxYoutubeApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mxYoutubeApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java2objc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -11638,7 +11573,11 @@
       <created>1410757546397</created>
       <updated>1410757546398</updated>
     </task>
-    <option name="localTasksCounter" value="283" />
+    <task id="LOCAL-00283" summary="add tools:AppDaoGenerator and java2objc.">
+      <created>1411727199205</created>
+      <updated>1411727199206</updated>
+    </task>
+    <option name="localTasksCounter" value="284" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -11649,7 +11588,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32692307" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32692307" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -11669,7 +11608,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20243531" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27853882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2283105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5874126" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -11749,7 +11688,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="test" />
     <MESSAGE value="add open projects examples." />
     <MESSAGE value="add open projects example[slidingmenu]." />
     <MESSAGE value="add open projects example[actionbarsherlockexample]." />
@@ -11774,7 +11712,8 @@
     <MESSAGE value="fix list.savedInstanceState." />
     <MESSAGE value="add [BottomTabsFragmentTabHost] example project." />
     <MESSAGE value="developing app." />
-    <option name="LAST_COMMIT_MESSAGE" value="developing app." />
+    <MESSAGE value="add tools:AppDaoGenerator and java2objc." />
+    <option name="LAST_COMMIT_MESSAGE" value="add tools:AppDaoGenerator and java2objc." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -11797,13 +11736,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/libraries/otherexamples/BottomTabsFragmentTabHost/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19014084" vertical-offset="0" max-vertical-offset="284">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/otherexamples/BottomTabsFragmentTabHost/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="576">
@@ -12123,14 +12055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/java2objc/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="522">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="2556">
@@ -12153,6 +12077,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40677965" vertical-offset="0" max-vertical-offset="342">
           <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/java2objc/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/java2objc/convert.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03345725" vertical-offset="0" max-vertical-offset="538">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
           <folding />
         </state>
       </provider>
