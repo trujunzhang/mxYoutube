@@ -33,4 +33,6 @@ Pod::Spec.new do |s|
     ss.source_files = 'Pod/Classes/utils/*.{h,m}'
   end
 
+  s.dependency 'AFNetworking'
+
 end
