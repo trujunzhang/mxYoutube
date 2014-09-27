@@ -147,7 +147,6 @@
   <component name="ChangeListManager">
     <list default="true" id="40b4ff95-6454-4327-83b2-70fa6b42ff96" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/main/projects/AndroidYoutubeQuery.java" afterPath="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/main/projects/AndroidYoutubeQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ios/mxYoutubeApp/lib/android-youtube-query/Pod/Classes/callback/YQVideoInfoTaskCallback.h" afterPath="$PROJECT_DIR$/../../ios/mxYoutubeApp/lib/android-youtube-query/Pod/Classes/callback/YQVideoInfoTaskCallback.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mxYoutubeApp.iws" />
@@ -260,8 +259,8 @@
       <file leaf-file-name="AndroidYoutubeQuery.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/main/projects/AndroidYoutubeQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44554454" vertical-offset="18" max-vertical-offset="576">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.34285715" vertical-offset="0" max-vertical-offset="756">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -9813,8 +9812,8 @@
         <option value="$PROJECT_DIR$/libraries/open/android-youtube-player/src/main/java/com/google/android/libraries/mediaframework/layeredvideo/SimpleVideoPlayer.java" />
         <option value="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/main/projects/androidYoutubeQuery.java" />
         <option value="$PROJECT_DIR$/tools/java2objc/convert.txt" />
-        <option value="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/main/projects/AndroidYoutubeQuery.java" />
         <option value="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/main/Main.java" />
+        <option value="$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/main/projects/AndroidYoutubeQuery.java" />
       </list>
     </option>
   </component>
@@ -12004,7 +12003,11 @@
       <created>1411779288178</created>
       <updated>1411779288178</updated>
     </task>
-    <option name="localTasksCounter" value="288" />
+    <task id="LOCAL-00288" summary="add tools:AppDaoGenerator and java2objc.">
+      <created>1411779426089</created>
+      <updated>1411779426089</updated>
+    </task>
+    <option name="localTasksCounter" value="289" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -12024,7 +12027,7 @@
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12404871" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2914764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5874126" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5874126" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -12512,8 +12515,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/java2objc/src/main/java/com/googlecode/java2objc/main/projects/AndroidYoutubeQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44554454" vertical-offset="18" max-vertical-offset="576">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.34285715" vertical-offset="0" max-vertical-offset="756">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding />
         </state>
       </provider>
