@@ -14,4 +14,6 @@
 
 @property(nonatomic, strong) YQYouTubePlayerHelper * playerHelper;
 
+@property(nonatomic, copy) NSString * gameName;
+
 @end

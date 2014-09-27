@@ -22,6 +22,8 @@
    [super viewDidLoad];
    // Do any additional setup after loading the view, typically from a nib.
 
+   self.gameName=@"wanghao";
+   
    self.playerHelper = [[YQYouTubePlayerHelper alloc] init];
 // determine the messages to be displayed as the view loads the video
    self.playerHelper.taskInfo = [self getExtractMessages ];
