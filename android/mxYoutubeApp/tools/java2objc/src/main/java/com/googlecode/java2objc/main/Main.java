@@ -25,7 +25,6 @@ import java.io.FileNotFoundException;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
@@ -33,6 +32,7 @@ import java.util.Properties;
 import com.google.code.java2objc.code.ObjcType;
 import com.google.code.java2objc.converters.CompilationUnitConverter;
 import com.google.common.collect.Lists;
+import com.googlecode.java2objc.main.projects.AndroidYoutubeQuery;
 import com.googlecode.java2objc.util.OrderedProperties;
 import com.googlecode.java2objc.util.Preconditions;
 
@@ -58,6 +58,7 @@ public final class Main {
 	}
 
 	public static void main(String[] args) throws Exception {
+        args= AndroidYoutubeQuery.getArgs();
 		if (args.length == 0) {
 			printUsageAndExit();
 		}
