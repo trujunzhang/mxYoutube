@@ -8,6 +8,4 @@
 
 @protocol YQVideoInfoTaskCallback <NSObject>
 - (void) startYoutubeTask:(NSString *)videoUrl;
-
-
 @end

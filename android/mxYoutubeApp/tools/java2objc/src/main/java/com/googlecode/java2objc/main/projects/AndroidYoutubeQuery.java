@@ -17,19 +17,19 @@ public class AndroidYoutubeQuery {
 	public static String[] getArgs() {
 		String[] dirs = {// convert dir
 		"beans",// 0
-		// "callback",// 1
+//		"callback",// 1
 		// "ui",// 2
 		// "utils",// 3
 		};
 		String[] files = {// convert files
-		"",// default
-				"/VideoStream",// test
+//		"",// default
+				"/VideoStream.java",// test
 		};
 
 		String[] args = new String[3];
 		int s = 0;
 		args[s++] = PROJECT_ROOT + PACKAGE_ROOT + dirs[0] + files[0];
-		args[s++] = OUTPUTDIR + PROJECT_ROOT + IOS_DIR + dirs[0] + files[0];
+		args[s++] = OUTPUTDIR + PROJECT_ROOT + IOS_DIR + dirs[0] ;
 		args[s++] = PREFIX_NAME;
 		return args;
 	}
