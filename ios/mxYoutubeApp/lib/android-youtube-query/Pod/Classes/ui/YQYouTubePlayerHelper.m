@@ -4,6 +4,8 @@
 #import "YQPlaylistId.h"
 #import "YQVideoId.h"
 #import "YQFileId.h"
+#import "MKNetworkOperation.h"
+#import "MKNetworkEngine.h"
 
 
 @implementation YQYouTubePlayerHelper
@@ -20,13 +22,34 @@
 * "http://www.youtube.com/get_video_info?&video_id=izA_Xgbj7II"
 */
 - (void)makeAndExecuteYoutubeTask:(NSString *)uri {
-   NSString * url = [NSString stringWithFormat:@"%@%@", YOUTUBE_VIDEO_INFORMATION_URL, [self getYouTubeId:uri].mId];
-   [self prepareAndPlay:url];
+//   NSString * url = [NSString stringWithFormat:@"%@%@", YOUTUBE_VIDEO_INFORMATION_URL, [self getYouTubeId:uri].mId];
+   [self prepareAndPlay:[self getYouTubeId:uri].mId];
 }
 
 
-- (void)prepareAndPlay:(NSString *)url {
+- (void)prepareAndPlay:(NSString *)videoId {
+   NSMutableDictionary * dic = [[NSMutableDictionary alloc] init];
+   [dic setValue:videoId forKey:@"video_id"];
 
+   MKNetworkEngine * engine = [[MKNetworkEngine alloc] initWithHostName:YOUTUBE_URL customHeaderFields:nil];
+
+   MKNetworkOperation * op = [[MKNetworkOperation alloc] initWithURLString:YOUTUBE_VIDEO_INFORMATION_URL
+                                                                    params:dic
+                                                                httpMethod:@"GET"];
+
+
+   void (^completionHandler)(MKNetworkOperation *) = ^(MKNetworkOperation * completedOperation) {
+       // the completionBlock will be called twice.
+       // if you are interested only in new values, move that code within the else block
+       NSString * string = [completedOperation responseString];
+
+   };
+   void (^errorHandler)(MKNetworkOperation *, NSError *) = ^(MKNetworkOperation * errorOp, NSError * error) {
+
+   };
+   [op addCompletionHandler:completionHandler errorHandler:errorHandler];
+
+   [engine enqueueOperation:op];
 }
 
 
