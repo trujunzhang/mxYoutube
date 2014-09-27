@@ -44,6 +44,11 @@
        // if you are interested only in new values, move that code within the else block
        NSString * string = [completedOperation responseString];
        self.youtubeQuality = [YQYouTubeUtility getFinalUri:string];
+       NSString * lUriStr = [YQYouTubeUtility getUrlByQuality:self.youtubeQuality
+                                                    pFallback:true
+                                           pYouTubeFmtQuality:self.taskInfo.lYouTubeFmtQuality];
+       if (self.videoInfoTaskCallback)
+          [self.videoInfoTaskCallback startYoutubeTask:lUriStr];
    };
    void (^errorHandler)(MKNetworkOperation *, NSError *) = ^(MKNetworkOperation * errorOp, NSError * error) {
 

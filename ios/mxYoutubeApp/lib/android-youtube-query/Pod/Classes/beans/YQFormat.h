@@ -8,6 +8,7 @@
 }
 
 @property(nonatomic) int mId;
+
 - (id) initWithPFormatString:(NSString *)pFormatString;
 - (id) initWithPId:(int)pId;
 - (BOOL) isEqualTo:(NSObject *)pObject;

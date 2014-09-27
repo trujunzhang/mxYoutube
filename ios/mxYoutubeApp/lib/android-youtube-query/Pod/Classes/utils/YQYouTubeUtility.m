@@ -56,4 +56,55 @@
    }
    return youtubeQuality;
 }
+
+
++ (NSString *)getUrlByQuality:(YQYoutubeQuality *)youtubeQuality pFallback:(BOOL)pFallback pYouTubeFmtQuality:(NSString *)pYouTubeFmtQuality {
+   NSMutableArray * lFormats = [youtubeQuality lFormats];
+   NSMutableArray * lStreams = [youtubeQuality lStreams];
+   NSString * lUriStr = nil;
+   int lFormatId = [pYouTubeFmtQuality intValue];
+   YQFormat * lSearchFormat = [[YQFormat alloc] initWithPId:lFormatId];
+
+   while (![lFormats containsObject:lSearchFormat] && pFallback) {
+      int lOldId = [lSearchFormat mId];
+      int lNewId = [self getSupportedFallbackId:lOldId];
+      if (lOldId == lNewId) {
+         break;
+      }
+      lSearchFormat = [[YQFormat alloc] initWithPId:lNewId];
+   }
+
+   int lIndex = [self indexOfObject:lFormats withObjectId:lSearchFormat.mId];//[lFormats indexOfObject:lSearchFormat];
+   if (lIndex >= 0) {
+      YQVideoStream * lSearchStream = [lStreams objectAtIndex:lIndex];
+      lUriStr = [lSearchStream mUrl];
+   }
+   return lUriStr;
+}
+
+
++ (int)indexOfObject:(NSMutableArray *)array withObjectId:(int )mId {
+   int step = -1;
+   for (YQFormat * format in array) {
+      step++;
+      if (format.mId == mId)
+         break;
+   }
+   return step;
+}
+
+
++ (int)getSupportedFallbackId:(int)pOldId {
+   NSArray * lSupportedFormatIds = [NSArray arrayWithObjects:@13, @17, @18, @22, @37, nil];
+   int lFallbackId = pOldId;
+
+   for (int i = lSupportedFormatIds.count - 1; i >= 0; i--) {
+      if (pOldId == lSupportedFormatIds[i] && i > 0) {
+         lFallbackId = lSupportedFormatIds[i - 1];
+      }
+   }
+
+   return lFallbackId;
+}
+
 @end

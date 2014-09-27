@@ -4,10 +4,10 @@
  */
 
 @interface YQVideoStream : NSObject {
-  NSString * mUrl;
+
 }
 
+@property(nonatomic, copy) NSString * mUrl;
 - (id) initWithPStreamStr:(NSString *)pStreamStr;
-- (NSString *) getmUrl;
-- (void) setmUrl:(NSString *)mUrl;
+
 @end

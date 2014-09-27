@@ -33,11 +33,8 @@
 }
 
 
-//- (BOOL) isEqualTo:(NSObject *)pObject {
-//  if (!([pObject conformsToProtocol:@protocol(YQFormat)])) {
-//    return NO;
-//  }
-//  return ((YQFormat *)pObject).mId == mId;
-//}
+- (BOOL) isEqualTo:(NSObject *)pObject {
+  return ((YQFormat *)pObject).mId == self.mId;
+}
 
 @end
