@@ -10,10 +10,10 @@ public class AndroidYoutubeQuery {
 
 	public static String[] getArgs() {
 		String[] dirs = {// convert dir
-		"beans",// 0
+//		"beans",// 0
 				"callback",// 1
-				"ui",// 2
-				"utils",// 3
+//				"ui",// 2
+//				"utils",// 3
 		};
 
 		String[] args = new String[3];
