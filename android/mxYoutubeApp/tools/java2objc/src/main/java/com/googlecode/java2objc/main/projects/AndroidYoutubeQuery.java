@@ -29,9 +29,19 @@ public class AndroidYoutubeQuery {
 
 		String[] args = new String[3];
 		int s = 0;
-		args[s++] = PROJECT_ROOT + PACKAGE_ROOT + dirs[0] + files[0];
-		args[s++] = OUTPUTDIR + PROJECT_ROOT + IOS_DIR + dirs[0] ;
+		args[s++] = getSource(dirs[0], files[0]);
+		args[s++] = OUTPUTDIR + getDestination(dirs[0]);
 		args[s++] = PREFIX_NAME;
 		return args;
 	}
+
+    private static String getSource(String dir, String file) {
+//        return PROJECT_ROOT + PACKAGE_ROOT + dir + file;
+        return "/Volumes/Home/Developing/SketchProjects/mxYoutube/android/mxYoutubeApp/libraries/open/android-youtube-query/src/main/java/com/keyes/youtube/temp/method.java";
+    }
+
+    private static String getDestination(String dir) {
+//        return PROJECT_ROOT + IOS_DIR + dir;
+        return "/Volumes/Home/Developing/SketchProjects/mxYoutube/android/mxYoutubeApp/out/temp";
+    }
 }
