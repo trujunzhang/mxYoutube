@@ -1,9 +1,9 @@
 
 @interface YQYouTubeId : NSObject {
-  NSString * mId;
+
 }
 
-@property(nonatomic, retain, readonly) NSString * id;
+@property(nonatomic, copy) NSString * mId;
 
 - (id) initWithPId:(NSString *)pId;
 @end

@@ -24,6 +24,7 @@ public class AndroidYoutubeQuery {
 		String[] files = {// convert files
 //		"",// default
 				"/VideoStream.java",// test
+//                "/YoutubeTaskInfo.java"// test
 		};
 
 		String[] args = new String[3];

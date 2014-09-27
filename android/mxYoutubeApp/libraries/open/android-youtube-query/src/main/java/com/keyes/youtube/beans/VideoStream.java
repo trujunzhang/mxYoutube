@@ -8,7 +8,9 @@ import java.util.Map;
  */
 public class VideoStream {
 
-    protected String mUrl;
+    private String mUrl;
+
+
 
     /**
      * Construct a video stream from one of the strings obtained
@@ -30,7 +32,11 @@ public class VideoStream {
         mUrl = lArgMap.get("url") + "&signature=" + lArgMap.get("sig");
     }
 
-    public String getUrl() {
+    public String getmUrl() {
         return mUrl;
+    }
+
+    public void setmUrl(String mUrl) {
+        this.mUrl = mUrl;
     }
 }

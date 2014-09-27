@@ -2,11 +2,10 @@
 
 @implementation YQYouTubeId
 
-@synthesize id;
 
 - (id) initWithPId:(NSString *)pId {
   if ((self = [super init])) {
-    mId = pId;
+    self.mId = pId;
   }
   return self;
 }

@@ -1,3 +1,4 @@
+#import "NSMutableDictionary.h"
 
 /**
  * Represents a video stream
@@ -7,6 +8,7 @@
   NSString * mUrl;
 }
 
-@property(nonatomic, retain, readonly) NSString * url;
 - (id) initWithPStreamStr:(NSString *)pStreamStr;
+- (NSString *) getmUrl;
+- (void) setmUrl:(NSString *)mUrl;
 @end

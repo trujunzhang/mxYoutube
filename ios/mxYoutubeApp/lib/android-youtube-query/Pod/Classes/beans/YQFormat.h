@@ -5,10 +5,9 @@
  */
 
 @interface YQFormat : NSObject {
-  int mId;
 }
 
-@property(nonatomic, readonly) int id;
+@property(nonatomic) int mId;
 - (id) initWithPFormatString:(NSString *)pFormatString;
 - (id) initWithPId:(int)pId;
 - (BOOL) isEqualTo:(NSObject *)pObject;
