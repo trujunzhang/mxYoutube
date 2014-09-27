@@ -16,6 +16,9 @@
 }
 
 
+/**
+* "http://www.youtube.com/get_video_info?&video_id=izA_Xgbj7II"
+*/
 - (void)makeAndExecuteYoutubeTask:(NSString *)uri {
    NSString * url = [NSString stringWithFormat:@"%@%@", YOUTUBE_VIDEO_INFORMATION_URL, [self getYouTubeId:uri].mId];
    [self prepareAndPlay:url];
