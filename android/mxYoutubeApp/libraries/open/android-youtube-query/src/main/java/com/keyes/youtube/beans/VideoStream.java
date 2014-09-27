@@ -9,9 +9,6 @@ import java.util.Map;
 public class VideoStream {
 
     private String mUrl;
-
-
-
     /**
      * Construct a video stream from one of the strings obtained
      * from the "url_encoded_fmt_stream_map" parameter if the video_info
@@ -32,11 +29,7 @@ public class VideoStream {
         mUrl = lArgMap.get("url") + "&signature=" + lArgMap.get("sig");
     }
 
-    public String getmUrl() {
+    public String getUrl() {
         return mUrl;
-    }
-
-    public void setmUrl(String mUrl) {
-        this.mUrl = mUrl;
     }
 }

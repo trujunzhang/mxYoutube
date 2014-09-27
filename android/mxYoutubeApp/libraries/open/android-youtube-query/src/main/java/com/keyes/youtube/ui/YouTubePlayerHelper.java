@@ -1,7 +1,18 @@
 package com.keyes.youtube.ui;
 
-import com.keyes.youtube.beans.YoutubeTaskInfo;
+import android.content.Context;
+import android.net.Uri;
+import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+import com.androidquery.AQuery;
+import com.androidquery.AbstractAQuery;
+import com.androidquery.callback.AjaxCallback;
+import com.androidquery.callback.AjaxStatus;
+import com.keyes.youtube.beans.*;
 import com.keyes.youtube.callback.VideoInfoTaskCallback;
+import com.keyes.youtube.utils.YouTubeUtility;
 import com.keyes.youtube.utils.YoutubeQuality;
 
 /**
@@ -99,66 +110,74 @@ public class YouTubePlayerHelper {
 		this.videoInfoTaskCallback = videoInfoTaskCallback;
 	}
 
-//	private String getVideoString(Uri lVideoIdUri) {
-//		String lVideoIdStr = lVideoIdUri.getEncodedSchemeSpecificPart();
-//		if (lVideoIdStr.startsWith("//")) {
-//			if (lVideoIdStr.length() > 2) {
-//				lVideoIdStr = lVideoIdStr.substring(2);
-//			} else {
-//				Log.i(this.getClass().getSimpleName(),
-//						"No video ID was specified in the intent.  Closing video activity.");
-//			}
-//		}
-//		return lVideoIdStr;
-//	}
+	private String getVideoString(Uri lVideoIdUri) {
+		String lVideoIdStr = lVideoIdUri.getEncodedSchemeSpecificPart();
+		if (lVideoIdStr.startsWith("//")) {
+			if (lVideoIdStr.length() > 2) {
+				lVideoIdStr = lVideoIdStr.substring(2);
+			} else {
+				Log.i(this.getClass().getSimpleName(),
+						"No video ID was specified in the intent.  Closing video activity.");
+			}
+		}
+		return lVideoIdStr;
+	}
 
-//
-//	public YouTubeId getYouTubeId(String lVideoSchemeStr, String lVideoIdStr) {
-//		// /////////////////
-//		// extract either a video id or a playlist id, depending on the uri scheme
-//		YouTubeId lYouTubeId = null;
-//		if (lVideoSchemeStr != null && lVideoSchemeStr.equalsIgnoreCase(Youtube_URL.SCHEME_YOUTUBE_PLAYLIST)) {
-//			lYouTubeId = new PlaylistId(lVideoIdStr);
-//		} else if (lVideoSchemeStr != null && lVideoSchemeStr.equalsIgnoreCase(Youtube_URL.SCHEME_YOUTUBE_VIDEO)) {
-//			lYouTubeId = new VideoId(lVideoIdStr);
-//		} else if (lVideoSchemeStr != null && lVideoSchemeStr.equalsIgnoreCase(Youtube_URL.SCHEME_FILE)) {
-//			lYouTubeId = new FileId(lVideoIdStr);
-//		}
-//		return lYouTubeId;
-//	}
-//
-//
-//
-//	public void setupView() {
-//
-//	}
-//
-//	public void makeAndExecuteYoutubeTask(Context context, Uri lVideoIdUri) {
-////		prepareAndPlay(context, Youtube_URL.YOUTUBE_VIDEO_INFORMATION_URL + this.getYouTubeId(lVideoIdUri).getId());
-//	}
-//
-//	private void prepareAndPlay(final Context context, String uri) {
-////		// AV2OkzIGykA
-////		// perform a Google search in just a few lines of code
-////		final AbstractAQuery aq = new AQuery(context);
-////		aq.ajax(uri, String.class, new AjaxCallback<String>() {
-////			@Override
-////			public void callback(String url, String json, AjaxStatus status) {
-////				if (json != null) {
-////					// successful ajax call, show status code and json content
-////					youtubeQuality = YouTubeUtility.getFinalUri(json);
-////					String lUriStr = YouTubeUtility.getUrlByQuality(youtubeQuality, true, taskInfo.lYouTubeFmtQuality);
-////					videoInfoTaskCallback.startYoutubeTask(lUriStr);
-////				} else {
-////					// ajax error, show error code
-////					Toast.makeText(aq.getContext(), "Error:" + status.getCode(), Toast.LENGTH_LONG).show();
-////				}
-////			}
-////		});
-//	}
-//
-//	public void stopYoutubeTask(Context context) {
-////		YouTubeUtility.markVideoAsViewed(context, mVideoId);
-//	}
+	public YouTubeId getYouTubeId(Uri lVideoIdUri) {
+		String lVideoIdStr = getVideoString(lVideoIdUri);
+
+		return this.getYouTubeId(lVideoIdUri.getScheme(), lVideoIdStr);
+	}
+
+	public YouTubeId getYouTubeId(String lVideoSchemeStr, String lVideoIdStr) {
+		// /////////////////
+		// extract either a video id or a playlist id, depending on the uri scheme
+		YouTubeId lYouTubeId = null;
+		if (lVideoSchemeStr != null && lVideoSchemeStr.equalsIgnoreCase(Youtube_URL.SCHEME_YOUTUBE_PLAYLIST)) {
+			lYouTubeId = new PlaylistId(lVideoIdStr);
+		} else if (lVideoSchemeStr != null && lVideoSchemeStr.equalsIgnoreCase(Youtube_URL.SCHEME_YOUTUBE_VIDEO)) {
+			lYouTubeId = new VideoId(lVideoIdStr);
+		} else if (lVideoSchemeStr != null && lVideoSchemeStr.equalsIgnoreCase(Youtube_URL.SCHEME_FILE)) {
+			lYouTubeId = new FileId(lVideoIdStr);
+		}
+		return lYouTubeId;
+	}
+
+	public View setupView(Context context) {
+		LinearLayout lLinLayout = new LinearLayout(context);
+		return lLinLayout;
+	}
+
+	public void setupView() {
+
+	}
+
+	public void makeAndExecuteYoutubeTask(Context context, Uri lVideoIdUri) {
+		prepareAndPlay(context, Youtube_URL.YOUTUBE_VIDEO_INFORMATION_URL + this.getYouTubeId(lVideoIdUri).getId());
+	}
+
+	private void prepareAndPlay(final Context context, String uri) {
+		// AV2OkzIGykA
+		// perform a Google search in just a few lines of code
+		final AbstractAQuery aq = new AQuery(context);
+		aq.ajax(uri, String.class, new AjaxCallback<String>() {
+			@Override
+			public void callback(String url, String json, AjaxStatus status) {
+				if (json != null) {
+					// successful ajax call, show status code and json content
+					youtubeQuality = YouTubeUtility.getFinalUri(json);
+					String lUriStr = YouTubeUtility.getUrlByQuality(youtubeQuality, true, taskInfo.lYouTubeFmtQuality);
+					videoInfoTaskCallback.startYoutubeTask(lUriStr);
+				} else {
+					// ajax error, show error code
+					Toast.makeText(aq.getContext(), "Error:" + status.getCode(), Toast.LENGTH_LONG).show();
+				}
+			}
+		});
+	}
+
+	public void stopYoutubeTask(Context context) {
+		YouTubeUtility.markVideoAsViewed(context, mVideoId);
+	}
 
 }

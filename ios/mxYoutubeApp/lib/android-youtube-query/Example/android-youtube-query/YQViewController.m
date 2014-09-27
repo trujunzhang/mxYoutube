@@ -24,10 +24,15 @@
 
    self.gameName = @"wanghao";
 
+//   NSURL* lVideoIdUri = NSURL.parse("ytv://" + this.selectedVideo.getId());
+
+   NSString * lVideoIdUri = [NSString stringWithFormat:@"%@%@", @"ytv://", @"izA_Xgbj7II"];
+
    self.playerHelper = [[YQYouTubePlayerHelper alloc] init];
 // determine the messages to be displayed as the view loads the video
    self.playerHelper.taskInfo = [self getExtractMessages];
 
+   [self.playerHelper makeAndExecuteYoutubeTask:lVideoIdUri];
 }
 
 
