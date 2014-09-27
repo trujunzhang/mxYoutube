@@ -88,11 +88,11 @@
 */
 
 @interface YQYouTubePlayerHelper : NSObject {
-   YQYoutubeTaskInfo * taskInfo;
    NSString * mVideoId;
-   YQYoutubeQuality * youtubeQuality;
 }
 
 - (id)init;
 @property(nonatomic, assign) id<YQVideoInfoTaskCallback> videoInfoTaskCallback;
+@property(nonatomic, strong) YQYoutubeTaskInfo * taskInfo;
+@property(nonatomic, strong) YQYoutubeQuality * youtubeQuality;
 @end

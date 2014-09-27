@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class YQYouTubePlayerHelper;
+
 
 @interface YQViewController : UIViewController
+
+@property(nonatomic, strong) YQYouTubePlayerHelper * playerHelper;
 
 @end
