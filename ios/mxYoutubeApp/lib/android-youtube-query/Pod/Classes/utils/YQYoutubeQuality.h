@@ -3,12 +3,10 @@
 
 
 @interface YQYoutubeQuality : NSObject {
-  NSMutableArray * lFormats;
-  NSMutableArray * lStreams;
+
 }
 
-- (NSMutableArray *) getlFormats;
-- (void) setlFormats:(NSMutableArray *)lFormats;
-- (NSMutableArray *) getlStreams;
-- (void) setlStreams:(NSMutableArray *)lStreams;
+@property(nonatomic, strong) NSMutableArray * lFormats;
+@property(nonatomic, strong) NSMutableArray * lStreams;
+
 @end

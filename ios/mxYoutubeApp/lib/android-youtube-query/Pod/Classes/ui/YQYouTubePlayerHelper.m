@@ -6,6 +6,7 @@
 #import "YQFileId.h"
 #import "MKNetworkOperation.h"
 #import "MKNetworkEngine.h"
+#import "YQYouTubeUtility.h"
 
 
 @implementation YQYouTubePlayerHelper
@@ -42,7 +43,7 @@
        // the completionBlock will be called twice.
        // if you are interested only in new values, move that code within the else block
        NSString * string = [completedOperation responseString];
-
+       self.youtubeQuality = [YQYouTubeUtility getFinalUri:string];
    };
    void (^errorHandler)(MKNetworkOperation *, NSError *) = ^(MKNetworkOperation * errorOp, NSError * error) {
 
