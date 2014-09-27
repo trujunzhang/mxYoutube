@@ -1,4 +1,3 @@
-#import "NSMutableDictionary.h"
 
 /**
  * Represents a video stream

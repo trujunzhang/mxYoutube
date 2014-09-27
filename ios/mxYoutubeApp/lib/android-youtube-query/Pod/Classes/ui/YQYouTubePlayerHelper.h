@@ -93,6 +93,7 @@
 
 - (id)init;
 @property(nonatomic, assign) id<YQVideoInfoTaskCallback> videoInfoTaskCallback;
+- (void)makeAndExecuteYoutubeTask:(NSString *)uri;
 @property(nonatomic, strong) YQYoutubeTaskInfo * taskInfo;
 @property(nonatomic, strong) YQYoutubeQuality * youtubeQuality;
 @end
