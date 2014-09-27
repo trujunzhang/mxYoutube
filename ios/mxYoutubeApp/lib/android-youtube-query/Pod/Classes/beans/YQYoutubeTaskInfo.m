@@ -13,8 +13,8 @@ NSString * const MSG_ERROR_MSG = @"com.keyes.video.msg.error.msg";
 
 - (id) init {
   if (self = [super init]) {
-    showControllerOnStartup = NO;
-    lYouTubeFmtQuality = @"17";
+    self.showControllerOnStartup = NO;
+    self.lYouTubeFmtQuality = @"17";
     mMsgInit = @"Initializing";
     mMsgDetect = @"Detecting Bandwidth";
     mMsgPlaylist = @"Determining Latest Video in YouTube Playlist";

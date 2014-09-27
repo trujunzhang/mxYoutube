@@ -9,8 +9,6 @@ extern NSString * const MSG_ERROR_TITLE;
 extern NSString * const MSG_ERROR_MSG;
 
 @interface YQYoutubeTaskInfo : NSObject {
-  BOOL showControllerOnStartup;
-  NSString * lYouTubeFmtQuality;
   NSString * mMsgInit;
   NSString * mMsgDetect;
   NSString * mMsgPlaylist;
@@ -20,6 +18,9 @@ extern NSString * const MSG_ERROR_MSG;
   NSString * mMsgErrorTitle;
   NSString * mMsgError;
 }
+
+@property(nonatomic, copy) NSString * lYouTubeFmtQuality;
+@property(nonatomic) BOOL showControllerOnStartup;
 
 - (id) init;
 @end
