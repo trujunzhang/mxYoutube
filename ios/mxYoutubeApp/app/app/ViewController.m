@@ -129,11 +129,13 @@
    CGFloat pixelHeight = (CGRectGetHeight(mainScreen.bounds) * scale);
 
    NSString * name = [AppResolutionHelper resolutionNameByType:[UIDevice resolution] isPortrait:portrait];
-//   if (portrait) {
+   if (portrait) {
 //      self.background.frame = CGRectMake(0, 0, 640, 1136/2);
-//   } else {
+      self.background.frame = CGRectMake(0, 0, pixelWidth, pixelHeight / scale);
+   } else {
+      self.background.frame = CGRectMake(0, 0, pixelHeight, pixelWidth / scale);
 //      self.background.frame = CGRectMake(0, 0, 1024, 768);
-//   }
+   }
    self.background.frame = CGRectMake(0, 0, pixelWidth, pixelHeight / scale);
 //   self.background.image = [UIImage imageNamed:@"Default-568h@2x.png"];
    self.background.image = [UIImage imageNamed:name];
