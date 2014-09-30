@@ -2,8 +2,3 @@ target 'XCDYouTubeKit', :exclusive => true do
   pod "XCDYouTubeKit", :path => "../"
 end
 
-target 'Tests', :exclusive => true do
-  pod "XCDYouTubeKit", :path => "../"
-
-  pod 'Kiwi'
-end
