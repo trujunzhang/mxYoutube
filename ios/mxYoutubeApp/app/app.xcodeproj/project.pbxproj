@@ -22,6 +22,7 @@
 		5E2D94F819A1C7F200C9EB16 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2D94DC19A1C7F200C9EB16 /* CoreData.framework */; };
 		5E2D950019A1C7F200C9EB16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E2D94FE19A1C7F200C9EB16 /* InfoPlist.strings */; };
 		5E2D950219A1C7F200C9EB16 /* appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2D950119A1C7F200C9EB16 /* appTests.m */; };
+		5EB87DEE19DA2E5D00A4F5EF /* WatchPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB87DED19DA2E5D00A4F5EF /* WatchPlayerController.m */; };
 		5ECEE79D19C8488F002E71F7 /* IpadGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEE79C19C8488F002E71F7 /* IpadGridViewCell.m */; };
 		5ECEE79F19C848A0002E71F7 /* IpadGridViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE79E19C848A0002E71F7 /* IpadGridViewCell.xib */; };
 		5ECEE7A419C84B27002E71F7 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE7A319C84B27002E71F7 /* cover.png */; };
@@ -78,6 +79,8 @@
 		5E2D94FD19A1C7F200C9EB16 /* appTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "appTests-Info.plist"; sourceTree = "<group>"; };
 		5E2D94FF19A1C7F200C9EB16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5E2D950119A1C7F200C9EB16 /* appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appTests.m; sourceTree = "<group>"; };
+		5EB87DEC19DA2E5D00A4F5EF /* WatchPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchPlayerController.h; sourceTree = "<group>"; };
+		5EB87DED19DA2E5D00A4F5EF /* WatchPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchPlayerController.m; sourceTree = "<group>"; };
 		5ECEE79B19C8488F002E71F7 /* IpadGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpadGridViewCell.h; sourceTree = "<group>"; };
 		5ECEE79C19C8488F002E71F7 /* IpadGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpadGridViewCell.m; sourceTree = "<group>"; };
 		5ECEE79E19C848A0002E71F7 /* IpadGridViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IpadGridViewCell.xib; sourceTree = "<group>"; };
@@ -191,6 +194,7 @@
 				65B8C28183203DA4FE1DE2EF /* HomeViewController.m */,
 				65B8C69DD46ECBC9FC90413E /* Main_iPad.storyboard */,
 				65B8CF27507B833BB83809DD /* Main_iPhone.storyboard */,
+				65B8CA604BA644D79FE5DADA /* watch */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -282,6 +286,15 @@
 			path = ../../app;
 			sourceTree = "<group>";
 		};
+		65B8CA604BA644D79FE5DADA /* watch */ = {
+			isa = PBXGroup;
+			children = (
+				5EB87DEC19DA2E5D00A4F5EF /* WatchPlayerController.h */,
+				5EB87DED19DA2E5D00A4F5EF /* WatchPlayerController.m */,
+			);
+			name = watch;
+			sourceTree = "<group>";
+		};
 		65B8CB0736F7CD93977D8DFD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,8 +369,6 @@
 			);
 			mainGroup = 5E2D94CA19A1C7F200C9EB16;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				5E2D94D219A1C7F200C9EB16 /* app */,
@@ -445,6 +456,7 @@
 			files = (
 				5E2D94E919A1C7F200C9EB16 /* AppDelegate.m in Sources */,
 				5E2D94E519A1C7F200C9EB16 /* main.m in Sources */,
+				5EB87DEE19DA2E5D00A4F5EF /* WatchPlayerController.m in Sources */,
 				5E2D94EC19A1C7F200C9EB16 /* app.xcdatamodeld in Sources */,
 				65B8CA7CCA08CCDD017A6DED /* SearchViewController.m in Sources */,
 				5ECEE79D19C8488F002E71F7 /* IpadGridViewCell.m in Sources */,
