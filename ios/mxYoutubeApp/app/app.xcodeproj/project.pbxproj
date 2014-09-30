@@ -60,7 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A7D13C7070E469396BA6550 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		498C4A8E7461F2089155F0B8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		54F6691D477B4FDF86387DC9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2D94D619A1C7F200C9EB16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5E2D94D819A1C7F200C9EB16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -109,6 +109,7 @@
 		65B8CDCCAB411D6C23622DA3 /* tab_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_home.png; sourceTree = "<group>"; };
 		65B8CE1168DE84DE1F99CB45 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		65B8CE3F1B0DC56D59F9AF38 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DB77B0A9E568702B2BC13870 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,13 +139,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0511FA2E73FC7E0E4AF4D206 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB77B0A9E568702B2BC13870 /* Pods.debug.xcconfig */,
+				498C4A8E7461F2089155F0B8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5E2D94CA19A1C7F200C9EB16 = {
 			isa = PBXGroup;
 			children = (
 				5E2D94DE19A1C7F200C9EB16 /* app */,
 				5E2D94FB19A1C7F200C9EB16 /* appTests */,
 				5E2D94D519A1C7F200C9EB16 /* Frameworks */,
-				1A7D13C7070E469396BA6550 /* Pods.xcconfig */,
+				0511FA2E73FC7E0E4AF4D206 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -346,6 +356,8 @@
 			);
 			mainGroup = 5E2D94CA19A1C7F200C9EB16;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				5E2D94D219A1C7F200C9EB16 /* app */,
@@ -421,7 +433,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -570,7 +582,7 @@
 		};
 		5E2D950619A1C7F200C9EB16 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A7D13C7070E469396BA6550 /* Pods.xcconfig */;
+			baseConfigurationReference = DB77B0A9E568702B2BC13870 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -587,7 +599,7 @@
 		};
 		5E2D950719A1C7F200C9EB16 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A7D13C7070E469396BA6550 /* Pods.xcconfig */;
+			baseConfigurationReference = 498C4A8E7461F2089155F0B8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

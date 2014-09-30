@@ -1,10 +1,14 @@
 pod "JBTabBarController", :path => "../lib/JBTabBarController"
 
+pod "XCDYouTubeKit", :path => "../lib/XCDYouTubeKit"
+
 pod "IOS_Collection_Code", :path => "../collect/IOS_Collection_Code"
 
 pod "Business-Logic-Layer", :path => "../layers/Business-Logic-Layer"
 
 pod "google-api-services-youtube", :path => "../layers/google-api-services-youtube"
+
+
 
 
 
