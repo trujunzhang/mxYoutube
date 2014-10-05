@@ -38,9 +38,9 @@
 
 /* Begin PBXFileReference section */
 		19AFD0A0BE0494CBEBCEC350 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B877AB6D55736C96FFD2AA0 /* XCDYouTubeKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = XCDYouTubeKit.podspec; path = ../XCDYouTubeKit.podspec; sourceTree = "<group>"; };
+		1B877AB6D55736C96FFD2AA0 /* XCDYouTubeKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = XCDYouTubeKit.podspec; path = ../XCDYouTubeKit.podspec; sourceTree = "<group>"; };
 		2A40AC622E7ABE3E2B2D178D /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		35C8107D1CECD5511954B6C0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		35C8107D1CECD5511954B6C0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* XCDYouTubeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCDYouTubeKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,7 +65,7 @@
 		6FDA1B6769505E73B0485BDC /* Pods-XCDYouTubeKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCDYouTubeKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCDYouTubeKit/Pods-XCDYouTubeKit.release.xcconfig"; sourceTree = "<group>"; };
 		90AFD732967FC1855DBC65F4 /* Pods-XCDYouTubeKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCDYouTubeKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCDYouTubeKit/Pods-XCDYouTubeKit.debug.xcconfig"; sourceTree = "<group>"; };
 		C301476E90CB4651D9593CCA /* libPods-XCDYouTubeKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XCDYouTubeKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0E5053E5B39107D61E30478 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D0E5053E5B39107D61E30478 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D69190327286F797EB61C7B7 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +106,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5EDC417719DA3D67000171FE /* watch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = watch;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +150,7 @@
 		6003F593195388D20070C39A /* XCDYouTubeKit */ = {
 			isa = PBXGroup;
 			children = (
+				5EDC417719DA3D67000171FE /* watch */,
 				6003F59C195388D20070C39A /* CDYKAppDelegate.h */,
 				6003F59D195388D20070C39A /* CDYKAppDelegate.m */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
@@ -263,8 +271,6 @@
 			mainGroup = 6003F581195388D10070C39A;
 			productRefGroup = 6003F58B195388D20070C39A /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				6003F589195388D20070C39A /* XCDYouTubeKit */,
