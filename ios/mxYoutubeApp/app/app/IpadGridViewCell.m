@@ -12,6 +12,8 @@
 #import "GTLYouTubeThumbnailDetails.h"
 #import "GTLYouTubeVideoContentDetails.h"
 #import "GTLYouTubeVideoStatistics.h"
+#import "UIImageView+Cache.h"
+#import "GTLYouTubeThumbnail.h"
 
 
 @implementation IpadGridViewCell
@@ -42,6 +44,8 @@
    // Confirm that the result represents a video. Otherwise, the
    // item will not contain a video ID.
    GTLYouTubeThumbnail * thumbnail = video.snippet.thumbnails.high;
+   NSString * _thumbnailUrl = thumbnail.url;
+
    NSString * _titleValue = video.snippet.title;
    NSString * _durationValue = video.contentDetails.duration;
    NSNumber * _viewCountValue = video.statistics.viewCount;
@@ -55,5 +59,7 @@
    [self.viewCount setText:[NSString stringWithFormat:@"%@", _viewCountValue]];
 
    [self.userName setText:_userNameValue];
+
+   [self.thumbnails setImageWithURL:[NSURL URLWithString:_thumbnailUrl]];
 }
 @end

@@ -8,7 +8,7 @@ pod "Business-Logic-Layer", :path => "../layers/Business-Logic-Layer"
 
 pod "google-api-services-youtube", :path => "../layers/google-api-services-youtube"
 
-
+pod 'MLImageCache', '~> 1.0.5'
 
 
 
