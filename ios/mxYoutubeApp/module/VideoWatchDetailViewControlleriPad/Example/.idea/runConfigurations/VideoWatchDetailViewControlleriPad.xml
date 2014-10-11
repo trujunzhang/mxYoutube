@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="VideoWatchDetailViewControlleriPad" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="VideoWatchDetailViewControlleriPad" TARGET_NAME="VideoWatchDetailViewControlleriPad" CONFIG_NAME="Debug" SCHEME_NAME="VideoWatchDetailViewControlleriPad" RUN_TARGET_PROJECT_NAME="VideoWatchDetailViewControlleriPad" RUN_TARGET_NAME="VideoWatchDetailViewControlleriPad" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <envs />
+    <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+      <REVEAL_SETTINGS autoInject="true" autoInstall="true" askToEnableAutoInstall="true" />
+    </EXTENSION>
+    <RunnerSettings RunnerId="AppRunner" />
+    <ConfigurationWrapper RunnerId="AppRunner" />
+    <method />
+  </configuration>
+</component>
