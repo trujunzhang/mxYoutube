@@ -25,35 +25,12 @@
    self.controller = [[ViewController alloc] init];
    [self.controller buildTabBarController:[self isPortrait]];
 
-//   [self.window addSubview:self.controller.view];
    self.window.rootViewController = self.controller;
 
    [self.window makeKeyAndVisible];
 
-   [self.controller changeBackground:[self isPortrait]];
-
-
-   [[NSNotificationCenter defaultCenter] addObserver:self
-                                            selector:@selector(handleDidChangeStatusBarOrientationNotification:)
-                                                name:UIApplicationDidChangeStatusBarOrientationNotification
-                                              object:nil];
-
    return YES;
 }
-
-
-- (void)handleDidChangeStatusBarOrientationNotification:(NSNotification *)notification; {
-   // Do something interesting
-//   self.window.backgroundColor = [UIColor redColor];
-//   NSLog(@"The orientation is %@", [notification.userInfo objectForKey:UIApplicationStatusBarOrientationUserInfoKey]);
-}
-
-
-- (void)application:(UIApplication *)application didChangeStatusBarOrientation:(UIInterfaceOrientation)oldStatusBarOrientation {
-   [self.controller changeBackground:[self isPortrait]];
-}
-
-
 
 
 - (BOOL)isPortrait {

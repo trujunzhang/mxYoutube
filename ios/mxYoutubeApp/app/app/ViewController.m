@@ -25,10 +25,14 @@
    self = [super init];
    if (self) {
       [self setBackground];
-
    }
 
    return self;
+}
+
+
+- (void)setBackground {
+   self.background = [[UIImageView alloc] init];
 }
 
 
@@ -116,17 +120,21 @@
 }
 
 
-- (void)setBackground {
-   self.background = [[UIImageView alloc] init];
+- (void)viewDidLayoutSubviews {
+   [super viewDidLayoutSubviews];
+
+   [self updateLayout:[UIApplication sharedApplication].statusBarOrientation];
 }
 
 
-- (void)changeBackground:(BOOL)portrait {
+- (void)updateLayout:(UIInterfaceOrientation)toInterfaceOrientation {
+   BOOL portrait = (toInterfaceOrientation == UIInterfaceOrientationPortrait) || (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
    NSString * name = [AppResolutionHelper resolutionNameByType:[UIDevice resolution] isPortrait:portrait];
    self.background.frame = [[UIScreen mainScreen] bounds];
 
 //   self.background.image = [UIImage imageNamed:@"Default-568h@2x.png"];
    self.background.image = [UIImage imageNamed:name];
 }
+
 
 @end

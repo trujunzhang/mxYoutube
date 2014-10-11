@@ -272,13 +272,14 @@ BOOL isDebug1 = NO;
 //   NSLog(@"count = %d", integer);
 
    if (isDebug1 == NO) {
-      [self updateTabBarController:[UIApplication sharedApplication].statusBarOrientation];
+      [self updateLayout:[UIApplication sharedApplication].statusBarOrientation];
    }
 }
 
 
-- (void)updateTabBarController:(UIInterfaceOrientation)toInterfaceOrientation {
+- (void)updateLayout:(UIInterfaceOrientation)toInterfaceOrientation {
    BOOL isPortrait = (toInterfaceOrientation == UIInterfaceOrientationPortrait) || (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+
    if (isPortrait) {
       [self setupVertical];
       [self setupTopVertical];
