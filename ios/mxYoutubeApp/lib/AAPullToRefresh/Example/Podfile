@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'AAPullToRefresh', :exclusive => true do
+  pod "AAPullToRefresh", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "AAPullToRefresh", :path => "../"
+
+  
+end

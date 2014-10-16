@@ -7,9 +7,11 @@
 //
 
 #import "HistoryViewController.h"
+
 #import "IpadGridViewCell.h"
 #import "GYSearch.h"
-#import "SearchImplementation.h"#import "GTLYouTubeVideo.h"
+#import "SearchImplementation.h"
+#import "GTLYouTubeVideo.h"
 
 
 @implementation HistoryViewController

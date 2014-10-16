@@ -7,13 +7,15 @@
 //
 
 #import "IpadGridViewCell.h"
+
 #import "GTLYouTubeVideo.h"
 #import "GTLYouTubeVideoSnippet.h"
 #import "GTLYouTubeThumbnailDetails.h"
 #import "GTLYouTubeVideoContentDetails.h"
 #import "GTLYouTubeVideoStatistics.h"
-#import "UIImageView+Cache.h"
 #import "GTLYouTubeThumbnail.h"
+
+#import "UIImageView+Cache.h"
 
 
 @implementation IpadGridViewCell
@@ -60,6 +62,10 @@
 
    [self.userName setText:_userNameValue];
 
-   [self.thumbnails setImageWithURL:[NSURL URLWithString:_thumbnailUrl]];
+   [self.thumbnails setImageWithURL:[NSURL URLWithString:_thumbnailUrl]];// used
+
+//   NSString * imageName = video.snippet.channelId;
+//   UIImage * image = [UIImage imageNamed:imageName];
+//   self.thumbnails.image = image;// test
 }
 @end

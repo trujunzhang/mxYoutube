@@ -5,11 +5,17 @@
     <content url="file://$MODULE_DIR$/../collect/IOS_Collection_Code">
       <sourceFolder url="file://$MODULE_DIR$/../collect/IOS_Collection_Code" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/../ipad/YoutubeCollectionView">
+      <sourceFolder url="file://$MODULE_DIR$/../ipad/YoutubeCollectionView" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$/../layers/Business-Logic-Layer">
       <sourceFolder url="file://$MODULE_DIR$/../layers/Business-Logic-Layer" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/../layers/google-api-services-youtube">
       <sourceFolder url="file://$MODULE_DIR$/../layers/google-api-services-youtube" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../lib/AAPullToRefresh">
+      <sourceFolder url="file://$MODULE_DIR$/../lib/AAPullToRefresh" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/../lib/JBTabBarController">
       <sourceFolder url="file://$MODULE_DIR$/../lib/JBTabBarController" isTestSource="false" />

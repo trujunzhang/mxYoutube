@@ -23,8 +23,6 @@
 		5E2D950019A1C7F200C9EB16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E2D94FE19A1C7F200C9EB16 /* InfoPlist.strings */; };
 		5E2D950219A1C7F200C9EB16 /* appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2D950119A1C7F200C9EB16 /* appTests.m */; };
 		5EB87DEE19DA2E5D00A4F5EF /* WatchPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB87DED19DA2E5D00A4F5EF /* WatchPlayerController.m */; };
-		5ECEE79D19C8488F002E71F7 /* IpadGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECEE79C19C8488F002E71F7 /* IpadGridViewCell.m */; };
-		5ECEE79F19C848A0002E71F7 /* IpadGridViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE79E19C848A0002E71F7 /* IpadGridViewCell.xib */; };
 		5ECEE7A419C84B27002E71F7 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE7A319C84B27002E71F7 /* cover.png */; };
 		5ECEE7AA19C84CC9002E71F7 /* mt_video_rating_count.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE7A619C84CC9002E71F7 /* mt_video_rating_count.png */; };
 		5ECEE7AB19C84CC9002E71F7 /* mt_video_rating_count@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE7A719C84CC9002E71F7 /* mt_video_rating_count@2x.png */; };
@@ -81,9 +79,6 @@
 		5E2D950119A1C7F200C9EB16 /* appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appTests.m; sourceTree = "<group>"; };
 		5EB87DEC19DA2E5D00A4F5EF /* WatchPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchPlayerController.h; sourceTree = "<group>"; };
 		5EB87DED19DA2E5D00A4F5EF /* WatchPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchPlayerController.m; sourceTree = "<group>"; };
-		5ECEE79B19C8488F002E71F7 /* IpadGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpadGridViewCell.h; sourceTree = "<group>"; };
-		5ECEE79C19C8488F002E71F7 /* IpadGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpadGridViewCell.m; sourceTree = "<group>"; };
-		5ECEE79E19C848A0002E71F7 /* IpadGridViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IpadGridViewCell.xib; sourceTree = "<group>"; };
 		5ECEE7A319C84B27002E71F7 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cover.png; path = test/cover.png; sourceTree = "<group>"; };
 		5ECEE7A619C84CC9002E71F7 /* mt_video_rating_count.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mt_video_rating_count.png; path = gridview/mt_video_rating_count.png; sourceTree = "<group>"; };
 		5ECEE7A719C84CC9002E71F7 /* mt_video_rating_count@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mt_video_rating_count@2x.png"; path = "gridview/mt_video_rating_count@2x.png"; sourceTree = "<group>"; };
@@ -177,7 +172,6 @@
 		5E2D94DE19A1C7F200C9EB16 /* app */ = {
 			isa = PBXGroup;
 			children = (
-				5ECEE79A19C84851002E71F7 /* cell */,
 				5E2D94E719A1C7F200C9EB16 /* AppDelegate.h */,
 				5E2D94E819A1C7F200C9EB16 /* AppDelegate.m */,
 				5E2D94ED19A1C7F200C9EB16 /* Images.xcassets */,
@@ -227,16 +221,6 @@
 				5E2D94FE19A1C7F200C9EB16 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5ECEE79A19C84851002E71F7 /* cell */ = {
-			isa = PBXGroup;
-			children = (
-				5ECEE79B19C8488F002E71F7 /* IpadGridViewCell.h */,
-				5ECEE79C19C8488F002E71F7 /* IpadGridViewCell.m */,
-				5ECEE79E19C848A0002E71F7 /* IpadGridViewCell.xib */,
-			);
-			name = cell;
 			sourceTree = "<group>";
 		};
 		5ECEE7A219C84B1E002E71F7 /* test */ = {
@@ -390,7 +374,6 @@
 				65B8C46F1E00C0509FF1D082 /* Main_iPhone.storyboard in Resources */,
 				5ECEE7AC19C84CC9002E71F7 /* mt_video_view_count.png in Resources */,
 				5ECEE7A419C84B27002E71F7 /* cover.png in Resources */,
-				5ECEE79F19C848A0002E71F7 /* IpadGridViewCell.xib in Resources */,
 				5ECEE7AD19C84CC9002E71F7 /* mt_video_view_count@2x.png in Resources */,
 				5ECEE7AA19C84CC9002E71F7 /* mt_video_rating_count.png in Resources */,
 				5ECEE7AB19C84CC9002E71F7 /* mt_video_rating_count@2x.png in Resources */,
@@ -461,7 +444,6 @@
 				5EB87DEE19DA2E5D00A4F5EF /* WatchPlayerController.m in Sources */,
 				5E2D94EC19A1C7F200C9EB16 /* app.xcdatamodeld in Sources */,
 				65B8CA7CCA08CCDD017A6DED /* SearchViewController.m in Sources */,
-				5ECEE79D19C8488F002E71F7 /* IpadGridViewCell.m in Sources */,
 				65B8CD9AA4E07D901583CF2F /* HistoryViewController.m in Sources */,
 				65B8C0E49C5596D74565FEBF /* ViewController.m in Sources */,
 				65B8C6450ABFF8908139C17D /* HomeViewController.m in Sources */,

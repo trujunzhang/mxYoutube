@@ -60,7 +60,9 @@ static CGSize const kDefaultSize = { 320.0f, 44.0f };
       [self addSubview:_backgroundView];
       [self sendSubviewToBack:_backgroundView];
 
-      UIImage * selected = [UIImage imageNamed:@"JBTabBarController.bundle/mt_navi_bar_bg.png"];
+      self.mt_segmented_seperator = [UIImage imageNamed:@"WHTabBarController.bundle/mt_segmented_seperator.png"];
+
+      UIImage * selected = [UIImage imageNamed:@"WHTabBarController.bundle/mt_navi_bar_bg.png"];
       if ([selected respondsToSelector:@selector(resizableImageWithCapInsets:)]) {
          self.selectionIndicatorImage = [selected resizableImageWithCapInsets:UIEdgeInsetsMake(6, 5, 5, 5)];
       } else {
@@ -86,9 +88,17 @@ static CGSize const kDefaultSize = { 320.0f, 44.0f };
 
    _tabs = [[NSMutableArray alloc] initWithCapacity:[_items count]];
 
+   int step = 0;
+   int count = _items.count;
    for (UITabBarItem * item in _items) {
       WHTopTab * tab = [self tabWithTabBarItem:item];
       [_tabs addObject:tab];
+      if (++step != count) {
+         UIImageView * imageView = [[UIImageView alloc] init];
+         imageView.image = self.mt_segmented_seperator;
+         imageView.frame = CGRectMake(tab.frame.origin.x + tab.frame.size.width, tab.frame.origin.y, 1, tab.frame.size.height);
+         [self addSubview:imageView];
+      }
       [self addSubview:tab];
    }
 }

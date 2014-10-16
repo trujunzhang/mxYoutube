@@ -26,32 +26,33 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    JBTabBarLayoutStrategyFill = 0,
-    JBTabBarLayoutStrategyCenter,
-    JBTabBarLayoutStrategyEqualSpacing,
-    JBTabBarLayoutStrategyLeftJustified,
-    JBTabBarLayoutStrategyRightJustified,
-    JBTabBarLayoutStrategyBlockBased
+   JBTabBarLayoutStrategyFill = 0,
+   JBTabBarLayoutStrategyCenter,
+   JBTabBarLayoutStrategyEqualSpacing,
+   JBTabBarLayoutStrategyLeftJustified,
+   JBTabBarLayoutStrategyRightJustified,
+   JBTabBarLayoutStrategyBlockBased
 } JBTabBarLayoutStrategy;
 
 @class WHTopTab;
-typedef void (^JBLayoutBlock) (WHTopTab * tab, NSUInteger index, NSUInteger numberOfTabs);
+typedef void (^JBLayoutBlock)(WHTopTab * tab, NSUInteger index, NSUInteger numberOfTabs);
 
 @protocol JBTopTabBarDelegate;
 
+
 @interface WHTopTabBar : UIView {
-    NSMutableArray                              *_tabs;
-    __unsafe_unretained id<JBTopTabBarDelegate>     _delegate;
-    NSArray                                     *_items;
-    __unsafe_unretained UITabBarItem            *_selectedItem;
-    UIImage                                     *_selectionIndicatorImage;
-    UIImageView                                 *_backgroundView;
-    JBTabBarLayoutStrategy                      _layoutStrategy;
+   NSMutableArray * _tabs;
+   __unsafe_unretained id<JBTopTabBarDelegate> _delegate;
+   NSArray * _items;
+   __unsafe_unretained UITabBarItem * _selectedItem;
+   UIImage * _selectionIndicatorImage;
+   UIImageView * _backgroundView;
+   JBTabBarLayoutStrategy _layoutStrategy;
 }
 
-@property(nonatomic,unsafe_unretained) id<JBTopTabBarDelegate> delegate;
-@property(nonatomic,copy) NSArray *items;
-@property(nonatomic,unsafe_unretained) UITabBarItem *selectedItem;
+@property(nonatomic, unsafe_unretained) id<JBTopTabBarDelegate> delegate;
+@property(nonatomic, copy) NSArray * items;
+@property(nonatomic, unsafe_unretained) UITabBarItem * selectedItem;
 
 // Determines how the tab views will be laid out. If self.frame.size.width/numberOfTabs >= maximumTabWidth, 
 // this setting will have no effect (i.e same result as JBTabBarLayoutStrategyFill).
@@ -68,10 +69,12 @@ typedef void (^JBLayoutBlock) (WHTopTab * tab, NSUInteger index, NSUInteger numb
 // Needs to be implemented to replicate UITabBar fully
 //- (void)setItems:(NSArray *)items animated:(BOOL)animated;
 
-@property(nonatomic,strong) UIImage *backgroundImage;
-@property(nonatomic,strong) UIImage *selectionIndicatorImage; 
+@property(nonatomic, strong) UIImage * backgroundImage;
+@property(nonatomic, strong) UIImage * selectionIndicatorImage;
 
+@property(nonatomic, strong) UIImage * mt_segmented_seperator;
 @end
+
 
 @protocol JBTopTabBarDelegate<NSObject>
 @optional
