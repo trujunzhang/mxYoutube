@@ -59,12 +59,16 @@
     [[HistoryViewController alloc] init],
     [[HomeViewController alloc] init],
     [[SearchViewController alloc] init],
+    [[SearchViewController alloc] init],
+    [[SearchViewController alloc] init],
      nil];
 
    NSArray * viewTabBars = [NSArray arrayWithObjects:
     [NSArray arrayWithObjects:@"Subscriptions", @"tab_home", @"tab_home", nil],
     [NSArray arrayWithObjects:@"", @"tab_search", @"tab_search", nil],
     [NSArray arrayWithObjects:@"History", @"tab_history", @"tab_history", nil],
+    [NSArray arrayWithObjects:@"Folders", @"tab_cache", @"tab_cache", nil],
+    [NSArray arrayWithObjects:@"Folders", @"tab_more", @"tab_more", nil],
      nil];
 
 
