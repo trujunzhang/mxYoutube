@@ -64,7 +64,8 @@
 
    [self.title setText:_titleValue];
    //Helvetica-Light
-   [self.title setFont:[UIFont fontWithName:@"Helvetica-Light" size:14]];
+   NSString * name = @"HelveticaNeue-Light";
+   [self.title setFont:[UIFont fontWithName:name size:16]];
 
    [self setupVideoStatistics:video];
 
