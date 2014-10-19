@@ -16,8 +16,20 @@
    self = [super init];
    if (self) {
       self.numbersPerLineArray = [NSArray arrayWithObjects:@"3", @"4", nil];
+
+      UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 26, 19)];
+      [btn addTarget:self action:@selector(popMenu:) forControlEvents:UIControlEventTouchUpInside];
+      [btn setImage:[UIImage imageNamed:@"mt_side_tab_button"] forState:UIControlStateNormal];
+
+      UIBarButtonItem * btnSearch = [[UIBarButtonItem alloc] initWithCustomView:btn];
+      self.navigationItem.leftBarButtonItem = btnSearch;
    }
    return self;
+}
+
+
+- (void)popMenu:(id)send {
+
 }
 
 

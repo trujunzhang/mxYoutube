@@ -22,6 +22,8 @@
 		5E2D94F819A1C7F200C9EB16 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2D94DC19A1C7F200C9EB16 /* CoreData.framework */; };
 		5E2D950019A1C7F200C9EB16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E2D94FE19A1C7F200C9EB16 /* InfoPlist.strings */; };
 		5E2D950219A1C7F200C9EB16 /* appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2D950119A1C7F200C9EB16 /* appTests.m */; };
+		5E89036319F3BD0E00F6E471 /* mt_side_tab_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E89036119F3BD0E00F6E471 /* mt_side_tab_button.png */; };
+		5E89036419F3BD0E00F6E471 /* mt_side_tab_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E89036219F3BD0E00F6E471 /* mt_side_tab_button@2x.png */; };
 		5EB87DEE19DA2E5D00A4F5EF /* WatchPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB87DED19DA2E5D00A4F5EF /* WatchPlayerController.m */; };
 		65B8C00559DE91DB46A39122 /* tab_more.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C4D78EDF6437184F5404 /* tab_more.png */; };
 		65B8C0E49C5596D74565FEBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8C733861CB0D2723E72FD /* ViewController.m */; };
@@ -71,6 +73,8 @@
 		5E2D94FD19A1C7F200C9EB16 /* appTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "appTests-Info.plist"; sourceTree = "<group>"; };
 		5E2D94FF19A1C7F200C9EB16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5E2D950119A1C7F200C9EB16 /* appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appTests.m; sourceTree = "<group>"; };
+		5E89036119F3BD0E00F6E471 /* mt_side_tab_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mt_side_tab_button.png; path = menu/mt_side_tab_button.png; sourceTree = "<group>"; };
+		5E89036219F3BD0E00F6E471 /* mt_side_tab_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mt_side_tab_button@2x.png"; path = "menu/mt_side_tab_button@2x.png"; sourceTree = "<group>"; };
 		5EB87DEC19DA2E5D00A4F5EF /* WatchPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchPlayerController.h; sourceTree = "<group>"; };
 		5EB87DED19DA2E5D00A4F5EF /* WatchPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchPlayerController.m; sourceTree = "<group>"; };
 		65B8C10AC1B27E95C12B8844 /* tab_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_search@2x.png"; sourceTree = "<group>"; };
@@ -211,6 +215,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5E89036019F3BCFD00F6E471 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				5E89036119F3BD0E00F6E471 /* mt_side_tab_button.png */,
+				5E89036219F3BD0E00F6E471 /* mt_side_tab_button@2x.png */,
+			);
+			name = menu;
+			sourceTree = "<group>";
+		};
 		65B8C438B748B20C1EA8FEBE /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +263,7 @@
 		65B8CB0736F7CD93977D8DFD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E89036019F3BCFD00F6E471 /* menu */,
 				65B8C438B748B20C1EA8FEBE /* Tabs */,
 			);
 			path = Resources;
@@ -319,8 +333,6 @@
 			);
 			mainGroup = 5E2D94CA19A1C7F200C9EB16;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				5E2D94D219A1C7F200C9EB16 /* app */,
@@ -344,7 +356,9 @@
 				65B8C3E97512AC3361B02D6A /* tab_history.png in Resources */,
 				65B8C66EA04CEE90531EAF5F /* tab_home@2x.png in Resources */,
 				65B8CDCDBA585EBE3D41A2B0 /* tab_more@2x.png in Resources */,
+				5E89036319F3BD0E00F6E471 /* mt_side_tab_button.png in Resources */,
 				65B8CB90B08F3A8F2126A8B6 /* tab_cache@2x.png in Resources */,
+				5E89036419F3BD0E00F6E471 /* mt_side_tab_button@2x.png in Resources */,
 				65B8C519C986899AA7276F3F /* tab_history@2x.png in Resources */,
 				65B8CF9645A0147D477CF54A /* tab_search.png in Resources */,
 				65B8CED63133E9D79A0EA12D /* tab_search@2x.png in Resources */,
