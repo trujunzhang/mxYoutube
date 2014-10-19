@@ -25,23 +25,25 @@
 
 #import "JBTab.h"
 
-@interface JBTab()
 
-@property (nonatomic, strong) UIImageView           *backgroundView;
+@interface JBTab ()
 
-@property(nonatomic,strong) UIColor                 *normalTitleColor;
-@property(nonatomic,strong) UIColor                 *normalTitleShadowColor;
-@property(nonatomic,strong) UIImage                 *normalImage;
+@property(nonatomic, strong) UIImageView * backgroundView;
 
-@property(nonatomic,strong) UIColor                 *selectedTitleColor;
-@property(nonatomic,strong) UIColor                 *selectedTitleShadowColor;
-@property(nonatomic,strong) UIImage                 *selectedImage;
+@property(nonatomic, strong) UIColor * normalTitleColor;
+@property(nonatomic, strong) UIColor * normalTitleShadowColor;
+@property(nonatomic, strong) UIImage * normalImage;
 
-@property(nonatomic,strong) tapBlock                 touchDownBlock;
+@property(nonatomic, strong) UIColor * selectedTitleColor;
+@property(nonatomic, strong) UIColor * selectedTitleShadowColor;
+@property(nonatomic, strong) UIImage * selectedImage;
 
-@end 
+@property(nonatomic, strong) tapBlock touchDownBlock;
 
-@implementation JBTab 
+@end
+
+
+@implementation JBTab
 
 @synthesize selected = _selected;
 
@@ -60,158 +62,174 @@
 
 @synthesize backgroundView = _backgroundView;
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        _backgroundView = [[UIImageView alloc] init];
-        _backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        [self addSubview:_backgroundView];
-        
-        _imageView = [[UIImageView alloc] init];
-        [self addSubview:_imageView];
-        
-        _titleLabel = [[UILabel alloc] init];
-        _titleLabel.backgroundColor = [UIColor clearColor];
-        [self addSubview:_titleLabel];
-        
-        [self setTitleColor:[UIColor whiteColor] selected:NO];
-        [self setTitleShadowColor:[UIColor clearColor] selected:NO];
-        
-        [self configureViewsSelected:NO];
-        self.userInteractionEnabled = YES;
-    }
-    return self;
+
+- (id)init {
+   self = [super init];
+   if (self) {
+      _backgroundView = [[UIImageView alloc] init];
+      _backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+      [self addSubview:_backgroundView];
+
+      _imageView = [[UIImageView alloc] init];
+      [self addSubview:_imageView];
+
+      _titleLabel = [[UILabel alloc] init];
+      _titleLabel.backgroundColor = [UIColor clearColor];
+      [self addSubview:_titleLabel];
+
+      [self setTitleColor:[UIColor whiteColor] selected:NO];
+      [self setTitleShadowColor:[UIColor clearColor] selected:NO];
+
+      [self configureViewsSelected:NO];
+      self.userInteractionEnabled = YES;
+   }
+   return self;
 }
 
-- (void) layoutSubviews {
-    [super layoutSubviews];
-    
-    CGFloat paddingH = 3.0f;
-    CGFloat paddingV = 3.0f;        
-    CGFloat requiredWidth = self.bounds.size.width - 2*paddingH;
-    CGSize titleSize = [self.title sizeWithFont:self.titleLabel.font
-                                                forWidth:requiredWidth 
-                                           lineBreakMode:self.titleLabel.lineBreakMode];
-    
-    if (self.currentImage && self.title) {
-        CGFloat imageHeight = self.bounds.size.height - titleSize.height - paddingV;
-        
-        self.imageView.frame = CGRectMake(paddingH, paddingV, requiredWidth, imageHeight); 
-        
-        self.titleLabel.frame = CGRectMake(paddingH, imageHeight + paddingV, requiredWidth, titleSize.height);  
-    } else if (!self.currentImage && self.title) {
-        self.titleLabel.frame = CGRectMake(paddingH, (self.bounds.size.height-titleSize.height)/2, requiredWidth, titleSize.height);   
-    } else if (self.currentImage && !self.title) {
-        CGSize imageSize = self.currentImage.size;
-        CGFloat paddingV = (self.bounds.size.height - imageSize.height)/2;
-        self.imageView.frame = CGRectMake(roundf((self.bounds.size.width - imageSize.width)/2), roundf(paddingV), roundf(imageSize.width), roundf(imageSize.height));
-    }    
+
+- (void)layoutSubviews {
+   [super layoutSubviews];
+
+   CGFloat paddingH = 3.0f;
+   CGFloat paddingV = 3.0f;
+   CGFloat requiredWidth = self.bounds.size.width - 2 * paddingH;
+   CGSize titleSize = [self.title sizeWithFont:self.titleLabel.font
+                                      forWidth:requiredWidth
+                                 lineBreakMode:self.titleLabel.lineBreakMode];
+
+   if (self.currentImage && self.title) {
+      CGFloat imageHeight = self.bounds.size.height - titleSize.height - paddingV;
+
+      self.imageView.frame = CGRectMake(paddingH, paddingV, requiredWidth, imageHeight);
+
+      self.titleLabel.frame = CGRectMake(paddingH, imageHeight + paddingV, requiredWidth, titleSize.height);
+   } else if (!self.currentImage && self.title) {
+      self.titleLabel.frame = CGRectMake(paddingH, (self.bounds.size.height - titleSize.height) / 2, requiredWidth, titleSize.height);
+   } else if (self.currentImage && !self.title) {
+      CGSize imageSize = self.currentImage.size;
+      CGFloat paddingV = (self.bounds.size.height - imageSize.height) / 2 + 4;
+      self.imageView.frame = CGRectMake(roundf((self.bounds.size.width - imageSize.width) / 2), roundf(paddingV), roundf(imageSize.width), roundf(imageSize.height));
+   }
 }
+
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    if (_touchDownBlock) {
-        _touchDownBlock();
-    }
+   if (_touchDownBlock) {
+      _touchDownBlock();
+   }
 }
+
 
 - (void)setSelected:(BOOL)selected {
-    if (_selected != selected) {
-        [self configureViewsSelected:selected];
-    }
-    _selected = selected;
+   if (_selected != selected) {
+      [self configureViewsSelected:selected];
+   }
+   _selected = selected;
 }
 
-- (void) configureViewsSelected:(BOOL)selected {
-    _backgroundView.hidden = !selected;
-    
-    if (selected) {
-        _titleLabel.textColor = _selectedTitleColor;
-        _titleLabel.shadowColor = _selectedTitleShadowColor;
-        
-        _imageView.image = _selectedImage;
-    } else {
-        _titleLabel.textColor = _normalTitleColor;
-        _titleLabel.shadowColor = _normalTitleShadowColor;
-        
-        _imageView.image = _normalImage;
-    }
+
+- (void)configureViewsSelected:(BOOL)selected {
+   _backgroundView.hidden = !selected;
+
+   if (selected) {
+      _titleLabel.textColor = _selectedTitleColor;
+      _titleLabel.shadowColor = _selectedTitleShadowColor;
+
+      _imageView.image = _selectedImage;
+   } else {
+      _titleLabel.textColor = _normalTitleColor;
+      _titleLabel.shadowColor = _normalTitleShadowColor;
+
+      _imageView.image = _normalImage;
+   }
 }
 
-- (void) setTitleColor:(UIColor*)titleColor selected:(BOOL)selected {
-    if (!_normalTitleColor || !selected) {
-        _normalTitleColor = titleColor;
-    }
-    
-    if (!_selectedTitleColor || selected) {
-        _selectedTitleColor = titleColor;
-    }
-    
-    if (selected == self.selected) {
-        _titleLabel.textColor = titleColor;
-    }
+
+- (void)setTitleColor:(UIColor *)titleColor selected:(BOOL)selected {
+   if (!_normalTitleColor || !selected) {
+      _normalTitleColor = titleColor;
+   }
+
+   if (!_selectedTitleColor || selected) {
+      _selectedTitleColor = titleColor;
+   }
+
+   if (selected == self.selected) {
+      _titleLabel.textColor = titleColor;
+   }
 }
 
-- (void) setTitleShadowColor:(UIColor*)titleShadowColor selected:(BOOL)selected {
-    if (!_normalTitleShadowColor || !selected) {
-        _normalTitleShadowColor = titleShadowColor;
-    }
-    
-    if (!_selectedTitleShadowColor || selected) {
-        _selectedTitleShadowColor = titleShadowColor;
-    }
-    
-    if (selected == self.selected) {
-        _titleLabel.shadowColor = titleShadowColor;
-    }
+
+- (void)setTitleShadowColor:(UIColor *)titleShadowColor selected:(BOOL)selected {
+   if (!_normalTitleShadowColor || !selected) {
+      _normalTitleShadowColor = titleShadowColor;
+   }
+
+   if (!_selectedTitleShadowColor || selected) {
+      _selectedTitleShadowColor = titleShadowColor;
+   }
+
+   if (selected == self.selected) {
+      _titleLabel.shadowColor = titleShadowColor;
+   }
 }
 
-- (void) setImage:(UIImage*)image selected:(BOOL)selected {
-    if (!_normalImage || !selected) {
-        _normalImage = image;
-    }
-    
-    if (!_selectedImage || selected) {
-        _selectedImage = image;
-    }
-    
-    if (selected == self.selected) {
-        _imageView.image = image;
-    }
+
+- (void)setImage:(UIImage *)image selected:(BOOL)selected {
+   if (!_normalImage || !selected) {
+      _normalImage = image;
+   }
+
+   if (!_selectedImage || selected) {
+      _selectedImage = image;
+   }
+
+   if (selected == self.selected) {
+      _imageView.image = image;
+   }
 }
+
 
 - (void)setTouchDownBlock:(tapBlock)block {
-    _touchDownBlock = [block copy];   
+   _touchDownBlock = [block copy];
 }
+
 
 #pragma mark Convenience Methods
 
-- (void) setTitle:(NSString*)title {
-    _titleLabel.text = title;
+
+- (void)setTitle:(NSString *)title {
+   _titleLabel.text = title;
 }
 
-- (NSString*) title {
-    return _titleLabel.text;
+
+- (NSString *)title {
+   return _titleLabel.text;
 }
 
-- (void) setSelectedBackgroundImage:(UIImage *)selectedBackgroundImage {
-    _backgroundView.image = selectedBackgroundImage;
+
+- (void)setSelectedBackgroundImage:(UIImage *)selectedBackgroundImage {
+   _backgroundView.image = selectedBackgroundImage;
 }
 
-- (UIImage*) selectedBackgroundImage {
-    return _backgroundView.image;
+
+- (UIImage *)selectedBackgroundImage {
+   return _backgroundView.image;
 }
+
 
 - (UIColor *)currentTitleColor {
-    return (_selected) ? _selectedTitleColor : _normalTitleColor;
+   return (_selected) ? _selectedTitleColor : _normalTitleColor;
 }
+
 
 - (UIColor *)currentTitleShadowColor {
-    return (_selected) ? _selectedTitleShadowColor : _normalTitleShadowColor;
+   return (_selected) ? _selectedTitleShadowColor : _normalTitleShadowColor;
 }
 
-- (UIImage*)currentImage {
-    return (_selected) ? _selectedImage : _normalImage;
+
+- (UIImage *)currentImage {
+   return (_selected) ? _selectedImage : _normalImage;
 }
 
 @end
