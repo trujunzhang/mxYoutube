@@ -23,12 +23,6 @@
 		5E2D950019A1C7F200C9EB16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E2D94FE19A1C7F200C9EB16 /* InfoPlist.strings */; };
 		5E2D950219A1C7F200C9EB16 /* appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2D950119A1C7F200C9EB16 /* appTests.m */; };
 		5EB87DEE19DA2E5D00A4F5EF /* WatchPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB87DED19DA2E5D00A4F5EF /* WatchPlayerController.m */; };
-		5ECEE7A419C84B27002E71F7 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE7A319C84B27002E71F7 /* cover.png */; };
-		5ECEE7AA19C84CC9002E71F7 /* mt_video_rating_count.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE7A619C84CC9002E71F7 /* mt_video_rating_count.png */; };
-		5ECEE7AB19C84CC9002E71F7 /* mt_video_rating_count@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE7A719C84CC9002E71F7 /* mt_video_rating_count@2x.png */; };
-		5ECEE7AC19C84CC9002E71F7 /* mt_video_view_count.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE7A819C84CC9002E71F7 /* mt_video_view_count.png */; };
-		5ECEE7AD19C84CC9002E71F7 /* mt_video_view_count@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE7A919C84CC9002E71F7 /* mt_video_view_count@2x.png */; };
-		5ECEE7AF19C84DE5002E71F7 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECEE7AE19C84DE5002E71F7 /* header.png */; };
 		65B8C00559DE91DB46A39122 /* tab_more.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C4D78EDF6437184F5404 /* tab_more.png */; };
 		65B8C0E49C5596D74565FEBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B8C733861CB0D2723E72FD /* ViewController.m */; };
 		65B8C190C1609AA1D6BD479A /* tab_cache.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8CB42B69C69AE5D94BED1 /* tab_cache.png */; };
@@ -79,12 +73,6 @@
 		5E2D950119A1C7F200C9EB16 /* appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appTests.m; sourceTree = "<group>"; };
 		5EB87DEC19DA2E5D00A4F5EF /* WatchPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchPlayerController.h; sourceTree = "<group>"; };
 		5EB87DED19DA2E5D00A4F5EF /* WatchPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchPlayerController.m; sourceTree = "<group>"; };
-		5ECEE7A319C84B27002E71F7 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cover.png; path = test/cover.png; sourceTree = "<group>"; };
-		5ECEE7A619C84CC9002E71F7 /* mt_video_rating_count.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mt_video_rating_count.png; path = gridview/mt_video_rating_count.png; sourceTree = "<group>"; };
-		5ECEE7A719C84CC9002E71F7 /* mt_video_rating_count@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mt_video_rating_count@2x.png"; path = "gridview/mt_video_rating_count@2x.png"; sourceTree = "<group>"; };
-		5ECEE7A819C84CC9002E71F7 /* mt_video_view_count.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mt_video_view_count.png; path = gridview/mt_video_view_count.png; sourceTree = "<group>"; };
-		5ECEE7A919C84CC9002E71F7 /* mt_video_view_count@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mt_video_view_count@2x.png"; path = "gridview/mt_video_view_count@2x.png"; sourceTree = "<group>"; };
-		5ECEE7AE19C84DE5002E71F7 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = header.png; path = test/header.png; sourceTree = "<group>"; };
 		65B8C10AC1B27E95C12B8844 /* tab_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_search@2x.png"; sourceTree = "<group>"; };
 		65B8C1A5D6DC5349710E26B2 /* appTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file.xctest; name = appTests.xctest; path = "../../../../../../djzhang/Library/Caches/appCode30/DerivedData/app-aca0d37e/Build/Products/Debug-iphonesimulator/appTests.xctest"; sourceTree = "<group>"; };
 		65B8C224D1C20725EF7BED12 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
@@ -223,26 +211,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5ECEE7A219C84B1E002E71F7 /* test */ = {
-			isa = PBXGroup;
-			children = (
-				5ECEE7AE19C84DE5002E71F7 /* header.png */,
-				5ECEE7A319C84B27002E71F7 /* cover.png */,
-			);
-			name = test;
-			sourceTree = "<group>";
-		};
-		5ECEE7A519C84CC0002E71F7 /* gridview */ = {
-			isa = PBXGroup;
-			children = (
-				5ECEE7A619C84CC9002E71F7 /* mt_video_rating_count.png */,
-				5ECEE7A719C84CC9002E71F7 /* mt_video_rating_count@2x.png */,
-				5ECEE7A819C84CC9002E71F7 /* mt_video_view_count.png */,
-				5ECEE7A919C84CC9002E71F7 /* mt_video_view_count@2x.png */,
-			);
-			name = gridview;
-			sourceTree = "<group>";
-		};
 		65B8C438B748B20C1EA8FEBE /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,8 +250,6 @@
 		65B8CB0736F7CD93977D8DFD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5ECEE7A519C84CC0002E71F7 /* gridview */,
-				5ECEE7A219C84B1E002E71F7 /* test */,
 				65B8C438B748B20C1EA8FEBE /* Tabs */,
 			);
 			path = Resources;
@@ -372,12 +338,6 @@
 				5E2D94EE19A1C7F200C9EB16 /* Images.xcassets in Resources */,
 				65B8C4A90756A16C79A27B89 /* Main_iPad.storyboard in Resources */,
 				65B8C46F1E00C0509FF1D082 /* Main_iPhone.storyboard in Resources */,
-				5ECEE7AC19C84CC9002E71F7 /* mt_video_view_count.png in Resources */,
-				5ECEE7A419C84B27002E71F7 /* cover.png in Resources */,
-				5ECEE7AD19C84CC9002E71F7 /* mt_video_view_count@2x.png in Resources */,
-				5ECEE7AA19C84CC9002E71F7 /* mt_video_rating_count.png in Resources */,
-				5ECEE7AB19C84CC9002E71F7 /* mt_video_rating_count@2x.png in Resources */,
-				5ECEE7AF19C84DE5002E71F7 /* header.png in Resources */,
 				65B8C8A45CF379E9F0F16E1B /* tab_home.png in Resources */,
 				65B8C00559DE91DB46A39122 /* tab_more.png in Resources */,
 				65B8C190C1609AA1D6BD479A /* tab_cache.png in Resources */,

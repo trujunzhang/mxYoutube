@@ -7,15 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <YoutubeCollectionView/YoutubeGridLayoutViewController.h>
 
 
-static NSString * const identifier = @"CELL";
+@interface HistoryViewController : YoutubeGridLayoutViewController
 
-
-@interface HistoryViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
-
-//@property(weak, nonatomic) IBOutlet UICollectionView * collectionView;
-@property(nonatomic, strong) UICollectionView * collectionView;
-
-@property(nonatomic, strong) NSArray * videoList;
 @end

@@ -7,12 +7,14 @@
 //
 
 #import "ViewController.h"
+
 #import "HomeViewController.h"
 #import "SearchViewController.h"
 #import "HistoryViewController.h"
+
 #import "UIDevice+Resolutions.h"
 #import "AppResolutionHelper.h"
-#import "YoutubeGridLayoutViewController.h"
+
 
 
 @interface ViewController ()
@@ -55,7 +57,7 @@
    NSMutableArray * controllers = [[NSMutableArray alloc] init];
 
    NSArray * viewControllers = [NSArray arrayWithObjects:
-    [[YoutubeGridLayoutViewController alloc] init],
+    [[HistoryViewController alloc] init],
     [[HomeViewController alloc] init],
     [[SearchViewController alloc] init],
      nil];

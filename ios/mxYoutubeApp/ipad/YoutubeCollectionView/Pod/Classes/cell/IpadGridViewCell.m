@@ -20,7 +20,6 @@
 
 @implementation IpadGridViewCell
 
-
 - (id)initWithFrame:(CGRect)frame {
    self = [super initWithFrame:frame];
    if (self) {
@@ -42,7 +41,17 @@
 }
 
 
+- (void)prepareView {
+//   self.title.lineBreakMode = NSLineBreakByWordWrapping;
+//   [self.title setNumberOfLines:2];
+
+//   [self.title setFont:[UIFont fontWithName:@"Courier" size:14]];
+}
+
+
 - (void)bind:(GTLYouTubeVideo *)video {
+   [self prepareView];
+
    // Confirm that the result represents a video. Otherwise, the
    // item will not contain a video ID.
    GTLYouTubeThumbnail * thumbnail = video.snippet.thumbnails.high;

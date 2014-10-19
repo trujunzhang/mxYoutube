@@ -1,0 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'YoutubeCollectionView', :exclusive => true do
+  pod "YoutubeCollectionView", :path => "../"
+
+  pod "Business-Logic-Layer", :path => "../../../layers/Business-Logic-Layer"
+  pod "google-api-services-youtube", :path => "../../../layers/google-api-services-youtube"
+end

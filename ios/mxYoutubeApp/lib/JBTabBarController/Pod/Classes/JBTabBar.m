@@ -31,7 +31,7 @@
 - (JBTab *)tabWithTabBarItem:(UITabBarItem *)item;
 @end
 
-static CGSize const kDefaultSize = {320.0f, 49.0f};
+static CGSize const kDefaultSize = {320.0f, 60.0f};
 
 @implementation JBTabBar
 

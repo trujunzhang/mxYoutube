@@ -1,4 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '7.0'
+inhibit_all_warnings!
+
 pod "JBTabBarController", :path => "../lib/JBTabBarController"
+
+# pod 'Reveal-iOS-SDK'
 
 pod "XCDYouTubeKit", :path => "../lib/XCDYouTubeKit"
 pod "AAPullToRefresh", :path => "../lib/AAPullToRefresh"

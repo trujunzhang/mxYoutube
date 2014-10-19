@@ -15,10 +15,10 @@
 
 @property(nonatomic, strong) UICollectionView * collectionView;
 
-//@property (nonatomic, strong) UIScrollView *scrollView;
-
 @property(nonatomic, strong) KRLCollectionViewGridLayout * collectionViewGridLayout;
 @property(nonatomic, strong) NSMutableArray * videoList;
+
+@property(nonatomic, strong) NSArray * numbersPerLineArray;
 - (id)initWithVideoList:(NSMutableArray *)array;
 
 

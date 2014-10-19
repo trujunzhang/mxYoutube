@@ -45,7 +45,6 @@ static NSString * const identifier = @"CELL";
    if (self) {
       self.videoList = [[NSArray alloc] init];
       YoutubeResponseBlock completion = ^(NSArray * array) {
-//          NSString * debug = @"debug";
           self.videoList = array;
           [[self collectionView] reloadData];
       };
@@ -64,10 +63,11 @@ static NSString * const identifier = @"CELL";
    [super viewDidLoad];
 
    // Do any additional setup after loading the view.
+   self.view.backgroundColor = [UIColor clearColor];
+
    [self setupScrollView];
    [self setTopRefresh:self.scrollView];
    [self setupCollectionView:self.scrollView];
-
 }
 
 
@@ -97,7 +97,7 @@ static NSString * const identifier = @"CELL";
    self.scrollView.alwaysBounceHorizontal = NO;
    self.scrollView.alwaysBounceVertical = YES;
 //   self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-   self.scrollView.backgroundColor = UIColor.lightGrayColor;
+   self.scrollView.backgroundColor = [UIColor clearColor];
    [self.view addSubview:self.scrollView];
 
    CGRect rect = self.scrollView.bounds;
@@ -105,7 +105,7 @@ static NSString * const identifier = @"CELL";
    self.thresholdView = [[UIView alloc] initWithFrame:rect];
    self.thresholdView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
    self.thresholdView.userInteractionEnabled = NO;
-   self.thresholdView.backgroundColor = UIColor.whiteColor;
+   self.thresholdView.backgroundColor = [UIColor clearColor];
    [self.scrollView addSubview:self.thresholdView];
 }
 
@@ -159,6 +159,17 @@ static NSString * const identifier = @"CELL";
    IpadGridViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
    cell.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 
+//   cell.layer.masksToBounds = NO;
+//   cell.layer.borderColor = [UIColor whiteColor].CGColor;
+//   cell.layer.borderWidth = 0.8f;
+//   cell.layer.contentsScale = [UIScreen mainScreen].scale;
+//   cell.layer.shadowOpacity = 1.0f;
+////   cell.layer.shadowRadius = 1.0f;
+//   cell.layer.shadowOffset = CGSizeZero;
+
+//   cell.layer.shadowPath = [UIBezierPath bezierPathWithRect:cell.bounds].CGPath;
+//   cell.layer.shouldRasterize = YES;
+
    [cell bind:[self.videoList objectAtIndex:indexPath.row]];
 
    return cell;
@@ -187,16 +198,10 @@ static NSString * const identifier = @"CELL";
 
 - (void)updateLayout:(UIInterfaceOrientation)toInterfaceOrientation {
    BOOL isPortrait = (toInterfaceOrientation == UIInterfaceOrientationPortrait) || (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
-//   if (isPortrait) {
-//      self.layout.numberOfItemsPerLine = 3;
-//   } else {
-//      self.layout.numberOfItemsPerLine = 2;
-//   }
-   if (isPortrait) {
-      self.layout.numberOfItemsPerLine = 3;
-   } else {
-      self.layout.numberOfItemsPerLine = 4;
-   }
+
+   NSAssert(self.numbersPerLineArray, @"Please initialize numbersPerLineArray first.");
+
+   self.layout.numberOfItemsPerLine = [(self.numbersPerLineArray[isPortrait ? 0 : 1]) intValue];
 }
 
 
