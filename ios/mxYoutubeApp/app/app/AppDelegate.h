@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <IOS_Collection_Code/UIDevice+Resolutions.h>
 @class ViewController;
 
 

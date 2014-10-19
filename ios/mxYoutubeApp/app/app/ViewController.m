@@ -12,9 +12,8 @@
 #import "SearchViewController.h"
 #import "HistoryViewController.h"
 
-#import "UIDevice+Resolutions.h"
 #import "AppResolutionHelper.h"
-
+#import "UIDevice+Resolutions.h"
 
 
 @interface ViewController ()
