@@ -41,50 +41,36 @@
 }
 
 
-- (void)prepareView {
-//   self.title.lineBreakMode = NSLineBreakByWordWrapping;
-//   [self.title setNumberOfLines:2];
-
-//   [self.title setFont:[UIFont fontWithName:@"Courier" size:14]];
-}
-
-
 - (void)bind:(GTLYouTubeVideo *)video placeholderImage:(UIImage *)image {
-   [self prepareView];
-
    // Confirm that the result represents a video. Otherwise, the
    // item will not contain a video ID.
-   GTLYouTubeThumbnail * thumbnail = video.snippet.thumbnails.high;
-   NSString * _thumbnailUrl = thumbnail.url;
 
-   NSString * _titleValue = video.snippet.title;
-
-
-   NSString * _userNameValue = video.snippet.channelTitle;
-
-   [self.title setText:_titleValue];
-   //Helvetica-Light
-//   NSString * name = @"HelveticaNeue-Light";
-//   [self.title setFont:[UIFont fontWithName:name size:16]];
-
-   [self setupVideoStatistics:video];
-
-
-   [self.userName setText:_userNameValue];
-
-   [self.thumbnails setImageWithURL:[NSURL URLWithString:_thumbnailUrl] placeholderImage:image];// used
-
+   // All tap gesture recognizer
    UITapGestureRecognizer * singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                 action:@selector(tapDetected)];
    singleTap.numberOfTapsRequired = 1;
+
+   // 1
+   [self.thumbnails setImageWithURL:[NSURL URLWithString:video.snippet.thumbnails.high.url]
+                   placeholderImage:image];// used
+   // UIImageView Touch event
    [self.thumbnails setUserInteractionEnabled:YES];
    [self.thumbnails addGestureRecognizer:singleTap];
-
-
 
 //   NSString * imageName = video.snippet.channelId;
 //   UIImage * image = [UIImage imageNamed:imageName];
 //   self.thumbnails.image = image;// test
+
+   // 2
+   [self.title setText:video.snippet.title];
+   // 3
+   [self setupVideoStatistics:video];
+   // UIView Touch event
+   [self.infoView setUserInteractionEnabled:YES];
+   [self.infoView addGestureRecognizer:singleTap];
+
+   // 4
+   [self.userName setText:video.snippet.channelTitle];
 }
 
 
