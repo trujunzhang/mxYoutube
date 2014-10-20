@@ -74,9 +74,22 @@
 
    [self.thumbnails setImageWithURL:[NSURL URLWithString:_thumbnailUrl] placeholderImage:image];// used
 
+   UITapGestureRecognizer * singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                action:@selector(tapDetected)];
+   singleTap.numberOfTapsRequired = 1;
+   [self.thumbnails setUserInteractionEnabled:YES];
+   [self.thumbnails addGestureRecognizer:singleTap];
+
+
+
 //   NSString * imageName = video.snippet.channelId;
 //   UIImage * image = [UIImage imageNamed:imageName];
 //   self.thumbnails.image = image;// test
+}
+
+
+- (void)tapDetected {
+   NSLog(@"single Tap on imageview");
 }
 
 
