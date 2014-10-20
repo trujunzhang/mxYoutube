@@ -48,15 +48,13 @@
    // Confirm that the result represents a video. Otherwise, the
    // item will not contain a video ID.
 
-   // All tap gesture recognizer
-   UITapGestureRecognizer * singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                action:@selector(tapDetected)];
-   singleTap.numberOfTapsRequired = 1;
-
    // 1
    [self.thumbnails setImageWithURL:[NSURL URLWithString:video.snippet.thumbnails.high.url]
                    placeholderImage:image];// used
    // UIImageView Touch event
+   UITapGestureRecognizer * singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                action:@selector(tapDetected)];
+   singleTap.numberOfTapsRequired = 1;
    [self.thumbnails setUserInteractionEnabled:YES];
    [self.thumbnails addGestureRecognizer:singleTap];
 
@@ -67,8 +65,11 @@
    // 3
    [self setupVideoStatistics:video];
    // UIView Touch event
+   UITapGestureRecognizer * singleTapPanel = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                action:@selector(tapDetected)];
+   singleTapPanel.numberOfTapsRequired = 1;
    [self.infoView setUserInteractionEnabled:YES];
-   [self.infoView addGestureRecognizer:singleTap];
+   [self.infoView addGestureRecognizer:singleTapPanel];
 
    // 4
    [self.userName setText:video.snippet.channelTitle];
