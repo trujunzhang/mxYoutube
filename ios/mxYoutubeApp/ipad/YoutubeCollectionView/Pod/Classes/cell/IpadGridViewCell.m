@@ -79,6 +79,7 @@
 //   self.thumbnails.image = image;// test
 }
 
+
 // #69 Creating a Non-Floating TableView Section Header
 - (void)setupVideoStatistics:(GTLYouTubeVideo *)video {
    NSString * _durationValue = video.contentDetails.duration;
@@ -111,8 +112,8 @@
    UILabel * viewCountLabel = [[UILabel alloc] init];
    viewCountLabel.frame = CGRectMake(130, 50, 35, 11);
    [self.infoView addSubview:viewCountLabel];
-   [viewCountLabel setText:@"117"];
-//   [viewCountLabel setText:[NSString stringWithFormat:@"%@", _viewCountValue]];
+//   [viewCountLabel setText:@"117"];
+   [viewCountLabel setText:[NSString stringWithFormat:@"%@", _viewCountValue]];
 
    viewCountLabel.textColor = [UIColor lightGrayColor];
    [viewCountLabel setFont:[UIFont fontWithName:@"Helvetica-Light" size:12]];

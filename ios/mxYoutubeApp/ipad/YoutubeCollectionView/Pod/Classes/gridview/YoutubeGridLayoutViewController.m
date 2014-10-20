@@ -17,7 +17,7 @@
 #import "UIScrollView+AAPullToRefresh.h"
 
 
-static NSString * const identifier = @"CELL";
+static NSString * const identifier = @"GridViewCellIdentifier";
 
 
 @interface YoutubeGridLayoutViewController ()
