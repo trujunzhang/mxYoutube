@@ -20,8 +20,14 @@
     <content url="file://$MODULE_DIR$/../lib/JBTabBarController">
       <sourceFolder url="file://$MODULE_DIR$/../lib/JBTabBarController" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/../lib/WHTopTabBarController">
+      <sourceFolder url="file://$MODULE_DIR$/../lib/WHTopTabBarController" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$/../lib/XCDYouTubeKit">
       <sourceFolder url="file://$MODULE_DIR$/../lib/XCDYouTubeKit" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../module/VideoWatchDetailViewControlleriPad">
+      <sourceFolder url="file://$MODULE_DIR$/../module/VideoWatchDetailViewControlleriPad" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

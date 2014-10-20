@@ -1,9 +1,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '7.0'
-inhibit_all_warnings!
+# pod 'Reveal-iOS-SDK'
+
 
 pod "JBTabBarController", :path => "../lib/JBTabBarController"
+pod "WHTopTabBarController", :path => "../lib/WHTopTabBarController"
 
 # pod 'Reveal-iOS-SDK'
 
@@ -17,6 +18,8 @@ pod "Business-Logic-Layer", :path => "../layers/Business-Logic-Layer"
 pod "google-api-services-youtube", :path => "../layers/google-api-services-youtube"
 
 pod "YoutubeCollectionView", :path => "../ipad/YoutubeCollectionView"
+
+pod "VideoWatchDetailViewControlleriPad", :path => "../module/VideoWatchDetailViewControlleriPad"
 
 
 

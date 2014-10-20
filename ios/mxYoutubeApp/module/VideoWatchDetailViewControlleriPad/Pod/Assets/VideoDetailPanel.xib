@@ -77,23 +77,6 @@
             </constraints>
             <point key="canvasLocation" x="257" y="298.5"/>
         </view>
-        <view contentMode="scaleToFill" id="5xF-E3-2qq">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQb-Ys-8wp">
-                    <rect key="frame" x="20" y="20" width="560" height="560"/>
-                    <color key="backgroundColor" red="0.9221271915" green="1" blue="0.20436310120000001" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
-            </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="iQb-Ys-8wp" secondAttribute="bottom" constant="20" id="1yn-Jr-Oec"/>
-                <constraint firstItem="iQb-Ys-8wp" firstAttribute="top" secondItem="5xF-E3-2qq" secondAttribute="top" constant="20" id="8Kd-vv-g6t"/>
-                <constraint firstItem="iQb-Ys-8wp" firstAttribute="leading" secondItem="5xF-E3-2qq" secondAttribute="leading" constant="20" id="U8A-E9-NSW"/>
-                <constraint firstAttribute="trailing" secondItem="iQb-Ys-8wp" secondAttribute="trailing" constant="20" id="e1o-2x-2o3"/>
-            </constraints>
-        </view>
     </objects>
     <resources>
         <image name="header.png" width="38" height="38"/>

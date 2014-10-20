@@ -10,10 +10,26 @@
 #import "AppDelegate.h"
 #import "UIColor+HexString.h"
 #import "ViewController.h"
+#import "VideoDetailViewControlleriPad.h"
 
 
 @implementation AppDelegate
 
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//   // Override point for customization after application launch.
+//   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//   // Override point for customization after application launch.
+//
+//   UIViewController * controller = [[VideoDetailViewControlleriPad alloc] init];
+//
+//   controller.view.backgroundColor = [UIColor whiteColor];
+//
+//   self.window.rootViewController = controller;
+//
+//   [self.window makeKeyAndVisible];
+//
+//   return YES;
+//}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    // Override point for customization after application launch.
