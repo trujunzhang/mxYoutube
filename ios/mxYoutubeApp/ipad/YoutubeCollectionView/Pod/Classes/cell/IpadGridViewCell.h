@@ -16,13 +16,10 @@
 
 @property(strong, nonatomic) IBOutlet UILabel * title;
 
-@property(strong, nonatomic) IBOutlet UILabel * rating;
-@property(strong, nonatomic) IBOutlet UILabel * viewCount;
-
 @property(strong, nonatomic) IBOutlet UIImageView * userHeader;
 @property(strong, nonatomic) IBOutlet UILabel * userName;
 
-@property(strong, nonatomic) IBOutlet UIView * infoView;
+@property (strong, nonatomic) IBOutlet UIView *infoView;
 
 
 - (void)bind:(GTLYouTubeVideo *)video placeholderImage:(UIImage *)image;

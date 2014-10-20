@@ -68,7 +68,7 @@
             </view>
             <size key="customSize" width="250" height="246"/>
             <connections>
-                <outlet property="infoView" destination="4TQ-3j-POz" id="EH7-ok-Yog"/>
+                <outlet property="infoView" destination="4TQ-3j-POz" id="f0i-Ff-se9"/>
                 <outlet property="thumbnails" destination="SPb-Hc-4tG" id="IKl-KN-uhB"/>
                 <outlet property="title" destination="2tw-Ph-OtJ" id="5Uc-vE-lI7"/>
                 <outlet property="userHeader" destination="tJc-9i-Ga6" id="yP6-jq-kET"/>
