@@ -6,6 +6,8 @@
 
 #import "YoutubeGridLayoutViewController.h"
 #import "IpadGridViewCell.h"
+#import "GTLYouTubeVideo.h"
+#import "GTLYouTubeVideoSnippet.h"
 
 
 @interface VideoDetailViewControlleriPad ()
@@ -23,12 +25,25 @@
 #pragma mark - UIView cycle
 
 
+- (instancetype)initWithDelegate:(id<IpadGridViewCellDelegate>)delegate video:(GTLYouTubeVideo *)video {
+   self = [super init];
+   if (self) {
+      self.delegate = delegate;
+      self.video = video;
+   }
+
+   return self;
+}
+
+
 - (void)viewDidLoad {
    [super viewDidLoad];
 
    // Do any additional setup after loading the view, typically from a nib.
    [self initViewControllers];
    [self setupPlayer:self.videoPlayView];
+
+   self.title = self.video.snippet.title;
 }
 
 
@@ -37,8 +52,6 @@
    // Dispose of any resources that can be recreated.
 
 }
-
-
 
 
 #pragma mark -
@@ -124,8 +137,8 @@
    self.moviePlayer.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
    self.moviePlayer.view.frame = view.bounds;
 
-   [self.moviePlayer play];
-   [view addSubview:self.moviePlayer.view];
+//   [self.moviePlayer play];
+//   [view addSubview:self.moviePlayer.view];
 }
 
 

@@ -44,9 +44,8 @@
 - (void)gridViewCellTap:(GTLYouTubeVideo *)video {
    NSString * debug = @"debug";
 
-   VideoDetailViewControlleriPad * controller = [[VideoDetailViewControlleriPad alloc] init];
-   controller.delegate = self;
-
+   VideoDetailViewControlleriPad * controller = [[VideoDetailViewControlleriPad alloc] initWithDelegate:self
+                                                                                                  video:video];
    [[self navigationController] pushViewController:controller animated:YES];
 }
 

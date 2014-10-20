@@ -14,11 +14,13 @@
 
 @class YoutubeGridLayoutViewController;
 @protocol IpadGridViewCellDelegate;
+@class GTLYouTubeVideo;
 
 
 @interface VideoDetailViewControlleriPad : UIViewController
 
 @property(nonatomic, assign) id<IpadGridViewCellDelegate> delegate;
+@property(nonatomic, strong) GTLYouTubeVideo * video;
 
 @property(nonatomic, strong) MPMoviePlayerController * moviePlayer;
 
@@ -28,6 +30,9 @@
 @property(nonatomic, strong) UIViewController * firstViewController;
 @property(nonatomic, strong) UIViewController * secondViewController;
 @property(nonatomic, strong) YoutubeGridLayoutViewController * thirdViewController;
+
+- (instancetype)initWithDelegate:(id<IpadGridViewCellDelegate>)delegate video:(GTLYouTubeVideo *)video;
+
 @end
 
 
