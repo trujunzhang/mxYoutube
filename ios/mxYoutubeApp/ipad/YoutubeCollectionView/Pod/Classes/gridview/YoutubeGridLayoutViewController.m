@@ -65,6 +65,8 @@ static NSString * const identifier = @"GridViewCellIdentifier";
    // Do any additional setup after loading the view.
    self.view.backgroundColor = [UIColor clearColor];
 
+   self.placeHoderImage = [UIImage imageNamed:@"mt_cell_cover_placeholder"];
+
    [self setupScrollView];
    [self setTopRefresh:self.scrollView];
    [self setupCollectionView:self.scrollView];
@@ -170,7 +172,7 @@ static NSString * const identifier = @"GridViewCellIdentifier";
 //   cell.layer.shadowPath = [UIBezierPath bezierPathWithRect:cell.bounds].CGPath;
 //   cell.layer.shouldRasterize = YES;
 
-   [cell bind:[self.videoList objectAtIndex:indexPath.row]];
+   [cell bind:[self.videoList objectAtIndex:indexPath.row] placeholderImage:self.placeHoderImage];
 
    return cell;
 }

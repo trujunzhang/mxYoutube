@@ -25,5 +25,5 @@
 @property(strong, nonatomic) IBOutlet UIView * infoView;
 
 
-- (void)bind:(GTLYouTubeVideo *)video;
+- (void)bind:(GTLYouTubeVideo *)video placeholderImage:(UIImage *)image;
 @end

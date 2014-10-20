@@ -19,6 +19,7 @@
 @property(nonatomic, strong) NSMutableArray * videoList;
 
 @property(nonatomic, strong) NSArray * numbersPerLineArray;
+@property(nonatomic, strong) UIImage * placeHoderImage;
 - (id)initWithVideoList:(NSMutableArray *)array;
 
 

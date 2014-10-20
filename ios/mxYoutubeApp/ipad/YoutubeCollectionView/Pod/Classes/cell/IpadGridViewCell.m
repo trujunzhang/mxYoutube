@@ -49,7 +49,7 @@
 }
 
 
-- (void)bind:(GTLYouTubeVideo *)video {
+- (void)bind:(GTLYouTubeVideo *)video placeholderImage:(UIImage *)image {
    [self prepareView];
 
    // Confirm that the result represents a video. Otherwise, the
@@ -72,7 +72,7 @@
 
    [self.userName setText:_userNameValue];
 
-   [self.thumbnails setImageWithURL:[NSURL URLWithString:_thumbnailUrl]];// used
+   [self.thumbnails setImageWithURL:[NSURL URLWithString:_thumbnailUrl] placeholderImage:image];// used
 
 //   NSString * imageName = video.snippet.channelId;
 //   UIImage * image = [UIImage imageNamed:imageName];
