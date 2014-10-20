@@ -10,6 +10,15 @@
 @class GTLYouTubeVideo;
 
 
+@protocol IpadGridViewCellDelegate<NSObject>
+
+@optional
+
+- (void)gridViewCellTap:(GTLYouTubeVideo *)video;
+
+@end
+
+
 @interface IpadGridViewCell : UICollectionViewCell
 
 @property(strong, nonatomic) IBOutlet UIImageView * thumbnails;
@@ -19,8 +28,10 @@
 @property(strong, nonatomic) IBOutlet UIImageView * userHeader;
 @property(strong, nonatomic) IBOutlet UILabel * userName;
 
-@property (strong, nonatomic) IBOutlet UIView *infoView;
+@property(strong, nonatomic) IBOutlet UIView * infoView;
 
+@property(nonatomic, assign) id<IpadGridViewCellDelegate> delegate;
 
-- (void)bind:(GTLYouTubeVideo *)video placeholderImage:(UIImage *)image;
+@property(nonatomic, strong) GTLYouTubeVideo * video;
+- (void)bind:(GTLYouTubeVideo *)video placeholderImage:(UIImage *)image delegate:(id<IpadGridViewCellDelegate>)delegate;
 @end

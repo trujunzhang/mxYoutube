@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <YoutubeCollectionView/YoutubeGridLayoutViewController.h>
+#import "IpadGridViewCell.h"
 
 
-@interface HistoryViewController : YoutubeGridLayoutViewController
+@interface HistoryViewController : YoutubeGridLayoutViewController<IpadGridViewCellDelegate>
 
 @end

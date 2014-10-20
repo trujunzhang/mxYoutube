@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class KRLCollectionViewGridLayout;
+@protocol IpadGridViewCellDelegate;
 
 
 @interface YoutubeGridLayoutViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
+
+@property(nonatomic, assign) id<IpadGridViewCellDelegate> delegate;
 
 @property(nonatomic, strong) UICollectionView * collectionView;
 

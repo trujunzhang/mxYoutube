@@ -41,7 +41,10 @@
 }
 
 
-- (void)bind:(GTLYouTubeVideo *)video placeholderImage:(UIImage *)image {
+- (void)bind:(GTLYouTubeVideo *)video placeholderImage:(UIImage *)image delegate:(id<IpadGridViewCellDelegate>)delegate {
+   self.video = video;
+   self.delegate = delegate;
+
    // Confirm that the result represents a video. Otherwise, the
    // item will not contain a video ID.
 
@@ -57,9 +60,7 @@
    [self.thumbnails setUserInteractionEnabled:YES];
    [self.thumbnails addGestureRecognizer:singleTap];
 
-//   NSString * imageName = video.snippet.channelId;
-//   UIImage * image = [UIImage imageNamed:imageName];
-//   self.thumbnails.image = image;// test
+//   self.thumbnails.image = [UIImage imageNamed:video.snippet.channelId];// test
 
    // 2
    [self.title setText:video.snippet.title];
@@ -76,6 +77,10 @@
 
 - (void)tapDetected {
    NSLog(@"single Tap on imageview");
+
+   if (self.delegate) {
+      [self.delegate gridViewCellTap:self.video];
+   }
 }
 
 

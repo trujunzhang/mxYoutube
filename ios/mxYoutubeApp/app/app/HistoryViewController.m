@@ -7,6 +7,7 @@
 //
 
 #import "HistoryViewController.h"
+#import "GTLYouTubeVideo.h"
 
 
 @implementation HistoryViewController
@@ -23,6 +24,8 @@
 
       UIBarButtonItem * btnSearch = [[UIBarButtonItem alloc] initWithCustomView:btn];
       self.navigationItem.leftBarButtonItem = btnSearch;
+
+      self.delegate = self;
    }
    return self;
 }
@@ -30,6 +33,15 @@
 
 - (void)popMenu:(id)send {
 
+}
+
+
+#pragma mark -
+#pragma mark - IpadGridViewCellDelegate
+
+
+- (void)gridViewCellTap:(GTLYouTubeVideo *)video {
+   NSString * debug = @"debug";
 }
 
 

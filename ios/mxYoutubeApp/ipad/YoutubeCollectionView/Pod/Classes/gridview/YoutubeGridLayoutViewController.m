@@ -172,7 +172,12 @@ static NSString * const identifier = @"GridViewCellIdentifier";
 //   cell.layer.shadowPath = [UIBezierPath bezierPathWithRect:cell.bounds].CGPath;
 //   cell.layer.shouldRasterize = YES;
 
-   [cell bind:[self.videoList objectAtIndex:indexPath.row] placeholderImage:self.placeHoderImage];
+   [cell    bind:[self.videoList objectAtIndex:indexPath.row]
+placeholderImage:self.placeHoderImage
+        delegate:self.delegate];
+
+//   UINavigationController * controller = [self navigationController];
+//   [[self navigationController] pushViewController:controller animated:YES];
 
    return cell;
 }
