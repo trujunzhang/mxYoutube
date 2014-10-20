@@ -117,7 +117,5 @@
 
    viewCountLabel.textColor = [UIColor lightGrayColor];
    [viewCountLabel setFont:[UIFont fontWithName:@"Helvetica-Light" size:12]];
-
-
 }
 @end
