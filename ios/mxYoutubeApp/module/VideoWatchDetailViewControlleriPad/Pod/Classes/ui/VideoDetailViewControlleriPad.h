@@ -13,9 +13,12 @@
 @class WHTopTabBarController;
 
 @class YoutubeGridLayoutViewController;
+@protocol IpadGridViewCellDelegate;
 
 
 @interface VideoDetailViewControlleriPad : UIViewController
+
+@property(nonatomic, assign) id<IpadGridViewCellDelegate> delegate;
 
 @property(nonatomic, strong) MPMoviePlayerController * moviePlayer;
 

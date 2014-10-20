@@ -5,6 +5,7 @@
 #import "WHTopTabBarController.h"
 
 #import "YoutubeGridLayoutViewController.h"
+#import "IpadGridViewCell.h"
 
 
 @interface VideoDetailViewControlleriPad ()
@@ -38,6 +39,8 @@
 }
 
 
+
+
 #pragma mark -
 #pragma mark - setup UIView
 
@@ -48,6 +51,7 @@
    self.secondViewController = [[UIViewController alloc] init];
 //   self.thirdViewController = [[YoutubeGridLayoutViewController alloc] initWithVideoList:[YoutubeDataHelper getVideoList]];
    self.thirdViewController = [[YoutubeGridLayoutViewController alloc] init];
+   self.thirdViewController.delegate = self.delegate;
    self.thirdViewController.numbersPerLineArray = [NSArray arrayWithObjects:@"3", @"2", nil];
    self.thirdViewController.title = @"Suggestions";
 

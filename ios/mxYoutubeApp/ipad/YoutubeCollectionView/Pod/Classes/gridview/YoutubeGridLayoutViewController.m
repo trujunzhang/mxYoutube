@@ -176,8 +176,6 @@ static NSString * const identifier = @"GridViewCellIdentifier";
 placeholderImage:self.placeHoderImage
         delegate:self.delegate];
 
-//   UINavigationController * controller = [self navigationController];
-//   [[self navigationController] pushViewController:controller animated:YES];
 
    return cell;
 }

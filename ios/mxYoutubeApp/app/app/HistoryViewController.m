@@ -8,6 +8,7 @@
 
 #import "HistoryViewController.h"
 #import "GTLYouTubeVideo.h"
+#import "VideoDetailViewControlleriPad.h"
 
 
 @implementation HistoryViewController
@@ -42,6 +43,11 @@
 
 - (void)gridViewCellTap:(GTLYouTubeVideo *)video {
    NSString * debug = @"debug";
+
+   VideoDetailViewControlleriPad * controller = [[VideoDetailViewControlleriPad alloc] init];
+   controller.delegate = self;
+
+   [[self navigationController] pushViewController:controller animated:YES];
 }
 
 
