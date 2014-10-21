@@ -137,8 +137,8 @@
    self.moviePlayer.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
    self.moviePlayer.view.frame = view.bounds;
 
-//   [self.moviePlayer play];
-//   [view addSubview:self.moviePlayer.view];
+   [self.moviePlayer play];
+   [view addSubview:self.moviePlayer.view];
 }
 
 

@@ -12,7 +12,7 @@
 @protocol IpadGridViewCellDelegate;
 
 
-@interface YoutubeGridLayoutViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
+@interface YoutubeGridLayoutViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property(nonatomic, assign) id<IpadGridViewCellDelegate> delegate;
 
@@ -23,7 +23,8 @@
 
 @property(nonatomic, strong) NSArray * numbersPerLineArray;
 @property(nonatomic, strong) UIImage * placeHoderImage;
+
 - (id)initWithVideoList:(NSMutableArray *)array;
 
-
+- (void)setupCollectionView:(UIScrollView *)scrollView;
 @end

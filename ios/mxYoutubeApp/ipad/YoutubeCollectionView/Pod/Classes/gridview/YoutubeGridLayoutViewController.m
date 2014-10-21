@@ -8,26 +8,20 @@
 
 #import "YoutubeGridLayoutViewController.h"
 
-#import "AAPullToRefresh.h"
-
 #import "KRLCollectionViewGridLayout.h"
 #import "IpadGridViewCell.h"
 #import "GYSearch.h"
 #import "SearchImplementation.h"
-#import "UIScrollView+AAPullToRefresh.h"
 
 
 static NSString * const identifier = @"GridViewCellIdentifier";
 
 
 @interface YoutubeGridLayoutViewController ()
-@property(nonatomic, strong) UIView * thresholdView;
-@property(nonatomic, strong) UIScrollView * scrollView;
 @end
 
 
 @implementation YoutubeGridLayoutViewController
-
 
 - (instancetype)initWithVideoList:(NSArray *)videoList {
    self = [super init];
@@ -67,48 +61,7 @@ static NSString * const identifier = @"GridViewCellIdentifier";
 
    self.placeHoderImage = [UIImage imageNamed:@"mt_cell_cover_placeholder"];
 
-   [self setupScrollView];
-   [self setTopRefresh:self.scrollView];
-   [self setupCollectionView:self.scrollView];
-}
-
-
-- (void)setTopRefresh:(UIScrollView *)scrollView {
-// top
-   void (^actionHandler)(AAPullToRefresh *) = ^(AAPullToRefresh * v) {
-       NSLog(@"fire from top");
-       [v performSelector:@selector(stopIndicatorAnimation)
-               withObject:nil
-               afterDelay:1.0f];
-   };
-   AAPullToRefresh * tv = [scrollView addPullToRefreshPosition:AAPullToRefreshPositionTop
-                                                 actionHandler:actionHandler];
-   tv.imageIcon = [UIImage imageNamed:@"launchpad"];
-   tv.borderColor = [UIColor whiteColor];
-}
-
-
-- (void)setupScrollView {
-   self.scrollView = [[UIScrollView alloc] init];
-
-//   self.scrollView.frame = self.view.bounds;
-
-   self.scrollView.delegate = self;
-   self.scrollView.maximumZoomScale = 2.0f;
-//   self.scrollView.contentSize = self.view.bounds.size;
-   self.scrollView.alwaysBounceHorizontal = NO;
-   self.scrollView.alwaysBounceVertical = YES;
-//   self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-   self.scrollView.backgroundColor = [UIColor clearColor];
-   [self.view addSubview:self.scrollView];
-
-   CGRect rect = self.scrollView.bounds;
-   rect.size.height = self.scrollView.contentSize.height;
-   self.thresholdView = [[UIView alloc] initWithFrame:rect];
-   self.thresholdView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-   self.thresholdView.userInteractionEnabled = NO;
-   self.thresholdView.backgroundColor = [UIColor clearColor];
-   [self.scrollView addSubview:self.thresholdView];
+   [self setupCollectionView:self.view];
 }
 
 
@@ -161,21 +114,10 @@ static NSString * const identifier = @"GridViewCellIdentifier";
    IpadGridViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
    cell.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 
-//   cell.layer.masksToBounds = NO;
-//   cell.layer.borderColor = [UIColor whiteColor].CGColor;
-//   cell.layer.borderWidth = 0.8f;
-//   cell.layer.contentsScale = [UIScreen mainScreen].scale;
-//   cell.layer.shadowOpacity = 1.0f;
-////   cell.layer.shadowRadius = 1.0f;
-//   cell.layer.shadowOffset = CGSizeZero;
-
-//   cell.layer.shadowPath = [UIBezierPath bezierPathWithRect:cell.bounds].CGPath;
-//   cell.layer.shouldRasterize = YES;
 
    [cell    bind:[self.videoList objectAtIndex:indexPath.row]
 placeholderImage:self.placeHoderImage
         delegate:self.delegate];
-
 
    return cell;
 }
@@ -195,8 +137,6 @@ placeholderImage:self.placeHoderImage
 //   NSLog(@"w = %f", w);
 //   NSLog(@"h = %f", h);
 
-   self.scrollView.frame = self.view.bounds;
-   self.scrollView.contentSize = self.view.bounds.size;
    [self updateLayout:[UIApplication sharedApplication].statusBarOrientation];
 }
 
@@ -209,9 +149,5 @@ placeholderImage:self.placeHoderImage
    self.layout.numberOfItemsPerLine = [(self.numbersPerLineArray[isPortrait ? 0 : 1]) intValue];
 }
 
-
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-   return self.thresholdView;
-}
 
 @end
