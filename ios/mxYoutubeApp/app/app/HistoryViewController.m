@@ -41,7 +41,7 @@
 #pragma mark - IpadGridViewCellDelegate
 
 
-- (void)gridViewCellTap:(GTLYouTubeVideo *)video {
+- (void)gridViewCellTap:(GTLYouTubeVideo *)video sender:(id)sender {
    NSString * debug = @"debug";
 
 

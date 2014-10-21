@@ -14,7 +14,7 @@
 
 @optional
 
-- (void)gridViewCellTap:(GTLYouTubeVideo *)video;
+- (void)gridViewCellTap:(GTLYouTubeVideo *)video sender:(id)sender;
 
 @end
 

@@ -66,7 +66,7 @@
    [self setupVideoStatistics:video];
    // UIView Touch event
    UITapGestureRecognizer * singleTapPanel = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                action:@selector(tapDetected)];
+                                                                                     action:@selector(tapDetected)];
    singleTapPanel.numberOfTapsRequired = 1;
    [self.infoView setUserInteractionEnabled:YES];
    [self.infoView addGestureRecognizer:singleTapPanel];
@@ -80,7 +80,7 @@
    NSLog(@"single Tap on imageview");
 
    if (self.delegate) {
-      [self.delegate gridViewCellTap:self.video];
+      [self.delegate gridViewCellTap:self.video sender:self.delegate];
    }
 }
 
