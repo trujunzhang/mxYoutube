@@ -44,8 +44,14 @@
 - (void)gridViewCellTap:(GTLYouTubeVideo *)video {
    NSString * debug = @"debug";
 
+
    VideoDetailViewControlleriPad * controller = [[VideoDetailViewControlleriPad alloc] initWithDelegate:self
                                                                                                   video:video];
+
+   [self.navigationItem setBackBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"back"
+                                                                              style:UIBarButtonItemStyleBordered
+                                                                             target:nil
+                                                                             action:nil]];
    [[self navigationController] pushViewController:controller animated:YES];
 }
 
