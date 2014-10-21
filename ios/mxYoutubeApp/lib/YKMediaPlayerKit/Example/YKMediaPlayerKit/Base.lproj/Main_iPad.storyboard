@@ -125,6 +125,7 @@
                     <connections>
                         <outlet property="mp4View" destination="Zgk-ng-LBt" id="5gd-DO-6Ad"/>
                         <outlet property="otherVideoView" destination="drb-V8-1SE" id="LkI-MJ-Qdm"/>
+                        <outlet property="pView" destination="KXI-bB-hXf" id="qDG-VY-hBJ"/>
                         <outlet property="unknownVideoView" destination="tdE-AF-g8R" id="xHp-nw-B3e"/>
                         <outlet property="vimeoView" destination="euK-9J-eGN" id="iex-wA-cCP"/>
                         <outlet property="youTubeView" destination="NLM-PQ-Qgd" id="DYt-nv-jBD"/>
