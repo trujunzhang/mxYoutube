@@ -1,9 +1,9 @@
 //
 //  ViewController.h
-//  YKMediaPlayerKit
+//  DemoApp
 //
-//  Created by wanghaogithub720 on 10/21/2014.
-//  Copyright (c) 2014 wanghaogithub720. All rights reserved.
+//  Created by Yas Kuraishi on 3/8/14.
+//  Copyright (c) 2014 Yas Kuraishi. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
