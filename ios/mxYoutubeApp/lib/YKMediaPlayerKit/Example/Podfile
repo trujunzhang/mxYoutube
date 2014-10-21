@@ -1,11 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
+pod 'Reveal-iOS-SDK'
+
 target 'YKMediaPlayerKit', :exclusive => true do
   pod "YKMediaPlayerKit", :path => "../"
 end
 
 target 'Tests', :exclusive => true do
   pod "YKMediaPlayerKit", :path => "../"
-
-  
 end

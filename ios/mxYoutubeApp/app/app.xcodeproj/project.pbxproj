@@ -41,6 +41,7 @@
 		65B8CDCDBA585EBE3D41A2B0 /* tab_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8CBBD4B75CD9E4F885787 /* tab_more@2x.png */; };
 		65B8CED63133E9D79A0EA12D /* tab_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C10AC1B27E95C12B8844 /* tab_search@2x.png */; };
 		65B8CF9645A0147D477CF54A /* tab_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B8C921D1A98537B9392363 /* tab_search.png */; };
+		99A14A13E517E33507A02959 /* libPods-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DF3A43A984B3CDEA392739 /* libPods-app.a */; };
 		D67E236FC33A4CBDA867579F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F6691D477B4FDF86387DC9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		498C4A8E7461F2089155F0B8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		49DF3A43A984B3CDEA392739 /* libPods-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F6691D477B4FDF86387DC9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2D94D619A1C7F200C9EB16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5E2D94D819A1C7F200C9EB16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,6 +114,7 @@
 				5E2D94DB19A1C7F200C9EB16 /* UIKit.framework in Frameworks */,
 				5E2D94D719A1C7F200C9EB16 /* Foundation.framework in Frameworks */,
 				D67E236FC33A4CBDA867579F /* libPods.a in Frameworks */,
+				99A14A13E517E33507A02959 /* libPods-app.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +160,7 @@
 				5E2D94DC19A1C7F200C9EB16 /* CoreData.framework */,
 				5E2D94F419A1C7F200C9EB16 /* XCTest.framework */,
 				54F6691D477B4FDF86387DC9 /* libPods.a */,
+				49DF3A43A984B3CDEA392739 /* libPods-app.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -333,6 +337,8 @@
 			);
 			mainGroup = 5E2D94CA19A1C7F200C9EB16;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				5E2D94D219A1C7F200C9EB16 /* app */,
@@ -403,7 +409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-app/Pods-app-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -1,26 +1,30 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-# pod 'Reveal-iOS-SDK'
+pod 'Reveal-iOS-SDK'
 
+target 'app', :exclusive => true do
+  pod "JBTabBarController", :path => "../lib/JBTabBarController"
+  pod "WHTopTabBarController", :path => "../lib/WHTopTabBarController"
+  pod "YKMediaPlayerKit", :path => "../lib/YKMediaPlayerKit"
 
-pod "JBTabBarController", :path => "../lib/JBTabBarController"
-pod "WHTopTabBarController", :path => "../lib/WHTopTabBarController"
-pod "YKMediaPlayerKit", :path => "../lib/YKMediaPlayerKit"
+  pod "XCDYouTubeKit", :path => "../lib/XCDYouTubeKit"
+  pod "AAPullToRefresh", :path => "../lib/AAPullToRefresh"
 
-# pod 'Reveal-iOS-SDK'
+  pod "IOS_Collection_Code", :path => "../collect/IOS_Collection_Code"
 
-pod "XCDYouTubeKit", :path => "../lib/XCDYouTubeKit"
-pod "AAPullToRefresh", :path => "../lib/AAPullToRefresh"
+  pod "Business-Logic-Layer", :path => "../layers/Business-Logic-Layer"
 
-pod "IOS_Collection_Code", :path => "../collect/IOS_Collection_Code"
+  pod "google-api-services-youtube", :path => "../layers/google-api-services-youtube"
 
-pod "Business-Logic-Layer", :path => "../layers/Business-Logic-Layer"
+  pod "YoutubeCollectionView", :path => "../ipad/YoutubeCollectionView"
 
-pod "google-api-services-youtube", :path => "../layers/google-api-services-youtube"
+  pod "VideoWatchDetailViewControlleriPad", :path => "../module/VideoWatchDetailViewControlleriPad"
+end
 
-pod "YoutubeCollectionView", :path => "../ipad/YoutubeCollectionView"
+target 'appTests', :exclusive => true do
 
-pod "VideoWatchDetailViewControlleriPad", :path => "../module/VideoWatchDetailViewControlleriPad"
+end
+
 
 
 

@@ -24,6 +24,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		A1FA1EBEAC85E7946AD3D284 /* libPods-YKMediaPlayerKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FCE3B57FCFEA9CC322647 /* libPods-YKMediaPlayerKit.a */; };
 		D391DAC4B388C81080B74552 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FC0177171DE669A1376B40 /* libPods-Tests.a */; };
+		E98B5533C39ECCC6202A4FD8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B5C7BD524110FBC2ED0B80 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		813119927862BFA8BB8B786D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		94B5C7BD524110FBC2ED0B80 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB09AD6BA338DDC80402DB2 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A67FCE3B57FCFEA9CC322647 /* libPods-YKMediaPlayerKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YKMediaPlayerKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA31846580119739AA0801D /* YKMediaPlayerKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = YKMediaPlayerKit.podspec; path = ../YKMediaPlayerKit.podspec; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				A1FA1EBEAC85E7946AD3D284 /* libPods-YKMediaPlayerKit.a in Frameworks */,
+				E98B5533C39ECCC6202A4FD8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +128,7 @@
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				23FC0177171DE669A1376B40 /* libPods-Tests.a */,
 				A67FCE3B57FCFEA9CC322647 /* libPods-YKMediaPlayerKit.a */,
+				94B5C7BD524110FBC2ED0B80 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
