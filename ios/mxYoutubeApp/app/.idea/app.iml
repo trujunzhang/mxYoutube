@@ -26,6 +26,9 @@
     <content url="file://$MODULE_DIR$/../lib/XCDYouTubeKit">
       <sourceFolder url="file://$MODULE_DIR$/../lib/XCDYouTubeKit" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/../lib/YKMediaPlayerKit">
+      <sourceFolder url="file://$MODULE_DIR$/../lib/YKMediaPlayerKit" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$/../module/VideoWatchDetailViewControlleriPad">
       <sourceFolder url="file://$MODULE_DIR$/../module/VideoWatchDetailViewControlleriPad" isTestSource="false" />
     </content>

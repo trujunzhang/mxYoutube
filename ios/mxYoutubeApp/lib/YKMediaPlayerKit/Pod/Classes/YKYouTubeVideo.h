@@ -23,4 +23,5 @@
 @property (nonatomic, strong) NSDictionary *videos;
 
 
+- (instancetype)initWithVideoId:(NSString *)videoId;
 @end

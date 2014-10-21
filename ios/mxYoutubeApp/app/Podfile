@@ -5,6 +5,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 pod "JBTabBarController", :path => "../lib/JBTabBarController"
 pod "WHTopTabBarController", :path => "../lib/WHTopTabBarController"
+pod "YKMediaPlayerKit", :path => "../lib/YKMediaPlayerKit"
 
 # pod 'Reveal-iOS-SDK'
 
