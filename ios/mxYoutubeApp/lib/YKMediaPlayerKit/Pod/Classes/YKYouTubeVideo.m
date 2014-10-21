@@ -114,6 +114,16 @@
 }
 
 
+- (void)playInView:(UIView *)pView withQualityOptions:(YKQualityOptions)quality {
+   if (!self.player) [self movieViewController:quality];
+
+   [pView addSubview:self.player.moviePlayer.view];
+   self.player.moviePlayer.view.frame = pView.bounds;
+
+   [self.player.moviePlayer play];
+}
+
+
 - (void)play:(YKQualityOptions)quality {
    if (!self.player) [self movieViewController:quality];
 

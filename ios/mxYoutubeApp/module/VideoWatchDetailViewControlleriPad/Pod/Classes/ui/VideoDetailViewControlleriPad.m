@@ -127,7 +127,7 @@
 }
 
 
-- (void)setupPlayer:(UIView *)view {
+- (void)setupPlayer:(UIView *)pView {
 // Make a URL
 //   NSURL * url = [NSURL URLWithString:@"http://www.ebookfrenzy.com/ios_book/movie/movie.mov"];
 
@@ -146,7 +146,8 @@
    //Fetch thumbnail
    [youTubeVideo parseWithCompletion:^(NSError * error) {
        //Then play (make sure that you have called parseWithCompletion before calling this method)
-       [youTubeVideo play:YKQualityMedium];
+//       [youTubeVideo play:YKQualityMedium];
+       [youTubeVideo playInView:pView withQualityOptions:YKQualityMedium];
    }];
 
 
