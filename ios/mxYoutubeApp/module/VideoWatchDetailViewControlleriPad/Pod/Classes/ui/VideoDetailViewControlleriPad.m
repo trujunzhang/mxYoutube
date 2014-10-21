@@ -147,7 +147,7 @@
    [youTubeVideo parseWithCompletion:^(NSError * error) {
        //Then play (make sure that you have called parseWithCompletion before calling this method)
 //       [youTubeVideo play:YKQualityMedium];
-       [youTubeVideo playInView:pView withQualityOptions:YKQualityMedium];
+       [youTubeVideo playInView:pView withQualityOptions:YKQualityLow];
    }];
 
 

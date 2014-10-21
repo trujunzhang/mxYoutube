@@ -107,7 +107,7 @@
 
 - (MPMoviePlayerViewController *)movieViewController:(YKQualityOptions)quality {
    self.player = [[MPMoviePlayerViewController alloc] initWithContentURL:[self videoURL:quality]];
-   [self.player.moviePlayer setShouldAutoplay:NO];
+   [self.player.moviePlayer setShouldAutoplay:YES];
    [self.player.moviePlayer prepareToPlay];
 
    return self.player;
