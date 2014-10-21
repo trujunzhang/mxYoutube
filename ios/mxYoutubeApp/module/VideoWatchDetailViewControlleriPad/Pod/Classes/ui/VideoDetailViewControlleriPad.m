@@ -141,8 +141,7 @@
 //   [self.moviePlayer play];
 //   [view addSubview:self.moviePlayer.view];
 
-//   YKYouTubeVideo * youTubeVideo = [[YKYouTubeVideo alloc] initWithVideoId:@"1hZ98an9wjo"];
-   YKYouTubeVideo * youTubeVideo = [[YKYouTubeVideo alloc] initWithVideoId:@"1hZ98an9wjo"];
+   YKYouTubeVideo * youTubeVideo = [[YKYouTubeVideo alloc] initWithVideoId:self.video.identifier];
 
    //Fetch thumbnail
    [youTubeVideo parseWithCompletion:^(NSError * error) {
