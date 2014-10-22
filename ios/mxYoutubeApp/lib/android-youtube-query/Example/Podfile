@@ -1,4 +1,0 @@
-target 'android-youtube-query', :exclusive => true do
-  pod "android-youtube-query", :path => "../"
-end
-
