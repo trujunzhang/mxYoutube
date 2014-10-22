@@ -1,0 +1,29 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+
+target 'AppiPad', :exclusive => true do
+  # ________________open projects___________________
+  pod "JBTabBarController", :path => "../dependencies/lib/JBTabBarController"
+  pod "WHTopTabBarController", :path => "../dependencies/lib/WHTopTabBarController"
+  pod "YKMediaPlayerKit", :path => "../dependencies/lib/YKMediaPlayerKit"
+
+  pod "XCDYouTubeKit", :path => "../dependencies/lib/XCDYouTubeKit"
+  pod "AAPullToRefresh", :path => "../dependencies/lib/AAPullToRefresh"
+
+  # ________________collect common library___________________
+  pod "IOS_Collection_Code", :path => "../dependencies/collect/IOS_Collection_Code"
+
+  # ________________Project layers___________________
+  pod "Business-Logic-Layer", :path => "../dependencies/layers/Business-Logic-Layer"
+  pod "google-api-services-youtube", :path => "../dependencies/layers/google-api-services-youtube"
+
+  # ________________Projects for iPad___________________
+  pod "YoutubeCollectionView", :path => "../dependencies/ipad/YoutubeCollectionView"
+
+  # ________________module Projects___________________
+  pod "VideoWatchDetailViewControlleriPad", :path => "../dependencies/module/VideoWatchDetailViewControlleriPad"
+
+  # ________________ipad app Project___________________
+  pod "MxYoutube-iPad-app", :path => "../dependencies/ipad/MxYoutube-iPad-app"
+
+end
