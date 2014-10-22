@@ -1,0 +1,6 @@
+target 'Business-Logic-Layer', :exclusive => true do
+  pod "Business-Logic-Layer", :path => "../"
+  pod "google-api-services-youtube", :path => "../../../layers/google-api-services-youtube"
+  pod "IOS_Collection_Code", :path => "../../../collect/IOS_Collection_Code"
+end
+

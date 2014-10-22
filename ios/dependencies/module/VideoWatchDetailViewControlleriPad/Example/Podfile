@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'VideoWatchDetailViewControlleriPad', :exclusive => true do
+  pod "VideoWatchDetailViewControlleriPad", :path => "../"
+  pod "WHTopTabBarController", :path => "../../../lib/WHTopTabBarController"
+end
+
+target 'Tests', :exclusive => true do
+  pod "VideoWatchDetailViewControlleriPad", :path => "../"
+
+
+end

@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'MxYoutube-iPad-app', :exclusive => true do
+  pod "MxYoutube-iPad-app", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "MxYoutube-iPad-app", :path => "../"
+
+  
+end
