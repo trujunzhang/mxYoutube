@@ -203,29 +203,4 @@
 }
 
 
-#pragma mark UIViewController rotation methods
-
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-   if (self.selectedViewController) {
-      return [self.selectedViewController shouldAutorotateToInterfaceOrientation:interfaceOrientation];
-   }
-   return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-   [_selectedViewController willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-}
-
-
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-   [_selectedViewController willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
-}
-
-
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-   [_selectedViewController didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-}
-
 @end

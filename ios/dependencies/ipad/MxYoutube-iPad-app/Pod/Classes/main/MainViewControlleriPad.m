@@ -51,7 +51,7 @@
    NSMutableArray * controllers = [[NSMutableArray alloc] init];
 
    NSArray * viewControllers = [NSArray arrayWithObjects:
-    [[HistoryViewController alloc] init],
+//    [[HistoryViewController alloc] init],
     [[HomeViewController alloc] init],
     [[SearchViewController alloc] init],
     [[SearchViewController alloc] init],
@@ -99,16 +99,6 @@
 
 - (NSUInteger)supportedInterfaceOrientations {
    return UIInterfaceOrientationMaskAll;
-}
-
-
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-   return UIInterfaceOrientationMaskAll;
-}
-
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation {
-   return YES;
 }
 
 

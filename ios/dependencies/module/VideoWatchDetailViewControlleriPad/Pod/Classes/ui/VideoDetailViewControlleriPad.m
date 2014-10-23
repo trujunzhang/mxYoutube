@@ -168,16 +168,6 @@
 }
 
 
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-   return UIInterfaceOrientationLandscapeLeft;
-}
-
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation {
-   return YES;
-}
-
-
 - (void)viewDidLayoutSubviews {
    [super viewDidLayoutSubviews];
 
