@@ -8,7 +8,6 @@ target 'AppiPad', :exclusive => true do
   pod "YKMediaPlayerKit", :path => "../dependencies/lib/YKMediaPlayerKit"
 
   pod "XCDYouTubeKit", :path => "../dependencies/lib/XCDYouTubeKit"
-  pod "AAPullToRefresh", :path => "../dependencies/lib/AAPullToRefresh"
 
   # ________________collect common library___________________
   pod "IOS_Collection_Code", :path => "../dependencies/collect/IOS_Collection_Code"
