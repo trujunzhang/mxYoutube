@@ -110,7 +110,29 @@
    [self.player.moviePlayer setShouldAutoplay:YES];
    [self.player.moviePlayer prepareToPlay];
 
+   [[NSNotificationCenter defaultCenter] addObserver:self
+                                            selector:@selector(moviePlayBackDidFinish:)
+                                                name:MPMoviePlayerPlaybackDidFinishNotification
+                                              object:self.player];
+
+   self.player.moviePlayer.controlStyle = MPMovieControlStyleDefault;
+
    return self.player;
+}
+
+
+- (void)moviePlayBackDidFinish:(NSNotification *)notification {
+   MPMoviePlayerController * player = [notification object];
+
+   [[NSNotificationCenter defaultCenter]
+    removeObserver:self
+              name:MPMoviePlayerPlaybackDidFinishNotification
+            object:player];
+
+
+//   if ([player respondsToSelector:@selector(setFullscreen:animated:)]) {
+//      [player.view removeFromSuperview];
+//   }
 }
 
 
@@ -118,17 +140,20 @@
    if (!self.player) [self movieViewController:quality];
 
    [pView addSubview:self.player.moviePlayer.view];
-   self.player.moviePlayer.view.frame = pView.bounds;
-
    [self.player.moviePlayer play];
+}
+
+
+- (void)setVideoLayout:(UIView *)pView {
+   self.player.moviePlayer.view.frame = pView.bounds;
 }
 
 
 - (void)play:(YKQualityOptions)quality {
    if (!self.player) [self movieViewController:quality];
 
-   [[UIApplication sharedApplication].keyWindow.rootViewController presentMoviePlayerViewControllerAnimated:self.player];
-   [self.player.moviePlayer play];
+//   [[UIApplication sharedApplication].keyWindow.rootViewController presentMoviePlayerViewControllerAnimated:self.player];
+//   [self.player.moviePlayer play];
 }
 
 @end

@@ -11,8 +11,4 @@ Pod::Spec.new do |s|
   s.source_files = 'Pod/Classes/*/*.{h,m}'
   s.resources = "Pod/Assets/WHTabBarController.bundle"
   s.requires_arc = true
-  
-  s.dependency 'AutoLayoutKit'
-  s.dependency 'JRSwizzle'
-
 end

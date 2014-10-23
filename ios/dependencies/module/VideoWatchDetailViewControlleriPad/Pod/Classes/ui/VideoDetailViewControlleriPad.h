@@ -8,6 +8,8 @@
 
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+
 #import <MediaPlayer/MediaPlayer.h>
 
 @class WHTopTabBarController;
@@ -31,6 +33,9 @@
 @property(nonatomic, strong) UIViewController * secondViewController;
 @property(nonatomic, strong) YoutubeGridLayoutViewController * thirdViewController;
 
+@property(nonatomic, strong) NSArray * defaultTableControllers;
+
+@property(nonatomic, strong) id youTubeVideo;
 - (instancetype)initWithDelegate:(id<IpadGridViewCellDelegate>)delegate video:(GTLYouTubeVideo *)video;
 
 @end

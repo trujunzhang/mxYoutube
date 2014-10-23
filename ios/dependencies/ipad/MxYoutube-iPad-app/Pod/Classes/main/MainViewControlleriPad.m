@@ -27,14 +27,18 @@
    self = [super init];
    if (self) {
       [self setBackground];
-   }
 
+      self.horizontalImage = [UIImage imageNamed:[AppResolutionHelper resolutionNameByType:[UIDevice resolution]
+                                                                                isPortrait:YES]];
+      self.verticalImage = [UIImage imageNamed:[AppResolutionHelper resolutionNameByType:[UIDevice resolution]
+                                                                              isPortrait:NO]];
+   }
    return self;
 }
 
 
 - (void)setBackground {
-   self.background = [[UIImageView alloc] init];
+//   self.background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 }
 
 
@@ -73,7 +77,8 @@
 
 
    int i = 0;
-   NSString * name = [AppResolutionHelper resolutionNameByType:[UIDevice resolution] isPortrait:portrait];
+//   NSString * name = [AppResolutionHelper resolutionNameByType:[UIDevice resolution] isPortrait:portrait];
+//   UIImage * image = [UIImage imageNamed:name];
    for (MainViewControlleriPad * controller in viewControllers) {
       NSArray * tabBarInfo = viewTabBars[i++];
       controller.title = tabBarInfo[0];
@@ -81,14 +86,11 @@
       controller.tabBarItem.selectedImage = [[UIImage imageNamed:tabBarInfo[2]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 
       UINavigationController * object = [[UINavigationController alloc] initWithRootViewController:controller];
-//      [[object navigationBar] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsCompact];
-      [[object navigationBar] setBackgroundImage:[UIImage imageNamed:name]
-                                   forBarMetrics:UIBarMetricsDefault];
+//      [[object navigationBar] setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
       [controllers addObject:object];
    }
 
-
-   self.viewControllers = controllers;
+//   self.viewControllers = controllers;
 
    self.tabBar.maximumTabWidth = 64.0f;
    self.tabBar.layoutStrategy = layoutStrategy;
@@ -105,24 +107,17 @@
 
 
 - (NSUInteger)supportedInterfaceOrientations {
-   if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-      return UIInterfaceOrientationMaskPortrait;
-   }
    return UIInterfaceOrientationMaskAll;
 }
 
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-   return UIInterfaceOrientationLandscapeLeft;
+   return UIInterfaceOrientationMaskAll;
 }
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation {
-   if ((orientation == UIInterfaceOrientationLandscapeRight) || (orientation == UIInterfaceOrientationLandscapeLeft)) {
-      return YES;
-   }
-
-   return NO;
+   return YES;
 }
 
 
@@ -134,12 +129,27 @@
 
 
 - (void)updateLayout:(UIInterfaceOrientation)toInterfaceOrientation {
-   BOOL portrait = (toInterfaceOrientation == UIInterfaceOrientationPortrait) || (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
-   NSString * name = [AppResolutionHelper resolutionNameByType:[UIDevice resolution] isPortrait:portrait];
-   self.background.frame = [[UIScreen mainScreen] bounds];
+   BOOL isPortrait = (toInterfaceOrientation == UIInterfaceOrientationPortrait) || (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+   self.background.image = [self getBackgroundImage:isPortrait];
+}
 
-//   self.background.image = [UIImage imageNamed:@"Default-568h@2x.png"];
-   self.background.image = [UIImage imageNamed:name];
+
+- (UIImage *)getBackgroundImage:(BOOL)isPortrait {
+   UIImage * image = nil;
+   if (isPortrait) {
+      if (self.horizontalImage == nil) {
+         self.horizontalImage = [UIImage imageNamed:[AppResolutionHelper resolutionNameByType:[UIDevice resolution]
+                                                                                   isPortrait:isPortrait]];
+      }
+      image = self.horizontalImage;
+   } else {
+      if (self.verticalImage == nil) {
+         self.verticalImage = [UIImage imageNamed:[AppResolutionHelper resolutionNameByType:[UIDevice resolution]
+                                                                                 isPortrait:isPortrait]];
+      }
+      image = self.verticalImage;
+   }
+   return image;
 }
 
 

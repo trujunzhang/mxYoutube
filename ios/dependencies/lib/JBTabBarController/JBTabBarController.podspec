@@ -12,5 +12,4 @@ Pod::Spec.new do |s|
   s.resources = "Pod/Assets/JBTabBarController.bundle"
   s.requires_arc = true
   s.dependency 'JRSwizzle'
-  s.dependency 'UIColor-HexString'
-end
+  end

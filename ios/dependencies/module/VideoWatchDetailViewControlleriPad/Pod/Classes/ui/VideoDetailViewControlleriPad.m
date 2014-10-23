@@ -62,7 +62,9 @@
 - (void)initViewControllers {
    // 1
    self.firstViewController = [[UIViewController alloc] init];
+   self.firstViewController.title = @"Comments";
    self.secondViewController = [[UIViewController alloc] init];
+   self.secondViewController.title = @"More From";
 //   self.thirdViewController = [[YoutubeGridLayoutViewController alloc] initWithVideoList:[YoutubeDataHelper getVideoList]];
    self.thirdViewController = [[YoutubeGridLayoutViewController alloc] init];
    self.thirdViewController.delegate = self.delegate;
@@ -76,54 +78,51 @@
    VideoDetailPanel * videoDetailPanel = [[VideoDetailPanel alloc] init];
 
    self.videoDetailController.view = videoDetailPanel;
+
+   // 3
+   self.videoTabBarController = [[WHTopTabBarController alloc] init];
+   self.videoTabBarController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+   [self.tabbarView addSubview:self.videoTabBarController.view];
+
+   // 4
+   self.videoDetailController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+
+   // 5
+   self.defaultTableControllers = [NSArray arrayWithObjects:
+    self.firstViewController,
+    self.secondViewController,
+    self.thirdViewController,
+     nil];
 }
 
 
 - (void)setupTabbarPanelInHorizontal:(UIView *)view {
-   self.videoTabBarController = [[WHTopTabBarController alloc] init];
-
-   NSMutableArray * array = [[NSMutableArray alloc] init];
-
-   [array addObject:self.firstViewController];
-   [array addObject:self.secondViewController];
-   [array addObject:self.thirdViewController];
+   NSArray * array = [self.defaultTableControllers copy];
 
    self.videoTabBarController.viewControllers = array;
-   self.videoTabBarController.selectedIndex = 2;
-
-   self.videoTabBarController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-   self.videoTabBarController.view.frame = view.bounds;
-
-   [view addSubview:self.videoTabBarController.view];
+   self.videoTabBarController.selectedIndex = array.count - 1;
 }
 
 
 - (void)setupTabbarPanelInVertical:(UIView *)view {
-   self.videoTabBarController = [[WHTopTabBarController alloc] init];
-
-   NSMutableArray * array = [[NSMutableArray alloc] init];
-
-   [array addObject:self.videoDetailController];
-
-   [array addObject:self.firstViewController];
-   [array addObject:self.secondViewController];
-   [array addObject:self.thirdViewController];
+   NSMutableArray * array = [self.defaultTableControllers mutableCopy];
+   [array insertObject:self.videoDetailController atIndex:0];
 
    self.videoTabBarController.viewControllers = array;
-   self.videoTabBarController.selectedIndex = 3;
-
-   self.videoTabBarController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-   self.videoTabBarController.view.frame = view.bounds;
-
-   [view addSubview:self.videoTabBarController.view];
+   self.videoTabBarController.selectedIndex = array.count - 1;
 }
 
 
-- (void)setupDetailPanel:(UIView *)view {
-   self.videoDetailController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-   self.videoDetailController.view.frame = view.bounds;
+- (void)removeDetailPanel:(UIView *)pView {
+   [self.detailView removeFromSuperview];
+}
 
-   [view addSubview:self.videoDetailController.view];
+
+- (void)addDetailPanel:(UIView *)pView {
+   // 1
+   [self.view addSubview:pView];
+   // 2
+   [pView addSubview:self.videoDetailController.view];
 }
 
 
@@ -141,13 +140,14 @@
 //   [self.moviePlayer play];
 //   [view addSubview:self.moviePlayer.view];
 
-   YKYouTubeVideo * youTubeVideo = [[YKYouTubeVideo alloc] initWithVideoId:self.video.identifier];
+   [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+   self.youTubeVideo = [[YKYouTubeVideo alloc] initWithVideoId:self.video.identifier];
 
    //Fetch thumbnail
-   [youTubeVideo parseWithCompletion:^(NSError * error) {
+   [self.youTubeVideo parseWithCompletion:^(NSError * error) {
        //Then play (make sure that you have called parseWithCompletion before calling this method)
 //       [youTubeVideo play:YKQualityMedium];
-       [youTubeVideo playInView:pView withQualityOptions:YKQualityLow];
+       [self.youTubeVideo playInView:pView withQualityOptions:YKQualityLow];
    }];
 
 
@@ -164,9 +164,6 @@
 
 
 - (NSUInteger)supportedInterfaceOrientations {
-   if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-      return UIInterfaceOrientationMaskPortrait;
-   }
    return UIInterfaceOrientationMaskAll;
 }
 
@@ -177,11 +174,7 @@
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation {
-   if ((orientation == UIInterfaceOrientationLandscapeRight) || (orientation == UIInterfaceOrientationLandscapeLeft)) {
-      return YES;
-   }
-
-   return NO;
+   return YES;
 }
 
 
@@ -195,17 +188,27 @@
 - (void)updateLayout:(UIInterfaceOrientation)toInterfaceOrientation {
    BOOL isPortrait = (toInterfaceOrientation == UIInterfaceOrientationPortrait) || (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
    if (isPortrait) {
-      [self setupVertical];
+      // 1  UIView contains
       [self setupTabbarPanelInVertical:self.tabbarView];
+      [self removeDetailPanel:self.detailView];
+      // 2  layout
+      [self setupVerticalLayout];
+      [self setupUIViewVerticalLayout];
    } else {
-      [self setupHorizontal];
-      [self setupDetailPanel:self.detailView];
+      // 1  UIView contains
       [self setupTabbarPanelInHorizontal:self.tabbarView];
+      [self addDetailPanel:self.detailView];
+      // 2 layout
+      [self setupHorizontalLayout];
+      [self setupUIViewHorizontalLayout];
    }
+
+   [self.youTubeVideo setVideoLayout:self.videoPlayView];
+   self.videoTabBarController.view.frame = self.tabbarView.bounds;
 }
 
 
-- (void)setupHorizontal {
+- (void)setupHorizontalLayout {
    CGFloat aWidth = self.view.frame.size.width;
    CGFloat aHeight = self.view.frame.size.height;
 
@@ -214,7 +217,6 @@
    rect.size.height = aHeight / 2;
    self.videoPlayView.frame = rect;
 
-   [self.view addSubview:self.detailView];
    rect = self.detailView.frame;
    rect.origin.y = aHeight / 2;
    rect.size.width = aWidth / 2;
@@ -230,7 +232,12 @@
 }
 
 
-- (void)setupVertical {
+- (void)setupUIViewHorizontalLayout {
+   self.videoDetailController.view.frame = self.detailView.bounds;
+}
+
+
+- (void)setupVerticalLayout {
    CGFloat aWidth = self.view.frame.size.width;
    CGFloat aHeight = self.view.frame.size.height;
 
@@ -239,14 +246,17 @@
    rect.size.height = aHeight / 2;
    self.videoPlayView.frame = rect;
 
-   [self.detailView removeFromSuperview];
-
    rect = self.tabbarView.frame;
    rect.origin.x = 0;
    rect.origin.y = aHeight / 2;
    rect.size.width = aWidth;
    rect.size.height = aHeight / 2;
    self.tabbarView.frame = rect;
+}
+
+
+- (void)setupUIViewVerticalLayout {
+
 }
 
 

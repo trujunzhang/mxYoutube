@@ -53,8 +53,15 @@
    self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
    self.view.backgroundColor = [UIColor clearColor];
 
-   if (self.background)
-      [self.view addSubview:self.background];
+//   if (self.background)
+   self.background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+   self.background.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+   self.background.frame = self.view.bounds;
+//   self.background.contentMode = UIViewContentModeScaleAspectFit;
+
+//   self.background = [[UIImageView alloc] init];
+   [self.view addSubview:self.background];
+   [self.view sendSubviewToBack:self.background];
 
 
    self.tabBar = [[JBTabBar alloc] init];

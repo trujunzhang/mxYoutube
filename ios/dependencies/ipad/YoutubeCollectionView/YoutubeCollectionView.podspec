@@ -13,6 +13,4 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.dependency 'MLImageCache'
   s.dependency 'KRLCollectionViewGridLayout'
-  s.dependency 'AAPullToRefresh'
-  s.dependency 'UIColor-HexString'
 end

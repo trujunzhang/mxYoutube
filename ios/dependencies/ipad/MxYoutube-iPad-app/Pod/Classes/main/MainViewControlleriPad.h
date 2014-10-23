@@ -11,5 +11,9 @@
 
 
 @interface MainViewControlleriPad : JBTabBarController
+
+@property(nonatomic, strong) UIImage * horizontalImage;
+@property(nonatomic, strong) UIImage * verticalImage;
+
 - (void)buildTabBarController:(BOOL)portrait;
 @end

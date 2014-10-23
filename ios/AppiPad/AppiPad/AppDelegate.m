@@ -8,7 +8,6 @@
 
 
 #import "AppDelegate.h"
-#import "UIColor+HexString.h"
 #import "MainViewControlleriPad.h"
 
 
@@ -34,8 +33,6 @@
    // Override point for customization after application launch.
 
    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-   self.window.tintColor = [UIColor colorWithHexString:@"#d23241"];
 
    self.controller = [[MainViewControlleriPad alloc] init];
    [self.controller buildTabBarController:[self isPortrait]];
