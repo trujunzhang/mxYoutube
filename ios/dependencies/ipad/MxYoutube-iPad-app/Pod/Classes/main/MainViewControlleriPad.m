@@ -26,8 +26,6 @@
 - (instancetype)init {
    self = [super init];
    if (self) {
-      [self setBackground];
-
       self.horizontalImage = [UIImage imageNamed:[AppResolutionHelper resolutionNameByType:[UIDevice resolution]
                                                                                 isPortrait:YES]];
       self.verticalImage = [UIImage imageNamed:[AppResolutionHelper resolutionNameByType:[UIDevice resolution]
@@ -37,15 +35,8 @@
 }
 
 
-- (void)setBackground {
-//   self.background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-}
-
-
 - (void)viewDidLoad {
    [super viewDidLoad];
-
-
 }
 
 
@@ -90,7 +81,7 @@
       [controllers addObject:object];
    }
 
-//   self.viewControllers = controllers;
+   self.viewControllers = controllers;
 
    self.tabBar.maximumTabWidth = 64.0f;
    self.tabBar.layoutStrategy = layoutStrategy;
@@ -137,16 +128,8 @@
 - (UIImage *)getBackgroundImage:(BOOL)isPortrait {
    UIImage * image = nil;
    if (isPortrait) {
-      if (self.horizontalImage == nil) {
-         self.horizontalImage = [UIImage imageNamed:[AppResolutionHelper resolutionNameByType:[UIDevice resolution]
-                                                                                   isPortrait:isPortrait]];
-      }
       image = self.horizontalImage;
    } else {
-      if (self.verticalImage == nil) {
-         self.verticalImage = [UIImage imageNamed:[AppResolutionHelper resolutionNameByType:[UIDevice resolution]
-                                                                                 isPortrait:isPortrait]];
-      }
       image = self.verticalImage;
    }
    return image;
